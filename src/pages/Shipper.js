@@ -42,13 +42,13 @@ export default class Shipper extends React.Component {
             className="mySwiper"
           >
             <SwiperSlide>
-              <img src={image2} className="h-96 " alt=""></img>
+              <img src={image2} className=" " alt=""></img>
             </SwiperSlide>
             <SwiperSlide>
-              <img src={image3} className=" h-96 " alt=""></img>
+              <img src={image3} className="  " alt=""></img>
             </SwiperSlide>
             <SwiperSlide>
-              <img src={image1} className="  h-96 " alt=""></img>
+              <img src={image1} className="   " alt=""></img>
             </SwiperSlide>
           </Swiper>
         </div>

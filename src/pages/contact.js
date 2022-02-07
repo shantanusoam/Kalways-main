@@ -36,6 +36,7 @@ const Contac = () => {
 class Contact extends React.Component {
   componentDidMount() {
     document.title = 'KALWAY Contact';
+    window.scrollTo(0, 0);
   }
 
   render() {

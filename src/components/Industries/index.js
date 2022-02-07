@@ -54,7 +54,7 @@ import {
   BgImage,
   Card,
 } from './Industries';
-const Industries = () => {
+const Industrie = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -633,5 +633,14 @@ const Industries = () => {
     </>
   );
 };
+class Industries extends React.Component {
+  componentDidMount() {
+    console.log('Industries');
+  }
+
+  render() {
+    return <Industrie />;
+  }
+}
 
 export default Industries;

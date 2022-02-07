@@ -17,32 +17,12 @@ import {
 } from './NavbarElements';
 
 const Navbar = ({ toggle }) => {
-  const [scrollNav, setScrollNav] = useState(false);
-
-  const changeNav = () => {
-    // if (Speed) {
-    //   setScrollNav(false);
-    // }
-    if (window.scrollY >= 100) {
-      setScrollNav(true);
-    } else {
-      setScrollNav(false);
-    }
-  };
-  useEffect(() => {
-    window.addEventListener('scroll', changeNav);
-  }, []);
-  const toggleHome = () => {
-    scroll.scrollToTop();
-  };
-
   return (
     <>
       <IconContext.Provider value={{ color: '#fff', size: '1em' }}>
-        <Nav scrollNav={scrollNav}>
+        <Nav>
           <NavLogo
             to="/"
-            onClick={toggleHome}
             className="flex flex-col content-center aligns-center"
           >
             <img src={logo} width="150px" alt="logo" />
@@ -60,21 +40,14 @@ const Navbar = ({ toggle }) => {
             </NavItem> */}
 
             <NavItem>
-              <NavLinks
-                to="/About"
-                activeClassName="active"
-                onClick={toggleHome}
-              >
-                ABOUT
+              <NavLinks to="/About" activeStyle>
+                <a href="/About">About Us</a>
               </NavLinks>
+              ABOUT
             </NavItem>
 
             <NavItem>
-              <NavLinks
-                to="/services"
-                onClick={toggleHome}
-                activeClassName="active"
-              >
+              <NavLinks to="/services" activeStyle>
                 SERVICES
               </NavLinks>
             </NavItem>
@@ -85,38 +58,22 @@ const Navbar = ({ toggle }) => {
               </NavLinks>
             </NavItem> */}
             <NavItem>
-              <NavLinks
-                to="/Carriers"
-                onClick={toggleHome}
-                activeClassName="active"
-              >
+              <NavLinks to="/Carriers" activeStyle>
                 CARRIERS
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks
-                to="/Shippers"
-                onClick={toggleHome}
-                activeClassName="active"
-              >
+              <NavLinks to="/Shippers" activeStyle>
                 SHIPPERS
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks
-                to="/Shipfreight"
-                onClick={toggleHome}
-                activeClassName="active"
-              >
+              <NavLinks to="/Shipfreight" activeStyle>
                 SHIPFREIGHT
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks
-                to="/Industries"
-                onClick={toggleHome}
-                activeClassName="active"
-              >
+              <NavLinks to="/Industries" activeStyle>
                 INDUSTRIES
               </NavLinks>
             </NavItem>

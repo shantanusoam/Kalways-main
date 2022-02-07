@@ -13,7 +13,7 @@ import {
 } from './WorkAtKalways';
 
 import { animateScroll as scroll, Link } from 'react-scroll';
-const WorkAtKalwayss = ({ isOpen, toggle }) => {
+const WorkAtKalways = ({ isOpen, toggle }) => {
   function refreshPage() {
     hide = 'lol';
     window.location.reload();
@@ -43,13 +43,13 @@ const WorkAtKalwayss = ({ isOpen, toggle }) => {
     </ContactContainer>
   );
 };
-class ContactSection extends React.Component {
-  // componentDidMount() {
-  //   window.location.reload(false);
-  // }
+class WorkAtKalwayss extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
 
   render() {
-    return <WorkAtKalwayss />;
+    return <WorkAtKalways />;
   }
 }
 export default WorkAtKalwayss;
