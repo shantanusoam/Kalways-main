@@ -48,10 +48,6 @@ const shipfreight = () => {
   return (
     <>
       <HeroContainer ontainer id="Home">
-        {/* <Gradients></Gradients>
-        <HeroBg>
-          <BgImage></BgImage>
-        </HeroBg> */}
         <HeroContent className="flex flex-col 	justify-items-end lg:w-1/2">
           <ContainerMain className="absolute bottom-0 left-20 pb-8 pl-32">
             <h1 className="text-white  font-normal pt-8 text-xl w-auto">
@@ -62,7 +58,7 @@ const shipfreight = () => {
             </h2>
           </ContainerMain>
 
-          <PCENTER class="text-gray-600 lg:p-8">
+          <PCENTER class="text-gray-600 lg:p-8 text-left  ">
             We will help you get your products where they need to go fast,
             efficiently and without interruption. Join the more than 3,500 CPG
             companies who trust us with their freight.
@@ -177,54 +173,13 @@ const shipfreight = () => {
             </button>
           </div>
         </div>
-        <h2 className=" self-center font-bold 2xl:pt-10 pt-10 2xl:text-6xl text-4xl pl-4 ">
+        <h2 className=" self-center font-bold 2xl:pt-10 pt-4 2xl:text-6xl text-4xl pl-4  ">
           What Makes Us Different
         </h2>
       </div>
 
       <div className="xl:px-14 xl:py-10 md:py-0 md:px-0 bg-white flex 2xl:flex-row lg:flex-row flex-wrap justify-center items-center flex-col ">
-        {/* <LinkRo
-              key={4}
-              to={{
-                pathname: "/Product",
-                state: { id: "lol" }, // your data array of objects
-              }}
-              className=" flex-1 "
-              key={3}
-              id={3}
-            > */}
-        {/* <Fade bottom key={2}>
-              <div
-                className="bg-white   m-9 hover:shadow-2xl flex-1 "
-                key={2}
-                id={5}
-              >
-                <img
-                  src={trucks}
-                  alt="Trailers images"
-                  className=" h-80 w-full object-cover"
-                />
-
-                <div className="p-8"> */}
-        {/* <h3 className="font-bold text-3xl font-boldmb-5">fine</h3> */}
-        {/* <br />
-                  <h3 className=" text-1xl mb-5 ">
-                    Tap into a marketplace that matches over 10.000 shipments a
-                    day
-                  </h3>
-                  <NavLink
-                    key={1}
-                    to={{
-                      pathname: "/Product",
-                      state: { id: "lol" }, // your data array of objects
-                    }}
-                  > */}
-        {/* <p>date</p> */}
-        {/* </NavLink>
-                </div>
-              </div>
-            </Fade> */}
-        {/* </LinkRo> */}
+        
         <Fade bottom>
           <div className="bg-white hover:shadow-2xl 2xl:m-2 m-2 flex-1">
             <img
@@ -234,11 +189,11 @@ const shipfreight = () => {
             />
 
             <div className="p-8">
-              <h3 className="font-bold 2xl:text-3xl text-2xl mb-5">
+              <h3 className="font-bold 2xl:text-3xl text-2xl ">
                 Pricing You Can Trust
               </h3>
               <br />
-              <p className="text-gray-800 text-1xl mb-5 h-42">
+              <p className="text-gray-800 text-1xl mb-0 h-42  ">
                 You can trust the quote you get from us, whether it comes
                 through your rep or KALWAYGO. If you are quoting for a spot LTL
                 load, a high-volume lane, or anything else, we can get you a
@@ -248,7 +203,7 @@ const shipfreight = () => {
           </div>
         </Fade>
         <Fade bottom>
-          <div className="bg-white hover:shadow-2xl 2xl:m-2 m-2 flex-1">
+          <div className="bg-white hover:shadow-2xl 2xl:m-2 m-2 flex-1">  
             <img
               src={image2}
               alt="boy with camera"
@@ -256,11 +211,11 @@ const shipfreight = () => {
             />
 
             <div className="p-8">
-              <h3 className="font-bold 2xl:text-3xl text-2xl mb-5">
+              <h3 className="font-bold 2xl:text-3xl text-2xl ">
                 Network Density
               </h3>
               <br />
-              <p className="text-gray-800 text-1xl mb-5 h-42">
+              <p className="text-gray-800 text-1xl mb-0 h-42 ">
                 You need quick access to a diverse carrier base to control your
                 freight spend and enable consistent service. Leverage our vast,
                 centralized network of over 75,000 carriers.
@@ -277,11 +232,11 @@ const shipfreight = () => {
             />
 
             <div className="p-8">
-              <h3 className="font-bold 2xl:text-3xl text-2xl  mb-5">
+              <h3 className="font-bold 2xl:text-3xl text-2xl  mb-0">
                 Unmatched Support
               </h3>
               <br />
-              <p className="text-gray-800 text-1xl mb-5 h-42">
+              <p className="text-gray-800 text-1xl mb-0 h-42">
                 When moving CPG freight, you need the support of a dedicated
                 team that you can count on. Our specialists are here to help
                 during the day and after hours to respond to your quoting and
@@ -295,7 +250,7 @@ const shipfreight = () => {
         <h3 className="font-bold  text-5xl pl-4">Business Solutions</h3>
         <div className="flex flex-row p-4">
           <div className="lg:pr-40">
-            <p className="text-gray-800 font-normal pt-8 text-xl w-auto ">
+            <p className="text-gray-800 font-normal pt-2 text-xl w-auto ">
               Your products are going to fly off the shelf. But first, they have
               to get there on time. Whether you ship tissues or toothpaste,
               sunscreen or salty snacks, your supply chain is feeling the
@@ -359,7 +314,7 @@ const shipfreight = () => {
               and 2020, we reduced network CO2 emissions by 18% and improved our
               SmartWay rankings. From environmental responsibility and
               sustainable supply chain solutions, to industry insights and
-              partnerships that drive innovative thinking – we’re committed to
+              partnerships that drive innovative thinking – we’re committed to  
               moving towards a greener future.
             </p>
           </div>
