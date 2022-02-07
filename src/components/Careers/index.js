@@ -54,7 +54,7 @@ const Careers = () => {
         {/* <Gradients></Gradients>
         <HeroBg>
           <BgImage></BgImage>
-        </HeroBg> */}
+        </HeroBg> */}  
         <HeroContent className="flex flex-col 	justify-items-end lg:w-1/2">
           <ContainerMain className="absolute bottom-0 left-20 pb-8 pl-32">
             <h1 className="text-white  font-normal pt-8 text-xl w-auto">

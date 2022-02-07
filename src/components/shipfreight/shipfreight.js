@@ -229,8 +229,9 @@ display: none;
     font-size: 1.5rem;
     font-weight: bold;
     color: #fff;
+    margin: 0px;
+    padding-left:1rem;
     
-  
     }
 `;
 export const HeroH1 = Styled.h1`
