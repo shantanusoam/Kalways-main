@@ -37,21 +37,21 @@ export default class ShipFlightPage extends React.Component {
           <img src={image4} className="flex-1 h-64 2xl:h-80 " alt=""></img>
         </div>
         <Card className=" self-center ">
-          <h1 className=" self-center pt-10 text-gray-800 text-4xl 2xl:text-5xl">
+          <h1 className=" self-center pt-10 text-gray-800 text-3xl 2xl:text-5xl">
             CARRIER SERVICES
             <p className="h-4"></p>
             <div className="w-40 h-2  hover:w-10"></div>
           </h1>
         </Card>
 
-        <div className="flex flex-row lg:pl-16 pl-8 pt-16">
+        <div className="flex flex-row lg:pl-16 pl-8 2xl:pt-16 pt-8">
           <img
             src={image3}
             className="flex-1 h-64 lg:block hidden"
             alt=""
           ></img>
-          <div className="self-end lg:pl-32">
-            <h2 className=" font-bold pt-10 text-xl">CARRIER PARTNERSHIP</h2>
+          <div className="self-end 2xl:pl-32 p-2">
+            <h2 className=" font-bold pt-0 text-xl">CARRIER PARTNERSHIP</h2>
             <h3 className=" text-gray-800 font-bold pt-10 text-xl">
               AVAILABLE LOADS ACCESS
             </h3>

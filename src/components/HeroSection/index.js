@@ -31,16 +31,16 @@ import { animateScroll as scroll, Link } from 'react-scroll';
 import EmblaCarousel from './EmblaCarousel';
 
 import styled from 'styled-components';
-import { sliderItems } from './media/data';
-import { mobile } from './media/responsive';
-const Container = styled.div`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  overflow: hidden;
-  position: relative;
-  ${mobile({ display: 'none' })}
-`;
+// import { sliderItems } from './media/data';
+// import { mobile } from './media/responsive';
+// const Container = styled.div`
+//   width: 100%;
+//   height: 100vh;
+//   display: flex;
+//   overflow: hidden;
+//   position: relative;
+//   ${mobile({ display: 'none' })}
+// `;
 const Gradients = styled.div`
   background-image: linear-gradient(
     180deg,

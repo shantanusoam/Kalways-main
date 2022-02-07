@@ -21,7 +21,7 @@ export default class Shipper extends React.Component {
           <img src={image1} className="flex-1  h-64 2xl:h-80" alt=""></img>
         </div>
         <Card>
-          <h2 className=" self-left lg:pt-10 lg:pl-40  2xl:text-5xl text-4xl p-8">
+          <h2 className=" self-left lg:pt-10 lg:pl-40  2xl:text-5xl text-4xl 2xl:p-8 pt-8 pl-8">
             FREIGHT BROKERAGE OVERVIEW
             <p className="h-4"></p>
             <div className="w-40 h-2  hover:w-10"></div>
@@ -98,7 +98,7 @@ export default class Shipper extends React.Component {
           </div>
           <div className="flex-1 h-64">
             <h3 className="font-bold pt-10 text-xl">Learn More</h3>
-            <p className="font-normal pt-10 text-xl w-96 pb-8">
+            <p className="font-normal pt-10 text-xl 2xl:w-96 pb-8">
               We measure success by the results we generate for our clients.
               With every solution, KALWAY Logistics simplifies transportation
               management—so you can focus on what you do best.
@@ -108,7 +108,7 @@ export default class Shipper extends React.Component {
             </button>
           </div>
         </div>
-        <h2 className=" self-center pt-20 text-4xl">CROSS - BORDER</h2>
+        <h2 className=" self-center pt-4 text-4xl">CROSS - BORDER</h2>
         <div className="flex flex-row lg:pr-16 p-8">
           <div className="self-end lg:pl-32 lg:pr-16 pb-16">
             <h3 className="font-bold pt-10 text-xl">

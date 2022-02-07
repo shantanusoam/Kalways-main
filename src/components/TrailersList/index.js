@@ -26,7 +26,7 @@ class TrailerList extends React.Component {
 
     return (
       <AboutContainer id="Products">
-        <h1 className="text-center text-black  2xl:text-5xl text-4xl pb-8  2xl:mt-28 xl:mt-28 mt-0 md:pb-3">
+        <h1 className="text-center text-black  2xl:text-5xl text-4xl pb-8  2xl:mt-28 xl:mt-28 mt-8 md:pb-3">
           SERVICES
           <div className="w-40 h-2  hover:w-10"></div>
         </h1>

@@ -22,14 +22,15 @@ export const TextContaner = styled.div`
 `;
 export const TextContanerS = styled.div`
   display: flex;
-  padding: 90px 0px 0px 6rem;
+  padding: 2rem 0px 0px 6rem;
   flex-direction: column;
   justify-content: flex-start;
   width: 70%;
   align-items: flex-start;
   @media screen and (max-width: 768px) {
     width: 100%;
-    padding-left: 10px;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 `;
 export const AboutContainer = styled.div`

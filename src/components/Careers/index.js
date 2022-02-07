@@ -43,8 +43,8 @@ import {
   ContainerMain,
   Callinfo,
   BgImage,
-} from './shipfreight';
-const shipfreight = () => {
+} from './CareersElement';
+const Careers = () => {
   return (
     <>
       <HeroContainer ontainer id="Home">
@@ -449,4 +449,4 @@ const shipfreight = () => {
   );
 };
 
-export default shipfreight;
+export default Careers;

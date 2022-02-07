@@ -72,7 +72,7 @@ const Industries = () => {
             </p>
           </ContainerMain>
 
-          <PCENTER class="text-white text-center 2xl:p-8 p-4">
+          <PCENTER class="text-white text-left 2xl:p-8 p-2 pl-8">
             Bring simplicity to an intricate supply chain process with our
             reliable cross-border solutions.
           </PCENTER>
@@ -80,7 +80,7 @@ const Industries = () => {
       </HeroContainer>
 
       <div className=" flex flex-col  bg-slate-800   2xl:ml-40 m-8">
-        <h2 className="pt-16 2xl:text-5xl  text-4xl  ">
+        <h2 className="pt-2 2xl:text-5xl  text-4xl  ">
           Expand your supply chain. Ship without borders.
         </h2>
 
@@ -131,7 +131,7 @@ const Industries = () => {
       <div className="flex flex-row lg:pr-16 pt-0 2xl:pt-12 p-8">
         <div className="self-end lg:pl-32 lg:pr-32">
           {/* <h3 className="font-bold pt-10 text-xl">Additional Information</h3> */}
-          <div className="flex flex-col items-center justify-items-center">
+          <div className="flex flex-col 2xl:items-center items-start justify-items-start">
             <Container className="pb-8">
               <h3 className="text-gray-800  2xl:text-5xl text-4xl">
                 Ways to Ship
@@ -141,14 +141,14 @@ const Industries = () => {
               </h3>
             </Container>
 
-            <p className="text-gray-800 font-normal pt-8 text-2xl w-auto text-center ">
+            <p className="text-gray-800 font-normal pt-8 text-2xl w-auto 2xl:text-center text-left ">
               Your products are going to fly off the shelf. But first, they have
               to get there on time. Whether you ship tissues or toothpaste,
               sunscreen or salty snacks, your supply chain is feeling the
               pressure. Consumer expectations are rising, delivery times are
               shortening and excuses won’t cut it.
             </p>
-            <p className="text-gray-800 font-normal pt-9 text-2xl w-auto text-center">
+            <p className="text-gray-800 font-normal pt-9 text-2xl w-auto 2xl:text-center text-left">
               We will help you get your products where they need to go fast,
               efficiently and without interruption. Join the more than 3,500 CPG
               companies who trust us with their freight.
@@ -245,7 +245,7 @@ const Industries = () => {
           </div>
         </div>
       </div>
-      <div className="xl:px-14 bg-white flex flex-row flex-wrap justify-center items-center ">
+      <div className="xl:px-14 bg-white flex 2xl:flex-row lg:flex-row flex-col flex-wrap justify-center items-center ">
         {/* <LinkRo
               key={4}
               to={{
@@ -561,7 +561,7 @@ const Industries = () => {
         <p className=" self-center font-bold pt-8   2xl:text-4xl">
           Insights to help grow your business.
         </p>
-        <div className="xl:px-14 xl:py-10 md:py-0 md:px-0 bg-white flex flex-row flex-wrap justify-center items-center   ">
+        <div className="xl:px-14 xl:py-10 md:py-0 md:px-0 bg-white flex 2xl:flex-row lg:flex-row flex-col flex-wrap justify-center items-center   ">
           <Fade bottom>
             <div className="bg-white hover:shadow-2xl m-4 flex-1">
               <img
