@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { TiArrowRightThick } from 'react-icons/ti';
 import Pulse from 'react-reveal/Pulse';
 import image1 from '../../images/dv0.jpg';
@@ -55,6 +55,9 @@ import {
   Card,
 } from './Industries';
 const Industries = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <HeroContainer id="Home">
@@ -93,7 +96,7 @@ const Industries = () => {
               opportunity, facilitate the crossing logistics and monitor your
               freight throughout the process.
             </p>
-            <p className="text-gray-800 font-normal pt-9 pb-10 text-2xl w-auto">
+            <p className="text-gray-800 font-normal pt-9 pb-4 text-2xl w-auto">
               We will help you get your products where they need to go fast,
               efficiently and without interruption. Join the more than 3,500 CPG
               companies who trust us with their freight.
@@ -141,7 +144,7 @@ const Industries = () => {
               </h3>
             </Container>
 
-            <p className="text-gray-800 font-normal pt-8 text-2xl w-auto 2xl:text-center text-left ">
+            <p className="text-gray-800 font-normal pt-2 text-2xl w-auto 2xl:text-center text-left ">
               Your products are going to fly off the shelf. But first, they have
               to get there on time. Whether you ship tissues or toothpaste,
               sunscreen or salty snacks, your supply chain is feeling the

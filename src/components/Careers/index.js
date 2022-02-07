@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import image1 from '../../images/ut008.jpg';
 import image2 from '../../images/ut009.jpg';
 import image3 from '../../images/ut0010.jpg';
@@ -45,6 +45,9 @@ import {
   BgImage,
 } from './CareersElement';
 const Careers = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <HeroContainer ontainer id="Home">

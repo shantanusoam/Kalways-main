@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Video from './media/Bgvideo2.mp4';
-import Slider from 'react-slick';
+
 import bg from '../../images/bg.jpg';
 // import bankground from "../../images";
 import './style.css';

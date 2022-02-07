@@ -20,6 +20,7 @@ import Shipper from './pages/Shipper';
 import shipfreight from './components/shipfreight';
 import Industries from './components/Industries';
 import WorkAtKalwayss from './components/WorkAtKalways';
+import Careers from './components/Careers';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -81,6 +82,7 @@ function App() {
           component={WorkAtKalwayss}
           title="WorkAtKALWAY"
         />
+        <Route exact path="/Careers" component={Careers} title="Careers" />
       </Switch>
 
       {/* <Switch>

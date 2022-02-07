@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import image1 from '../../images/ut008.jpg';
 import image2 from '../../images/ut009.jpg';
 import image3 from '../../images/ut0010.jpg';
@@ -44,7 +44,7 @@ import {
   Callinfo,
   BgImage,
 } from './shipfreight';
-const shipfreight = () => {
+const shipfreight = ({}) => {
   return (
     <>
       <HeroContainer ontainer id="Home">
@@ -62,7 +62,7 @@ const shipfreight = () => {
             </h2>
           </ContainerMain>
 
-          <PCENTER class="text-gray-600 lg:p-8">
+          <PCENTER class="text-gray-600 text-left">
             We will help you get your products where they need to go fast,
             efficiently and without interruption. Join the more than 3,500 CPG
             companies who trust us with their freight.

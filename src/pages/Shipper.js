@@ -2,6 +2,12 @@ import { render } from '@testing-library/react';
 import React, { useState, useEffect } from 'react';
 import { shipfreight } from '../components/waystoship/shipfreight';
 import './shipFleight.css';
+
+import { Autoplay, Pagination, Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
+
+import 'swiper/swiper.min.css';
+import 'swiper/modules/pagination/pagination.min.css';
 import image1 from '../images/dv0.jpg';
 import image2 from '../images/Ut1.jpg';
 import image3 from '../images/Rt2.jpg';
@@ -15,10 +21,36 @@ export default class Shipper extends React.Component {
   render() {
     return (
       <div className="lg:pt-28 flex flex-col bg-slate-800">
-        <div className="flex lg:flex-row flex-col ">
+        <div className="lg:flex lg:flex-row hidden ">
           <img src={image2} className="flex-1 h-64 2xl:h-80 " alt=""></img>
           <img src={image3} className="flex-1  h-64 2xl:h-80" alt=""></img>
           <img src={image1} className="flex-1  h-64 2xl:h-80" alt=""></img>
+        </div>
+        <div className=" lg:hidden block pt-20">
+          <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <img src={image2} className="h-96 " alt=""></img>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={image3} className=" h-96 " alt=""></img>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={image1} className="  h-96 " alt=""></img>
+            </SwiperSlide>
+          </Swiper>
         </div>
         <Card>
           <h2 className=" self-left lg:pt-10 lg:pl-40  2xl:text-5xl text-4xl 2xl:p-8 pt-8 pl-8">
@@ -111,7 +143,7 @@ export default class Shipper extends React.Component {
         <h2 className=" self-center pt-4 text-4xl">CROSS - BORDER</h2>
         <div className="flex flex-row lg:pr-16 p-8">
           <div className="self-end lg:pl-32 lg:pr-16 pb-16">
-            <h3 className="font-bold pt-10 text-xl">
+            <h3 className="font-bold pt-4 text-xl">
               KALWAY Logistics has Combined 30 years’ experience moving
               time-critical freight across borders in the United States, Mexico
               and Canada.

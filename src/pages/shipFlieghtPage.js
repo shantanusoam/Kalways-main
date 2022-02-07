@@ -1,6 +1,8 @@
 import { render } from '@testing-library/react';
 import React, { useState, useEffect } from 'react';
 import { shipfreight } from '../components/waystoship/shipfreight';
+import { Autoplay, Pagination, Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 import Styled from 'styled-components';
 import './shipFleight.css';
 import image1 from '../images/dv01.jpg';
@@ -31,10 +33,36 @@ export default class ShipFlightPage extends React.Component {
   render() {
     return (
       <div className="lg:pt-28 flex flex-col pb-10 bg-slate-500">
-        <div className="flex lg:flex-row flex-col">
+        <div className="lg:flex lg:flex-row hidden">
           <img src={image1} className="flex-1 h-64 2xl:h-80 " alt=""></img>
           <img src={image2} className="flex-1 h-64 2xl:h-80 " alt=""></img>
           <img src={image4} className="flex-1 h-64 2xl:h-80 " alt=""></img>
+        </div>
+        <div className=" lg:hidden block pt-20">
+          <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <img src={image2} alt=""></img>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={image3} alt=""></img>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={image1} alt=""></img>
+            </SwiperSlide>
+          </Swiper>
         </div>
         <Card className=" self-center ">
           <h1 className=" self-center pt-10 text-gray-800 text-3xl 2xl:text-5xl">

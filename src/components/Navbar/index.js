@@ -16,14 +16,14 @@ import {
   NavLinks,
 } from './NavbarElements';
 
-const Navbar = ({ toggle, Speed }) => {
+const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
-  console.log(Speed);
+
   const changeNav = () => {
     // if (Speed) {
     //   setScrollNav(false);
     // }
-    if (window.scrollY >= 100 || Speed) {
+    if (window.scrollY >= 100) {
       setScrollNav(true);
     } else {
       setScrollNav(false);
@@ -35,10 +35,7 @@ const Navbar = ({ toggle, Speed }) => {
   const toggleHome = () => {
     scroll.scrollToTop();
   };
-  function disabeled() {
-    console.log(Boolean(window.localStorage.getItem('product')));
-    return window.localStorage.getItem('product');
-  }
+
   return (
     <>
       <IconContext.Provider value={{ color: '#fff', size: '1em' }}>
@@ -66,14 +63,9 @@ const Navbar = ({ toggle, Speed }) => {
               <NavLinks
                 to="/About"
                 activeClassName="active"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact={true}
-                offset={-80}
                 onClick={toggleHome}
               >
-                <a to="/About">ABOUT</a>
+                ABOUT
               </NavLinks>
             </NavItem>
 
@@ -81,14 +73,9 @@ const Navbar = ({ toggle, Speed }) => {
               <NavLinks
                 to="/services"
                 onClick={toggleHome}
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact={true}
-                offset={-80}
                 activeClassName="active"
               >
-                <a to="/products">SERVICES</a>
+                SERVICES
               </NavLinks>
             </NavItem>
 
@@ -101,56 +88,36 @@ const Navbar = ({ toggle, Speed }) => {
               <NavLinks
                 to="/Carriers"
                 onClick={toggleHome}
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact={true}
-                offset={-80}
                 activeClassName="active"
               >
-                <a to="/Carriers">CARRIERS</a>
+                CARRIERS
               </NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks
                 to="/Shippers"
                 onClick={toggleHome}
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact={true}
-                offset={-80}
                 activeClassName="active"
               >
-                <a to="/Shippers">SHIPPERS</a>
+                SHIPPERS
               </NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks
                 to="/Shipfreight"
                 onClick={toggleHome}
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact={true}
-                offset={-80}
                 activeClassName="active"
               >
-                <a to="/Shipfreight">SHIPFREIGHT</a>
+                SHIPFREIGHT
               </NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks
                 to="/Industries"
                 onClick={toggleHome}
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact={true}
-                offset={-80}
                 activeClassName="active"
               >
-                <a to="/Industries">INDUSTRIES</a>
+                INDUSTRIES
               </NavLinks>
             </NavItem>
             {/* <NavItem>
