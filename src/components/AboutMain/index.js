@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';   
 import {
   AboutContainer,
   TextContaner,
@@ -20,7 +20,7 @@ const AboutMain = ({ isOpen, toggle }) => {
       </TextContaner>
 
       <TextContanerS>
-        <h1 className="text-left text-black  text-5xl pb-8">KALWAY</h1>
+        <h1 className="text-left text-black  text-4xl pb-8 ">KALWAY</h1>     
         <p className="text-left text-gray-800 text-2xl   ">
           KALWAY’s mission is to move business forward with expertise and
           integrity. That’s why we’re committed to creating smarter, less
@@ -28,8 +28,8 @@ const AboutMain = ({ isOpen, toggle }) => {
           2020, we reduced network CO2 emissions by 18% and improved our
           SmartWay rankings. From environmental responsibility and sustainable
           supply chain solutions, to industry insights and partnerships that
-          drive innovative thinking – we’re committed to moving towards a
-          greener future.
+          drive innovative thinking – we’re committed to moving towards a     
+          greener future.    
         </p>
       </TextContanerS>
     </AboutContainer>
@@ -37,3 +37,6 @@ const AboutMain = ({ isOpen, toggle }) => {
 };
 
 export default AboutMain;
+
+
+

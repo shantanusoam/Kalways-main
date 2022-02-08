@@ -40,10 +40,10 @@ const Navbar = ({ toggle }) => {
             </NavItem> */}
 
             <NavItem>
-              <NavLinks to="/About" activeStyle>
-                <a href="/About">About Us</a>
+              <NavLinks to="/" activeStyle>
+                <a href="/">HOME</a>
               </NavLinks>
-              ABOUT
+         
             </NavItem>
 
             <NavItem>
