@@ -69,7 +69,7 @@ const Industrie = () => {
             <h2 className="text-white   pt-3 2xl:text-5xl text-3xl w-5/6 xl:text-2xl md:text-2xl">
               Driving your business across borders.
             </h2>
-            <p className=" font-normal pt-2 xl:mb-2 mb-0 2xl:text-2xl  text-1xl text-white 2xl:mb-10 mb:-10 w-4/5">
+            <p className=" font-normal pt-2 xl:mb-2 mb-0 2xl:text-2xl  text-1xl text-white 2xl:mb-10 mb:-10 w-4/5 ">
               Bring simplicity to an intricate supply chain process with our
               reliable cross-border solutions.
             </p>
@@ -154,7 +154,7 @@ const Industrie = () => {
             <p className="text-gray-800 font-normal pt-9 text-2xl w-auto 2xl:text-center text-left">
               We will help you get your products where they need to go fast,
               efficiently and without interruption. Join the more than 3,500 CPG
-              companies who trust us with their freight.
+              companies who trust us with their freight.   
             </p>
           </div>
 
@@ -166,7 +166,7 @@ const Industrie = () => {
                 Automotive shippers can’t afford to have their supply chain slam
                 on the brakes. Keeping up with changes in demand and fulfilling
                 orders can be daunting. You need a 3PL you can trust with a
-                reliable, responsive carrier network to make sure you never hit
+                reliable, responsive carrier network to make sure you never hit      
                 a roadblock.
               </p>
             </div>
@@ -215,7 +215,7 @@ const Industrie = () => {
             </div>
             <div className="flex flex-col items-start">
               <img src={mgrid14} width="150px"></img>
-              <h4 className="text-2xl">Air & Ocean</h4>
+              <h4 className="text-2xl">AIR & OCEAN</h4>  
               <p className="text-gray-800 font-normal pt-2 text-xl w-auto">
                 Running a manufacturing supply chain is not easy. Though
                 transportation is often viewed as a commodity, the cost of

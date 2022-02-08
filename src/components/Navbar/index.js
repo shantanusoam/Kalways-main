@@ -14,7 +14,7 @@ import {
   NavItem,
   Numbers,
   NavLinks,
-} from './NavbarElements';
+} from './NavbarElements';   
 
 const Navbar = ({ toggle }) => {
   return (
@@ -37,7 +37,7 @@ const Navbar = ({ toggle }) => {
               <NavLinks to="/" onClick={toggleHome}>
                 <a to="/">Home</a>
               </NavLinks>
-            </NavItem> */}
+            </NavItem> */}      
 
             <NavItem>
               <NavLinks to="/" activeStyle>
@@ -79,7 +79,7 @@ const Navbar = ({ toggle }) => {
             </NavItem>
             {/* <NavItem>
             
-          <NavLinks >
+          <NavLinks >              
           <Link to='ContactUs' smooth={true} duration={500} spy={true} exact={true} offset={-80}>Contact Us</Link>
           </NavLinks>
           </NavItem> */}
@@ -99,13 +99,15 @@ const Navbar = ({ toggle }) => {
               Login
             </h3>
           </NavBtn> */}
-          {/* <MobileIcon onClick={toggle}>
+          {/* <MobileIcon onClick={toggle}>   
           <FaBars/>
         </MobileIcon> */}
         </Nav>
-      </IconContext.Provider>
+      </IconContext.Provider>   
     </>
   );
 };
 
-export default Navbar;
+export default Navbar;    
+
+

@@ -58,7 +58,7 @@ const shipfreight = ({}) => {
             </h2>
           </ContainerMain>
 
-          <PCENTER class="text-gray-600 lg:p-8 text-left  ">
+          <PCENTER class="text-gray-600 lg:p-10 text-left ">
             We will help you get your products where they need to go fast,
             efficiently and without interruption. Join the more than 3,500 CPG
             companies who trust us with their freight.

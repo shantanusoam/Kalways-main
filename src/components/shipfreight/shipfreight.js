@@ -228,9 +228,11 @@ display: none;
     display: block;
     font-size: 1.5rem;
     font-weight: bold;
+    line-height:2rem;
     color: #fff;
     margin: 0px;
-    padding-left:1rem;
+    width:80%;
+    // padding-left:1rem;
     
     }
 `;

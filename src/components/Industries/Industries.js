@@ -31,7 +31,7 @@ z-index: 1;
 
 export const ContainerMain = Styled.div`
 display: flex;
-flex-direction: column;
+flex-direction:column;
 h1{
    :first-child{
        color: #00e700;
@@ -237,8 +237,8 @@ display: none;
     font-size: 1.5rem;
     font-weight: bold;
     color: #fff;
-    width:50%;
-    text-align: center;
+    width:80%;
+    text-align: left;
     margin: 0px;
     padding: 0px;
     }
