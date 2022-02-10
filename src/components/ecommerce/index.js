@@ -71,12 +71,12 @@ const ecommerce = () => {
           <BgImage></BgImage>
         </HeroBg> */}
 
-        <HeroContent className="flex flex-col 	justify-items-end lg:w-1/2">
+        <HeroContent className="lg:flex lg:flex-col  	lg:justify-items-end lg:w-1/2">
           <ContainerMain>
             <HeroP>EVER FULFILLING</HeroP>
             <a href="/Contact">
               <button class="btn">
-                <span class="btn-text">SPEAK TO AN EXPERT</span>   
+                <span class="btn-text">SPEAK TO AN EXPERT</span>
               </button>
             </a>
           </ContainerMain>
@@ -101,7 +101,10 @@ const ecommerce = () => {
           <h3 className="self-center pb-8 pt-4 lg:text-4xl text-2xl text-white">
             The Ryder e-commerce fulfillment advantage
           </h3>
-          <FormButton>SPEAK TO A RYDER EXPERT</FormButton>
+          <FormButton className="self-center">
+            {' '}
+            <a href="/Contact">SPEAK TO A RYDER EXPERT</a>
+          </FormButton>
         </Formcontainer>
       </Bounce>
       {/* <div className="xl:px-14 xl:py-10 md:py-0 md:px-0 bg-white flex 2xl:flex-row lg:flex-row flex-wrap justify-center items-center flex-col ">
@@ -173,14 +176,14 @@ const ecommerce = () => {
         </Fade>
       </div> */}
 
-      <div className="lg:ml-40 lg:mr-40 ml-4 lg:mt-16">
-        <div className="p-4 flex lg:flex-row flex-col-reverse ">
-          <div className="lg:pr-40 w-4/5">
+      <div className="lg:ml-40 lg:mr-40  lg:mt-16">
+        <div className=" flex lg:flex-row flex-col-reverse ">
+          <div className="lg:pr-40 ml-4 mt-4 lg:w-4/5 mr-4">
             <>
-              <h3 className="font-bold  lg:text-5xl text-3xl">
+              <h3 className="font-bold  lg:text-3xl text-3xl">
                 Kalways Postions
               </h3>
-              <p className="font-bold  lg:text-3xl text-xl ">
+              <p className="font-bold  lg:text-2xl text-xl ">
                 Flexible solutions to meets today’s omni-channel demands
               </p>
             </>
@@ -194,7 +197,7 @@ const ecommerce = () => {
               streamlined operation stand-up, product personalization, and
               improved customer satisfaction.
             </p>
-            <p className=" text-gray-800 font-normal pt-9 pb-10 text-xl w-auto">
+            <p className=" text-gray-800 font-normal pt-2 pb-10 text-xl w-auto">
               Through our e-commerce fulfillment solution, you get: a
               streamlined on-boarding process to ensure you are operational
               quickly; specially trained teams that provide you with talent
@@ -206,16 +209,16 @@ const ecommerce = () => {
             </p>
           </div>
           <div>
-            <img src={image4} className="lg:w-auto w-64" alt=""></img>
+            <img src={image4} className="lg:w-auto w-96" alt=""></img>
           </div>
         </div>
       </div>
 
       <Fulfillment>
-        <h3 className="self-center pb-8 pt-4 text-4xl">
+        <h3 className="self-center pb-8 pt-8 text-4xl">
           The Ryder e-commerce fulfillment advantage
         </h3>
-        <div className="flex lg:flex-row flex-col w-5/6 pb-8  justify-around">
+        <div className="flex lg:flex-row flex-col w-5/6 pb-16  justify-around">
           <div className="flex-1 ">
             <h4 className="font-bold text-xl pb-4  ">TECHNOLOGY</h4>
             <p className="   text-white">
@@ -276,7 +279,10 @@ const ecommerce = () => {
             <h3 className="self-center pb-8 pt-4 text-4xl text-white">
               The Ryder e-commerce fulfillment advantage
             </h3>
-            <FormButton>SPEAK TO A RYDER EXPERT</FormButton>
+            <FormButton>
+              {' '}
+              <a href="/Contact">SPEAK TO A RYDER EXPERT</a>
+            </FormButton>
           </div>
         </Formcontainer>
       </Bounce>

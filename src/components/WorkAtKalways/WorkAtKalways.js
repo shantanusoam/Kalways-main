@@ -194,11 +194,11 @@ export const Heading = styled.h1`
   color: #000;
 
   @media screen and (max-width: 768px) and (max-width: 1024px) {
-    font-size: 10px;
+    font-size: 3rem;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 36px;
+    font-size: 2rem;
     text-align: center;
     width: 100%;
     padding: 0px;

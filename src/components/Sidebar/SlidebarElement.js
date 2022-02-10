@@ -36,13 +36,13 @@ export const SidebarWrapper = styled.div`
   color: #fff;
 `;
 export const SidebarMenu = styled.ul`
-  padding-top: 2rem;
+  padding-top: 3rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 80px);
   text-align: center;
   @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(7, 60px);
+    grid-template-rows: repeat(9, 60px);
   }
 `;
 export const SidebarLink = styled(LinkS)`
@@ -83,7 +83,7 @@ export const SideBtnWrap = styled.div`
   padding-right: 2rem;
   paddding-top: 1rem;
 `;
-export const SidebarRoute = styled(LinkR)`
+export const SidebarRoute = styled.div`
   border-radius: 50px;
   background: #01e600;
   white-space: nowrap;

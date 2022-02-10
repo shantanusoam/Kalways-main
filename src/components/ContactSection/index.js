@@ -28,7 +28,7 @@ const ContactSectio = ({ isOpen, toggle }) => {
       <br></br>
       <div className="pt-20"> </div>
       <ContactForm>
-        <Heading style={{ paddingTop: '12rem' }}>Contact Us</Heading>
+        <Heading style={{ paddingTop: '4rem' }}>Contact Us</Heading>
         <div
           data-aidaform-widget="form-2019-12"
           data-url="https://shantanu.aidaform.com/contact-us-kalways"
@@ -36,9 +36,9 @@ const ContactSectio = ({ isOpen, toggle }) => {
           data-height="500px"
           data-do-resize
         ></div>
-        <WWOCCButton className="p-2" onClick={refreshPage} id={`${hide}`}>
+        {/* <WWOCCButton className="" onClick={refreshPage} id={`${hide}`}>
           Contact Us
-        </WWOCCButton>
+        </WWOCCButton> */}
       </ContactForm>
 
       <ContactImage>

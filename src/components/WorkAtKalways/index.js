@@ -36,9 +36,9 @@ const WorkAtKalways = ({ isOpen, toggle }) => {
           data-height="500px"
           data-do-resize
         ></div>
-        <WWOCCButton className="p-2" onClick={refreshPage} id={`${hide}`}>
+        {/* <WWOCCButton className="p-2" onClick={refreshPage} id={`${hide}`}>
           Work At KALWAY
-        </WWOCCButton>
+        </WWOCCButton> */}
       </ContactForm>
     </ContactContainer>
   );

@@ -3,10 +3,11 @@ import image1 from '../../images/ut008.jpg';
 import image2 from '../../images/ut009.jpg';
 import image3 from '../../images/ut0010.jpg';
 import image4 from '../../images/ut0011.jpg';
+import PTO01 from '../../images/Kalway-Icon2.png';
 import bgcf from '../../images/bgcf.png';
 import map from '../../images/Cmap.png';
 import EmployeeReferral from '../../images/Employee-Referral.png';
-import MaternityPaternity from '../../images/Maternity-Paternity.png';
+import MaternityPaternity from '../../images/MP-Care-Icon.png';
 import Philanthropy from '../../images/Philanthropy.png';
 import PetInsurance from '../../images/Pet-Insurance-01.png';
 import HealthWellness from '../../images/Health-Wellness-01.png';
@@ -14,7 +15,8 @@ import MedicalVisionDental from '../../images/Medical-Vision-Dental-01.png';
 import AdditionalBenefits from '../../images/Additional-Benefits-01.png';
 import Four from '../../images/401k-01.png';
 import CareerGrowth from '../../images/Career-Growth-01.png';
-import PTO01 from '../../images/PTO-01.png';
+// import PTO01 from '../../images/PTO-01.png';
+
 import grid1 from '../../images/fleet.png';
 import grid2 from '../../images/grid2.png';
 import grid3 from '../../images/grid3.png';
@@ -83,8 +85,8 @@ class Careers extends React.Component {
 
           <HeroContent className="flex flex-col 	justify-items-end lg:w-1/2">
             <ContainerMain>
-              <HeroP>Start your career on Kalway</HeroP>   
-              <a href="/Contact">  
+              <HeroP>Start your career on Kalway</HeroP>
+              <a href="/Contact">
                 <button class="btn">
                   <span class="btn-text">Contact us</span>
                 </button>
@@ -101,7 +103,7 @@ class Careers extends React.Component {
                 who’ve created an environment where everyone is willing to help
                 everyone. It means challenging yourself and your peers to take
                 the road less traveled, to stay fearless and innovative, while
-                having fun too.   
+                having fun too.
               </p>
             </PCENTER>
           </HeroContent>
@@ -141,24 +143,30 @@ class Careers extends React.Component {
             <div className="flex flex-col lg:ml-4 ml-0 mt-24">
               <h4 className="text-3xl">Location</h4>
               <div className="lg:mt-4 mt-2">
-                <p className="pt-1"> Fontana, CA</p>
-                <p className="pt-1">Bakersfield, CA</p>
-                <p className="pt-1">San Marcos, CA</p>
-                <p className="pt-1">Lathrop , CA</p>
-                <p className="pt-1">Arlington, TX</p>
-                <p className="pt-1">Kansas City, MO</p>
-                <p className="pt-1">Incianapolis, IN</p>
-                <p className="pt-1">Atlanta, GA</p>
-                <p className="pt-1">Hampton, NJ</p>
-                <p className="pt-1">Abbotsford, BC</p>
-                <p className="pt-1">Edmonton, AL</p>
+                <Zoom right cascade>
+                  <div>
+                    <p className="pt-1"> Fontana, CA</p>
+                    <p className="pt-1">Bakersfield, CA</p>
+                    <p className="pt-1">San Marcos, CA</p>
+                    <p className="pt-1">Lathrop , CA</p>
+                    <p className="pt-1">Arlington, TX</p>
+                    <p className="pt-1">Kansas City, MO</p>
+                    <p className="pt-1">Incianapolis, IN</p>
+                    <p className="pt-1">Atlanta, GA</p>
+                    <p className="pt-1">Hampton, NJ</p>
+                    <p className="pt-1">Abbotsford, BC</p>
+                    <p className="pt-1">Edmonton, AL</p>
+                  </div>
+                </Zoom>
               </div>
               <h4 className="text-3xl lg:mt-8 mt-4 ">COMING SOON</h4>
-              <div className="lg:mt-4 mt-2">
-                <p className="pt-1">Chicago, IL</p>
-                <p className="pt-1">Miami, FL</p>
-                <p className="pt-1">Ontatio, CANADA</p>
-              </div>
+              <Zoom right cascade>
+                <div className="lg:mt-4 mt-2">
+                  <p className="pt-1">Chicago, IL</p>
+                  <p className="pt-1">Miami, FL</p>
+                  <p className="pt-1">Ontatio, CANADA</p>
+                </div>
+              </Zoom>
             </div>
           </div>
         </div>
@@ -175,7 +183,7 @@ class Careers extends React.Component {
           <div className="pb-10  pt-10 grid gap-10 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 self-center justify-center justify-items-center ">
             <Pulse>
               <Card className="flex flex-col items-left h-96 bg-white w-80 p-8">
-                <img src={EmployeeReferral} className="w-64 self-center"></img>
+                <img src={EmployeeReferral} className="w-32 self-center"></img>
                 <h4 className="text-2xl font-bold self-left pt-4">
                   Employee Referral Bonus Program
                 </h4>
@@ -188,8 +196,11 @@ class Careers extends React.Component {
             </Pulse>
             <Pulse>
               <Card className="flex flex-col items-left h-96 bg-white w-80 p-8 ">
-                <img src={MaternityPaternity} className="w-64"></img>
-                <h4 className="text-2xl font-bold self-left pt-4">
+                <img
+                  src={MaternityPaternity}
+                  className="w-40 self-center"
+                ></img>
+                <h4 className="text-2xl font-bold self-left">
                   Maternity/Paternity leave
                 </h4>
                 <p className="font-light self-left pt-4">
@@ -200,7 +211,7 @@ class Careers extends React.Component {
             </Pulse>
             <Pulse>
               <Card className="flex flex-col items-left h-96 bg-white w-80 p-8 ">
-                <img src={Philanthropy} className="w-64"></img>
+                <img src={Philanthropy} className="w-32"></img>
                 <h4 className="text-2xl font-bold self-left pt-4">
                   Philanthropy
                 </h4>
@@ -212,9 +223,9 @@ class Careers extends React.Component {
                 </p>
               </Card>
             </Pulse>
-            <Pulse>
+            {/* <Pulse>
               <Card className="flex flex-col items-left h-96 bg-white w-80 p-8 ">
-                <img src={PetInsurance} className="w-64"></img>
+                <img src={PetInsurance} className="w-32 self-center"></img>
                 <h4 className="text-2xl font-bold self-left pt-4">
                   Nationwide Pet Insurance
                 </h4>
@@ -223,10 +234,10 @@ class Careers extends React.Component {
                   rates for insurance through Nationwide for employees.
                 </p>
               </Card>
-            </Pulse>
+            </Pulse> */}
 
             <Card className="flex flex-col items-left h-96 bg-white w-80 p-8 ">
-              <img src={HealthWellness} className="w-64"></img>
+              <img src={HealthWellness} className="w-32 self-center"></img>
               <h4 className="text-2xl font-bold self-left pt-4">Wellness</h4>
               <p className="font-light self-left pt-4">
                 From physical to mental health, we cover it all. Company
@@ -237,7 +248,10 @@ class Careers extends React.Component {
 
             <Pulse>
               <Card className="flex flex-col items-left h-96 bg-white w-80 p-8 ">
-                <img src={MedicalVisionDental} className="w-64"></img>
+                <img
+                  src={MedicalVisionDental}
+                  className="w-32 self-center"
+                ></img>
                 <h4 className="text-2xl font-bold self-left pt-4">
                   Medical, dental, vision
                 </h4>
@@ -249,7 +263,10 @@ class Careers extends React.Component {
             </Pulse>
             <Pulse>
               <Card className="flex flex-col items-left h-96 bg-white w-80 p-8 ">
-                <img src={AdditionalBenefits} className="w-64"></img>
+                <img
+                  src={AdditionalBenefits}
+                  className="w-32 self-center "
+                ></img>
                 <h4 className="text-2xl font-bold self-left pt-4">
                   Additional Benefits
                 </h4>
@@ -259,9 +276,9 @@ class Careers extends React.Component {
                 </p>
               </Card>
             </Pulse>
-            <Pulse>
+            {/* <Pulse>
               <Card className="flex flex-col items-left h-96 bg-white w-80 p-8 ">
-                <img src={Four} className="w-64"></img>
+                <img src={Four} className="w-64 self-center"></img>
                 <h4 className="text-2xl font-bold self-left pt-4">
                   401k/Roth Program
                 </h4>
@@ -271,13 +288,11 @@ class Careers extends React.Component {
                   referrals.
                 </p>
               </Card>
-            </Pulse>
+            </Pulse> */}
             <Pulse>
               <Card className="flex flex-col items-left h-96 bg-white w-80 p-8 ">
-                <img src={PTO01} className="w-64"></img>
-                <h4 className="text-2xl font-bold self-left pt-4">
-                  Paid Time Off
-                </h4>
+                <img src={PTO01} className="w-40 self-center"></img>
+                <h4 className="text-2xl font-bold self-left ">Paid Time Off</h4>
                 <p className="font-light self-left pt-4">
                   Vacation? Staycation? Get some “you” time to recharge, travel
                   or just chill. On top of 6 company paid holidays, you’ll earn
@@ -287,7 +302,7 @@ class Careers extends React.Component {
             </Pulse>
             <Pulse>
               <Card className="flex flex-col items-left h-96 bg-white w-80 p-8 ">
-                <img src={CareerGrowth} className="w-64"></img>
+                <img src={CareerGrowth} className="w-32 self-center"></img>
                 <h4 className="text-2xl font-bold self-left pt-4">
                   Career Growth Opportunities
                 </h4>
@@ -308,30 +323,18 @@ class Careers extends React.Component {
                 backgroundImage: `url(${bgcf})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
+                backgroundPosition: 'center',
               }}
             >
               <h4 className="text-white text-center lg:text-5xl text-3xl lg:w-3/5">
                 We're here to make your career awesome.
               </h4>
-              <WWOCCButtonM onClick={this.handleClick}>
-                {this.state.show ? 'Hide' : 'Show'} Start now
+              <WWOCCButtonM>
+                <a href="/WorkAtKalway">Start now</a>
               </WWOCCButtonM>
             </div>
           </div>
           <div className="h-4"></div>
-          <FormC>
-            <div>
-              <Zoom top when={true}>
-                <div
-                  data-aidaform-widget="form-2019-12"
-                  data-url="https://shantanu.aidaform.com/work-at-kalways"
-                  data-width="100%"
-                  data-height="500px"
-                  data-do-resize
-                ></div>
-              </Zoom>
-            </div>
-          </FormC>
 
           {/* <div className="flex 2xl:flex-col self-center justify-center justify-items-center w-4/5">
             <h4 className=" self-left font-light text-5xl">FAQs</h4>
@@ -382,7 +385,7 @@ class Careers extends React.Component {
                 about the internal interview process.
               </div>
             </Faq>
-          </div> */}    
+          </div> */}
         </div>
       </>
     );
