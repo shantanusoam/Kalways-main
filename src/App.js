@@ -23,6 +23,7 @@ import WorkAtKalwayss from './components/WorkAtKalways';
 import Careers from './components/Careers';
 import ecommerce from './components/ecommerce';
 
+
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
@@ -101,8 +102,9 @@ function App() {
         <Route path='/sign-up' component={SignUp} />
       </Switch> */}
       {/* <PartnerCompnay></PartnerCompnay> */}
-      {/* <PartnerCompnay></PartnerCompnay> */}
+      {/* <PartnerCompnay></PartnerCompnay> */}   
 
+      
       <FooterSection />
       {/* <BottomBar></BottomBar> */}
     </Router>
@@ -110,3 +112,7 @@ function App() {
 }
 
 export default App;
+
+
+
+
