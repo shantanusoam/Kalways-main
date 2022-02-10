@@ -1,25 +1,54 @@
-import Styled from 'styled-components';
-import bgimage from '../../images/bgfreight.png';
+import Styled, { keyframes } from 'styled-components';
+import bgimage from '../../images/bgcarrers.png';
 import { Link as LinkR } from 'react-router-dom';
+
+const heartbeat = keyframes`
+
+
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+
+
+`;
+
 export const HeroContainer = Styled.div`
 
 overflow: hidden;
 // background:  url(${bgimage}) center ;
-background-image: radial-gradient(#42424280, #191919d9),  url(${bgimage});
-background-position: center; /* Center the image */
-background-repeat: no-repeat; /* Do not repeat the image */
+background-image: radial-gradient(#42424280,#9f9e9e17),  url(${bgimage});
 background-size: cover;
 display: flex;  
 flex-direction: column;
-justify-content: flex-end;
-align-items: center;
+j
 
 margin: 0;
 padding: 0;
 
 width: 100%;
 position: relative;
-height: 50vh;
+height: 90vh;
 
 z-index: 1;
 @media screen and (max-width: 768px) {
@@ -29,39 +58,70 @@ z-index: 1;
 
 `;
 export const Card = Styled.div`
-// box-shadow: 6px 4px 8px 2px rgb(0 0 0 / 20%);
-&hover: {
-    box-shadow: 6px 4px 8px 2px rgb(0 0 0 / 70%);
+box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+border-radius: 20px;
+img{
+    filter: grayscale(100%);
 }
 h4{
-    text-align: center;
-}
-:hover{
-    h4{
-        color: #00e700;
 
+font-style: normal;
+font-weight: bold;
+    font-size: 1.5rem;
+}
+`;
+export const Head = Styled.div`
+h2 {
+    text-align: start;
+    width: 100%;
+    div {
+      background: #00e700;
+      width: 20%;
+      border-radius: 10px;
+      transition: all 0.5s ease;
     }
+    :hover {
+      cursor: pointer;
+      div {
+        width: 85%;
+      }
+    }
+  }
+`;
+export const Line = Styled.div`
+border-left: 2.5px solid black;
+width: 10rem;
+height: 100%;
+`;
+export const Faq = Styled.div`  
+padding-top: 2rem;
+:hover{
+div{
+    display: block;
 }
+}    
+:first-child{
+    display: block;
 
+}
+div{
+    display: none;
+}
+:last-child{
+    padding-bottom: 2rem;
+}
 `;
 export const ContainerMain = Styled.div`
 display: flex;
 flex-direction: column;
 h1{
-    
-        :first-child{
-            color: #00e700;
-        }
-         @media screen and (max-width: 1366px) {
-             
-         }
-   
-    line-height: 5rem;
-    @media screen and (max-width: 1366px) {
-        line-height: 3rem;
-    }
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #fff;
+    letter-spacing: 0.3rem;
 }
 `;
+
 // export const HeroBg = Styled.div`
 
 // position: absolute;
@@ -146,6 +206,17 @@ height: 100%;
 // // background: #232a34;
 
 // `;
+export const FormC = Styled.div`
+z-index: 5;
+position: relative;
+div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+`;
 export const VideoBg = Styled.video`
 
 width: 100%;
@@ -163,20 +234,18 @@ background: #232a34;
 }
 `;
 export const HeroContent = Styled.div`
-BACKGROUND: #191919;
 padding: 0px 20px 0px 20px;
 z-index: 2;
-margin-left: -30vw;
+margin-left: 10vw;
+flex:1;
+width: 100%;
 
-justify-content: flex-end
-width:400PX;
-height:100%;
 flex-wrap: wrap;
 display: flex;
+justify-content: space-between;
+flex-direction: row;
 
-flex-direction: column;
-
-align-items: flex-end;
+align-items: center;
 
 
 div{
@@ -226,13 +295,28 @@ export const PCENTER = Styled.p`
 display: none;
     @media screen and (max-width: 768px) {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #fff;
-    text-align: center;
-    margin: 0px;
+    text-align: left;
+    margin: 2rem;
     padding: 0px;
+    h1{
+    
+        :first-child{
+            color: #00e700;
+        }
+         @media screen and (max-width: 1366px) {
+             
+         }
+   
+    line-height: 5rem;
+    @media screen and (max-width: 1366px) {
+        line-height: 3rem;
     }
+}
+    }
+
 `;
 export const HeroH1 = Styled.h1`
 
@@ -252,33 +336,33 @@ color: #ED1C24;
     font-size: 32px;
 }
 `;
-export const HeroP = Styled.p`
+export const HeroP = Styled.h2`
 margin-top: 24px;
 margin-bottom: 24px;
 font-family: sans-serif;
 font-style: normal;
-font-weight: 800;
-font-size: 12px;
-font-size: 4vw;
+font-weight: 600;
+font-size: 4rem;
+
 line-height: 89.69%;
 text-align: left;
-width: 100%;
+// width: 75%;
 z-index: 2;
 color: #FFFFFF;
 
 @media screen and (max-width: 768px) {
-    font-size: 24px;
+    font-size: 54px;
     width: 65%;
     padding: 0px 0px 50px 0px;
     text-align: center; 
 }
 /* @media screen and (max-width: 1024px) {
-    font-size: 20px;
+    font-size: 40px;
     width: 36%;
     text-align: center; 
 } */
 @media screen and (max-width: 375px) {
-    font-size: 22px;
+    font-size: 42px;
     width: 80%;
   
     text-align: center; 
@@ -412,35 +496,64 @@ color: #FFFFFF;
     font-size: 22px;
 }
 `;
-export const WWOCCButtonM = Styled(LinkR)`
-display: none;
+export const WWOCCButtonM = Styled.div`
 
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #01e600;
-    color: #010606;
-  }
-  @media screen and (max-width: 768px) {
-   padding: 25px;
-display: block;
-  display: flex;
-    justify-content: center;
-  background: #01e600;
-  padding: 10px 22px;
-  white-space: nowrap;
-  padding: 20px 92px;
-  font-size: 16px;
+
+align-items: center;
+  background-color: #0064bf;
+  border: 2px solid #06f;
+  box-sizing: border-box;
   color: #fff;
-  outline: none;
-  border: none;
-  
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
   text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 
-  /* Second Nav */
-  margin-top: 44px;
+
+:focus {
+  color: #171e29;
+
 }
+
+:hover {
+  background-color: #3385ff;
+  border-color: #3385ff;
+  fill: #06f;
+  animation: none;
+}
+
+:active {
+  background-color: #3385ff;
+  border-color: #3385ff;
+  fill: #06f;
+}
+
+@media (min-width: 768px) {
+ 
+    min-width: 170px;
+ 
+}
+  animation: ${heartbeat} 6s infinite;
+    
+
+
+  margin-top: 2rem;
+
 `;
 export const WWOCCButton = Styled(LinkR)`
 padding: 25px;

@@ -20,7 +20,8 @@
     "styled-components": "^5.3.3",
     "swiper": "^8.0.0",
     "vanilla-tilt": "^1.7.2",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "webfontloader": "^1.6.28"
   },
   "scripts": {
     "start": "craco start",

@@ -11,6 +11,10 @@ const Stickbar = () => {
           {/* <NavLink to="/" activeStyle>
             Track Your Shipment
           </NavLink> */}
+          {/* <NavLink to="/Abut" activeStyle>
+            <a href="/About">About Us</a>
+          </NavLink> */}
+
           <NavLink to="/Abut" activeStyle>
             <a href="/About">About Us</a>
           </NavLink>
@@ -19,6 +23,12 @@ const Stickbar = () => {
           </NavLink>
           <NavLink to="/WorkAtKalway" activeStyle>
             <a href="/WorkAtKalway">Work at KALWAY</a>
+          </NavLink>
+          <NavLink to="/Careers" activeStyle>
+            <a href="/Careers">Carrers</a>
+          </NavLink>
+          <NavLink to="/Ecommerce" activeStyle>
+            <a href="/Ecommerce">Ecommerce</a>
           </NavLink>
           {/* <NavLink to="/" activeStyle>
             Contact
