@@ -25,7 +25,7 @@ const Stickbar = () => {
             <a href="/WorkAtKalway">Work at KALWAY</a>
           </NavLink>
           <NavLink to="/Careers" activeStyle>
-            <a href="/Careers">Carrers</a>
+            <a href="/Careers">Careers</a>  
           </NavLink>
           <NavLink to="/Ecommerce" activeStyle>
             <a href="/Ecommerce">Ecommerce</a>

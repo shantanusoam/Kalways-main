@@ -83,7 +83,7 @@ const ecommerce = () => {
 
           <PCENTER class="text-white lg:p-8 text-left m-8">
             <h1 className=" font-normal pt-8 2xl:text-3xl pb-2 text-2xl w-auto">
-              Carrers
+              Careers
             </h1>
             <p>
               Being part of the Kalways family means surrounding yourself with a

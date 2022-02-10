@@ -117,7 +117,7 @@ class Careers extends React.Component {
             <div className="self-start ">
               {/* <h3 className="font-bold pt-10 text-xl">Additional Information</h3> */}
               <Head className=" lg:self-center self-start ">
-                <h2 className=" lg:self-center self-start pt-10 text-black font-bold text-3xl 2xl:text-4xl">
+                <h2 className=" lg:self-center self-start pt-10 text-black font-bold text-3xl 2xl:text-4xl">   
                   Where we work
                   <p className="h-2"></p>
                   <div className="w-40 h-1  hover:w-10"></div>

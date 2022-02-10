@@ -1,5 +1,5 @@
 import Styled, { keyframes } from 'styled-components';
-import bgimage from '../../images/bgcarrers.png';
+import bgimage from '../../images/bgcarrers.png';  
 import { Link as LinkR } from 'react-router-dom';
 
 const heartbeat = keyframes`
