@@ -38,9 +38,11 @@ overflow: hidden;
 // background:  url(${bgimage}) center ;
 background-image: radial-gradient(#42424280,#9f9e9e17),  url(${bgimage});
 background-size: cover;
+background-position: center;
+  
 display: flex;  
 flex-direction: column;
-j
+
 
 margin: 0;
 padding: 0;
@@ -51,7 +53,9 @@ height: 90vh;
 
 z-index: 1;
 @media screen and (max-width: 768px) {
-    background: transparent url(${bgimage}) no-repeat center center;
+  background-image: radial-gradient(#42424280,#9f9e9e17),  url(${bgimage});
+  background-size: cover;
+  background-position: center;
     
 }
 
@@ -325,7 +329,7 @@ display: none;
     h1{
     
         :first-child{
-            color: #00e700;
+            color: #;
         }
          @media screen and (max-width: 1366px) {
              
@@ -598,7 +602,9 @@ cursor: pointer;
 `;
 export const Formcontainer = Styled.div`
 background: #212121;
-
+h3{
+  text-align: center;
+}
 `;
 export const FormButton = Styled.div`
 

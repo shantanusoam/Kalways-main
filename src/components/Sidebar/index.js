@@ -76,6 +76,32 @@ const Sidebar = ({ isOpen, toggle }) => {
               Shipper
             </a>
           </SidebarLinkR>
+          <SidebarLinkR to="/Ecommerce">
+            <a
+              onClick={toggle}
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact={true}
+              activeClassName="active"
+              to="/Ecommerce"
+            >
+              Ecommerce
+            </a>
+          </SidebarLinkR>
+          <SidebarLinkR to="/Careers">
+            <a
+              onClick={toggle}
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact={true}
+              activeClassName="active"
+              to="/Careers"
+            >
+              Careers
+            </a>
+          </SidebarLinkR>
           <SidebarLinkR to="/Shipfreight">
             <a
               onClick={toggle}
@@ -104,28 +130,14 @@ const Sidebar = ({ isOpen, toggle }) => {
           </SidebarLinkR>
         </SidebarMenu>
         <SideBtnWrap className="mt-2">
-          <SidebarRoute to="/Contact">
-            <addEventListener
-              to="/Contact"
-              smooth={true}
-              duration={500}
-              spy={true}
-              exact={true}
-            >
-              Contact
-            </addEventListener>
+          <SidebarRoute>
+            <a href="/Contact">Contact Us</a>
           </SidebarRoute>
         </SideBtnWrap>
         <SideBtnWrap className="mt-2">
           <SidebarRoute to="/WorkAtKalway">
-            <addEventListener
-              to="/WorkAtKalway"
-              smooth={true}
-              duration={500}
-              spy={true}
-              exact={true}
-            >
-              Work At KALWAY
+            <addEventListener>
+              <a href="/WorkAtKalway">Work At KALWAY</a>
             </addEventListener>
           </SidebarRoute>
         </SideBtnWrap>

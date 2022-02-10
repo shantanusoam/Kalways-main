@@ -18,17 +18,18 @@ const Stickbar = () => {
           <NavLink to="/Abut" activeStyle>
             <a href="/About">About Us</a>
           </NavLink>
-          <NavLink to="/Contact" activeStyle>
-            <a href="/Contact">Contact Us</a>
-          </NavLink>
-          <NavLink to="/WorkAtKalway" activeStyle>
+
+          {/* <NavLink to="/WorkAtKalway" activeStyle>
             <a href="/WorkAtKalway">Work at KALWAY</a>
-          </NavLink>
+          </NavLink> */}
           <NavLink to="/Careers" activeStyle>
             <a href="/Careers">Careers</a>  
           </NavLink>
           <NavLink to="/Ecommerce" activeStyle>
-            <a href="/Ecommerce">Ecommerce</a>
+            <a href="/Ecommerce">E-commerce</a>
+          </NavLink>
+          <NavLink to="/Contact" activeStyle>
+            <a href="/Contact">Contact Us</a>
           </NavLink>
           {/* <NavLink to="/" activeStyle>
             Contact
