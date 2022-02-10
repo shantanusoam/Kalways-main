@@ -188,7 +188,7 @@ const ecommerce = () => {
               </p>
             </>
             <p className="text-gray-800 font-normal pt-8 text-xl w-auto ">
-              At KalWayr, our e-commerce solutions allow you to gain greater
+              At KALWAY, our e-commerce solutions allow you to gain greater
               control of product selection, inventory management, and customer
               service, while maintaining critical speed-to-market. With our
               focus on integration with all e-commerce platforms, fulfillment

@@ -48,7 +48,7 @@ export function FooterContainerBlack() {
             </div>
             <div>
               <h1 className="pt-10 font-bold text-xl   text-white">
-                © KalWay Inc, 2022 All rights reserved.
+                © KALWAY Inc, 2022 All rights reserved.
               </h1>
             </div>
           </div>
@@ -56,7 +56,7 @@ export function FooterContainerBlack() {
             <Footer.Title>About Us</Footer.Title>
 
             <Footer.Link href="/About">About</Footer.Link>
-            <Footer.Link href="/WorkAtKalway">Work at KalWay</Footer.Link>
+            <Footer.Link href="/WorkAtKalway">Work at KALWAY</Footer.Link>
           </Footer.Column>
           <Footer.Column>
             <Footer.Title>Services</Footer.Title>
