@@ -83,8 +83,8 @@ class Careers extends React.Component {
 
           <HeroContent className="flex flex-col 	justify-items-end lg:w-1/2">
             <ContainerMain>
-              <HeroP>Start your career on Kalway</HeroP>
-              <a href="/Contact">
+              <HeroP>Start your career on Kalway</HeroP>   
+              <a href="/Contact">  
                 <button class="btn">
                   <span class="btn-text">Contact us</span>
                 </button>
@@ -92,8 +92,8 @@ class Careers extends React.Component {
             </ContainerMain>
 
             <PCENTER class="text-white lg:p-8 text-left m-8">
-              <h1 className=" font-normal pt-8 2xl:text-3xl pb-2 text-2xl w-auto">
-                Carrers
+              <h1 className=" font-normal pt-8 2xl:text-3xl pb-2 text-2xl w-auto ">
+                Careers
               </h1>
               <p>
                 Being part of the Kalways family means surrounding yourself with
@@ -101,7 +101,7 @@ class Careers extends React.Component {
                 who’ve created an environment where everyone is willing to help
                 everyone. It means challenging yourself and your peers to take
                 the road less traveled, to stay fearless and innovative, while
-                having fun too.
+                having fun too.   
               </p>
             </PCENTER>
           </HeroContent>
@@ -382,7 +382,7 @@ class Careers extends React.Component {
                 about the internal interview process.
               </div>
             </Faq>
-          </div> */}
+          </div> */}    
         </div>
       </>
     );

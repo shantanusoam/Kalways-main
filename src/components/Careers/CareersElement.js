@@ -304,7 +304,11 @@ display: none;
     h1{
     
         :first-child{
-            color: #00e700;
+            color: #fff;
+            font-weight:bold;
+            font-size: 1.5rem;
+            letter-spacing: 0.02rem;
+            font-family: sans-serif;
         }
          @media screen and (max-width: 1366px) {
              
