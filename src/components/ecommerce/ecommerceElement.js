@@ -36,7 +36,7 @@ export const HeroContainer = Styled.div`
 
 overflow: hidden;
 // background:  url(${bgimage}) center ;
-background-image: radial-gradient(#42424280,#9f9e9e17),  url(${bgimage});
+background-image: radial-gradient(#42424280,#9f9e9e17);
 background-size: cover;
 background-position: center;
   
@@ -149,13 +149,29 @@ div{
 `;
 export const ContainerMain = Styled.div`
 display: flex;
+background-image: radial-gradient(#42424280,#9f9e9e17);
+background-size: cover;
+background-position: center;
 flex-direction: column;
+postion: relative;
 h1{
     font-size: 1.5rem;
     font-weight: normal;
     color: #fff;
     letter-spacing: 0.3rem;
 }
+`;
+export const ImageS = Styled.div`
+background-image: radial-gradient(#42424280,#9f9e9e17),  url(${(props) =>
+  props.img});
+background-size: cover;
+background-position: center;
+margin: 0;
+padding: 0;
+
+width: 100%;
+
+height: 100vh;
 `;
 
 // export const HeroBg = Styled.div`

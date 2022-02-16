@@ -91,7 +91,7 @@ function App() {
           component={ecommerce}
           title="Ecomerece"
         />
-        <Route exact path="/Careers" component={Careers} title="Careers" />
+ 
       </Switch>
 
       {/* <Switch>
