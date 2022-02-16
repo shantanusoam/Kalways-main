@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import image1 from '../../images/e-commerce1.jpg';
 import image2 from '../../images/e-commerce2.png';
+import image3 from '../../images/e-commerce3.png';
 
-import image3 from '../../images/ut0010.jpg';
+// import image3 from '../../images/ut0010.jpg';
 import image4 from '../../images/eci1.png';
 import { Autoplay, Pagination, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
@@ -110,12 +111,12 @@ const ecommerce = () => {
                 <ImageS alt="" img={image2}></ImageS>
               </SwiperSlide>
               <SwiperSlide>
-                <ImageS alt="" img={image2}></ImageS>
+                <ImageS alt="" img={image3}></ImageS>
               </SwiperSlide>
             </Swiper>
           </div>
         </div>
-        <div className="absolute bottom-80 lg:left-40 z-30">
+        <div className="absolute bottom-48 lg:left-40 z-30">
           <div className="hidden lg:block">
             <HeroP>EVER FULFILLING</HeroP>
             <a href="/Contact">
@@ -125,18 +126,18 @@ const ecommerce = () => {
             </a>
           </div>
 
-          <PCENTER class="text-white lg:p-8 text-left m-8">
-            <h1 className=" font-normal pt-8 2xl:text-3xl pb-2 text-2xl w-auto">
-              Careers
+          <PCENTER class="text-white  self-center m-8">
+            <h1 className=" font-bold pt-8 text-5xl pb-2 self-center  w-auto">
+              EVER FULFILLING
             </h1>
-            <p>
+            {/* <p>
               Being part of the Kalways family means surrounding yourself with a
               sense of openness and inclusivity,a group of different people
               who’ve created an environment where everyone is willing to help
               everyone. It means challenging yourself and your peers to take the
               road less traveled, to stay fearless and innovative, while having
               fun too.
-            </p>
+            </p> */}
           </PCENTER>
         </div>
       </ContainerMain>
@@ -260,8 +261,8 @@ const ecommerce = () => {
       </div>
 
       <Fulfillment>
-        <h3 className="self-center pb-8 pt-8 text-4xl">
-          The KALWAY e-commerce fulfillment advantage
+        <h3 className="self-center pb-8 pt-8 text-4xl p-4">
+          The KALWAY <br></br> e-commerce fulfillment advantage
         </h3>
         <div className="flex lg:flex-row flex-col w-5/6 pb-16  justify-around">
           <div className="flex-1 ">
@@ -292,8 +293,8 @@ const ecommerce = () => {
 
       <Bounce top>
         <Percentage>
-          <h3 className="self-center lg:pb-16 lg:pt-16 text-4xl text-black font-normal">
-            The KALWAY e-commerce fulfillment advantage
+          <h3 className="self-center p-4 lg:pb-16 lg:pt-16 text-4xl text-black font-normal">
+            The KALWAY<br></br> e-commerce fulfillment advantage
           </h3>
           <div className="flex lg:flex-row flex-col w-5/6 lg:pb-16  justify-around">
             <div className="flex-1 ">
@@ -312,7 +313,7 @@ const ecommerce = () => {
         </Percentage>
       </Bounce>
       <Bounce left>
-        <Formcontainer className="flex w-screen justify-center justify-items-center items-center">
+        <Formcontainer className=" flex w-screen justify-center justify-items-center items-center">
           <div
             className="flex flex-col justify-center justify-items-center items-center h-80 lg:w-full"
             style={{
@@ -321,8 +322,8 @@ const ecommerce = () => {
               backgroundSize: 'cover',
             }}
           >
-            <h3 className="self-center pb-8 pt-4 text-4xl text-white">
-              The KALWAY e-commerce fulfillment advantage
+            <h3 className="p-4 self-center pb-8 pt-4 text-4xl text-white">
+              The KALWAY <br></br> e-commerce fulfillment advantage
             </h3>
             <FormButton>
               {' '}

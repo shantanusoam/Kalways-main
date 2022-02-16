@@ -4,7 +4,7 @@ import image2 from '../../images/ut009.jpg';
 import image3 from '../../images/ut0010.jpg';
 import image4 from '../../images/ut0011.jpg';
 import PTO01 from '../../images/Kalway-Icon2.png';
-import bgcf from '../../images/bgcf.png';
+import bgcf from '../../images/CarrearD.png';
 import map from '../../images/Cmap.png';
 import EmployeeReferral from '../../images/Employee-Referral.png';
 import MaternityPaternity from '../../images/MP-Care-Icon.png';
@@ -119,7 +119,7 @@ class Careers extends React.Component {
             <div className="self-start ">
               {/* <h3 className="font-bold pt-10 text-xl">Additional Information</h3> */}
               <Head className=" lg:self-center self-start ">
-                <h2 className=" lg:self-center self-start pt-10 text-black font-bold text-3xl 2xl:text-4xl">   
+                <h2 className=" lg:self-center self-start pt-10 text-black font-bold text-3xl 2xl:text-4xl">
                   Where we work
                   <p className="h-2"></p>
                   <div className="w-40 h-1  hover:w-10"></div>
@@ -173,10 +173,10 @@ class Careers extends React.Component {
 
         <div className="flex flex-col bg-grey bg-white ">
           <Head className="  self-start pl-16">
-            <h2 className=" self-start pt-10 text-black  text-2xl 2xl:text-4xl">
+            <h2 className="font-bold self-start pt-10 text-black  text-2xl 2xl:text-4xl">
               Perks & Benefits
               <p className="h-2"></p>
-              <div className="w-40 h-1  hover:w-10"></div>
+              <div className="w-full h-1  hover:w-10"></div>
             </h2>
           </Head>
 
@@ -320,7 +320,7 @@ class Careers extends React.Component {
             <div
               className="flex flex-col justify-center justify-items-center items-center h-80 lg:w-5/6"
               style={{
-                backgroundImage: `url(${bgcf})`,
+                backgroundImage: `radial-gradient(#42424280,#9f9e9e17), url(${bgcf})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',

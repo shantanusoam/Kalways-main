@@ -128,6 +128,19 @@ const Sidebar = ({ isOpen, toggle }) => {
               Industries
             </a>
           </SidebarLinkR>
+          <SidebarLinkR to="/KalPower">
+            <a
+              onClick={toggle}
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact={true}
+              activeClassName="active"
+              to="/KalPower"
+            >
+              Kal Power
+            </a>
+          </SidebarLinkR>
         </SidebarMenu>
         <SideBtnWrap className="mt-2">
           <SidebarRoute>

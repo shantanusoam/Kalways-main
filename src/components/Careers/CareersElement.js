@@ -1,5 +1,6 @@
 import Styled, { keyframes } from 'styled-components';
-import bgimage from '../../images/bgcarrers.png';  
+import bgimage from '../../images/Carrear.png';
+import bgimages from '../../images/CarrearsS.png';
 import { Link as LinkR } from 'react-router-dom';
 
 const heartbeat = keyframes`
@@ -36,7 +37,7 @@ const heartbeat = keyframes`
 export const HeroContainer = Styled.div`
 
 overflow: hidden;
-// background:  url(${bgimage}) center ;
+
 background-image: radial-gradient(#42424280,#9f9e9e17),  url(${bgimage});
 background-size: cover;
 display: flex;  
@@ -48,14 +49,14 @@ padding: 0;
 
 width: 100%;
 position: relative;
-height: 90vh;
+height: 100vh;
 
 z-index: 1;
-@media screen and (max-width: 768px) {
-    background: transparent url(${bgimage}) no-repeat center center;
-    
-}
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  background-image: radial-gradient(#42424280,#9f9e9e17),  url(${bgimage});
+  background-size: cover;
+}
 `;
 export const Card = Styled.div`
 box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);

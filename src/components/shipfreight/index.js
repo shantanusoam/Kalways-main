@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import image1 from '../../images/ut008.jpg';
-import image2 from '../../images/ut009.jpg';
+import image2 from '../../images/NetworkD.png';
 import image3 from '../../images/ut0010.jpg';
 import image4 from '../../images/ut0011.jpg';
 import grid1 from '../../images/fleet.png';

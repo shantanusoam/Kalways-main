@@ -107,7 +107,6 @@ export const Percentage = Styled.div`
 display: flex;
 margin-top: 1rem
 width: 100%;
-
 h3{
     text-align: center;
 }
@@ -172,6 +171,9 @@ padding: 0;
 width: 100%;
 
 height: 100vh;
+@media screen and (max-width: 768px) {
+  height: 75vh;
+}
 `;
 
 // export const HeroBg = Styled.div`
@@ -339,11 +341,11 @@ display: none;
     font-size: 1.2rem;
     font-weight: bold;
     color: #fff;
-    text-align: left;
+    text-align: center;
     margin: 2rem;
     padding: 0px;
     h1{
-    
+      text-align: center;
         :first-child{
             color: #;
         }
@@ -352,6 +354,8 @@ display: none;
          }
    
     line-height: 5rem;
+    font-size: 2rem;
+    font-weight: 750;
     @media screen and (max-width: 1366px) {
         line-height: 3rem;
     }

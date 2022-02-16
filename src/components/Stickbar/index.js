@@ -16,20 +16,24 @@ const Stickbar = () => {
           </NavLink> */}
 
           <NavLink to="/Abut" activeStyle>
-            <a href="/About">About Us</a>
+            <a href="/About">ABOUT US</a>
           </NavLink>
 
           {/* <NavLink to="/WorkAtKalway" activeStyle>
             <a href="/WorkAtKalway">Work at KALWAY</a>
           </NavLink> */}
-          <NavLink to="/Careers" activeStyle>
-            <a href="/Careers">Careers</a>  
-          </NavLink>
           <NavLink to="/Ecommerce" activeStyle>
-            <a href="/Ecommerce">E-commerce</a>
+            <a href="/Ecommerce">E-COMMERCE</a>
+          </NavLink>
+
+          <NavLink to="/KalPower" activeStyle>
+            <a href="/KalPower">KAL POWER</a>
+          </NavLink>
+          <NavLink to="/Careers" activeStyle>
+            <a href="/Careers">CAREERS</a>
           </NavLink>
           <NavLink to="/Contact" activeStyle>
-            <a href="/Contact">Contact Us</a>
+            <a href="/Contact">CONTACT US</a>
           </NavLink>
           {/* <NavLink to="/" activeStyle>
             Contact
