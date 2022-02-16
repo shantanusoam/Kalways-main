@@ -342,11 +342,11 @@ color: #ED1C24;
 `;
 export const HeroP = Styled.h2`
 margin-top: 24px;
-margin-bottom: 18px;
+margin-bottom: 8px;
 font-family: sans-serif;
 font-style: normal;
 font-weight: 600;
-font-size: 4rem;
+font-size: 3rem;
 
 line-height: 89.69%;
 text-align: left;

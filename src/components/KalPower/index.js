@@ -87,8 +87,8 @@ class KalPower extends React.Component {
           <HeroContent className="flex flex-col 	justify-items-end lg:w-1/2">
             <ContainerMain>
               <HeroP>KALPOWER</HeroP>
-              <p className="text-white text-xl pb-4">Keep You running</p>
-              <a href="/Contact">
+              <p className="text-white text-xl pb-6">Keep You running</p>
+              <a href="/Contact" target="_blank">
                 <button class="btn">
                   <span class="btn-text">Contact us</span>
                 </button>
@@ -197,7 +197,7 @@ class KalPower extends React.Component {
               </h4>
               <div className="pb-64 lg:ml-40 pt-10 ml-4">
                 <button class="btn">
-                  <a class="btn-text" href="/WorkAtKalway">
+                  <a class="btn-text" href="/Contact" target="_blank">
                     Start now
                   </a>
                 </button>
@@ -217,7 +217,7 @@ class KalPower extends React.Component {
                   </p>
                   <div className=" pt-10">
                     <button class="btn">
-                      <a class="btn-text" href="/WorkAtKalway">
+                      <a class="btn-text" href="/Contact" target="_blank">
                         Start now
                       </a>
                     </button>

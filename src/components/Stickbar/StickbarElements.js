@@ -26,7 +26,7 @@ export const NavLink = styled.div`
   align-items: center;
   justify-content: end;
 
-  font-size: 1rem;
+  font-size: 0.9rem;
   top: 0;
   z-index: 20;
   text-decoration: none;
