@@ -116,7 +116,7 @@ const ecommerce = () => {
             </Swiper>
           </div>
         </div>
-        <div className="absolute bottom-48 lg:left-40 z-30">
+        <div className="absolute bottom-48 lg:bottom-80 lg:left-40 z-30">
           <div className="hidden lg:block">
             <HeroP>EVER FULFILLING</HeroP>
             <a href="/Contact">
