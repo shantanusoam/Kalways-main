@@ -1,5 +1,5 @@
 import Styled, { keyframes } from 'styled-components';
-import bgimage from '../../images/bgcarrers.png';  
+import bgimage from '../../images/bgcarrers.jpg';
 import { Link as LinkR } from 'react-router-dom';
 
 const heartbeat = keyframes`
@@ -48,11 +48,12 @@ padding: 0;
 
 width: 100%;
 position: relative;
-height: 90vh;
+height:  90vh;
 
 z-index: 1;
 @media screen and (max-width: 768px) {
-    background: transparent url(${bgimage}) no-repeat center center;
+  background-image: radial-gradient(#42424280,#9f9e9e17),  url(${bgimage});
+  height:  70vh;
     
 }
 
@@ -114,12 +115,7 @@ div{
 export const ContainerMain = Styled.div`
 display: flex;
 flex-direction: column;
-h1{
-    font-size: 1.5rem;
-    font-weight: normal;
-    color: #fff;
-    letter-spacing: 0.3rem;
-}
+
 `;
 
 // export const HeroBg = Styled.div`
@@ -306,7 +302,7 @@ display: none;
         :first-child{
             color: #fff;
             font-weight:bold;
-            font-size: 1.5rem;
+            font-size: 2rem;
             letter-spacing: 0.02rem;
             font-family: sans-serif;
         }
@@ -346,11 +342,11 @@ margin-bottom: 24px;
 font-family: sans-serif;
 font-style: normal;
 font-weight: 600;
-font-size: 4rem;
+font-size: 3.5rem;
 
 line-height: 89.69%;
 text-align: left;
-// width: 75%;
+
 z-index: 2;
 color: #FFFFFF;
 
@@ -360,17 +356,8 @@ color: #FFFFFF;
     padding: 0px 0px 50px 0px;
     text-align: center; 
 }
-/* @media screen and (max-width: 1024px) {
-    font-size: 40px;
-    width: 36%;
-    text-align: center; 
-} */
-@media screen and (max-width: 375px) {
-    font-size: 42px;
-    width: 80%;
-  
-    text-align: center; 
-}
+
+
 `;
 export const CardHeading = Styled.button`
 

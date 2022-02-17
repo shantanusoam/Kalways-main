@@ -85,7 +85,7 @@ class Careers extends React.Component {
 
           <HeroContent className="flex flex-col 	justify-items-end lg:w-1/2">
             <ContainerMain>
-              <HeroP>Start your career on Kalway</HeroP>
+              <HeroP>Start your career on KALWAY</HeroP>
               <a href="/Contact">
                 <button class="btn">
                   <span class="btn-text">Contact us</span>
@@ -94,17 +94,17 @@ class Careers extends React.Component {
             </ContainerMain>
 
             <PCENTER class="text-white lg:p-8 text-left m-8">
-              <h1 className=" font-normal pt-8 2xl:text-3xl pb-2 text-2xl w-auto ">
-                Careers
+              <h1 className=" font-normal pt-8 2xl:text-3xl pb-2 text-4xl w-auto ">
+                Start your career on KALWAY
               </h1>
-              <p>
-                Being part of the Kalways family means surrounding yourself with
+              {/* <p>
+                Being part of the KALWAY family means surrounding yourself with
                 a sense of openness and inclusivity,a group of different people
                 who’ve created an environment where everyone is willing to help
                 everyone. It means challenging yourself and your peers to take
                 the road less traveled, to stay fearless and innovative, while
                 having fun too.
-              </p>
+              </p> */}
             </PCENTER>
           </HeroContent>
         </HeroContainer>
@@ -119,7 +119,7 @@ class Careers extends React.Component {
             <div className="self-start ">
               {/* <h3 className="font-bold pt-10 text-xl">Additional Information</h3> */}
               <Head className=" lg:self-center self-start ">
-                <h2 className=" lg:self-center self-start pt-10 text-black font-bold text-3xl 2xl:text-4xl">   
+                <h2 className=" lg:self-center self-start pt-10 text-black font-bold text-3xl 2xl:text-4xl">
                   Where we work
                   <p className="h-2"></p>
                   <div className="w-40 h-1  hover:w-10"></div>
@@ -330,7 +330,7 @@ class Careers extends React.Component {
                 We're here to make your career awesome.
               </h4>
               <WWOCCButtonM>
-                <a href="/WorkAtKalway">Start now</a>
+                <a href="/WorkAtKalway">Apply now</a>
               </WWOCCButtonM>
             </div>
           </div>

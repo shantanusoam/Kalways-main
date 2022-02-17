@@ -82,28 +82,20 @@ const ecommerce = () => {
           </ContainerMain>
 
           <PCENTER class="text-white lg:p-8 text-left m-8">
-            <h1 className=" font-normal pt-8 2xl:text-3xl pb-2 text-2xl w-auto">
-              Careers
+            <h1 className=" font-bold pt-8 2xl:text-3xl pb-2 text-4xl w-auto">
+              EVER FULFILLING
             </h1>
-            <p>
-              Being part of the Kalways family means surrounding yourself with a
-              sense of openness and inclusivity,a group of different people
-              who’ve created an environment where everyone is willing to help
-              everyone. It means challenging yourself and your peers to take the
-              road less traveled, to stay fearless and innovative, while having
-              fun too.
-            </p>
           </PCENTER>
         </HeroContent>
       </HeroContainer>
       <Bounce right>
         <Formcontainer className="flex flex-col justify-center lg:items-center items-start bg-black p-8">
           <h3 className="self-center pb-8 pt-4 lg:text-4xl text-2xl text-white">
-            The Ryder e-commerce fulfillment advantage
+            The KALWAY e-commerce fulfillment advantage
           </h3>
           <FormButton className="self-center">
             {' '}
-            <a href="/Contact">SPEAK TO A RYDER EXPERT</a>
+            <a href="/Contact">SPEAK TO A KALWAY EXPERT</a>
           </FormButton>
         </Formcontainer>
       </Bounce>
@@ -181,7 +173,7 @@ const ecommerce = () => {
           <div className="lg:pr-40 ml-4 mt-4 lg:w-4/5 mr-4">
             <>
               <h3 className="font-bold  lg:text-3xl text-3xl">
-                Kalways Postions
+                KALWAY Postions
               </h3>
               <p className="font-bold  lg:text-2xl text-xl ">
                 Flexible solutions to meets today’s omni-channel demands
@@ -209,14 +201,14 @@ const ecommerce = () => {
             </p>
           </div>
           <div>
-            <img src={image4} className="lg:w-auto w-96" alt=""></img>
+            <img src={image4} className="lg:w-auto w-full" alt=""></img>
           </div>
         </div>
       </div>
 
       <Fulfillment>
-        <h3 className="self-center pb-8 pt-8 text-4xl">
-          The Ryder e-commerce fulfillment advantage
+        <h3 className="self-center pb-8 pt-8 text-3xl">
+          The KALWAY <br></br> e-commerce fulfillment advantage
         </h3>
         <div className="flex lg:flex-row flex-col w-5/6 pb-16  justify-around">
           <div className="flex-1 ">
@@ -247,8 +239,8 @@ const ecommerce = () => {
 
       <Bounce top>
         <Percentage>
-          <h3 className="self-center lg:pb-16 lg:pt-16 text-4xl text-black font-normal">
-            The KALWAY e-commerce fulfillment advantage
+          <h3 className="self-center lg:pb-16 lg:pt-16 pt-4 text-3xl text-black font-normal">
+            The KALWAY <br></br> e-commerce fulfillment advantage
           </h3>
           <div className="flex lg:flex-row flex-col w-5/6 lg:pb-16  justify-around">
             <div className="flex-1 ">
@@ -276,12 +268,12 @@ const ecommerce = () => {
               backgroundSize: 'cover',
             }}
           >
-            <h3 className="self-center pb-8 pt-4 text-4xl text-white">
-              The Ryder e-commerce fulfillment advantage
+            <h3 className="self-center pb-8 pt-4 text-3xl text-white">
+              The KALWAY <br></br>e-commerce fulfillment advantage
             </h3>
             <FormButton>
               {' '}
-              <a href="/Contact">SPEAK TO A RYDER EXPERT</a>
+              <a href="/Contact">SPEAK TO A KALWAY EXPERT</a>
             </FormButton>
           </div>
         </Formcontainer>
