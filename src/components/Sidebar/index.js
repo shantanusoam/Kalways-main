@@ -138,7 +138,7 @@ const Sidebar = ({ isOpen, toggle }) => {
               activeClassName="active"
               to="/KalPower"
             >
-              Kal Power
+              KalPower
             </a>
           </SidebarLinkR>
         </SidebarMenu>

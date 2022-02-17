@@ -44,7 +44,7 @@ import styled from 'styled-components';
 const Gradients = styled.div`
   background-image: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.7) 50%,
+    rgba(0, 0, 0, 0.6) 20%,
     rgba(0, 0, 0, 0) 100%
   );
   width: 100%;

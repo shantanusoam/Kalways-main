@@ -77,7 +77,7 @@ class Careers extends React.Component {
   render() {
     return (
       <>
-        <HeroContainer ontainer id="Carrers ">
+        <HeroContainer id="Carrers ">
           {/* <Gradients></Gradients>
           <HeroBg>
             <BgImage></BgImage>
@@ -85,7 +85,7 @@ class Careers extends React.Component {
 
           <HeroContent className="flex flex-col 	justify-items-end lg:w-1/2">
             <ContainerMain>
-              <HeroP>Start your career on Kalway</HeroP>
+              <HeroP>Start your career at Kalway</HeroP>
               <a href="/Contact">
                 <button class="btn">
                   <span class="btn-text">Contact us</span>

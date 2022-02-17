@@ -53,8 +53,8 @@ height: 100vh;
 
 z-index: 1;
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  background-image: radial-gradient(#42424280,#9f9e9e17),  url(${bgimage});
+@media (max-width: 768px) {
+  background-image: radial-gradient(#42424280,#9f9e9e17),  url(${bgimages});
   background-size: cover;
 }
 `;
