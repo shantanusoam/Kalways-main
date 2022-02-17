@@ -109,7 +109,7 @@ class KalPower extends React.Component {
           </HeroContent>
         </HeroContainer>
 
-        <div className="flex flex-col bg-grey bg-white pt-32">
+        <div className="flex flex-col bg-grey bg-white lg:pt-32">
           {/* <Head className="  self-start pl-16">
             <h2 className=" self-start pt-10 text-black  text-2xl 2xl:text-4xl">
               Perks & Benefits
@@ -118,12 +118,12 @@ class KalPower extends React.Component {
             </h2>
           </Head> */}
 
-          <div className="pb-10  pt-10 lg:pl-32 lg:pr-32 grid gap-20 2xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 self-center justify-center justify-items-center ">
+          <div className="lg:pb-10  lg:pt-10 lg:pl-32 lg:pr-32 grid gap-20 2xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 self-center justify-center justify-items-center ">
             <Pulse>
               <Card className="flex flex-col items-left h-auto bg-white w-auto p-8">
                 <img src={acessTime} className="w-20 self-left"></img>
                 <h4 className="text-2xl font-bold self-left pt-4">
-                  Less detention time
+                  Less detention<br></br> time
                 </h4>
                 <p className="font-light self-left pt-4 pb-20">
                   At KalWay, our e-commerce solutions allow you to gain greater
@@ -139,7 +139,7 @@ class KalPower extends React.Component {
               <Card className="flex flex-col items-left h-auto bg-white w-auto p-8">
                 <img src={MoreTime} className="w-20 self-left"></img>
                 <h4 className="text-2xl font-bold self-left pt-4 ">
-                  More time driving
+                  More time <br></br> driving
                 </h4>
                 <p className="font-light self-left pt-4 pb-20">
                   At KalWay, our e-commerce solutions allow you to gain greater
@@ -155,7 +155,7 @@ class KalPower extends React.Component {
               <Card className="flex flex-col items-left h-auto bg-white w-auto p-8">
                 <img src={NewBusiness} className="w-20 self-left"></img>
                 <h4 className="text-2xl font-bold self-left pt-4">
-                  New business opportunities
+                  New business<br></br> opportunities
                 </h4>
                 <p className="font-light self-left pt-4 pb-20">
                   At KalWay, our e-commerce solutions allow you to gain greater
@@ -196,11 +196,11 @@ class KalPower extends React.Component {
                 Get back on the road faster
               </h4>
               <div className="pb-64 lg:ml-40 pt-10 ml-4">
-                <button class="btn">
-                  <a class="btn-text" href="/Contact" target="_blank">
-                    Start now
-                  </a>
-                </button>
+                <a className="pt-10" href="/Contact" target="_blank">
+                  <button class="btn">
+                    <div class="btn-text">Start now</div>
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -215,12 +215,12 @@ class KalPower extends React.Component {
                   <p className=" lg:text-2xl text-xl lg:pt-10">
                     Book the loads you want, 24 hours a day
                   </p>
-                  <div className=" pt-10">
-                    <button class="btn">
-                      <a class="btn-text" href="/Contact" target="_blank">
-                        Start now
-                      </a>
-                    </button>
+                  <div className="lg:pt-10 pt-10">
+                    <a className="pt-10" href="/Contact" target="_blank">
+                      <button class="btn">
+                        <div class="btn-text">Start now</div>
+                      </button>
+                    </a>
                   </div>
                 </>
                 {/* <p className="text-gray-800 font-normal pt-8 text-xl w-auto ">

@@ -52,6 +52,7 @@ height: 90vh;
 
 z-index: 1;
 @media screen and (max-width: 768px) {
+  height: 90vh;
     background: radial-gradient(#42424280,#9f9e9e17), url(${bgimage}) no-repeat center center;
     
 }
