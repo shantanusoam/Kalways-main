@@ -1,8 +1,12 @@
 import React, { useEffect } from 'react';
-import image1 from '../../images/ut008.jpg';
-import image2 from '../../images/ut009.jpg';
-import image3 from '../../images/ut0010.jpg';
+import image1 from '../../images/e-commerce1.png';
+import image2 from '../../images/e-commerce2.png';
+import image3 from '../../images/e-commerce3.png';
+
+// import image3 from '../../images/ut0010.jpg';
 import image4 from '../../images/eci1.png';
+import { Autoplay, Pagination, Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 import ecb from '../../images/ecb.png';
 import Bounce from 'react-reveal/Bounce';
 import EmployeeReferral from '../../images/Employee-Referral.png';
@@ -38,6 +42,7 @@ import Fade from 'react-reveal/Fade';
 // import bankground from "../../images";
 import { animateScroll as scroll, Link } from 'react-scroll';
 import {
+  ImageS,
   HeroContainer,
   WWOCCButtonM,
   Percentage,
@@ -65,29 +70,78 @@ import {
 const ecommerce = () => {
   return (
     <>
-      <HeroContainer ontainer id="Carrers ">
-        {/* <Gradients></Gradients>
+      {/* <Gradients></Gradients>
         <HeroBg>
           <BgImage></BgImage>
         </HeroBg> */}
 
-        <HeroContent className="lg:flex lg:flex-col  	lg:justify-items-end lg:w-1/2">
-          <ContainerMain>
+      <ContainerMain className="relative">
+        <div className=" flex flex-col  bg-slate-500">
+          {/* <div className="lg:flex lg:flex-row hidden">
+            <img src={image1} className="flex-1 h-64 2xl:h-80 " alt=""></img>
+            <img src={image2} className="flex-1 h-64 2xl:h-80 " alt=""></img>
+            <img src={image4} className="flex-1 h-64 2xl:h-80 " alt=""></img>
+          </div> */}
+
+          <div className="block  z-0">
+            <div
+              className=" bg-gradient-to-l rounded-lg  
+                from-blue-400 via-green-500 to-red-500
+                z-20
+                "
+            ></div>
+            <Swiper
+              spaceBetween={30}
+              centeredSlides={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={true}
+              modules={[Autoplay, Pagination, Navigation]}
+              className="mySwiper z-10 w-full"
+            >
+              <SwiperSlide>
+                <ImageS alt="" img={image1}></ImageS>
+              </SwiperSlide>
+              <SwiperSlide>
+                <ImageS alt="" img={image2}></ImageS>
+              </SwiperSlide>
+              <SwiperSlide>
+                <ImageS alt="" img={image3}></ImageS>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </div>
+        <div className="absolute bottom-48 lg:bottom-80 lg:left-40 z-30">
+          <div className="hidden lg:block">
             <HeroP>EVER FULFILLING</HeroP>
             <a href="/Contact">
               <button class="btn">
                 <span class="btn-text">SPEAK TO AN EXPERT</span>
               </button>
             </a>
-          </ContainerMain>
+          </div>
 
-          <PCENTER class="text-white lg:p-8 text-left m-8">
-            <h1 className=" font-bold pt-8 2xl:text-3xl pb-2 text-4xl w-auto">
+          <PCENTER class="text-white  self-center m-8">
+            <h1 className=" font-bold pt-8 text-5xl pb-2 self-center  w-auto">
               EVER FULFILLING
             </h1>
+            {/* <p>
+              Being part of the Kalways family means surrounding yourself with a
+              sense of openness and inclusivity,a group of different people
+              who’ve created an environment where everyone is willing to help
+              everyone. It means challenging yourself and your peers to take the
+              road less traveled, to stay fearless and innovative, while having
+              fun too.
+            </p> */}
           </PCENTER>
-        </HeroContent>
-      </HeroContainer>
+        </div>
+      </ContainerMain>
+
       <Bounce right>
         <Formcontainer className="flex flex-col justify-center lg:items-center items-start bg-black p-8">
           <h3 className="self-center pb-8 pt-4 lg:text-4xl text-2xl text-white">
@@ -207,7 +261,7 @@ const ecommerce = () => {
       </div>
 
       <Fulfillment>
-        <h3 className="self-center pb-8 pt-8 text-3xl">
+        <h3 className="self-center pb-8 pt-8 text-4xl p-4">
           The KALWAY <br></br> e-commerce fulfillment advantage
         </h3>
         <div className="flex lg:flex-row flex-col w-5/6 pb-16  justify-around">
@@ -239,8 +293,8 @@ const ecommerce = () => {
 
       <Bounce top>
         <Percentage>
-          <h3 className="self-center lg:pb-16 lg:pt-16 pt-4 text-3xl text-black font-normal">
-            The KALWAY <br></br> e-commerce fulfillment advantage
+          <h3 className="self-center p-4 lg:pb-16 lg:pt-16 text-4xl text-black font-normal">
+            The KALWAY<br></br> e-commerce fulfillment advantage
           </h3>
           <div className="flex lg:flex-row flex-col w-5/6 lg:pb-16  justify-around">
             <div className="flex-1 ">
@@ -259,7 +313,7 @@ const ecommerce = () => {
         </Percentage>
       </Bounce>
       <Bounce left>
-        <Formcontainer className="flex w-screen justify-center justify-items-center items-center">
+        <Formcontainer className=" flex w-screen justify-center justify-items-center items-center">
           <div
             className="flex flex-col justify-center justify-items-center items-center h-80 lg:w-full"
             style={{
@@ -268,8 +322,8 @@ const ecommerce = () => {
               backgroundSize: 'cover',
             }}
           >
-            <h3 className="self-center pb-8 pt-4 text-3xl text-white">
-              The KALWAY <br></br>e-commerce fulfillment advantage
+            <h3 className="p-4 self-center pb-8 pt-4 text-4xl text-white">
+              The KALWAY <br></br> e-commerce fulfillment advantage
             </h3>
             <FormButton>
               {' '}

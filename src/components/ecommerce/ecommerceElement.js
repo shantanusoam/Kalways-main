@@ -36,7 +36,7 @@ export const HeroContainer = Styled.div`
 
 overflow: hidden;
 // background:  url(${bgimage}) center ;
-background-image: radial-gradient(#42424280,#9f9e9e17),  url(${bgimage});
+background-image: radial-gradient(#42424280,#9f9e9e17);
 background-size: cover;
 background-position: center;
   
@@ -107,7 +107,6 @@ export const Percentage = Styled.div`
 display: flex;
 margin-top: 1rem
 width: 100%;
-
 h3{
     text-align: center;
 }
@@ -149,12 +148,31 @@ div{
 `;
 export const ContainerMain = Styled.div`
 display: flex;
+background-image: radial-gradient(#42424280,#9f9e9e17);
+background-size: cover;
+background-position: center;
 flex-direction: column;
+postion: relative;
 h1{
     font-size: 1.5rem;
     font-weight: normal;
     color: #fff;
     letter-spacing: 0.3rem;
+}
+`;
+export const ImageS = Styled.div`
+background-image: radial-gradient(#42424280,#9f9e9e17),  url(${(props) =>
+  props.img});
+background-size: cover;
+background-position: center;
+margin: 0;
+padding: 0;
+
+width: 100%;
+
+height: 100vh;
+@media screen and (max-width: 768px) {
+  height: 75vh;
 }
 `;
 
@@ -323,11 +341,11 @@ display: none;
     font-size: 1.2rem;
     font-weight: bold;
     color: #fff;
-    text-align: left;
+    text-align: center;
     margin: 2rem;
     padding: 0px;
     h1{
-    
+      text-align: center;
         :first-child{
             color: #;
         }
@@ -336,6 +354,8 @@ display: none;
          }
    
     line-height: 5rem;
+    font-size: 2rem;
+    font-weight: 750;
     @media screen and (max-width: 1366px) {
         line-height: 3rem;
     }

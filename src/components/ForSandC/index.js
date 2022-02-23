@@ -1,6 +1,6 @@
 import React from 'react';
-import containers from '../../images/Ccontainers.png';
-import Hcontainers from '../../images/Hcontainers.png';
+import containers from '../../images/Ccontainers.jpg';
+import Hcontainers from '../../images/Hcontainers.jpg';
 
 import './style.css';
 import {

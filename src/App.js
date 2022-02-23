@@ -22,7 +22,7 @@ import Industries from './components/Industries';
 import WorkAtKalwayss from './components/WorkAtKalways';
 import Careers from './components/Careers';
 import ecommerce from './components/ecommerce';
-
+import KalPower from './components/KalPower';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -91,7 +91,7 @@ function App() {
           component={ecommerce}
           title="Ecomerece"
         />
-        <Route exact path="/Careers" component={Careers} title="Careers" />
+        <Route exact path="/KalPower" component={KalPower} title="KalPower" />
       </Switch>
 
       {/* <Switch>
@@ -102,9 +102,8 @@ function App() {
         <Route path='/sign-up' component={SignUp} />
       </Switch> */}
       {/* <PartnerCompnay></PartnerCompnay> */}
-      {/* <PartnerCompnay></PartnerCompnay> */}   
+      {/* <PartnerCompnay></PartnerCompnay> */}
 
-      
       <FooterSection />
       {/* <BottomBar></BottomBar> */}
     </Router>
@@ -112,7 +111,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
