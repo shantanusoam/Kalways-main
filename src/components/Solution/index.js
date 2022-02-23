@@ -112,7 +112,7 @@ const Solution = ({ isOpen, toggle }) => {
                   <div className="text-gray-800 text-1xl mb-5 lg:h-56">
                     As the market fluctuates, your supply chain must adapt
                     instantly, which means you need more than just a
-                    transportation management system (TMS). Without a 3PL who
+                    transportation management system (TMS). Without a 5PL who
                     can configure a solution to support your needs, you’ll be
                     stuck dealing with cost volatility and service disruptions.
                     We help you achieve end-to-end network execution, real-time

@@ -154,7 +154,7 @@ const Industrie = () => {
             <p className="text-gray-800 font-normal pt-9 text-2xl w-auto 2xl:text-center text-left">
               We will help you get your products where they need to go fast,
               efficiently and without interruption. Join the more than 3,500 CPG
-              companies who trust us with their freight.   
+              companies who trust us with their freight.
             </p>
           </div>
 
@@ -165,8 +165,8 @@ const Industrie = () => {
               <p className="text-gray-800 font-normal pt-2 text-xl w-auto">
                 Automotive shippers can’t afford to have their supply chain slam
                 on the brakes. Keeping up with changes in demand and fulfilling
-                orders can be daunting. You need a 3PL you can trust with a
-                reliable, responsive carrier network to make sure you never hit      
+                orders can be daunting. You need a 5PL you can trust with a
+                reliable, responsive carrier network to make sure you never hit
                 a roadblock.
               </p>
             </div>
@@ -215,7 +215,7 @@ const Industrie = () => {
             </div>
             <div className="flex flex-col items-start">
               <img src={mgrid14} width="150px"></img>
-              <h4 className="text-2xl">AIR & OCEAN</h4>  
+              <h4 className="text-2xl">AIR & OCEAN</h4>
               <p className="text-gray-800 font-normal pt-2 text-xl w-auto">
                 Running a manufacturing supply chain is not easy. Though
                 transportation is often viewed as a commodity, the cost of

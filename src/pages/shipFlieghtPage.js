@@ -8,7 +8,7 @@ import './shipFleight.css';
 import image1 from '../images/dv01.jpg';
 import image2 from '../images/3t.jpeg';
 import image3 from '../images/Ut02.jpg';
-import image4 from '../images/bt.jpeg';   
+import image4 from '../images/bt.jpeg';
 const Card = Styled.div`
 
 h1 {
@@ -27,7 +27,7 @@ h1 {
 `;
 export default class ShipFlightPage extends React.Component {
   componentDidMount() {
-    document.title = 'KALWAY shipfreight';
+    document.title = 'KALWAY - 5PL Logistics & Brokerage';
   }
 
   render() {
@@ -101,7 +101,7 @@ export default class ShipFlightPage extends React.Component {
             </h3>
             <p className="text-gray-800 font-normal pt-2 text-xl">
               The KALWAY Logistics mobile app allows drivers to provide
-              real-time tracking, reducing the need for check-in phone calls.{" "}
+              real-time tracking, reducing the need for check-in phone calls.{' '}
             </p>
 
             <h3 className="text-gray-800 font-bold pt-10 text-xl">
@@ -128,7 +128,7 @@ export default class ShipFlightPage extends React.Component {
               </li>
               <li className="text-gray-800 font-normal pt-2 text-xl">
                 Set Preferred Lanes and receive daily Suggested Loads tailored
-                to your needs{" "}
+                to your needs{' '}
               </li>
               <li className="text-gray-800 font-normal pt-2 text-xl">
                 Receive Reload opportunities for shipments booked with Echo
@@ -140,4 +140,3 @@ export default class ShipFlightPage extends React.Component {
     );
   }
 }
-

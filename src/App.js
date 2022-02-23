@@ -41,7 +41,7 @@ function App() {
           exact
           path="/"
           component={Home}
-          title="KALWAY - 3PL Logistics & Brokerage"
+          title="KALWAY - 5PL Logistics & Brokerage"
         />
         <Route exact path="/Contact" component={Contact} title="BigContact" />
 
@@ -65,7 +65,7 @@ function App() {
           component={ShipFlightPage}
           title="Inventory"
         />
-        <Route exact path="/Shippers" component={Shipper} title="Inventory" />
+        <Route exact path="/Shippers" component={Shipper} title="Shipper" />
         <Route
           exact
           path="/shipfreight"

@@ -15,7 +15,7 @@ import image4 from '../images/Rt02.jpg';
 import { Card } from '../components/shipfreight/shipfreight';
 export default class Shipper extends React.Component {
   componentDidMount() {
-    document.title = 'KALWAY shipfreight';
+    document.title = 'KALWAY - 5PL Logistics & Brokerage';
   }
 
   render() {
