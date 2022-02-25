@@ -2,6 +2,10 @@ import React from 'react';
 import trucks from '../../images/bg.jpg';
 import Containers from '../../images/comtaimer.png';
 import Shiping from '../../images/shiping.jpg';
+import Inc5000 from '../../images/baI1.png';
+import SmartWay from '../../images/baI2.png';
+import BestBroker from '../../images/baI3.png';
+
 import './style.css';
 import {
   WWOCArd,
@@ -9,8 +13,10 @@ import {
   WWOCCHeading,
   WWOCCParagraph,
   CardListRow,
+  BannerContainer,
   LinkRo,
   NavLink,
+  BannerContainer2,
 } from './SolutionElement';
 import Fade from 'react-reveal/Fade';
 const Solution = ({ isOpen, toggle }) => {
@@ -69,7 +75,7 @@ const Solution = ({ isOpen, toggle }) => {
               </div>
             </Fade> */}
             {/* </LinkRo> */}
-            <Fade bottom>
+            <Fade left>
               <div className="bg-white hover:shadow-2xl m-9 flex-1">
                 <img
                   src={trucks}
@@ -202,8 +208,35 @@ const Solution = ({ isOpen, toggle }) => {
             or see our portfolio
           </WWOCCParagraph>
         </CButton> */}
+        <BannerContainer>
+          <BannerContainer2 className="flex lg:flex-row flex-col ">
+            <Fade left>
+              <div className="flex-1 ">
+                <img
+                  src={Inc5000}
+                  alt="America's Fastest Growing Priivate Companies"
+                ></img>
+              </div>
+            </Fade>
+            <Fade bottom>
+              <div className="flex-1">
+                <img src={SmartWay} alt="Smart Way Transport Partner"></img>
+              </div>
+            </Fade>
+            <Fade right>
+              <div className="flex-1 pt-6">
+                <img
+                  className="w-3/4"
+                  src={BestBroker}
+                  alt="Nastc Bsest Broker"
+                ></img>
+              </div>
+            </Fade>
+          </BannerContainer2>
+        </BannerContainer>
+
         <WWOCCHeading>
-          CARRIER PACKET - JOIN TEAM At KALWAY <br></br>1-800-502-7000
+          CARRIER PACKET - JOIN TEAM AT KALWAY <br></br>1-800-502-7000
         </WWOCCHeading>
         <WWOCCParagraph>
           Quickly browse, negotiate, book, track and invoice loads on any of our

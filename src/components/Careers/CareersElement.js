@@ -49,20 +49,9 @@ padding: 0;
 
 width: 100%;
 position: relative;
-<<<<<<< HEAD
-height:  90vh;
-
-z-index: 1;
-@media screen and (max-width: 768px) {
-  background-image: radial-gradient(#42424280,#9f9e9e17),  url(${bgimage});
-  height:  70vh;
-    
-}
-=======
 height: 100vh;
 
 z-index: 1;
->>>>>>> 2ec05fa1a880488da310a6df7186c7944e3c9d9a
 
 @media (max-width: 768px) {
   background-image: radial-gradient(#42424280,#9f9e9e17),  url(${bgimages});
