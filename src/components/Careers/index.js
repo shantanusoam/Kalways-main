@@ -122,7 +122,7 @@ class Careers extends React.Component {
                 <h2 className=" lg:self-center self-start pt-10 text-black font-bold text-3xl 2xl:text-4xl">
                   Where we work
                   <p className="h-2"></p>
-                  <div className="w-40 h-1  hover:w-10"></div>
+                  <div className="w-40 h-1  hover:w-10 transition duration-700 ease-in-out delay-150"></div>
                 </h2>
               </Head>
 
@@ -176,7 +176,7 @@ class Careers extends React.Component {
             <h2 className="font-bold self-start pt-10 text-black  text-2xl 2xl:text-4xl">
               Perks & Benefits
               <p className="h-2"></p>
-              <div className="w-full h-1  hover:w-10"></div>
+              <div className="w-full h-1  hover:w-10 transition duration-700 ease-in-out delay-150"></div>
             </h2>
           </Head>
 

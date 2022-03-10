@@ -139,8 +139,8 @@ const Industrie = () => {
               <h3 className="text-gray-800  2xl:text-5xl text-4xl">
                 Ways to Ship
                 <br></br>
-                <p className="text-gray-800 w-40 h-5 pt-2 hover:w-10 bg-white "></p>
-                <div className="text-gray-800 w-40 h-2 pt-2 hover:w-10 "></div>
+                <p className="text-gray-800 w-40 h-5 pt-2 hover:w-10 bg-white transition duration-700 ease-in-out delay-150"></p>
+                <div className="text-gray-800 w-40 h-2 pt-2 hover:w-10 transition duration-700 ease-in-out delay-150"></div>
               </h3>
             </Container>
 
@@ -154,7 +154,7 @@ const Industrie = () => {
             <p className="text-gray-800 font-normal pt-9 text-2xl w-auto 2xl:text-center text-left">
               We will help you get your products where they need to go fast,
               efficiently and without interruption. Join the more than 3,500 CPG
-              companies who trust us with their freight.   
+              companies who trust us with their freight.
             </p>
           </div>
 
@@ -166,7 +166,7 @@ const Industrie = () => {
                 Automotive shippers can’t afford to have their supply chain slam
                 on the brakes. Keeping up with changes in demand and fulfilling
                 orders can be daunting. You need a 3PL you can trust with a
-                reliable, responsive carrier network to make sure you never hit      
+                reliable, responsive carrier network to make sure you never hit
                 a roadblock.
               </p>
             </div>
@@ -215,7 +215,7 @@ const Industrie = () => {
             </div>
             <div className="flex flex-col items-start">
               <img src={mgrid14} width="150px"></img>
-              <h4 className="text-2xl">AIR & OCEAN</h4>  
+              <h4 className="text-2xl">AIR & OCEAN</h4>
               <p className="text-gray-800 font-normal pt-2 text-xl w-auto">
                 Running a manufacturing supply chain is not easy. Though
                 transportation is often viewed as a commodity, the cost of
@@ -293,7 +293,7 @@ const Industrie = () => {
         {/* </LinkRo> */}
 
         <Fade bottom>
-          <div className="bg-white hover:shadow-2xl m-4 flex-1">
+          <div className="bg-white hover:shadow-2xl m-4 flex-1 transition duration-700 ease-in-out delay-150">
             <img
               src={image6}
               alt="boy with camera"
@@ -312,7 +312,7 @@ const Industrie = () => {
           </div>
         </Fade>
         <Fade bottom>
-          <div className="bg-white hover:shadow-2xl m-4 flex-1">
+          <div className="bg-white hover:shadow-2xl m-4 flex-1 transition duration-700 ease-in-out delay-150">
             <img
               src={image1}
               alt="boy with camera"
@@ -332,7 +332,7 @@ const Industrie = () => {
           </div>
         </Fade>
         <Fade right>
-          <div className="bg-white hover:shadow-2xl m-4 flex-1">
+          <div className="bg-white hover:shadow-2xl m-4 flex-1 transition duration-700 ease-in-out delay-150">
             <img
               src={image5}
               alt="boy with camera"
@@ -361,7 +361,7 @@ const Industrie = () => {
           <Pulse>
             <Card className="flex flex-col items-center 	align-content:center place-items-center bg-white w-80 p-8">
               <img src={grid1} className="w-32"></img>
-              <h3 className="text-2xl  hover:text-lime-500">
+              <h3 className="text-2xl  hover:text-lime-500 transition duration-700 ease-in-out delay-150">
                 Primary Truckload Capacity
               </h3>
             </Card>
@@ -566,7 +566,7 @@ const Industrie = () => {
         </p>
         <div className="xl:px-14 xl:py-10 md:py-0 md:px-0 bg-white flex 2xl:flex-row lg:flex-row flex-col flex-wrap justify-center items-center   ">
           <Fade bottom>
-            <div className="bg-white hover:shadow-2xl m-4 flex-1">
+            <div className="bg-white hover:shadow-2xl m-4 flex-1 transition duration-700 ease-in-out delay-150">
               <img
                 src={image7}
                 alt="boy with camera"
@@ -588,7 +588,7 @@ const Industrie = () => {
             </div>
           </Fade>
           <Fade bottom>
-            <div className="bg-white hover:shadow-2xl m-4 flex-1">
+            <div className="bg-white hover:shadow-2xl m-4 flex-1 transition duration-700 ease-in-out delay-150">
               <img
                 src={image4}
                 alt="boy with camera"
@@ -607,7 +607,7 @@ const Industrie = () => {
             </div>
           </Fade>
           <Fade right>
-            <div className="bg-white hover:shadow-2xl m-4 flex-1">
+            <div className="bg-white hover:shadow-2xl m-4 flex-1 transition duration-700 ease-in-out delay-150">
               <img
                 src={image3}
                 alt="boy with camera"

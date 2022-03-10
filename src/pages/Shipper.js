@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import React, { useState, useEffect } from 'react';
 import { shipfreight } from '../components/waystoship/shipfreight';
 import './shipFleight.css';
-
+import Bounce from 'react-reveal/Bounce';
 import { Autoplay, Pagination, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 
@@ -12,7 +12,11 @@ import image1 from '../images/dv0.jpg';
 import image2 from '../images/Ut1.jpg';
 import image3 from '../images/Rt2.jpg';
 import image4 from '../images/Rt02.jpg';
-import { Card } from '../components/shipfreight/shipfreight';
+import {
+  Card,
+  Formcontainer,
+  FormButton,
+} from '../components/shipfreight/shipfreight';
 export default class Shipper extends React.Component {
   componentDidMount() {
     document.title = 'KALWAY shipfreight';
@@ -52,11 +56,22 @@ export default class Shipper extends React.Component {
             </SwiperSlide>
           </Swiper>
         </div>
+        <Bounce right>
+          <Formcontainer className="flex flex-col justify-center lg:items-center items-start bg-black p-8">
+            <h3 className="self-center pb-8 pt-4 lg:text-4xl text-2xl text-white">
+              The KALWAY CREDIT AGREEMENT
+            </h3>
+            <FormButton className="self-center">
+              {' '}
+              <a href="/CreditApplication">CREDIT AGREEMENT</a>
+            </FormButton>
+          </Formcontainer>
+        </Bounce>
         <Card>
           <h2 className=" self-left lg:pt-10 lg:pl-40  2xl:text-5xl text-4xl 2xl:p-8 pt-8 pl-8">
             FREIGHT BROKERAGE OVERVIEW
             <p className="h-4"></p>
-            <div className="w-40 h-2  hover:w-10"></div>
+            <div className="w-40 h-2  hover:w-10 transition duration-700 ease-in-out delay-150"></div>
           </h2>
         </Card>
 

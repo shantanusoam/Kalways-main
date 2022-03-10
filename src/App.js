@@ -23,6 +23,7 @@ import WorkAtKalwayss from './components/WorkAtKalways';
 import Careers from './components/Careers';
 import ecommerce from './components/ecommerce';
 import KalPower from './components/KalPower';
+import CreditApllication from './pages/CreditApllication';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -89,6 +90,12 @@ function App() {
           exact
           path="/Ecommerce"
           component={ecommerce}
+          title="Ecomerece"
+        />
+        <Route
+          exact
+          path="/CreditApplication"
+          component={CreditApllication}
           title="Ecomerece"
         />
         <Route exact path="/KalPower" component={KalPower} title="KalPower" />
