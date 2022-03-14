@@ -1,46 +1,46 @@
-import React, { useEffect } from 'react';
-import image1 from '../../images/ut008.jpg';
-import image2 from '../../images/ut009.jpg';
-import image3 from '../../images/ut0010.jpg';
-import image4 from '../../images/kalPower.png';
-import PTO01 from '../../images/Kalway-Icon2.png';
-import bgcf from '../../images/Kalp.png';
-import MoreTime from '../../images/MoreTime.png';
-import map from '../../images/Cmap.png';
-import acessTime from '../../images/access_time.png';
-import NewBusiness from '../../images/NewBusiness.png';
-import Philanthropy from '../../images/Philanthropy.png';
-import PetInsurance from '../../images/Pet-Insurance-01.png';
-import HealthWellness from '../../images/Health-Wellness-01.png';
-import MedicalVisionDental from '../../images/Medical-Vision-Dental-01.png';
-import AdditionalBenefits from '../../images/Additional-Benefits-01.png';
-import Four from '../../images/401k-01.png';
-import CareerGrowth from '../../images/Career-Growth-01.png';
+import React, { useEffect } from "react";
+import image1 from "../../images/ut008.jpg";
+import image2 from "../../images/ut009.jpg";
+import image3 from "../../images/ut0010.jpg";
+import image4 from "../../images/kalPower.png";
+import PTO01 from "../../images/Kalway-Icon2.png";
+import bgcf from "../../images/Kalp.png";
+import MoreTime from "../../images/MoreTime.png";
+import map from "../../images/Cmap.png";
+import acessTime from "../../images/access_time.png";
+import NewBusiness from "../../images/NewBusiness.png";
+import Philanthropy from "../../images/Philanthropy.png";
+import PetInsurance from "../../images/Pet-Insurance-01.png";
+import HealthWellness from "../../images/Health-Wellness-01.png";
+import MedicalVisionDental from "../../images/Medical-Vision-Dental-01.png";
+import AdditionalBenefits from "../../images/Additional-Benefits-01.png";
+import Four from "../../images/401k-01.png";
+import CareerGrowth from "../../images/Career-Growth-01.png";
 // import PTO01 from '../../images/PTO-01.png';
 
-import grid1 from '../../images/fleet.png';
-import grid2 from '../../images/grid2.png';
-import grid3 from '../../images/grid3.png';
-import grid4 from '../../images/grid4.png';
-import grid5 from '../../images/grid5.png';
-import grid6 from '../../images/grid6.png';
-import grid7 from '../../images/grid7.png';
-import grid8 from '../../images/grid8.png';
-import grid9 from '../../images/grid9.png';
-import mgrid1 from '../../images/mgrid1.png';
-import mgrid2 from '../../images/mgrid2.png';
-import mgrid4 from '../../images/intermodal.png';
-import mgrid5 from '../../images/mgrid5.png';
-import mgrid6 from '../../images/mgrid6.png';
-import grid12 from '../../images/sustain.png';
-import grid13 from '../../images/shipper.png';
-import Pulse from 'react-reveal/Pulse';
-import moreleaves from '../../images/more-leaves.png';
-import Fade from 'react-reveal/Fade';
-import Zoom from 'react-reveal/Zoom';
+import grid1 from "../../images/fleet.png";
+import grid2 from "../../images/grid2.png";
+import grid3 from "../../images/grid3.png";
+import grid4 from "../../images/grid4.png";
+import grid5 from "../../images/grid5.png";
+import grid6 from "../../images/grid6.png";
+import grid7 from "../../images/grid7.png";
+import grid8 from "../../images/grid8.png";
+import grid9 from "../../images/grid9.png";
+import mgrid1 from "../../images/mgrid1.png";
+import mgrid2 from "../../images/mgrid2.png";
+import mgrid4 from "../../images/intermodal.png";
+import mgrid5 from "../../images/mgrid5.png";
+import mgrid6 from "../../images/mgrid6.png";
+import grid12 from "../../images/sustain.png";
+import grid13 from "../../images/shipper.png";
+import Pulse from "react-reveal/Pulse";
+import moreleaves from "../../images/more-leaves.png";
+import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
 
 // import bankground from "../../images";
-import { animateScroll as scroll, Link } from 'react-scroll';
+import { animateScroll as scroll, Link } from "react-scroll";
 import {
   HeroContainer,
   WWOCCButtonM,
@@ -64,8 +64,8 @@ import {
   ContainerMain,
   Callinfo,
   BgImage,
-} from './KalPowerElement';
-import { render } from '@testing-library/react';
+} from "./KalPowerElement";
+import { render } from "@testing-library/react";
 class KalPower extends React.Component {
   constructor(props) {
     super(props);
@@ -126,12 +126,9 @@ class KalPower extends React.Component {
                   Less detention<br></br> time
                 </h4>
                 <p className="font-light self-left pt-4 pb-20">
-                  At KalWay, our e-commerce solutions allow you to gain greater
-                  control of product selection, inventory management, and
-                  customer service, while maintaining critical speed-to-market.
-                  With our focus on integration with all e-commerce platforms,
-                  fulfillment center expertise, and strategically located
-                  fulfillment warehouses,
+                  KALPOWER enables carriers to access preloaded trailers,
+                  cutting load time from hours to minutes. This helps free
+                  carriers from unexpected delays at facilities.
                 </p>
               </Card>
             </Pulse>
@@ -142,12 +139,9 @@ class KalPower extends React.Component {
                   More time <br></br> driving
                 </h4>
                 <p className="font-light self-left pt-4 pb-20">
-                  At KalWay, our e-commerce solutions allow you to gain greater
-                  control of product selection, inventory management, and
-                  customer service, while maintaining critical speed-to-market.
-                  With our focus on integration with all e-commerce platforms,
-                  fulfillment center expertise, and strategically located
-                  fulfillment warehouses,
+                  The days of searching endlessly for the next load are over. As
+                  part of the KALPOWER network, carriers are able to find
+                  backhauls more easily.
                 </p>
               </Card>
             </Pulse>
@@ -158,12 +152,9 @@ class KalPower extends React.Component {
                   New business<br></br> opportunities
                 </h4>
                 <p className="font-light self-left pt-4 pb-20">
-                  At KalWay, our e-commerce solutions allow you to gain greater
-                  control of product selection, inventory management, and
-                  customer service, while maintaining critical speed-to-market.
-                  With our focus on integration with all e-commerce platforms,
-                  fulfillment center expertise, and strategically located
-                  fulfillment warehouses,
+                  Any eligible carrier can participate, regardless of size.
+                  Carriers can drive new business by renting trailers rather
+                  than purchasing them.
                 </p>
               </Card>
             </Pulse>
@@ -187,14 +178,15 @@ class KalPower extends React.Component {
               className="flex flex-col justify-center justify-items-start items-left  h-auto w-full"
               style={{
                 backgroundImage: `url(${bgcf})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
               }}
             >
               <h4 className="text-white text-left  lg:text-5xl text-3xl lg:w-3/5 pt-64 lg:ml-40 ml-4">
                 Get back on the road faster
               </h4>
+              <p className="text-white text-left ml-44 pt-4 font-bold">See how Powerloop is reducing the wait for carriers.</p>
               <div className="pb-64 lg:ml-40 pt-10 ml-4">
                 <a className="pt-10" href="/Contact" target="_blank">
                   <button class="btn">

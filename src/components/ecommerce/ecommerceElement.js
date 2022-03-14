@@ -56,7 +56,7 @@ z-index: 1;
   background-image: radial-gradient(#42424280,#9f9e9e17),  url(${bgimage});
   background-size: cover;
   background-position: center;
-    
+  height: 70vh;
 }
 
 `;

@@ -111,7 +111,7 @@ const shipfreight = ({}) => {
                   Every day, increasingly complex shipping demands put pressure
                   on your business. The ability to succeed requires a shift in
                   focus—from short-term capacity to long-term agility. Work with
-                  a global 3PL provider that can build a supply chain solution
+                  a global 5PL provider that can build a supply chain solution
                   for your business, no matter the size or complexity.
                 </p>
               </div>

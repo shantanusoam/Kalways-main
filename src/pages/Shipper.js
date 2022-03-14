@@ -19,7 +19,7 @@ import {
 } from '../components/shipfreight/shipfreight';
 export default class Shipper extends React.Component {
   componentDidMount() {
-    document.title = 'KALWAY shipfreight';
+    document.title = 'KALWAY - 5PL Logistics & Brokerage';
   }
 
   render() {

@@ -27,7 +27,7 @@ h1 {
 `;
 export default class ShipFlightPage extends React.Component {
   componentDidMount() {
-    document.title = 'KALWAY shipfreight';
+    document.title = 'KALWAY - 5PL Logistics & Brokerage';
   }
 
   render() {

@@ -165,7 +165,7 @@ const Industrie = () => {
               <p className="text-gray-800 font-normal pt-2 text-xl w-auto">
                 Automotive shippers can’t afford to have their supply chain slam
                 on the brakes. Keeping up with changes in demand and fulfilling
-                orders can be daunting. You need a 3PL you can trust with a
+                orders can be daunting. You need a 5PL you can trust with a
                 reliable, responsive carrier network to make sure you never hit
                 a roadblock.
               </p>
