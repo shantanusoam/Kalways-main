@@ -20,7 +20,7 @@ import mgrid6 from '../../images/mgrid6.png';
 import grid12 from '../../images/sustain.png';
 import grid13 from '../../images/shipper.png';
 import Pulse from 'react-reveal/Pulse';
-
+import Bounce from 'react-reveal/Bounce';
 import Fade from 'react-reveal/Fade';
 // import bankground from "../../images";
 import { animateScroll as scroll, Link } from 'react-scroll';
@@ -28,6 +28,7 @@ import {
   HeroContainer,
   WWOCCButtonM,
   PCENTER,
+  FormButton,
   Card,
   HeroP,
   HeroContent,
@@ -43,6 +44,7 @@ import {
   ContainerMain,
   Callinfo,
   BgImage,
+  Formcontainer,
 } from './shipfreight';
 const shipfreight = ({}) => {
   return (
@@ -65,6 +67,17 @@ const shipfreight = ({}) => {
           </PCENTER>
         </HeroContent>
       </HeroContainer>
+      <Bounce right>
+        <Formcontainer className="flex flex-col justify-center lg:items-center items-start bg-black p-8">
+          <h3 className="self-center pb-8 pt-4 lg:text-4xl text-2xl text-white">
+            The KALWAY CREDIT AGREEMENT
+          </h3>
+          <FormButton className="self-center">
+            {' '}
+            <a href="/CreditApplication">CREDIT AGREEMENT</a>
+          </FormButton>
+        </Formcontainer>
+      </Bounce>
       <div className=" flex flex-col  lg:pb-2 bg-slate-800">
         {/* <div className="flex flex-row">
           <img src={image2} className="flex-1 h-96" alt=""></img>
@@ -98,7 +111,7 @@ const shipfreight = ({}) => {
                   Every day, increasingly complex shipping demands put pressure
                   on your business. The ability to succeed requires a shift in
                   focus—from short-term capacity to long-term agility. Work with
-                  a global 3PL provider that can build a supply chain solution
+                  a global 5PL provider that can build a supply chain solution
                   for your business, no matter the size or complexity.
                 </p>
               </div>
@@ -180,7 +193,7 @@ const shipfreight = ({}) => {
 
       <div className="xl:px-14 xl:py-10 md:py-0 md:px-0 bg-white flex 2xl:flex-row lg:flex-row flex-wrap justify-center items-center flex-col ">
         <Fade bottom>
-          <div className="bg-white hover:shadow-2xl 2xl:m-2 m-2 flex-1">
+          <div className="bg-white hover:shadow-2xl 2xl:m-2 m-2 flex-1 transition duration-700 ease-in-out delay-150">
             <img
               src={image1}
               alt="boy with camera"
@@ -202,7 +215,7 @@ const shipfreight = ({}) => {
           </div>
         </Fade>
         <Fade bottom>
-          <div className="bg-white hover:shadow-2xl 2xl:m-2 m-2 flex-1">
+          <div className="bg-white hover:shadow-2xl 2xl:m-2 m-2 flex-1 transition duration-700 ease-in-out delay-150">
             <img
               src={image2}
               alt="boy with camera"
@@ -223,7 +236,7 @@ const shipfreight = ({}) => {
           </div>
         </Fade>
         <Fade right>
-          <div className="bg-white hover:shadow-2xl 2xl:m-2 m-2 flex-1">
+          <div className="bg-white hover:shadow-2xl 2xl:m-2 m-2 flex-1 transition duration-700 ease-in-out delay-150">
             <img
               src={image3}
               alt="boy with camera"

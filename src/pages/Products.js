@@ -8,7 +8,7 @@ import Contact from './contact';
 
 export default class Products extends React.Component {
   componentDidMount() {
-    document.title = 'KALWAY Product';
+    document.title = 'KALWAY - 5PL Logistics & Brokerage';
   }
 
   render() {

@@ -28,7 +28,7 @@ class TrailerList extends React.Component {
       <AboutContainer id="Products">
         <h1 className="text-center text-black  2xl:text-5xl text-4xl pb-0  2xl:mt-28 xl:mt-28 mt-8 md:pb-3">
           SERVICES
-          <div className="w-40 h-2  hover:w-10"></div>
+          <div className="w-40 h-2  hover:w-10 transition duration-700 ease-in-out delay-150"></div>
         </h1>
 
         <CardListRow>
@@ -46,7 +46,7 @@ class TrailerList extends React.Component {
               // >
               <Fade bottom key={trailer.id}>
                 <div
-                  className="bg-white rounded-xl  m-9 hover:shadow-2xl flex-1 "
+                  className="bg-white rounded-xl  m-9 hover:shadow-2xl flex-1 transition duration-700 ease-in-out delay-150"
                   key={trailer.id}
                   id={trailer.id}
                 >
@@ -130,7 +130,7 @@ const TrailerLists = ({ isOpen, toggle }) => {
         <div className="xl:px-14 xl:py-10 md:py-0 md:px-0 bg-white flex flex-row flex-wrap justify-center items-center   ">
           {this.state.Trailers.map((trailer) => (
             <Roll left key={trailer.img}>
-              <div className="bg-white rounded-xl  m-9 hover:shadow-2xl">
+              <div className="bg-white rounded-xl  m-9 hover:shadow-2xl transition duration-700 ease-in-out delay-150">
                 <img
                   src={trailer.img}
                   alt="boy with camera"

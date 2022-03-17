@@ -63,7 +63,7 @@ const About = () => {
             </Fade> */}
         {/* </LinkRo> */}
         <Fade bottom>
-          <div className="bg-white hover:shadow-2xl m-9 flex-1">
+          <div className="bg-white hover:shadow-2xl m-9 flex-1 transition duration-700 ease-in-out delay-150">
             <img
               src={trucks}
               alt="boy with camera"
@@ -87,7 +87,7 @@ const About = () => {
           </div>
         </Fade>
         <Fade bottom>
-          <div className="bg-white hover:shadow-2xl m-9 flex-1">
+          <div className="bg-white hover:shadow-2xl m-9 flex-1 transition duration-700 ease-in-out delay-150">
             <img
               src={Containers}
               alt="boy with camera"
@@ -111,7 +111,7 @@ const About = () => {
           </div>
         </Fade>
         <Fade right>
-          <div className="bg-white hover:shadow-2xl m-9 flex-1">
+          <div className="bg-white hover:shadow-2xl m-9 flex-1 transition duration-700 ease-in-out delay-150">
             <img
               src={Shiping}
               alt="boy with camera"

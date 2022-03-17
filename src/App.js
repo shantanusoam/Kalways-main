@@ -23,6 +23,7 @@ import WorkAtKalwayss from './components/WorkAtKalways';
 import Careers from './components/Careers';
 import ecommerce from './components/ecommerce';
 import KalPower from './components/KalPower';
+import CreditApllication from './pages/CreditApllication';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +42,7 @@ function App() {
           exact
           path="/"
           component={Home}
-          title="KALWAY - 3PL Logistics & Brokerage"
+          title="KALWAY - 5PL Logistics & Brokerage"
         />
         <Route exact path="/Contact" component={Contact} title="BigContact" />
 
@@ -65,7 +66,7 @@ function App() {
           component={ShipFlightPage}
           title="Inventory"
         />
-        <Route exact path="/Shippers" component={Shipper} title="Inventory" />
+        <Route exact path="/Shippers" component={Shipper} title="Shipper" />
         <Route
           exact
           path="/shipfreight"
@@ -89,6 +90,12 @@ function App() {
           exact
           path="/Ecommerce"
           component={ecommerce}
+          title="Ecomerece"
+        />
+        <Route
+          exact
+          path="/CreditApplication"
+          component={CreditApllication}
           title="Ecomerece"
         />
         <Route exact path="/KalPower" component={KalPower} title="KalPower" />

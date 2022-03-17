@@ -227,7 +227,7 @@ const ecommerce = () => {
           <div className="lg:pr-40 ml-4 mt-4 lg:w-4/5 mr-4">
             <>
               <h3 className="font-bold  lg:text-3xl text-3xl">
-                Kalways Postions
+                KALWAY Postions
               </h3>
               <p className="font-bold  lg:text-2xl text-xl ">
                 Flexible solutions to meets today’s omni-channel demands

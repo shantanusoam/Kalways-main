@@ -21,6 +21,20 @@ export const WWOCArd = styled.div`
     height: auto;
   }
 `;
+export const BannerContainer = styled.div`
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120%;
+`;
+export const BannerContainer2 = styled.div`
+  background-color: #efefef;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+`;
 
 export const WWOCardContent = styled.div`
   display: flex;

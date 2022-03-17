@@ -1,6 +1,42 @@
-import Styled from 'styled-components';
+import Styled, { keyframes } from 'styled-components';
 import bgimage from '../../images/bgfreight.png';
 import { Link as LinkR } from 'react-router-dom';
+export const Formcontainer = Styled.div`
+background: #212121;
+h3{
+  text-align: center;
+}
+`;
+const heartbeat = keyframes`
+
+
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+
+
+`;
 export const HeroContainer = Styled.div`
 
 overflow: hidden;
@@ -42,6 +78,69 @@ h4{
 
     }
 }
+
+`;
+
+export const FormButton = Styled.div`
+
+
+
+
+
+
+
+  align-items: center;
+  background-color: #0064bf;
+  border: 2px solid #06f;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+
+:focus {
+  color: #171e29;
+
+}
+
+:hover {
+  background-color: #3385ff;
+  border-color: #3385ff;
+  fill: #06f;
+  animation: none;
+}
+
+:active {
+  background-color: #3385ff;
+  border-color: #3385ff;
+  fill: #06f;
+}
+
+@media (min-width: 768px) {
+   
+    min-width: 170px;
+ 
+}
+  animation: ${heartbeat} 6s infinite;
+    
+
 
 `;
 export const ContainerMain = Styled.div`

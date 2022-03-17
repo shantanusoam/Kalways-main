@@ -8,7 +8,7 @@ import './shipFleight.css';
 import image1 from '../images/dv01.jpg';
 import image2 from '../images/3t.jpeg';
 import image3 from '../images/Ut02.jpg';
-import image4 from '../images/bt.jpeg';   
+import image4 from '../images/bt.jpeg';
 const Card = Styled.div`
 
 h1 {
@@ -27,7 +27,7 @@ h1 {
 `;
 export default class ShipFlightPage extends React.Component {
   componentDidMount() {
-    document.title = 'KALWAY shipfreight';
+    document.title = 'KALWAY - 5PL Logistics & Brokerage';
   }
 
   render() {
@@ -68,7 +68,7 @@ export default class ShipFlightPage extends React.Component {
           <h1 className=" self-center pt-10 text-gray-800 text-3xl 2xl:text-5xl">
             CARRIER SERVICES
             <p className="h-4"></p>
-            <div className="w-40 h-2  hover:w-10"></div>
+            <div className="w-40 h-2  hover:w-10 transition duration-700 ease-in-out delay-150"></div>
           </h1>
         </Card>
 
@@ -101,7 +101,7 @@ export default class ShipFlightPage extends React.Component {
             </h3>
             <p className="text-gray-800 font-normal pt-2 text-xl">
               The KALWAY Logistics mobile app allows drivers to provide
-              real-time tracking, reducing the need for check-in phone calls.{" "}
+              real-time tracking, reducing the need for check-in phone calls.{' '}
             </p>
 
             <h3 className="text-gray-800 font-bold pt-10 text-xl">
@@ -128,7 +128,7 @@ export default class ShipFlightPage extends React.Component {
               </li>
               <li className="text-gray-800 font-normal pt-2 text-xl">
                 Set Preferred Lanes and receive daily Suggested Loads tailored
-                to your needs{" "}
+                to your needs{' '}
               </li>
               <li className="text-gray-800 font-normal pt-2 text-xl">
                 Receive Reload opportunities for shipments booked with Echo
@@ -140,4 +140,3 @@ export default class ShipFlightPage extends React.Component {
     );
   }
 }
-
