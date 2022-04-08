@@ -33,10 +33,10 @@ const opts = {
 const Solution = ({ isOpen, toggle }) => {
   return (
     <>
-      <WWOCArd1>
+      {/* <WWOCArd1>
         <div style={{ flex: 1 }} className="m-8 items-center">
           <YouTube videoId="h-P3khDl29U" opts={opts} />;
-          {/* <YoutubeEmbed embedId="h-P3khDl29U" /> */}
+          <YoutubeEmbed embedId="h-P3khDl29U" />
         </div>
         <div style={{ flex: 1 }}>
           <h3 className="font-bold text-2xl mb-5">
@@ -58,7 +58,7 @@ const Solution = ({ isOpen, toggle }) => {
             future.
           </div>
         </div>
-      </WWOCArd1>
+      </WWOCArd1> */}
       <WWOCArd>
         <WWOCardContent>
           <WWOCCHeading>FREIGHT AT FULL SPEED</WWOCCHeading>
