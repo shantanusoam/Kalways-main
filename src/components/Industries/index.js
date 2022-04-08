@@ -90,7 +90,7 @@ const Industrie = () => {
         <div className="flex flex-row 2xl:pt-16 pt-8">
           <div className="lg:pr-40">
             <p className="text-gray-800 font-normal 2xl:pt-8 pt-2 text-2xl w-auto ">
-              Whether shipping northbound or southbound, Coyote leverages a
+              Whether shipping northbound or southbound, KALWAY leverages a
               dense North American carrier network to bring you capacity when
               and where you need it. We source the right carrier for each
               opportunity, facilitate the crossing logistics and monitor your
@@ -199,7 +199,7 @@ const Industrie = () => {
                 <br />
                 Whether you’re shipping three pallets of craft beer, 30
                 truckloads of leafy greens or 3,000 annual loads of ice cream,
-                you can trust Coyote’s 15-years of food and beverage experience
+                you can trust KALWAY’s 15-years of food and beverage experience
                 to cover sensitive freight on-time, in-full.
               </p>
             </div>

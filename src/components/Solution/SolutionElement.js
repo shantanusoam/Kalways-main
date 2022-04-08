@@ -21,6 +21,23 @@ export const WWOCArd = styled.div`
     height: auto;
   }
 `;
+export const WWOCArd1 = styled.div`
+  background-color: #fff;
+  display: flex;
+
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  @media screen and (max-width: 768px) {
+    padding: 0;
+    margin: 0;
+    height: auto;
+    flex-direction: column;
+  }
+`;
 export const BannerContainer = styled.div`
   background-color: #efefef;
   display: flex;

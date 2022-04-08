@@ -20,3 +20,21 @@ h2 {
 p {
   font-weight: 300;
 }
+
+@media screen and (max-width: 768px) {
+  .video-responsive {
+    padding-bottom: 100%;
+    min-width: 100%;
+  }
+  .video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.video-responsive iframe {
+  width: 100%;
+  height: 100%;
+}
