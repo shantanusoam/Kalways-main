@@ -24,7 +24,10 @@ import Careers from './components/Careers';
 import ecommerce from './components/ecommerce';
 import KalPower from './components/KalPower';
 import CreditApllication from './pages/CreditApllication';
-import { Blog } from './components/Blog';
+import Blog from './components/Blog';
+import SinglePost from './components/SinglePost';
+
+import Error from './components/Error';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -99,8 +102,15 @@ function App() {
           component={CreditApllication}
           title="Ecomerece"
         />
-        <Route exact path="/Blog" component={Blog} title="Ecomerece" />
+        <Route path="/blog/:slug" children={<SinglePost />}></Route>
+        <Route exact path="/blog" title="Ecomerece">
+          <Blog />
+        </Route>
+
         <Route exact path="/KalPower" component={KalPower} title="KalPower" />
+        <Route exact path="*" title="Error">
+          <Error />
+        </Route>
       </Switch>
 
       {/* <Switch>

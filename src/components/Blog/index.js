@@ -1,29 +1,54 @@
-import React from 'react';
-import Categories from './Categories';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import client from '../../client';
 
-export const Blog = () => {
+export default function Blog() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    client
+      .fetch(
+        `*[_type == "post"] {
+        title,
+        slug,
+        body,
+        mainImage {
+          asset -> {
+            _id,
+            url
+          },
+          alt
+        }
+      }`
+      )
+      .then((data) => setPosts(data))
+      .catch(console.error);
+  }, []);
+
   return (
-    <section className="container w-full lg:px-0 px-5 lg:w-3/4 mx-auto">
-      <div className="flex lg:flex-row flex-col my-10 justify-between">
-        <div className="">
-          <h2 className="text-3xl lg:text-4xl font-bold">Hello👋</h2>
-          <p className="text-xl lg:text-2xl">What do you want?</p>
+    <>
+      <section className="px-5 2xl:max-w-7xl 2xl:mx-auto">
+        <h1 className="font-bold text-4xl pt-28 mb-10 tracking-widest text-center md:text-5xl lg:text-6xl">
+          Blog page
+        </h1>
+
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {posts.map((post) => (
+            <article key={post.slug.current}>
+              <img src={post.mainImage.asset.url} alt={post.title} />
+              <h4 className="text-xl mt-2">{post.title}</h4>
+              <button className="mt-5 mb-10">
+                <Link
+                  to={`/blog/${post.slug.current}`}
+                  className="py-2 px-6 rounded shadow text-white bg-black hover:bg-transparent border-2 border-black transition-all duration-500 hover:text-black font-bold"
+                >
+                  Read Full Article
+                </Link>
+              </button>
+            </article>
+          ))}
         </div>
-        <div className="flex items-center lg:mt-0 mt-5 gap-3 lg:flex-row flex-col">
-          <input
-            type="text"
-            className="w-full lg:w-80 p-2 border-2 border-gray-500 rounded focus:outline-none"
-          />
-          <button
-            style={{ backgroundColor: '#FE043C' }}
-            className="rounded w-full lg:w-auto px-10 py-3 text-white"
-          >
-            Search
-          </button>
-        </div>
-      </div>
-      <hr className="my-10" />
-      <Categories />
-    </section>
+      </section>
+    </>
   );
-};
+}
