@@ -176,16 +176,16 @@ class KalPower extends React.Component {
               className="flex flex-col justify-center justify-items-start items-left  h-auto w-full"
               style={{
                 backgroundImage: `url(${bgcf})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
               }}
             >
               <h4 className="text-white text-left  lg:text-5xl text-3xl lg:w-3/5 pt-64 lg:ml-40 ml-4">
                 Get back on the road faster
               </h4>
-              <p className="text-white text-left ml-44 pt-4 font-bold">
-                See how Powerloop is reducing the wait for carriers.
+              <p className="text-white text-left pt-4 lg:ml-40 ml-4 lg:w-full w-72 font-bold ">   
+                See how Powerloop is reducing the wait for carriers.    
               </p>
               <div className="pb-64 lg:ml-40 pt-10 ml-4">
                 <a className="pt-10" href="/Contact" target="_blank">
