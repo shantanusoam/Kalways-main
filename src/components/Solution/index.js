@@ -276,7 +276,7 @@ const Solution = ({ isOpen, toggle }) => {
               </Fade>
             </BannerContainer2>
           </BannerContainer>
-          {/* <WWOCArd1>
+          <WWOCArd1>
             <div style={{ flex: 1 }} className="m-8 items-center">
               <YouTube videoId="h-P3khDl29U" opts={opts} />
             </div>
@@ -298,7 +298,7 @@ const Solution = ({ isOpen, toggle }) => {
                 your fingertips.
               </div>
             </div>
-          </WWOCArd1> */}
+          </WWOCArd1>
           <WWOCCHeading>
             CARRIER PACKET - JOIN TEAM AT KALWAY <br></br>1-800-303-0076
           </WWOCCHeading>
