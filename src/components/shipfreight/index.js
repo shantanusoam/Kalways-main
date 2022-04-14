@@ -182,7 +182,7 @@ const shipfreight = ({}) => {
               management—so you can focus on what you do best.
             </p>
             <button class="btn">
-              <span class="btn-text ">1-800-502-7000</span>
+              <span class="btn-text ">1-800-303-0076</span>
             </button>
           </div>
         </div>

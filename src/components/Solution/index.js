@@ -135,7 +135,7 @@ const Solution = ({ isOpen, toggle }) => {
                     </div>
                     <a href="/Contact">
                       <button class="btn">
-                        <span class="btn-text">1-800-502-7000</span>
+                        <span class="btn-text">1-800-303-0076</span>
                       </button>
                     </a>
                   </div>
@@ -165,7 +165,7 @@ const Solution = ({ isOpen, toggle }) => {
                     </div>
                     <a href="/Contact">
                       <button class="btn">
-                        <span class="btn-text">1-800-502-7000</span>
+                        <span class="btn-text">1-800-303-0076</span>
                       </button>
                     </a>
                   </div>
@@ -195,7 +195,7 @@ const Solution = ({ isOpen, toggle }) => {
                     </div>
                     <a href="/Contact">
                       <button class="btn">
-                        <span class="btn-text">1-800-502-7000</span>
+                        <span class="btn-text">1-800-303-0076</span>
                       </button>
                     </a>
                   </div>
@@ -300,7 +300,7 @@ const Solution = ({ isOpen, toggle }) => {
             </div>
           </WWOCArd1> */}
           <WWOCCHeading>
-            CARRIER PACKET - JOIN TEAM AT KALWAY <br></br>1-800-502-7000
+            CARRIER PACKET - JOIN TEAM AT KALWAY <br></br>1-800-303-0076
           </WWOCCHeading>
           <WWOCCParagraph>
             Quickly browse, negotiate, book, track and invoice loads on any of

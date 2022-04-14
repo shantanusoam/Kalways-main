@@ -3,12 +3,43 @@ import React, { useState, useEffect } from 'react';
 import { shipfreight } from '../components/waystoship/shipfreight';
 import { Autoplay, Pagination, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
-import Styled from 'styled-components';
+import Styled, { keyframes } from 'styled-components';
 import './shipFleight.css';
 import image1 from '../images/dv01.jpg';
 import image2 from '../images/3t.jpeg';
 import image3 from '../images/Ut02.jpg';
 import image4 from '../images/bt.jpeg';
+import Bounce from 'react-reveal/Bounce';
+const heartbeat = keyframes`
+
+
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+
+
+`;
 const Card = Styled.div`
 
 h1 {
@@ -24,6 +55,74 @@ h1 {
     }
   }
 }
+`;
+export const Formcontainer = Styled.div`
+background: #212121;
+h3{
+  text-align: center;
+}
+`;
+export const FormButton = Styled.div`
+
+
+
+
+
+
+
+  align-items: center;
+  background-color: #0064bf;
+  border: 2px solid #06f;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+
+:focus {
+  color: #171e29;
+
+}
+
+:hover {
+  background-color: #3385ff;
+  border-color: #3385ff;
+  fill: #06f;
+  animation: none;
+}
+
+:active {
+  background-color: #3385ff;
+  border-color: #3385ff;
+  fill: #06f;
+}
+
+@media (min-width: 768px) {
+   
+    min-width: 170px;
+ 
+}
+  animation: ${heartbeat} 6s infinite;
+    
+
+
 `;
 export default class ShipFlightPage extends React.Component {
   componentDidMount() {
@@ -64,6 +163,23 @@ export default class ShipFlightPage extends React.Component {
             </SwiperSlide>
           </Swiper>
         </div>
+        <Bounce right>
+          <Formcontainer className="flex flex-col justify-center lg:items-center items-start bg-black p-8">
+            <h3 className="self-center pb-8 pt-4 lg:text-4xl text-2xl text-white">
+              Set up As Carrier For KALWAY
+            </h3>
+            <FormButton className="self-center">
+              {' '}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://kalwayonboarding.rmissecure.com/_s/client/UserClientLogin.aspx"
+              >
+                Set up a Carrier
+              </a>
+            </FormButton>
+          </Formcontainer>
+        </Bounce>
         <Card className=" self-center ">
           <h1 className=" self-center pt-10 text-gray-800 text-3xl 2xl:text-5xl">
             CARRIER SERVICES

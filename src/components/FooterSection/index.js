@@ -52,7 +52,7 @@ const FooterSection = ({ isOpen, toggle }) => {
           <FotterContact>
             <FotterContactlist>
               <FotterContactName> Help line Number</FotterContactName>
-              <FotterContactNo>1-800-502-7000</FotterContactNo>
+              <FotterContactNo>1-800-303-0076</FotterContactNo>
               {/* //todo */}
             </FotterContactlist>
           </FotterContact>

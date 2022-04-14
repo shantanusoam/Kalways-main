@@ -14,7 +14,7 @@ import {
   NavItem,
   Numbers,
   NavLinks,
-} from './NavbarElements';   
+} from './NavbarElements';
 
 const Navbar = ({ toggle }) => {
   return (
@@ -27,7 +27,7 @@ const Navbar = ({ toggle }) => {
           >
             <img src={logo} width="150px" alt="logo" />
             <Numbers className="text-sm items-center pt-2">
-              1-800-502-7000
+              1-800-303-0076
             </Numbers>
           </NavLogo>
 
@@ -37,13 +37,12 @@ const Navbar = ({ toggle }) => {
               <NavLinks to="/" onClick={toggleHome}>
                 <a to="/">Home</a>
               </NavLinks>
-            </NavItem> */}      
+            </NavItem> */}
 
             <NavItem>
               <NavLinks to="/" activeStyle>
                 <a href="/">HOME</a>
               </NavLinks>
-         
             </NavItem>
 
             <NavItem>
@@ -103,11 +102,9 @@ const Navbar = ({ toggle }) => {
           <FaBars/>
         </MobileIcon> */}
         </Nav>
-      </IconContext.Provider>   
+      </IconContext.Provider>
     </>
   );
 };
 
-export default Navbar;    
-
-
+export default Navbar;
