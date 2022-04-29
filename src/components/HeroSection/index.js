@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Video from './media/Bgvideo2.mp4';
 
 import bg from '../../images/bg.jpg';
@@ -269,6 +269,28 @@ const Button = styled.button`
 // };
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
+  //making fetch call for data from the api
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+  const [index, setIndex] = React.useState(0);
+  const timeoutRef = React.useRef(null);
+  // making fetch call from http://kalwaycms.local/wp-json/wp/v2/posts/1 and saving data in the state data
+  useEffect(() => {
+    fetch('http://kalwaycms.local/wp-json/wp/v2/posts/1')
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setError(true);
+      });
+  }, []);
+  // console.log(
+  //   `your data is here from wordpress${JSON.stringify(data.title.rendered)}`
+  // );
+
   const onHover = () => {
     setHover(!hover);
   };
@@ -290,7 +312,11 @@ const HeroSection = () => {
       </HeroBg>
       <HeroContent>
         <ContainerMain>
-          <h1 className="text-white">KALWAY</h1>
+          {loading ? null : (
+            <h1 className="text-white">
+              {JSON.stringify(data.title.rendered)}
+            </h1>
+          )}
           <HeroP>Drive your business forward</HeroP>
           <a href="/Contact">
             <button class="btn">
