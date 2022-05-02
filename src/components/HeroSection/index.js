@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Video from './media/Bgvideo2.mp4';
-
+import client from '../../client';
 import bg from '../../images/bg.jpg';
 // import bankground from "../../images";
 import './style.css';
@@ -267,11 +267,26 @@ const Button = styled.button`
 
 //   );
 // };
-const HeroSection = () => {
+export default function HeroSectio() {
   const [hover, setHover] = useState(false);
   const onHover = () => {
     setHover(!hover);
   };
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    client
+      .fetch(
+        `*[title == 'Home' ]{
+          title,
+          content[]
+          
+          }`
+      )
+      .then((data) => setPosts(data))
+      .catch(console.error);
+    console.log(posts[0]);
+  }, []);
   const settings = {
     dots: false,
     infinite: true,
@@ -291,12 +306,18 @@ const HeroSection = () => {
       <HeroContent>
         <ContainerMain>
           <h1 className="text-white">KALWAY</h1>
-          <HeroP>Drive your business forward</HeroP>
-          <a href="/Contact">
-            <button class="btn">
-              <span class="btn-text">Contact us</span>
-            </button>
-          </a>
+          {posts[0]['content'] ? (
+            <HeroP>{posts[0]['content'][0].heading}</HeroP>
+          ) : null}
+          {posts[0]['content'] ? (
+            <a href={posts[0]['content'][0]['ctas'][0].link}>
+              <button class="btn">
+                <span class="btn-text">
+                  {posts[0]['content'][0]['ctas'][0].title}
+                </span>
+              </button>
+            </a>
+          ) : null}
         </ContainerMain>
 
         <PCENTER class="text-gray-600 p-8">
@@ -381,5 +402,4 @@ const HeroSection = () => {
       </HeroPromoContainer>
     </HeroContainer>
   );
-};
-export default HeroSection;
+}
