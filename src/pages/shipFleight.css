@@ -1,0 +1,26 @@
+ul {
+  padding-top: 2.5rem;
+}
+li {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  list-style-type: disc;
+  padding-top: 0.5rem;
+  color: rgba(31, 41, 55, var(--tw-text-opacity));
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  padding-top: 2.5rem;
+}
+p {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  padding-top: 0.5rem;
+}
+h3 {
+  font-size: 2rem;
+}

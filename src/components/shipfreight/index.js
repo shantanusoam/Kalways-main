@@ -22,6 +22,7 @@ import grid13 from '../../images/shipper.png';
 import Pulse from 'react-reveal/Pulse';
 import Bounce from 'react-reveal/Bounce';
 import Fade from 'react-reveal/Fade';
+
 // import bankground from "../../images";
 import { animateScroll as scroll, Link } from 'react-scroll';
 import {

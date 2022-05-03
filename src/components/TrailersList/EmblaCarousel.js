@@ -1,14 +1,16 @@
-import React, { useState, useEffect, useCallback, useRef } from "react";
-import { PrevButton, NextButton } from "./EmblaCarouselButtons";
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
-import { Trailers } from "../../trailer.js";
-import "./embla.css";
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { PrevButton, NextButton } from './EmblaCarouselButtons';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
+import { Trailers } from '../../trailer.js';
+import './embla.css';
+import { builder } from '../../client';
 
-const EmblaCarousel = ({ slides, options = { loop: true }, id }) => {
-  const data = Trailers[id];
-  const media = data.subImages;
-  const mediaByIndex = (index) => media[index % media.length];
+const EmblaCarousel = ({ slides, options = { loop: true }, id, rows }) => {
+  // const data = Trailers[id];
+  // const media = data.subImages;
+  const urlFor = (source) => builder.image(source);
+
   const autoplay = useRef(
     Autoplay(
       { delay: 900, stopOnInteraction: false },
@@ -51,7 +53,7 @@ const EmblaCarousel = ({ slides, options = { loop: true }, id }) => {
   useEffect(() => {
     if (!emblaApi) return;
     onSelect();
-    emblaApi.on("select", onSelect);
+    emblaApi.on('select', onSelect);
   }, [emblaApi, onSelect]);
 
   return (
@@ -67,7 +69,7 @@ const EmblaCarousel = ({ slides, options = { loop: true }, id }) => {
               <div className="embla__slide__inner">
                 <img
                   className="rounded-t-xl object-cover h-96 w-full"
-                  src={mediaByIndex(index)}
+                  src={urlFor(rows[index].asset._ref)}
                   alt="Trailers"
                 />
               </div>

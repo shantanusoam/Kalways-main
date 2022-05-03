@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import client, { builder } from '../../client';
 import trucks from '../../images/bg.jpg';
 import Containers from '../../images/comtaimer.png';
 import Shiping from '../../images/shiping.jpg';
@@ -20,6 +21,7 @@ import {
   BannerContainer2,
 } from './SolutionElement';
 import Fade from 'react-reveal/Fade';
+
 import YoutubeEmbed from './youtubeVideo';
 const opts = {
   playerVars: {
@@ -30,7 +32,22 @@ const opts = {
     ecver: 2,
   },
 };
-const Solution = ({ isOpen, toggle }) => {
+const urlFor = (source) => builder.image(source);
+export default function Solution({ isOpen, toggle }) {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    client
+      .fetch(
+        `*[title == 'Home' ]{
+          title,
+          content[]
+          
+          }`
+      )
+      .then((data) => setPosts(data))
+      .catch(console.error);
+  }, []);
   return (
     <>
       {/* <WWOCArd1>
@@ -61,15 +78,13 @@ const Solution = ({ isOpen, toggle }) => {
       </WWOCArd1> */}
       <WWOCArd>
         <WWOCardContent>
-          <WWOCCHeading>FREIGHT AT FULL SPEED</WWOCCHeading>
-          <WWOCCParagraph>
-            Work with a trusted global third-party logistics provider that has
-            been empowering business growth. Our centralized marketplace
-            connects you to the people, technology, data and capacity – full
-            truckload, less than truckload (LTL), intermodal and other capacity
-            or asset solutions – needed to take your supply chain further,
-            faster.
-          </WWOCCParagraph>
+          {posts[0] ? (
+            <>
+              <WWOCCHeading>{posts[0]['content'][1].label}</WWOCCHeading>
+              <WWOCCParagraph>{posts[0]['content'][1].heading}</WWOCCParagraph>
+            </>
+          ) : null}
+
           <CardListRow>
             <div className=" md:py-0 md:px-0 bg-white flex flex-row flex-wrap justify-center items-center   ">
               {/* <LinkRo
@@ -114,7 +129,35 @@ const Solution = ({ isOpen, toggle }) => {
         </div>
       </Fade> */}
               {/* </LinkRo> */}
-              <Fade bottom>
+              {posts[0]
+                ? posts[0]['content'][2]['rows'].map((post) => (
+                    <Fade bottom>
+                      <div className="bg-white hover:shadow-2xl m-9 flex-1 transition duration-700 ease-in-out delay-150 transition duration-700 ease-in-out delay-150">
+                        <img
+                          src={urlFor(post.image.asset._ref)}
+                          alt="boy with camera"
+                          className=" h-80 w-full object-cover"
+                        />
+
+                        <div className="p-8">
+                          <h3 className="font-bold text-2xl mb-5">
+                            {post.heading}
+                          </h3>
+                          <br />
+                          <div className=" text-gray-800 text-0xl mb-4 lg:text-1xl md:mb-5 2xl:h-56">
+                            {post.text[0]['children'][0]['text']}
+                          </div>
+                          <a href="/Contact">
+                            <button class="btn">
+                              <span class="btn-text">1-800-502-7000</span>
+                            </button>
+                          </a>
+                        </div>
+                      </div>
+                    </Fade>
+                  ))
+                : null}
+              {/* <Fade bottom>
                 <div className="bg-white hover:shadow-2xl m-9 flex-1 transition duration-700 ease-in-out delay-150 transition duration-700 ease-in-out delay-150">
                   <img
                     src={trucks}
@@ -200,7 +243,7 @@ const Solution = ({ isOpen, toggle }) => {
                     </a>
                   </div>
                 </div>
-              </Fade>
+              </Fade> */}
             </div>
           </CardListRow>
           {/* <CardContainer>
@@ -252,28 +295,18 @@ const Solution = ({ isOpen, toggle }) => {
   </CButton> */}
           <BannerContainer>
             <BannerContainer2 className="flex lg:flex-row flex-col ">
-              <Fade left>
-                <div className="flex-1 ">
-                  <img
-                    src={Inc5000}
-                    alt="America's Fastest Growing Priivate Companies"
-                  ></img>
-                </div>
-              </Fade>
-              <Fade bottom>
-                <div className="flex-1">
-                  <img src={SmartWay} alt="Smart Way Transport Partner"></img>
-                </div>
-              </Fade>
-              <Fade right>
-                <div className="flex-1">
-                  <img
-                    className="w-3/4"
-                    src={BestBroker}
-                    alt="Nastc Bsest Broker"
-                  ></img>
-                </div>
-              </Fade>
+              {posts[0]
+                ? posts[0]['content'][3]['rows'].map((post) => (
+                    <Fade left>
+                      <div className="flex-1 ">
+                        <img
+                          src={urlFor(post.image.asset._ref)}
+                          alt="America's Fastest Growing Priivate Companies"
+                        ></img>
+                      </div>
+                    </Fade>
+                  ))
+                : null}
             </BannerContainer2>
           </BannerContainer>
           {/* <WWOCArd1>
@@ -299,23 +332,18 @@ const Solution = ({ isOpen, toggle }) => {
               </div>
             </div>
           </WWOCArd1> */}
-          <WWOCCHeading>
-            CARRIER PACKET - JOIN TEAM AT KALWAY <br></br>1-800-502-7000
-          </WWOCCHeading>
-          <WWOCCParagraph>
-            Quickly browse, negotiate, book, track and invoice loads on any of
-            our easy-to-use technology channels. Plus, when you need to talk to
-            a KALWAY logistics specialist, we’re just a phone call away. Life on
-            the road is tough; let us make it easier. Rely on our specialist to
-            know the loads you want, find opportunities that fit your network
-            and stand by you when things get tough. We’re here to help you grow
-            with a variety of dedicated opportunities.
-          </WWOCCParagraph>
+          {posts[0] ? (
+            <>
+              <WWOCCHeading>
+                {posts[0]['content'][4].label} <br></br>1-800-502-7000
+              </WWOCCHeading>
+              <WWOCCParagraph>{posts[0]['content'][4].heading}</WWOCCParagraph>
+            </>
+          ) : null}
+
           <CardListRow></CardListRow>
         </WWOCardContent>
       </WWOCArd>
     </>
   );
-};
-
-export default Solution;
+}
