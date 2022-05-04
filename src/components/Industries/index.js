@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import client, { builder } from '../../client';
 import { TiArrowRightThick } from 'react-icons/ti';
 import Pulse from 'react-reveal/Pulse';
 import image1 from '../../images/dv0.jpg';
@@ -54,56 +55,77 @@ import {
   BgImage,
   Card,
 } from './Industries';
-const Industrie = () => {
+import BlockContent from '@sanity/block-content-to-react';
+const urlFor = (source) => builder.image(source);
+export function Industrie() {
+  const [posts, setPosts] = useState([]);
+
   useEffect(() => {
-    window.scrollTo(0, 0);
+    client
+      .fetch(
+        `*[title == 'INDUSTRIES' ]{
+     
+          content[]
+          
+          }`
+      )
+      .then((data) => setPosts(data))
+      .catch(console.error);
   }, []);
+
   return (
     <>
-      <HeroContainer id="Home">
-        <HeroContent className="flex flex-col 	justify-items-end lg:w-1/2">
-          <ContainerMain className="absolute bottom-0 left-20 pb-0 pl-32">
-            <h1 className="text-white  font-normal pt-8 text-xl w-auto">
-              CROSS-BORDER FREIGHT
-            </h1>
-            <h2 className="text-white   pt-3 2xl:text-5xl text-3xl w-5/6 xl:text-2xl md:text-2xl">
-              Driving your business across borders.
-            </h2>
-            <p className=" font-normal pt-2 xl:mb-2 mb-0 2xl:text-2xl  text-1xl text-white 2xl:mb-10 mb:-10 w-4/5 ">
+      {posts[0] ? (
+        <HeroContainer id="Home">
+          <HeroContent className="flex flex-col 	justify-items-end lg:w-1/2">
+            <ContainerMain className="absolute bottom-0 left-20 pb-0 pl-32">
+              <h1 className="text-white  font-normal pt-8 text-xl w-auto">
+                {posts[0]['content'][0].heading}
+              </h1>
+              <h2 className="text-white   pt-3 2xl:text-5xl text-3xl w-5/6 xl:text-2xl md:text-2xl">
+                <BlockContent
+                  className="w-10/12"
+                  blocks={posts[0]['content'][0].tagline}
+                  projectId="cjv2tdo2"
+                  dataset="production"
+                />
+              </h2>
+              {/* <p className=" font-normal pt-2 xl:mb-2 mb-0 2xl:text-2xl  text-1xl text-white 2xl:mb-10 mb:-10 w-4/5 ">
+                Bring simplicity to an intricate supply chain process with our
+                reliable cross-border solutions.
+              </p> */}
+            </ContainerMain>
+            s
+            <PCENTER class="text-white text-left 2xl:p-8 p-2 pl-8">
               Bring simplicity to an intricate supply chain process with our
               reliable cross-border solutions.
-            </p>
-          </ContainerMain>
-
-          <PCENTER class="text-white text-left 2xl:p-8 p-2 pl-8">
-            Bring simplicity to an intricate supply chain process with our
-            reliable cross-border solutions.
-          </PCENTER>
-        </HeroContent>
-      </HeroContainer>
-
+            </PCENTER>
+          </HeroContent>
+        </HeroContainer>
+      ) : null}
       <div className=" flex flex-col  bg-slate-800   2xl:ml-40 m-8">
         <h2 className="pt-2 2xl:text-5xl  text-4xl  ">
-          Expand your supply chain. Ship without borders.
+          {posts[0] ? posts[0]['content'][1].title : null}
         </h2>
 
         <div className="flex flex-row 2xl:pt-16 pt-8">
           <div className="lg:pr-40">
             <p className="text-gray-800 font-normal 2xl:pt-8 pt-2 text-2xl w-auto ">
-              Whether shipping northbound or southbound, KALWAY leverages a
-              dense North American carrier network to bring you capacity when
-              and where you need it. We source the right carrier for each
-              opportunity, facilitate the crossing logistics and monitor your
-              freight throughout the process.
+              {posts[0] ? posts[0]['content'][1].label : null}
             </p>
-            <p className="text-gray-800 font-normal pt-9 pb-4 text-2xl w-auto">
+            {/* <p className="text-gray-800 font-normal pt-9 pb-4 text-2xl w-auto">
               We will help you get your products where they need to go fast,
               efficiently and without interruption. Join the more than 3,500 CPG
               companies who trust us with their freight.
-            </p>
+            </p> */}
           </div>
           <div className="w-2/2 drop-shadow-md pr-20 hidden lg:block ">
-            <img src={image8} className="w-auto "></img>
+            {posts[0] ? (
+              <img
+                src={urlFor(posts[0]['content'][1].image.asset._ref)}
+                className="w-auto "
+              ></img>
+            ) : null}
           </div>
         </div>
 
@@ -137,7 +159,7 @@ const Industrie = () => {
           <div className="flex flex-col 2xl:items-center items-start justify-items-start">
             <Container className="pb-8">
               <h3 className="text-gray-800  2xl:text-5xl text-4xl">
-                Ways to Ship
+                {posts[0] ? posts[0]['content'][2].title : null}
                 <br></br>
                 <p className="text-gray-800 w-40 h-5 pt-2 hover:w-10 bg-white transition duration-700 ease-in-out delay-150"></p>
                 <div className="text-gray-800 w-40 h-2 pt-2 hover:w-10 transition duration-700 ease-in-out delay-150"></div>
@@ -145,344 +167,111 @@ const Industrie = () => {
             </Container>
 
             <p className="text-gray-800 font-normal pt-2 text-2xl w-auto 2xl:text-center text-left ">
-              Your products are going to fly off the shelf. But first, they have
-              to get there on time. Whether you ship tissues or toothpaste,
-              sunscreen or salty snacks, your supply chain is feeling the
-              pressure. Consumer expectations are rising, delivery times are
-              shortening and excuses won’t cut it.
+              {posts[0] ? posts[0]['content'][2].label : null}
             </p>
-            <p className="text-gray-800 font-normal pt-9 text-2xl w-auto 2xl:text-center text-left">
+            {/* <p className="text-gray-800 font-normal pt-9 text-2xl w-auto 2xl:text-center text-left">
               We will help you get your products where they need to go fast,
               efficiently and without interruption. Join the more than 3,500 CPG
               companies who trust us with their freight.
-            </p>
+            </p> */}
           </div>
 
           <div className=" pt-10 grid gap-10 lg:grid-cols-2 grid-cols-1">
-            <div className="flex flex-col items-start">
-              <img src={grid1} width="150px"></img>
-              <h4 className="text-2xl">AUTOMOTIVE LOGISTICS</h4>
-              <p className="text-gray-800 font-normal pt-2 text-xl w-auto">
-                Automotive shippers can’t afford to have their supply chain slam
-                on the brakes. Keeping up with changes in demand and fulfilling
-                orders can be daunting. You need a 5PL you can trust with a
-                reliable, responsive carrier network to make sure you never hit
-                a roadblock.
-              </p>
-            </div>
-            <div className="flex flex-col items-start">
-              <img src={mgrid10} width="150px"></img>
-              <h4 className="text-2xl">CONSUMER PACKAGED GOODS LOGISTICS</h4>
-              <p className="text-gray-800 font-normal pt-2 text-xl w-auto">
-                our products are going to fly off the shelf. But first, they
-                have to get there on time. Whether you ship tissues or
-                toothpaste, sunscreen or salty snacks, your supply chain is
-                feeling the pressure. Consumer expectations are rising, delivery
-                times are shortening and excuses won’t cut it.
-                <br />
-                We will help you get your products where they need to go fast,
-                efficiently and without interruption. Join the more than 3,500
-                CPG companies who trust us with their freight
-              </p>
-            </div>
-            <div className="flex flex-col items-start">
-              <img src={mgrid12} width="150px"></img>
-              <h4 className="text-2xl">FOOD & BEVERAGE LOGISTICS</h4>
-              <p className="text-gray-800 font-normal pt-2 text-xl w-auto">
-                Running a food and beverage supply chain is not easy — margins
-                are tight, deliveries are strict, and customer demand is
-                seasonal.
-                <br />
-                You grow, crate, can and bottle the essential products we all
-                rely on. Your supply chain needs experienced refrigerated
-                carriers and national providers you can rely on.
-                <br />
-                Whether you’re shipping three pallets of craft beer, 30
-                truckloads of leafy greens or 3,000 annual loads of ice cream,
-                you can trust KALWAY’s 15-years of food and beverage experience
-                to cover sensitive freight on-time, in-full.
-              </p>
-            </div>
-            <div className="flex flex-col items-start">
-              <img src={mgrid13} width="150px"></img>
-              <h4 className="text-2xl">HEALTHCARE LOGISTICS</h4>
-              <p className="text-gray-800 font-normal pt-2 text-xl w-auto">
-                Healthcare shippers need fast and reliable service to keep up
-                with changes in demand. From medical equipment and
-                pharmaceuticals to PPE and emergency supplies — deliveries must
-                arrive on-time and intact.
-              </p>
-            </div>
-            <div className="flex flex-col items-start">
-              <img src={mgrid14} width="150px"></img>
-              <h4 className="text-2xl">AIR & OCEAN</h4>
-              <p className="text-gray-800 font-normal pt-2 text-xl w-auto">
-                Running a manufacturing supply chain is not easy. Though
-                transportation is often viewed as a commodity, the cost of
-                missed deliveries can shut down production. Manufacturers have
-                to control freight spend while delivering high service.
-              </p>
-            </div>
-            <div className="flex flex-col items-start">
-              <img src={mgrid15} width="150px"></img>
-              <h4 className="text-2xl">MANUFACTURING LOGISTICS</h4>
-              <p className="text-gray-800 font-normal pt-2 text-xl w-auto">
-                Running a manufacturing supply chain is not easy. Though
-                transportation is often viewed as a commodity, the cost of
-                missed deliveries can shut down production. Manufacturers have
-                to control freight spend while delivering high service.
-              </p>
-            </div>
-            <div className="flex flex-col items-start">
-              <img src={mgrid16} width="150px"></img>
-              <h4 className="text-2xl">RETAIL LOGISTICS</h4>
-              <p className="text-gray-800 font-normal pt-2 text-xl w-auto">
-                It’s never been harder to manage a retail supply chain. The line
-                between brick-and-mortar and e-commerce is blurring. Everyday,
-                consumer expectations rise higher, while delivery times get
-                shorter. To execute a modern retail supply chain, you need agile
-                capacity and readily-available assets — not only for the last
-                mile, but for every mile along the way.
-              </p>
-            </div>
+            {posts[0]
+              ? posts[0]['content'][2]['rows'].map((post) => (
+                  <div className="flex flex-col items-start">
+                    <img
+                      src={urlFor(post.image.asset._ref)}
+                      width="150px"
+                    ></img>
+                    <h4 className="text-2xl">{post.heading}</h4>
+                    <p className="text-gray-800 font-normal pt-2 text-xl w-auto">
+                      <BlockContent
+                        className="w-10/12"
+                        blocks={post.text}
+                        projectId="cjv2tdo2"
+                        dataset="production"
+                      />
+                    </p>
+                  </div>
+                ))
+              : null}
           </div>
         </div>
       </div>
-      <div className="xl:px-14 bg-white flex 2xl:flex-row lg:flex-row flex-col flex-wrap justify-center items-center ">
-        {/* <LinkRo
-              key={4}
-              to={{
-                pathname: "/Product",
-                state: { id: "lol" }, // your data array of objects
-              }}
-              className=" flex-1 "
-              key={3}
-              id={3}
-            > */}
-        {/* <Fade bottom key={2}>
-              <div
-                className="bg-white   m-9 hover:shadow-2xl flex-1 "
-                key={2}
-                id={5}
-              >
-                <img
-                  src={trucks}
-                  alt="Trailers images"
-                  className=" h-80 w-full object-cover"
-                />
+      <div className="xl:px-14 pb-10 bg-white flex 2xl:flex-row lg:flex-row flex-col flex-wrap justify-center items-center ">
+        {posts[0]
+          ? posts[0]['content'][3]['rows'].map((post) => (
+              <Fade bottom>
+                <div className="bg-white hover:shadow-2xl 2xl:m-2 m-2 flex-1 transition duration-700 ease-in-out delay-150">
+                  <img
+                    src={urlFor(post.image.asset._ref)}
+                    alt="boy with camera"
+                    className=" h-80 w-full object-cover"
+                  />
 
-                <div className="p-8"> */}
-        {/* <h3 className="font-bold text-2xl mb-5">fine</h3> */}
-        {/* <br />
-                  <h3 className=" text-1xl mb-5 ">
-                    Tap into a marketplace that matches over 10.000 shipments a
-                    day
-                  </h3>
-                  <NavLink
-                    key={1}
-                    to={{
-                      pathname: "/Product",
-                      state: { id: "lol" }, // your data array of objects
-                    }}
-                  > */}
-        {/* <p>date</p> */}
-        {/* </NavLink>
+                  <div className="p-8">
+                    <h3 className="font-bold 2xl:text-3xl text-2xl ">
+                      {post.heading}
+                    </h3>
+                    <br />
+                    <p className="text-gray-800 text-1xl mb-0 h-42  ">
+                      <BlockContent
+                        className="w-10/12"
+                        blocks={post.text}
+                        projectId="cjv2tdo2"
+                        dataset="production"
+                      />
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </Fade> */}
-        {/* </LinkRo> */}
-
-        <Fade bottom>
-          <div className="bg-white hover:shadow-2xl m-4 flex-1 transition duration-700 ease-in-out delay-150">
-            <img
-              src={image6}
-              alt="boy with camera"
-              className=" h-80 w-full object-cover"
-            />
-
-            <div className="p-8">
-              <h4 className="font-bold text-2xl mb-5">Network Density</h4>
-              <br />
-              <p className="text-gray-800 text-1xl mb-5 h-42">
-                You need quick access to a diverse carrier base to control your
-                freight spend and enable consistent service. Leverage our vast,
-                centralized network of over 75,000 carriers.
-              </p>
-            </div>
-          </div>
-        </Fade>
-        <Fade bottom>
-          <div className="bg-white hover:shadow-2xl m-4 flex-1 transition duration-700 ease-in-out delay-150">
-            <img
-              src={image1}
-              alt="boy with camera"
-              className=" h-80 w-full object-cover"
-            />
-
-            <div className="p-8">
-              <h4 className="font-bold text-2xl mb-5">Pricing You Can Trust</h4>
-              <br />
-              <p className="text-gray-800 text-1xl mb-5 h-42">
-                You can trust the quote you get from us, whether it comes
-                through your rep or KALWAY. If you are quoting for a spot LTL
-                load, a high-volume lane, or anything else, we can get you a
-                clear, reliable price.
-              </p>
-            </div>
-          </div>
-        </Fade>
-        <Fade right>
-          <div className="bg-white hover:shadow-2xl m-4 flex-1 transition duration-700 ease-in-out delay-150">
-            <img
-              src={image5}
-              alt="boy with camera"
-              className=" h-80 w-full object-cover"
-            />
-
-            <div className="p-8">
-              <h3 className="font-bold text-2xl mb-5">Unmatched Support</h3>
-              <br />
-              <h3 className="text-gray-800 text-1xl mb-5 h-42">
-                When moving CPG freight, you need the support of a dedicated
-                team that you can count on. Our specialists are here to help
-                during the day and after hours to respond to your quoting and
-                issue resolution needs.
-              </h3>
-            </div>
-          </div>
-        </Fade>
+              </Fade>
+            ))
+          : null}
       </div>
       <div className="flex flex-col bg-gray-200">
         <h4 className=" self-center font-bold pt-16 lg:text-4xl text-2xl p-8">
-          Mexico Cross-Border Services
+          {posts[0] ? posts[0]['content'][5].title : null}
         </h4>
 
-        <div className="m-8 pt-2 grid gap-10 lg:grid-cols-4 grid-cols-1 self-center justify-center justify-items-center ">
-          <Pulse>
-            <Card className="flex flex-col items-center 	align-content:center place-items-center bg-white w-80 p-8">
-              <img src={grid1} className="w-32"></img>
-              <h3 className="text-2xl  hover:text-lime-500 transition duration-700 ease-in-out delay-150">
-                Primary Truckload Capacity
-              </h3>
-            </Card>
-          </Pulse>
-
-          <Pulse>
-            <Card className="flex flex-col items-center bg-white w-80 p-8">
-              <img src={igrid2} className=" w-32"></img>
-              <h4 className="text-2xl">Spot Truckload Capacity</h4>
-            </Card>
-          </Pulse>
-
-          <Pulse>
-            <Card className="flex flex-col items-center bg-white w-80 p-8">
-              <img src={igrid3} className="w-32"></img>
-              <h4 className="text-2xl">Dedicated Surge Capacity</h4>
-            </Card>
-          </Pulse>
-
-          <Pulse>
-            <Card className="flex flex-col items-center bg-white w-80 p-8">
-              <img src={igrid4} className="w-40"></img>
-              <h4 className="text-2xl">Power Only Capacity</h4>
-            </Card>
-          </Pulse>
-
-          <Pulse>
-            <Card className="flex flex-col items-center bg-white w-80 p-8">
-              <img src={igrid5} className="w-32"></img>
-              <h4 className="text-2xl">Mobile Storage Solutions</h4>
-            </Card>
-          </Pulse>
-
-          <Pulse>
-            <Card className="flex flex-col items-center bg-white w-80 p-8">
-              <img src={igrid6} className="w-32"></img>
-              <h4 className="text-2xl">Leased Trailer Solutions</h4>
-            </Card>
-          </Pulse>
-
-          <Pulse>
-            <Card className="flex flex-col items-center bg-white w-80 p-8">
-              <img src={igrid7} className="w-40"></img>
-              <h4 className="text-2xl">Cross-Border Shipping</h4>
-            </Card>
-          </Pulse>
-
-          <Pulse>
-            <Card className="flex flex-col items-center bg-white w-80 p-8">
-              <img src={igrid8} className="w-40"></img>
-              <h4 className="text-2xl">Refrigerated</h4>
-            </Card>
-          </Pulse>
+        <div className="pb-10 m-8 pt-2 grid gap-10 lg:grid-cols-4 grid-cols-1 self-center justify-center justify-items-center ">
+          {posts[0]
+            ? posts[0]['content'][5]['rows'].map((post) => (
+                <Pulse>
+                  <Card className="flex flex-col items-center 	align-content:center place-items-center bg-white w-80 p-8 ">
+                    <img
+                      src={urlFor(post.image.asset._ref)}
+                      className="w-32"
+                    ></img>
+                    <h4 className="text-2xl font-bold self-center">
+                      {post.heading}
+                    </h4>
+                  </Card>
+                </Pulse>
+              ))
+            : null}
         </div>
-        <div className="self-center pt-8 pb-10">
-          <Pulse>
-            <Card className="flex flex-col items-center bg-white w-80 p-8">
-              <img src={igrid9} className="w-32"></img>
-              <h4 className="text-2xl">High-Value Cargo</h4>
-            </Card>
-          </Pulse>
-        </div>
+
         <h2 className=" self-center font-bold pt-4 lg:text-4xl text-2xl ">
-          Canada Cross-Border Services
+          {posts[0] ? posts[0]['content'][6].title : null}
         </h2>
 
         <div className=" pt-10 grid gap-10 lg:grid-cols-4 grid-cols-1 self-center justify-center justify-items-center ">
-          <Pulse>
-            <Card className="flex flex-col items-center bg-white w-80 p-8">
-              <img src={igrid2} className=" w-32"></img>
-              <h4 className="text-2xl">Spot Truckload Capacity</h4>
-            </Card>
-          </Pulse>
-
-          <Pulse>
-            <Card className="flex flex-col items-center bg-white w-80 p-8">
-              <img src={igrid3} className="w-32"></img>
-              <h4 className="text-2xl">Dedicated Surge Capacity</h4>
-            </Card>
-          </Pulse>
-
-          <Pulse>
-            <Card className="flex flex-col items-center bg-white w-80 p-8">
-              <img src={igrid4} className="w-40"></img>
-              <h4 className="text-2xl">Power Only Capacity</h4>
-            </Card>
-          </Pulse>
-
-          <Pulse>
-            <Card className="flex flex-col items-center bg-white w-80 p-8">
-              <img src={igrid5} className="w-32"></img>
-              <h4 className="text-2xl">Mobile Storage Solutions</h4>
-            </Card>
-          </Pulse>
-
-          <Pulse>
-            <Card className="flex flex-col items-center bg-white w-80 p-8">
-              <img src={igrid6} className="w-32"></img>
-              <h4 className="text-2xl">Leased Trailer Solutions</h4>
-            </Card>
-          </Pulse>
-
-          <Pulse>
-            <Card className="flex flex-col items-center bg-white w-80 p-8">
-              <img src={igrid7} className="w-40"></img>
-              <h4 className="text-2xl">Cross-Border Shipping</h4>
-            </Card>
-          </Pulse>
-
-          <Pulse>
-            <Card className="flex flex-col items-center bg-white w-80 p-8">
-              <img src={igrid8} className="w-40"></img>
-              <h4 className="text-2xl">Refrigerated</h4>
-            </Card>
-          </Pulse>
-          <Pulse>
-            <Card className="flex flex-col items-center bg-white w-80 p-8">
-              <img src={igrid9} className="w-40"></img>
-              <h4 className="text-2xl">High-Value Cargo</h4>
-            </Card>
-          </Pulse>
+          {posts[0]
+            ? posts[0]['content'][6]['rows'].map((post) => (
+                <Pulse>
+                  <Card className="flex flex-col items-center 	align-content:center place-items-center bg-white w-80 p-8 ">
+                    <img
+                      src={urlFor(post.image.asset._ref)}
+                      className="w-32"
+                    ></img>
+                    <h4 className="text-2xl font-bold self-center">
+                      {post.heading}
+                    </h4>
+                  </Card>
+                </Pulse>
+              ))
+            : null}
         </div>
         <div className="self-center pt-8 pb-10"></div>
       </div>
@@ -632,7 +421,7 @@ const Industrie = () => {
       </div>
     </>
   );
-};
+}
 class Industries extends React.Component {
   componentDidMount() {
     console.log('Industries');

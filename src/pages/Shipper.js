@@ -19,7 +19,18 @@ import {
   FormButton,
 } from '../components/shipfreight/shipfreight';
 import BlockContent from '@sanity/block-content-to-react';
+import YouTube from 'react-youtube';
+import PortableText from '@sanity/block-content-to-react';
 const urlFor = (source) => builder.image(source);
+const serializers = {
+  types: {
+    youtube: ({ node }) => {
+      const { url } = node;
+      const id = url.split('be/')[1];
+      return <YouTube videoId={id} />;
+    },
+  },
+};
 export default function Shipper() {
   const [posts, setPosts] = useState([]);
 
@@ -104,11 +115,12 @@ export default function Shipper() {
       </Card>
       <div className="flex lg:flex-row  content-between  justify-between flex-col p-8">
         {posts[0] ? (
-          <BlockContent
+          <PortableText
             className="w-10/12 "
             blocks={posts[0]['content'][2].text}
             projectId="cjv2tdo2"
             dataset="production"
+            serializers={serializers}
           />
         ) : null}
         {/* <div className="self-end lg:pl-32 lg:pr-32">

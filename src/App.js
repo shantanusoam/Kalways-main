@@ -17,7 +17,7 @@ import { FooterContainerBlack } from './CONTAINERS/footer';
 import ShipFlight from './pages/shipFlieghtPage';
 import ShipFlightPage from './pages/shipFlieghtPage';
 import Shipper from './pages/Shipper';
-import shipfreight from './components/shipfreight';
+import { Shipfreight } from './components/shipfreight';
 import Industries from './components/Industries';
 import WorkAtKalwayss from './components/WorkAtKalways';
 import Careers from './components/Careers';
@@ -74,7 +74,7 @@ function App() {
         <Route
           exact
           path="/shipfreight"
-          component={shipfreight}
+          component={Shipfreight}
           title="Inventory"
         />
         <Route
