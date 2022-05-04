@@ -225,13 +225,13 @@ color: #ED1C24;
     font-size: 32px;
 }
 `;
-export const HeroP = Styled.h2`
+export const HeroP = Styled.h1`
 margin-top: 24px;
 margin-bottom: 24px;
 font-family: sans-serif;
 font-style: normal;
 font-weight: 600;
-font-size: 4rem;
+font-size: 3.5rem !important; 
 
 line-height: 89.69%;
 text-align: left;

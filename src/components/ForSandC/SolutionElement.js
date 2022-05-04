@@ -165,7 +165,7 @@ export const Contanier = styled.div`
     text-align: center;
   }
   p {
-    padding: 0px;
+    padding: 1.5rem;
     font-size: 24px;
     color: #313131;
     text-align: center;

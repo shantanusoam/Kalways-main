@@ -26,10 +26,11 @@ export default function Shipper() {
   useEffect(() => {
     client
       .fetch(
-        `*[title == "SHIPPERS"] {
-          content[],
-         
-         }`
+        `*[title == 'SHIPPERS' ]{
+    
+          content[]
+          
+          }`
       )
       .then((data) => setPosts(data))
       .catch(console.error);
@@ -70,23 +71,30 @@ export default function Shipper() {
                 </SwiperSlide>
               ))
             : null}
+          {/* <SwiperSlide>
+            <img src={image2} className=" " alt=""></img>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={image3} className="  " alt=""></img>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={image1} className="   " alt=""></img>
+          </SwiperSlide> */}
         </Swiper>
       </div>
       <Bounce right>
-        {posts[0] ? (
-          <Formcontainer className="flex flex-col justify-center lg:items-center items-start bg-black p-8">
-            <h3 className="self-center pb-8 pt-4 lg:text-4xl text-2xl text-white">
-              {posts[0]['content'][1].heading}
-            </h3>
-            <FormButton className="self-center">
-              {' '}
-              <a href={posts[0]['content'][1]['ctas'][0].link}>
-                {posts[0]['content'][1]['ctas'][0].title}
-              </a>
-            </FormButton>
-          </Formcontainer>
-        ) : null}
+        <Formcontainer className="flex flex-col justify-center lg:items-center items-start bg-black p-8">
+          <h3 className="self-center pb-8 pt-4 lg:text-4xl text-2xl text-white">
+            {posts[0] ? posts[0]['content'][1].heading : null}
+          </h3>
+          <FormButton className="self-center">
+            <a href={posts[0] ? posts[0]['content'][1]['ctas'][0].link : null}>
+              {posts[0] ? posts[0]['content'][1]['ctas'][0].title : null}
+            </a>
+          </FormButton>
+        </Formcontainer>
       </Bounce>
+
       <Card>
         <h2 className=" self-left lg:pt-10 lg:pl-40  2xl:text-5xl text-4xl 2xl:p-8 pt-8 pl-8">
           {posts[0] ? posts[0]['content'][2].heading : null}
@@ -94,15 +102,16 @@ export default function Shipper() {
           <div className="w-40 h-2  hover:w-10 transition duration-700 ease-in-out delay-150"></div>
         </h2>
       </Card>
-      {posts[0] ? (
-        <BlockContent
-          blocks={posts[0]['content'][0]['text']}
-          projectId="cjv2tdo2"
-          dataset="production"
-        />
-      ) : null}
-      <div className="flex lg:flex-row   flex-col p-8">
-        <div className="self-end lg:pl-32 lg:pr-32">
+      <div className="flex lg:flex-row  content-between  justify-between flex-col p-8">
+        {posts[0] ? (
+          <BlockContent
+            className="w-10/12 "
+            blocks={posts[0]['content'][2].text}
+            projectId="cjv2tdo2"
+            dataset="production"
+          />
+        ) : null}
+        {/* <div className="self-end lg:pl-32 lg:pr-32">
           <h3 className="  2xl:text-4xl text-3xl">Additional Information</h3>
           <h3 className="font-bold pt-10 text-xl">
             Your New, Upgraded LTL Solution
@@ -128,60 +137,69 @@ export default function Shipper() {
             technology gives you complete visibility into each shipment, from
             step-by-step tracking to custom reporting.
           </p>
-          {/* <h3 className="font-bold pt-10 text-xl">REAL-TIME TRACKING</h3>
-            <p className="font-normal pt-2 text-xl">
-              The KALWAY Logistics mobile app allows drivers to provide
-              real-time tracking, reducing the need for check-in phone calls.{" "}
-            </p>
-            <h3 className="font-bold pt-10 text-xl">DOCUMENT UPLOAD</h3>
-            <p className="font-normal pt-2 text-xl">
-              TWith the KALWAY Logistics mobile app, drivers can quickly and
-              easily submit delivery documents to ensure they get paid faster.
-            </p>
-            <h3 className="font-bold pt-10 text-xl">
-              Dispatcher Web Portal Benefits:
-            </h3>
-            <div className="self-center pt-10 ">
-              <li className="font-normal pt-2 text-xl">
-                Search Available Loads and submit bids
-              </li>
-              <li className="font-normal pt-2 text-xl">
-                Full fleet overview with ability to manage loads and drivers
-              </li>
-              <li className="font-normal pt-2 text-xl">
-                Visibility into your Echo shipment volume history
-              </li>
-              <li className="font-normal pt-2 text-xl">
-                Complete load visibility during shipment process
-              </li>
-              <li className="font-normal pt-2 text-xl">
-                Invoice portal to view current and past receivables
-              </li>
-              <li className="font-normal pt-2 text-xl">
-                Ability to share load info with one click
-              </li>
-              <li className="font-normal pt-2 text-xl">
-                Set Preferred Lanes and receive daily Suggested Loads tailored
-                to your needs{" "}
-              </li>
-              <li className="font-normal pt-2 text-xl">
-                Receive Reload opportunities for shipments booked with Echo
-              </li>
-            </div> */}
-        </div>
-        <div className="flex-1 h-64">
+          <h3 className="font-bold pt-10 text-xl">REAL-TIME TRACKING</h3>
+          <p className="font-normal pt-2 text-xl">
+            The KALWAY Logistics mobile app allows drivers to provide real-time
+            tracking, reducing the need for check-in phone calls.{' '}
+          </p>
+          <h3 className="font-bold pt-10 text-xl">DOCUMENT UPLOAD</h3>
+          <p className="font-normal pt-2 text-xl">
+            TWith the KALWAY Logistics mobile app, drivers can quickly and
+            easily submit delivery documents to ensure they get paid faster.
+          </p>
+          <h3 className="font-bold pt-10 text-xl">
+            Dispatcher Web Portal Benefits:
+          </h3>
+          <div className="self-center pt-10 ">
+            <li className="font-normal pt-2 text-xl">
+              Search Available Loads and submit bids
+            </li>
+            <li className="font-normal pt-2 text-xl">
+              Full fleet overview with ability to manage loads and drivers
+            </li>
+            <li className="font-normal pt-2 text-xl">
+              Visibility into your Echo shipment volume history
+            </li>
+            <li className="font-normal pt-2 text-xl">
+              Complete load visibility during shipment process
+            </li>
+            <li className="font-normal pt-2 text-xl">
+              Invoice portal to view current and past receivables
+            </li>
+            <li className="font-normal pt-2 text-xl">
+              Ability to share load info with one click
+            </li>
+            <li className="font-normal pt-2 text-xl">
+              Set Preferred Lanes and receive daily Suggested Loads tailored to
+              your needs{' '}
+            </li>
+            <li className="font-normal pt-2 text-xl">
+              Receive Reload opportunities for shipments booked with Echo
+            </li>
+          </div>
+        </div> */}
+        <div className="flex-1 h-64 pl-28 flex flex-col flex-end ">
           <h3 className="font-bold pt-10 text-xl">Learn More</h3>
+
           <p className="font-normal pt-10 text-xl 2xl:w-96 pb-8">
-            We measure success by the results we generate for our clients. With
-            every solution, KALWAY Logistics simplifies transportation
-            management—so you can focus on what you do best.
+            {posts[0] ? posts[0]['content'][2]['cta'].title : null}
           </p>
           <button class="btn">
             <span class="btn-text">1-800-502-7000</span>
           </button>
+          <img
+            style={{ paddingTop: '2rem' }}
+            src={
+              posts[0]
+                ? urlFor(posts[0]['content'][2]['image']['asset']._ref)
+                : null
+            }
+            className="flex-1 h-64 hidden lg:block"
+            alt=""
+          ></img>
         </div>
       </div>
-      <h2 className=" self-center pt-4 text-4xl">CROSS - BORDER</h2>
+      {/* <h2 className=" self-center pt-4 text-4xl">CROSS - BORDER</h2>
       <div className="flex flex-row lg:pr-16 p-8">
         <div className="self-end lg:pl-32 lg:pr-16 pb-16">
           <h3 className="font-bold pt-4 text-xl">
@@ -200,7 +218,7 @@ export default function Shipper() {
             points of United states.
           </p>
 
-          {/* <h3 className="font-bold pt-10 text-xl">REAL-TIME TRACKING</h3>
+          <h3 className="font-bold pt-10 text-xl">REAL-TIME TRACKING</h3>
             <p className="font-normal pt-2 text-xl">
               The KALWAY Logistics mobile app allows drivers to provide
               real-time tracking, reducing the need for check-in phone calls.{" "}
@@ -239,10 +257,9 @@ export default function Shipper() {
               <li className="font-normal pt-2 text-xl">
                 Receive Reload opportunities for shipments booked with Echo
               </li>
-            </div> */}
+            </div>
         </div>
-        <img src={image4} className="flex-1 h-64 hidden lg:block" alt=""></img>
-      </div>
+      </div> */}
     </div>
   );
 }
