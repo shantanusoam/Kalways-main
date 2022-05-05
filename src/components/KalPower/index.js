@@ -221,11 +221,13 @@ export default function KalPower() {
                   {posts[0] ? posts[0]['content'][3].heading : null}
                 </h3>
                 <p className=" lg:text-2xl text-xl lg:pt-10">
-                  <BlockContent
-                    blocks={posts[0]['content'][3].text}
-                    projectId="cjv2tdo2"
-                    dataset="production"
-                  />
+                  {posts[0] ? (
+                    <BlockContent
+                      blocks={posts[0]['content'][3].text}
+                      projectId="cjv2tdo2"
+                      dataset="production"
+                    />
+                  ) : null}
                 </p>
                 <div className="lg:pt-10 pt-10">
                   <a className="pt-10" href="/Contact" target="_blank">

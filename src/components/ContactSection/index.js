@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+import client, { builder } from '../../client';
 import {
   ContactContainer,
   ContactForm,
@@ -13,7 +14,21 @@ import {
 } from './ContactSEctionElements';
 
 import { animateScroll as scroll, Link } from 'react-scroll';
-const ContactSectio = ({ isOpen, toggle }) => {
+export default function ContactSectio({ isOpen, toggle }) {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    client
+      .fetch(
+        `*[title == 'Contact Us' ]{
+          label,
+          content[]
+          
+          }`
+      )
+      .then((data) => setPosts(data))
+      .catch(console.error);
+  }, []);
   function refreshPage() {
     hide = 'lol';
     window.location.reload();
@@ -46,37 +61,20 @@ const ContactSectio = ({ isOpen, toggle }) => {
           <FotterNav>
             <FotterContact>
               <FotterContactlist>
-                <FotterContactName>Address</FotterContactName>
-                <FotterContactNo>
-                  10156 Live Oak Ave, Fontana, CA 92335
-                </FotterContactNo>
+                {posts[0]
+                  ? posts[0]['content'].map((post) => (
+                      <>
+                        <FotterContactName>{post.heading}</FotterContactName>
+                        <FotterContactNo>{post.label}</FotterContactNo>
+                      </>
+                    ))
+                  : null}
+              </FotterContactlist>
+            </FotterContact>
+            {/* <hr align="left" width="100%"></hr> */}
 
-                <FotterContactName>United states</FotterContactName>
-                <FotterContactNo>
-                  California
-                  {/* Finsweet@gmail.com */}
-                </FotterContactNo>
-              </FotterContactlist>
-            </FotterContact>
             {/* <hr align="left" width="100%"></hr> */}
-            <FotterContact>
-              <FotterContactlist>
-                <FotterContactName>Contact Details</FotterContactName>
-                <FotterContactNo>
-                  1-800-502-7000
-                  {/* Finsweet@gmail.com */}
-                </FotterContactNo>
-              </FotterContactlist>
-            </FotterContact>
-            {/* <hr align="left" width="100%"></hr> */}
-            <FotterContact>
-              <FotterContactlist>
-                <FotterContactName>Opening Hours</FotterContactName>
-                <FotterContactNo>
-                  Monday to Friday 8:00 AM to 5:00 PM
-                </FotterContactNo>
-              </FotterContactlist>
-            </FotterContact>
+
             {/* <SocialMediaActions>
             <FaFacebookF/>
             </SocialMediaActions> */}
@@ -90,7 +88,7 @@ const ContactSectio = ({ isOpen, toggle }) => {
       </ContactImage>
     </ContactContainer>
   );
-};
+}
 class ContactSection extends React.Component {
   // componentDidMount() {
   //   window.location.reload(false);
@@ -100,4 +98,3 @@ class ContactSection extends React.Component {
     return <ContactSectio />;
   }
 }
-export default ContactSection;

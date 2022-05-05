@@ -38,7 +38,8 @@ export const HeroContainer = Styled.div`
 
 overflow: hidden;
 
-background-image: radial-gradient(#42424280,#9f9e9e17),  url(${bgimage});
+background-image: radial-gradient(#42424280,#9f9e9e17),  url(${(props) =>
+  props.bgImage});
 background-size: cover;
 display: flex;  
 flex-direction: column;
