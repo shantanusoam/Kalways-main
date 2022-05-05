@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+import client, { builder } from '../../client';
 import image1 from '../../images/e-commerce1.png';
 import image2 from '../../images/e-commerce2.png';
 import image3 from '../../images/e-commerce3.png';
@@ -67,7 +68,23 @@ import {
   BgImage,
   FormButton,
 } from './ecommerceElement';
-const ecommerce = () => {
+import BlockContent from '@sanity/block-content-to-react';
+const urlFor = (source) => builder.image(source);
+export default function Ecommerce() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    client
+      .fetch(
+        `*[title == 'E-commerce' ]{
+    
+          content[]
+          
+          }`
+      )
+      .then((data) => setPosts(data))
+      .catch(console.error);
+  }, []);
   return (
     <>
       {/* <Gradients></Gradients>
@@ -104,7 +121,14 @@ const ecommerce = () => {
               modules={[Autoplay, Pagination, Navigation]}
               className="mySwiper z-10 w-full"
             >
-              <SwiperSlide>
+              {posts[0]
+                ? posts[0]['content'][0]['rows'].map((post) => (
+                    <SwiperSlide>
+                      <ImageS alt="" img={urlFor(post.asset._ref)}></ImageS>
+                    </SwiperSlide>
+                  ))
+                : null}
+              {/* <SwiperSlide>
                 <ImageS alt="" img={image1}></ImageS>
               </SwiperSlide>
               <SwiperSlide>
@@ -112,13 +136,13 @@ const ecommerce = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <ImageS alt="" img={image3}></ImageS>
-              </SwiperSlide>
+              </SwiperSlide> */}
             </Swiper>
           </div>
         </div>
         <div className="absolute bottom-48 lg:bottom-80 lg:left-40 z-30">
           <div className="hidden lg:block">
-            <HeroP>EVER FULFILLING</HeroP>
+            <HeroP>{posts[0] ? posts[0]['content'][0].heading : null}</HeroP>
             <a href="/Contact">
               <button class="btn">
                 <span class="btn-text">SPEAK TO AN EXPERT</span>
@@ -145,11 +169,12 @@ const ecommerce = () => {
       <Bounce right>
         <Formcontainer className="flex flex-col justify-center lg:items-center items-start bg-black p-8">
           <h3 className="self-center pb-8 pt-4 lg:text-4xl text-2xl text-white">
-            The KALWAY e-commerce fulfillment advantage
+            {posts[0] ? posts[0]['content'][1].heading : null}
           </h3>
           <FormButton className="self-center">
-            {' '}
-            <a href="/Contact">SPEAK TO A KALWAY EXPERT</a>
+            <a href={posts[0] ? posts[0]['content'][1]['ctas'][0].link : null}>
+              {posts[0] ? posts[0]['content'][1]['ctas'][0].title : null}
+            </a>
           </FormButton>
         </Formcontainer>
       </Bounce>
@@ -227,113 +252,119 @@ const ecommerce = () => {
           <div className="lg:pr-40 ml-4 mt-4 lg:w-4/5 mr-4">
             <>
               <h3 className="font-bold  lg:text-3xl text-3xl">
-                KALWAY Postions
+                {posts[0] ? posts[0]['content'][2].heading : null}
               </h3>
               <p className="font-bold  lg:text-2xl text-xl ">
-                Flexible solutions to meets today’s omni-channel demands
+                {posts[0] ? posts[0]['content'][2].label : null}
               </p>
             </>
             <p className="text-gray-800 font-normal pt-8 text-xl w-auto ">
-              At KALWAY, our e-commerce solutions allow you to gain greater
-              control of product selection, inventory management, and customer
-              service, while maintaining critical speed-to-market. With our
-              focus on integration with all e-commerce platforms, fulfillment
-              center expertise, and strategically located fulfillment
-              warehouses, you benefit from 2-day delivery to 95% of the U.S.;
-              streamlined operation stand-up, product personalization, and
-              improved customer satisfaction.
+              {posts[0] ? (
+                <BlockContent
+                  blocks={posts[0]['content'][2]['text']}
+                  projectId="cjv2tdo2"
+                  dataset="production"
+                />
+              ) : null}
             </p>
-            <p className=" text-gray-800 font-normal pt-2 pb-10 text-xl w-auto">
-              Through our e-commerce fulfillment solution, you get: a
-              streamlined on-boarding process to ensure you are operational
-              quickly; specially trained teams that provide you with talent
-              management; best-in-class fulfillment order and management
-              systems; and full reverse logistics capabilities. As a result, you
-              overcome the challenges of operating an omni-channel supply chain,
-              meet the e-commerce demands of consumers who expect two-day
-              delivery, and provide real-time inventory management.
-            </p>
+            <p className=" text-gray-800 font-normal pt-2 pb-10 text-xl w-auto"></p>
           </div>
           <div>
-            <img src={image4} className="lg:w-auto w-full" alt=""></img>
+            <img
+              src={
+                posts[0]
+                  ? urlFor(posts[0]['content'][2].image.asset._ref)
+                  : null
+              }
+              className="lg:w-auto w-full"
+              alt=""
+            ></img>
           </div>
         </div>
       </div>
 
       <Fulfillment>
         <h3 className="self-center pb-8 pt-8 text-4xl p-4">
-          The KALWAY <br></br> e-commerce fulfillment advantage
+          {posts[0] ? posts[0]['content'][3].title : null}
+          <br></br> {posts[0] ? posts[0]['content'][3].label : null}
         </h3>
         <div className="flex lg:flex-row flex-col w-5/6 pb-16  justify-around">
-          <div className="flex-1 ">
-            <h4 className="font-bold text-xl pb-4  ">TECHNOLOGY</h4>
-            <p className="   text-white">
-              With seamless shopping cart integration and top-of-the-line
-              Warehouse Management System (WMS), you can easily manage your
-              inventory and ship your products
-            </p>
-          </div>
-          <div className="flex-1">
-            <h4 className="font-bold text-xl pb-4">TWO-DAY DELIVERY</h4>
-            <p className=" text-white">
-              Our strategically placed fulfillment centers offer two-day
-              delivery to 99% of the United States, reduced transit costs, and
-              industry-leading accuracy
-            </p>
-          </div>
-          <div className="flex-1">
-            <h4 className="font-bold text-xl pb-4">TRANSPORTATION</h4>
-            <p className="text-white">
-              Our carrier-agnostic shipping helps us secure the lowiest costs
-              for your order
-            </p>
-          </div>
+          {posts[0]
+            ? posts[0]['content'][3]['rows'].map((post) => (
+                <div className="flex-1 ">
+                  <h4 className="font-bold text-xl pb-4  ">{post.heading}</h4>
+                  <p className="   text-white">
+                    {posts[0] ? (
+                      <BlockContent
+                        blocks={post.text}
+                        projectId="cjv2tdo2"
+                        dataset="production"
+                      />
+                    ) : null}
+                  </p>
+                </div>
+              ))
+            : null}
         </div>
       </Fulfillment>
 
       <Bounce top>
         <Percentage>
           <h3 className="self-center p-4 lg:pb-16 lg:pt-16 text-4xl text-black font-normal">
-            The KALWAY<br></br> e-commerce fulfillment advantage
+            {posts[0] ? posts[0]['content'][4].title : null}
+            <br></br> {posts[0] ? posts[0]['content'][4].label : null}
           </h3>
           <div className="flex lg:flex-row flex-col w-5/6 lg:pb-16  justify-around">
-            <div className="flex-1 ">
-              <h4 className="font-bold text-7xl pb-4  ">95%</h4>
-              <p className="   text-black">of U.S. reached in two days</p>
-            </div>
-            <div className="flex-1">
-              <h4 className="font-bold text-7xl pb-4">99%</h4>
-              <p className=" text-black">order accuracy</p>
-            </div>
-            <div className="flex-1">
-              <h4 className="font-bold text-7xl pb-4">100%</h4>
-              <p className="text-black">API integration</p>
-            </div>
+            {posts[0]
+              ? posts[0]['content'][4]['rows'].map((post) => (
+                  <div className="flex-1 ">
+                    <h4 className="font-bold text-7xl pb-4  ">
+                      {post.heading}
+                    </h4>
+                    <p className="   text-black">
+                      {' '}
+                      {posts[0] ? (
+                        <BlockContent
+                          blocks={post.text}
+                          projectId="cjv2tdo2"
+                          dataset="production"
+                        />
+                      ) : null}
+                    </p>
+                  </div>
+                ))
+              : null}
           </div>
         </Percentage>
       </Bounce>
-      <Bounce left>
-        <Formcontainer className=" flex w-screen justify-center justify-items-center items-center">
-          <div
-            className="flex flex-col justify-center justify-items-center items-center h-80 lg:w-full"
-            style={{
-              backgroundImage: `radial-gradient(rgba(66, 66, 66, 0.5), rgb(0 0 0 / 50%)) ,url(${ecb})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-            }}
-          >
-            <h3 className="p-4 self-center pb-8 pt-4 text-4xl text-white">
-              The KALWAY <br></br> e-commerce fulfillment advantage
-            </h3>
-            <FormButton>
-              {' '}
-              <a href="/Contact">SPEAK TO A KALWAY EXPERT</a>
-            </FormButton>
-          </div>
-        </Formcontainer>
-      </Bounce>
+      {posts[0] ? (
+        <Bounce left>
+          <Formcontainer className=" flex w-screen justify-center justify-items-center items-center">
+            <div
+              className="flex flex-col justify-center justify-items-center items-center h-80 lg:w-full"
+              style={{
+                backgroundImage: `radial-gradient(rgba(66, 66, 66, 0.5), rgb(0 0 0 / 50%)) ,url(${urlFor(
+                  posts[0]['content'][5].image.asset._ref
+                )})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+              }}
+            >
+              <h3 className="p-4 self-center pb-8 pt-4 text-4xl text-white">
+                {posts[0] ? posts[0]['content'][5].title : null}
+                <br></br> {posts[0] ? posts[0]['content'][5].label : null}
+              </h3>
+              <FormButton>
+                {' '}
+                <a href={posts[0] ? posts[0]['content'][5].cta.link : null}>
+                  {' '}
+                  {posts[0] ? posts[0]['content'][5].cta.title : null}
+                </a>
+              </FormButton>
+            </div>
+          </Formcontainer>
+        </Bounce>
+      ) : null}
     </>
   );
-};
-
-export default ecommerce;
+}

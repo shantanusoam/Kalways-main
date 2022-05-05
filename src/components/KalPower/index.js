@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+import client, { builder } from '../../client';
 import image1 from '../../images/ut008.jpg';
 import image2 from '../../images/ut009.jpg';
 import image3 from '../../images/ut0010.jpg';
@@ -66,51 +67,57 @@ import {
   BgImage,
 } from './KalPowerElement';
 import { render } from '@testing-library/react';
-class KalPower extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { show: false };
-    this.handleClick = this.handleClick.bind(this);
-  }
-  handleClick() {
-    this.setState({ show: !this.state.show });
-  }
-  render() {
-    return (
-      <>
-        <HeroContainer ontainer id="Carrers ">
-          {/* <Gradients></Gradients>
+export default function KalPower() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    client
+      .fetch(
+        `*[title == 'CARRIER' ]{
+    
+          content[]
+          
+          }`
+      )
+      .then((data) => setPosts(data))
+      .catch(console.error);
+  }, []);
+
+  return (
+    <>
+      <HeroContainer ontainer id="Carrers ">
+        {/* <Gradients></Gradients>
           <HeroBg>
             <BgImage></BgImage>
           </HeroBg> */}
 
-          <HeroContent className="flex flex-col 	justify-items-end lg:w-1/2">
-            <ContainerMain>
-              <HeroP>KALPOWER</HeroP>
-              <p className="text-white text-xl pb-6">Keep You running</p>
-              <a href="/Contact" target="_blank">
-                <button class="btn">
-                  <span class="btn-text">Contact us</span>
-                </button>
-              </a>
-            </ContainerMain>
+        <HeroContent className="flex flex-col 	justify-items-end lg:w-1/2">
+          <ContainerMain>
+            <HeroP>KALPOWER</HeroP>
+            <p className="text-white text-xl pb-6">Keep You running</p>
+            <a href="/Contact" target="_blank">
+              <button class="btn">
+                <span class="btn-text">Contact us</span>
+              </button>
+            </a>
+          </ContainerMain>
 
-            <PCENTER class="text-white lg:p-8 text-left m-8">
-              <h1 className=" font-normal pt-8 2xl:text-3xl pb-2 text-2xl w-auto ">
-                KalPower
-              </h1>
-              <p>
-                Being part of the Kalways family means surrounding yourself with
-                a sense of openness and inclusivity,a group of different people
-                who’ve created an environment where everyone is willing to help
-                everyone.
-              </p>
-            </PCENTER>
-          </HeroContent>
-        </HeroContainer>
+          <PCENTER class="text-white lg:p-8 text-left m-8">
+            <h1 className=" font-normal pt-8 2xl:text-3xl pb-2 text-2xl w-auto ">
+              KalPower
+            </h1>
+            <p>
+              Being part of the Kalways family means surrounding yourself with a
+              sense of openness and inclusivity,a group of different people
+              who’ve created an environment where everyone is willing to help
+              everyone.
+            </p>
+          </PCENTER>
+        </HeroContent>
+      </HeroContainer>
 
-        <div className="flex flex-col bg-grey bg-white lg:pt-32">
-          {/* <Head className="  self-start pl-16">
+      <div className="flex flex-col bg-grey bg-white lg:pt-32">
+        {/* <Head className="  self-start pl-16">
             <h2 className=" self-start pt-10 text-black  text-2xl 2xl:text-4xl">
               Perks & Benefits
               <p className="h-2"></p>
@@ -118,45 +125,45 @@ class KalPower extends React.Component {
             </h2>
           </Head> */}
 
-          <div className="lg:pb-10  lg:pt-10 lg:pl-32 lg:pr-32 grid gap-20 2xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 self-center justify-center justify-items-center ">
-            <Pulse>
-              <Card className="flex flex-col items-left h-auto bg-white w-auto p-8 lg:h-96">
-                <img src={acessTime} className="w-20 self-left"></img>
-                <h4 className="text-2xl font-bold self-left pt-4">
-                  Short Detentions
-                </h4>
-                <p className="font-light self-left pt-4 pb-20 lg:h-40">
-                  At KALWAY, carriers may access preloaded trailers to turn down
-                  the load time significantly. Due to this free carriers avoid
-                  unplanned delays which shortens detention durations.
-                </p>
-              </Card>
-            </Pulse>
-            <Pulse>
-              <Card className="flex flex-col items-left h-auto bg-white w-auto p-8 lg:h-96">
-                <img src={MoreTime} className="w-20 self-left"></img>
-                <h4 className="text-2xl font-bold self-left pt-4 ">
-                  Maximize On-road <br></br> hours
-                </h4>
-                <p className="font-light self-left pt-4 pb-20 lg:h-40">
-                  Ease in searching next loads in queue. KALWAY has made
-                  backhauling so easy .
-                </p>
-              </Card>
-            </Pulse>
-            <Pulse>
-              <Card className="flex flex-col items-left h-auto bg-white w-auto p-8 lg:h-96">
-                <img src={NewBusiness} className="w-20 self-left"></img>
-                <h4 className="text-2xl font-bold self-left pt-4">
-                  Entrepreneur <br></br> opportunities
-                </h4>
-                <p className="font-light self-left pt-4 pb-20 ">
-                  Association with KALWAY can bring exciting business
-                  opportunities with the leased trailers instead of owning them.
-                </p>
-              </Card>
-            </Pulse>
-            {/* <Pulse>
+        <div className="lg:pb-10  lg:pt-10 lg:pl-32 lg:pr-32 grid gap-20 2xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 self-center justify-center justify-items-center ">
+          <Pulse>
+            <Card className="flex flex-col items-left h-auto bg-white w-auto p-8 lg:h-96">
+              <img src={acessTime} className="w-20 self-left"></img>
+              <h4 className="text-2xl font-bold self-left pt-4">
+                Short Detentions
+              </h4>
+              <p className="font-light self-left pt-4 pb-20 lg:h-40">
+                At KALWAY, carriers may access preloaded trailers to turn down
+                the load time significantly. Due to this free carriers avoid
+                unplanned delays which shortens detention durations.
+              </p>
+            </Card>
+          </Pulse>
+          <Pulse>
+            <Card className="flex flex-col items-left h-auto bg-white w-auto p-8 lg:h-96">
+              <img src={MoreTime} className="w-20 self-left"></img>
+              <h4 className="text-2xl font-bold self-left pt-4 ">
+                Maximize On-road <br></br> hours
+              </h4>
+              <p className="font-light self-left pt-4 pb-20 lg:h-40">
+                Ease in searching next loads in queue. KALWAY has made
+                backhauling so easy .
+              </p>
+            </Card>
+          </Pulse>
+          <Pulse>
+            <Card className="flex flex-col items-left h-auto bg-white w-auto p-8 lg:h-96">
+              <img src={NewBusiness} className="w-20 self-left"></img>
+              <h4 className="text-2xl font-bold self-left pt-4">
+                Entrepreneur <br></br> opportunities
+              </h4>
+              <p className="font-light self-left pt-4 pb-20 ">
+                Association with KALWAY can bring exciting business
+                opportunities with the leased trailers instead of owning them.
+              </p>
+            </Card>
+          </Pulse>
+          {/* <Pulse>
               <Card className="flex flex-col items-left h-96 bg-white w-80 p-8 ">
                 <img src={PetInsurance} className="w-32 self-center"></img>
                 <h4 className="text-2xl font-bold self-left pt-4">
@@ -168,54 +175,54 @@ class KalPower extends React.Component {
                 </p>
               </Card>
             </Pulse> */}
-          </div>
-          <div className="h-24"></div>
+        </div>
+        <div className="h-24"></div>
 
-          <div className="flex w-screen justify-center justify-items-center items-center">
-            <div
-              className="flex flex-col justify-center justify-items-start items-left  h-auto w-full"
-              style={{
-                backgroundImage: `url(${bgcf})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
-            >
-              <h4 className="text-white text-left  lg:text-5xl text-3xl lg:w-3/5 pt-64 lg:ml-40 ml-4">
-                Get back on the road faster
-              </h4>
-              <p className="text-white text-left ml-44 pt-4 font-bold">
-                See how Powerloop is reducing the wait for carriers.
-              </p>
-              <div className="pb-64 lg:ml-40 pt-10 ml-4">
-                <a className="pt-10" href="/Contact" target="_blank">
-                  <button class="btn">
-                    <div class="btn-text">Start now</div>
-                  </button>
-                </a>
-              </div>
+        <div className="flex w-screen justify-center justify-items-center items-center">
+          <div
+            className="flex flex-col justify-center justify-items-start items-left  h-auto w-full"
+            style={{
+              backgroundImage: `url(${bgcf})`,
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
+            <h4 className="text-white text-left  lg:text-5xl text-3xl lg:w-3/5 pt-64 lg:ml-40 ml-4">
+              Get back on the road faster
+            </h4>
+            <p className="text-white text-left ml-44 pt-4 font-bold">
+              See how Powerloop is reducing the wait for carriers.
+            </p>
+            <div className="pb-64 lg:ml-40 pt-10 ml-4">
+              <a className="pt-10" href="/Contact" target="_blank">
+                <button class="btn">
+                  <div class="btn-text">Start now</div>
+                </button>
+              </a>
             </div>
           </div>
-          <div className="h-4"></div>
-          <div className="lg:ml-32 lg:mr-40  lg:mt-20 lg:mb-20 mb-20">
-            <div className=" flex lg:flex-row flex-col-reverse ">
-              <div className="lg:pr-40 ml-4 mt-20 lg:w-4/5 mr-4">
-                <>
-                  <h3 className="font-bold  2xl:text-6xl lg:text-4xl xl:text-5xl text-3xl leading-10 w-4/5">
-                    Sign up for free and get started today
-                  </h3>
-                  <p className=" lg:text-2xl text-xl lg:pt-10">
-                    Book the loads you want, 24 hours a day
-                  </p>
-                  <div className="lg:pt-10 pt-10">
-                    <a className="pt-10" href="/Contact" target="_blank">
-                      <button class="btn">
-                        <div class="btn-text">Start now</div>
-                      </button>
-                    </a>
-                  </div>
-                </>
-                {/* <p className="text-gray-800 font-normal pt-8 text-xl w-auto ">
+        </div>
+        <div className="h-4"></div>
+        <div className="lg:ml-32 lg:mr-40  lg:mt-20 lg:mb-20 mb-20">
+          <div className=" flex lg:flex-row flex-col-reverse ">
+            <div className="lg:pr-40 ml-4 mt-20 lg:w-4/5 mr-4">
+              <>
+                <h3 className="font-bold  2xl:text-6xl lg:text-4xl xl:text-5xl text-3xl leading-10 w-4/5">
+                  Sign up for free and get started today
+                </h3>
+                <p className=" lg:text-2xl text-xl lg:pt-10">
+                  Book the loads you want, 24 hours a day
+                </p>
+                <div className="lg:pt-10 pt-10">
+                  <a className="pt-10" href="/Contact" target="_blank">
+                    <button class="btn">
+                      <div class="btn-text">Start now</div>
+                    </button>
+                  </a>
+                </div>
+              </>
+              {/* <p className="text-gray-800 font-normal pt-8 text-xl w-auto ">
                   At KALWAY, our e-commerce solutions allow you to gain greater
                   control of product selection, inventory management, and
                   customer service, while maintaining critical speed-to-market.
@@ -236,13 +243,13 @@ class KalPower extends React.Component {
                   expect two-day delivery, and provide real-time inventory
                   management.
                 </p> */}
-              </div>
-              <div>
-                <img src={image4} className="lg:w-auto w-full" alt=""></img>
-              </div>
+            </div>
+            <div>
+              <img src={image4} className="lg:w-auto w-full" alt=""></img>
             </div>
           </div>
-          {/* <div className="flex 2xl:flex-col self-center justify-center justify-items-center w-4/5">
+        </div>
+        {/* <div className="flex 2xl:flex-col self-center justify-center justify-items-center w-4/5">
             <h4 className=" self-left font-light text-5xl">FAQs</h4>
             <Faq className=" self-left  text-xl">
               <h4 className="text-4xl bg-grey-400 border-2  rounded-xl shadow-lg">
@@ -292,10 +299,7 @@ class KalPower extends React.Component {
               </div>
             </Faq>
           </div> */}
-        </div>
-      </>
-    );
-  }
+      </div>
+    </>
+  );
 }
-
-export default KalPower;

@@ -21,7 +21,7 @@ import { Shipfreight } from './components/shipfreight';
 import Industries from './components/Industries';
 import WorkAtKalwayss from './components/WorkAtKalways';
 import Careers from './components/Careers';
-import ecommerce from './components/ecommerce';
+import Ecommerce from './components/ecommerce';
 import KalPower from './components/KalPower';
 import CreditApllication from './pages/CreditApllication';
 import Blog from './components/Blog';
@@ -93,7 +93,7 @@ function App() {
         <Route
           exact
           path="/Ecommerce"
-          component={ecommerce}
+          component={Ecommerce}
           title="Ecomerece"
         />
         <Route
