@@ -66,14 +66,16 @@ import {
   Callinfo,
   BgImage,
 } from './KalPowerElement';
+import BlockContent from '@sanity/block-content-to-react';
 import { render } from '@testing-library/react';
+const urlFor = (source) => builder.image(source);
 export default function KalPower() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     client
       .fetch(
-        `*[title == 'CARRIER' ]{
+        `*[title == 'KALPOWER' ]{
     
           content[]
           
@@ -85,7 +87,15 @@ export default function KalPower() {
 
   return (
     <>
-      <HeroContainer ontainer id="Carrers ">
+      <HeroContainer
+        ontainer
+        id="Carrers"
+        bgImage={
+          posts[0]
+            ? urlFor(posts[0]['content'][0].backgroundImage.asset._ref)
+            : null
+        }
+      >
         {/* <Gradients></Gradients>
           <HeroBg>
             <BgImage></BgImage>
@@ -93,8 +103,16 @@ export default function KalPower() {
 
         <HeroContent className="flex flex-col 	justify-items-end lg:w-1/2">
           <ContainerMain>
-            <HeroP>KALPOWER</HeroP>
-            <p className="text-white text-xl pb-6">Keep You running</p>
+            <HeroP>{posts[0] ? posts[0]['content'][0].heading : null}</HeroP>
+            <p className="text-white text-xl pb-6">
+              {posts[0] ? (
+                <BlockContent
+                  blocks={posts[0]['content'][0].tagline}
+                  projectId="cjv2tdo2"
+                  dataset="production"
+                />
+              ) : null}
+            </p>
             <a href="/Contact" target="_blank">
               <button class="btn">
                 <span class="btn-text">Contact us</span>
@@ -126,43 +144,29 @@ export default function KalPower() {
           </Head> */}
 
         <div className="lg:pb-10  lg:pt-10 lg:pl-32 lg:pr-32 grid gap-20 2xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 self-center justify-center justify-items-center ">
-          <Pulse>
-            <Card className="flex flex-col items-left h-auto bg-white w-auto p-8 lg:h-96">
-              <img src={acessTime} className="w-20 self-left"></img>
-              <h4 className="text-2xl font-bold self-left pt-4">
-                Short Detentions
-              </h4>
-              <p className="font-light self-left pt-4 pb-20 lg:h-40">
-                At KALWAY, carriers may access preloaded trailers to turn down
-                the load time significantly. Due to this free carriers avoid
-                unplanned delays which shortens detention durations.
-              </p>
-            </Card>
-          </Pulse>
-          <Pulse>
-            <Card className="flex flex-col items-left h-auto bg-white w-auto p-8 lg:h-96">
-              <img src={MoreTime} className="w-20 self-left"></img>
-              <h4 className="text-2xl font-bold self-left pt-4 ">
-                Maximize On-road <br></br> hours
-              </h4>
-              <p className="font-light self-left pt-4 pb-20 lg:h-40">
-                Ease in searching next loads in queue. KALWAY has made
-                backhauling so easy .
-              </p>
-            </Card>
-          </Pulse>
-          <Pulse>
-            <Card className="flex flex-col items-left h-auto bg-white w-auto p-8 lg:h-96">
-              <img src={NewBusiness} className="w-20 self-left"></img>
-              <h4 className="text-2xl font-bold self-left pt-4">
-                Entrepreneur <br></br> opportunities
-              </h4>
-              <p className="font-light self-left pt-4 pb-20 ">
-                Association with KALWAY can bring exciting business
-                opportunities with the leased trailers instead of owning them.
-              </p>
-            </Card>
-          </Pulse>
+          {posts[0]
+            ? posts[0]['content'][1]['rows'].map((post) => (
+                <Pulse>
+                  <Card className="flex flex-col items-left h-auto bg-white w-auto p-8 lg:h-96">
+                    <img
+                      src={urlFor(post.image.asset._ref)}
+                      className="w-20 self-left"
+                    ></img>
+                    <h4 className="text-2xl font-bold self-left pt-4">
+                      {post.heading}
+                    </h4>
+                    <p className="font-light self-left pt-4 pb-20 lg:h-40">
+                      <BlockContent
+                        blocks={post.text}
+                        projectId="cjv2tdo2"
+                        dataset="production"
+                      />
+                    </p>
+                  </Card>
+                </Pulse>
+              ))
+            : null}
+
           {/* <Pulse>
               <Card className="flex flex-col items-left h-96 bg-white w-80 p-8 ">
                 <img src={PetInsurance} className="w-32 self-center"></img>
@@ -179,29 +183,33 @@ export default function KalPower() {
         <div className="h-24"></div>
 
         <div className="flex w-screen justify-center justify-items-center items-center">
-          <div
-            className="flex flex-col justify-center justify-items-start items-left  h-auto w-full"
-            style={{
-              backgroundImage: `url(${bgcf})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          >
-            <h4 className="text-white text-left  lg:text-5xl text-3xl lg:w-3/5 pt-64 lg:ml-40 ml-4">
-              Get back on the road faster
-            </h4>
-            <p className="text-white text-left ml-44 pt-4 font-bold">
-              See how Powerloop is reducing the wait for carriers.
-            </p>
-            <div className="pb-64 lg:ml-40 pt-10 ml-4">
-              <a className="pt-10" href="/Contact" target="_blank">
-                <button class="btn">
-                  <div class="btn-text">Start now</div>
-                </button>
-              </a>
+          {posts[0] ? (
+            <div
+              className="flex flex-col justify-center justify-items-start items-left  h-auto w-full"
+              style={{
+                backgroundImage: `url(${urlFor(
+                  posts[0]['content'][2].image.asset._ref
+                )})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            >
+              <h4 className="text-white text-left  lg:text-5xl text-3xl lg:w-3/5 pt-64 lg:ml-40 ml-4">
+                {posts[0]['content'][2].heading}
+              </h4>
+              <p className="text-white text-left ml-44 pt-4 font-bold">
+                {posts[0]['content'][2].label}
+              </p>
+              <div className="pb-64 lg:ml-40 pt-10 ml-4">
+                <a className="pt-10" href="/Contact" target="_blank">
+                  <button class="btn">
+                    <div class="btn-text">Start now</div>
+                  </button>
+                </a>
+              </div>
             </div>
-          </div>
+          ) : null}
         </div>
         <div className="h-4"></div>
         <div className="lg:ml-32 lg:mr-40  lg:mt-20 lg:mb-20 mb-20">
@@ -210,9 +218,14 @@ export default function KalPower() {
               <>
                 <h3 className="font-bold  2xl:text-6xl lg:text-4xl xl:text-5xl text-3xl leading-10 w-4/5">
                   Sign up for free and get started today
+                  {posts[0] ? posts[0]['content'][3].heading : null}
                 </h3>
                 <p className=" lg:text-2xl text-xl lg:pt-10">
-                  Book the loads you want, 24 hours a day
+                  <BlockContent
+                    blocks={posts[0]['content'][3].text}
+                    projectId="cjv2tdo2"
+                    dataset="production"
+                  />
                 </p>
                 <div className="lg:pt-10 pt-10">
                   <a className="pt-10" href="/Contact" target="_blank">
@@ -245,7 +258,13 @@ export default function KalPower() {
                 </p> */}
             </div>
             <div>
-              <img src={image4} className="lg:w-auto w-full" alt=""></img>
+              {posts[0] ? (
+                <img
+                  src={urlFor(posts[0]['content'][3].image.asset._ref)}
+                  className="lg:w-auto w-full"
+                  alt=""
+                ></img>
+              ) : null}
             </div>
           </div>
         </div>
