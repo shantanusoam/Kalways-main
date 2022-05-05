@@ -231,12 +231,12 @@ export function Industrie() {
       </div>
       <div className="flex flex-col bg-gray-200">
         <h4 className=" self-center font-bold pt-16 lg:text-4xl text-2xl p-8">
-          {posts[0] ? posts[0]['content'][5].title : null}
+          {posts[0] ? posts[0]['content'][4].title : null}
         </h4>
 
         <div className="pb-10 m-8 pt-2 grid gap-10 lg:grid-cols-4 grid-cols-1 self-center justify-center justify-items-center ">
           {posts[0]
-            ? posts[0]['content'][5]['rows'].map((post) => (
+            ? posts[0]['content'][4]['rows'].map((post) => (
                 <Pulse>
                   <Card className="flex flex-col items-center 	align-content:center place-items-center bg-white w-80 p-8 ">
                     <img
@@ -253,12 +253,12 @@ export function Industrie() {
         </div>
 
         <h2 className=" self-center font-bold pt-4 lg:text-4xl text-2xl ">
-          {posts[0] ? posts[0]['content'][6].title : null}
+          {posts[0] ? posts[0]['content'][5].title : null}
         </h2>
 
         <div className=" pt-10 grid gap-10 lg:grid-cols-4 grid-cols-1 self-center justify-center justify-items-center ">
           {posts[0]
-            ? posts[0]['content'][6]['rows'].map((post) => (
+            ? posts[0]['content'][5]['rows'].map((post) => (
                 <Pulse>
                   <Card className="flex flex-col items-center 	align-content:center place-items-center bg-white w-80 p-8 ">
                     <img
@@ -346,37 +346,45 @@ export function Industrie() {
           </Fade>
         </div>
       </div> */}
+
       <div className="flex flex-col m-2">
         <h3 className=" 2xl:self-center  lg:pt-12 text-2xl m-2">
-          ONE CENTRALIZED MARKETPLACE. MULTIPLE MODES FOR WHAT YOU NEED.
+          {posts[0] ? posts[0]['content'][6].label : null}
         </h3>
         <p className=" self-center font-bold pt-8   2xl:text-4xl">
-          Insights to help grow your business.
+          {posts[0] ? posts[0]['content'][6].title : null}
         </p>
         <div className="xl:px-14 xl:py-10 md:py-0 md:px-0 bg-white flex 2xl:flex-row lg:flex-row flex-col flex-wrap justify-center items-center   ">
-          <Fade bottom>
-            <div className="bg-white hover:shadow-2xl m-4 flex-1 transition duration-700 ease-in-out delay-150">
-              <img
-                src={image7}
-                alt="boy with camera"
-                className=" h-80 w-full object-cover"
-              />
+          {posts[0]
+            ? posts[0]['content'][6]['rows'].map((post) => (
+                <Fade bottom>
+                  <div className="bg-white hover:shadow-2xl m-4 flex-1 transition duration-700 ease-in-out delay-150">
+                    <img
+                      src={urlFor(post.image.asset._ref)}
+                      alt="boy with camera"
+                      className=" h-80 w-full object-cover"
+                    />
 
-              <div className="p-8">
-                <h3 className="font-bold text-2xl mb-5">
-                  Pricing You Can Trust
-                </h3>
-                <br />
-                <p className="text-gray-800 text-1xl mb-9 h-42 ">
-                  You can trust the quote you get from us, whether it comes
-                  through your rep or KALWAY. If you are quoting for a spot LTL
-                  load, a high-volume lane, or anything else, we can get you a
-                  clear, reliable price.
-                </p>
-              </div>
-            </div>
-          </Fade>
-          <Fade bottom>
+                    <div className="p-8">
+                      <h3 className="font-bold text-2xl mb-5">
+                        {post.heading}
+                      </h3>
+                      <br />
+                      <p className="text-gray-800 text-1xl mb-9 h-42 ">
+                        <BlockContent
+                          className="w-10/12"
+                          blocks={post.text}
+                          projectId="cjv2tdo2"
+                          dataset="production"
+                        />
+                      </p>
+                    </div>
+                  </div>
+                </Fade>
+              ))
+            : null}
+
+          {/* <Fade bottom>
             <div className="bg-white hover:shadow-2xl m-4 flex-1 transition duration-700 ease-in-out delay-150">
               <img
                 src={image4}
@@ -416,7 +424,7 @@ export function Industrie() {
                 </p>
               </div>
             </div>
-          </Fade>
+          </Fade> */}
         </div>
       </div>
     </>
