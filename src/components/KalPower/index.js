@@ -217,7 +217,6 @@ export default function KalPower() {
             <div className="lg:pr-40 ml-4 mt-20 lg:w-4/5 mr-4">
               <>
                 <h3 className="font-bold  2xl:text-6xl lg:text-4xl xl:text-5xl text-3xl leading-10 w-4/5">
-                  Sign up for free and get started today
                   {posts[0] ? posts[0]['content'][3].heading : null}
                 </h3>
                 <p className=" lg:text-2xl text-xl lg:pt-10">
