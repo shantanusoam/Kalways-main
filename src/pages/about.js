@@ -1,21 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import client, { builder } from '../client';
-import trucks from '../images/sustain1.jpg';
-import Containers from '../images/sustain2.jpg';
-import Shiping from '../images/sustain3.jpg';
-import Navbar from '../components/Navbar';
+
 // import whitetruck from '../../images/AP.jpeg';
 import {
   AboutContainer,
   TextContaner,
   TextContanerS,
 } from '../components/AboutMain/AboutMainElements';
-import Sidebar from '../components/Sidebar';
+
 import './shipFleight.css';
-import FooterSection from '../components/FooterSection';
-import AboutMain from '../components/AboutMain';
-import QuoteAtEnd from '../components/QuoteAtEnd';
-import AboutMain2 from '../components/AboutMain2';
+
 import BlockContent from '@sanity/block-content-to-react';
 import Fade from 'react-reveal/Fade';
 const urlFor = (source) => builder.image(source);

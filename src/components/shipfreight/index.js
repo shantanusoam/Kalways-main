@@ -130,12 +130,6 @@ export function Shipfreight() {
               {posts[0]
                 ? posts[0]['content'][2]['rows'].map((post) => (
                     <div className="flex flex-col items-start">
-                      <img
-                        key={post._key}
-                        src={urlFor(post.image.asset._ref)}
-                        className=""
-                        width="150px"
-                      ></img>
                       <h4 className="text-3xl">{post.heading}</h4>
                       <p className="text-gray-800 font-normal pt-5 text-xl w-auto">
                         <BlockContent
