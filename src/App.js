@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import client from './client';
 import './App.css';
 import Stickbar from './components/Stickbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -28,9 +29,41 @@ import Blog from './components/Blog';
 import SinglePost from './components/SinglePost';
 
 import Error from './components/Error';
+import useLocalStorageState from './localStorage';
+function Setposts(data) {
+  const [post, setPost] = useLocalStorageState('name');
+
+  data.map((post) =>
+    client
+      .fetch(
+        `*[title == ${post.title} ]{
+    
+      content[]
+      
+      }`
+      )
+      .then((data) => setPost(data))
+
+      .catch(console.error)
+  );
+}
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    client
+      .fetch(
+        `*[_type == "page"] {
+          title,
+         
+         }`
+      )
+      .then((data) => Setposts(data))
+
+      .catch(console.error);
+  }, []);
+  useLocalStorageState();
   const toggle = () => {
     setIsOpen(!isOpen);
   };
