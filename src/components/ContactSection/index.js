@@ -54,7 +54,9 @@ export default function ContactSectio({ isOpen, toggle }) {
                 {posts[0]
                   ? posts[0]['content'].map((post) => (
                       <>
-                        <FotterContactName>{post.heading}</FotterContactName>
+                        <FotterContactName key={post._key}>
+                          {post.heading}
+                        </FotterContactName>
                         <FotterContactNo>{post.label}</FotterContactNo>
                       </>
                     ))

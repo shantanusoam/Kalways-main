@@ -101,7 +101,7 @@ export default function FooterSection() {
         <FotterNav>
           {posts[0]
             ? posts[0]['content'].map((post) => (
-                <FotterContact>
+                <FotterContact key={post._key}>
                   <FotterContactlist>
                     <FotterContactName>{post.heading}</FotterContactName>
                     <FotterContactNo>{post.label}</FotterContactNo>

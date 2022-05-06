@@ -31,7 +31,7 @@ export function ForSandC({ isOpen, toggle }) {
       <ImageContainers>
         {posts[0]
           ? posts[0]['content'][5]['rows'].map((post) => (
-              <ImageContainers>
+              <ImageContainers key={post._key}>
                 <Contanier>
                   <ImageContainer>
                     <img src={urlFor(post.image.asset._ref)} alt=""></img>

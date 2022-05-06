@@ -158,7 +158,9 @@ export default function Careers() {
             {posts[0]
               ? posts[0]['content'][1]['content'].map((post) => (
                   <>
-                    <h4 className="text-3xl lg:mt-8 mt-4 ">{post.title}</h4>
+                    <h4 className="text-3xl lg:mt-8 mt-4 " key={post._key}>
+                      {post.title}
+                    </h4>
                     <Zoom right cascade>
                       <div className="lg:mt-4 mt-2">
                         {post.rows.map((row) => (

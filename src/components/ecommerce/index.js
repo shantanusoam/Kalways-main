@@ -123,7 +123,7 @@ export default function Ecommerce() {
             >
               {posts[0]
                 ? posts[0]['content'][0]['rows'].map((post) => (
-                    <SwiperSlide>
+                    <SwiperSlide key={post._key}>
                       <ImageS alt="" img={urlFor(post.asset._ref)}></ImageS>
                     </SwiperSlide>
                   ))
@@ -291,7 +291,7 @@ export default function Ecommerce() {
         <div className="flex lg:flex-row flex-col w-5/6 pb-16  justify-around">
           {posts[0]
             ? posts[0]['content'][3]['rows'].map((post) => (
-                <div className="flex-1 ">
+                <div className="flex-1 " key={post._key}>
                   <h4 className="font-bold text-xl pb-4  ">{post.heading}</h4>
                   <p className="   text-white">
                     {posts[0] ? (
@@ -317,7 +317,7 @@ export default function Ecommerce() {
           <div className="flex lg:flex-row flex-col w-5/6 lg:pb-16  justify-around">
             {posts[0]
               ? posts[0]['content'][4]['rows'].map((post) => (
-                  <div className="flex-1 ">
+                  <div className="flex-1 " key={post._key}>
                     <h4 className="font-bold text-7xl pb-4  ">
                       {post.heading}
                     </h4>
