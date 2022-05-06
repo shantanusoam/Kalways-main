@@ -58,13 +58,13 @@ export default function KalPower() {
               ) : null}
             </p>
             <a href="/Contact" target="_blank">
-              <button class="btn">
-                <span class="btn-text">Contact us</span>
+              <button className="btn">
+                <span className="btn-text">Contact us</span>
               </button>
             </a>
           </ContainerMain>
 
-          <PCENTER class="text-white lg:p-8 text-left m-8">
+          <PCENTER className="text-white lg:p-8 text-left m-8">
             <h1 className=" font-normal pt-8 2xl:text-3xl pb-2 text-2xl w-auto ">
               KalPower
             </h1>
@@ -127,8 +127,8 @@ export default function KalPower() {
               </p>
               <div className="pb-64 lg:ml-40 pt-10 ml-4">
                 <a className="pt-10" href="/Contact" target="_blank">
-                  <button class="btn">
-                    <div class="btn-text">Start now</div>
+                  <button className="btn">
+                    <div className="btn-text">Start now</div>
                   </button>
                 </a>
               </div>
@@ -154,8 +154,8 @@ export default function KalPower() {
                 </p>
                 <div className="lg:pt-10 pt-10">
                   <a className="pt-10" href="/Contact" target="_blank">
-                    <button class="btn">
-                      <div class="btn-text">Start now</div>
+                    <button className="btn">
+                      <div className="btn-text">Start now</div>
                     </button>
                   </a>
                 </div>

@@ -148,8 +148,8 @@ export default function Solution({ isOpen, toggle }) {
                             {post.text[0]['children'][0]['text']}
                           </div>
                           <a href="/Contact">
-                            <button class="btn">
-                              <span class="btn-text">1-800-502-7000</span>
+                            <button className="btn">
+                              <span className="btn-text">1-800-502-7000</span>
                             </button>
                           </a>
                         </div>
@@ -177,8 +177,8 @@ export default function Solution({ isOpen, toggle }) {
                       options for carriers.
                     </div>
                     <a href="/Contact">
-                      <button class="btn">
-                        <span class="btn-text">1-800-502-7000</span>
+                      <button className="btn">
+                        <span className="btn-text">1-800-502-7000</span>
                       </button>
                     </a>
                   </div>
@@ -207,8 +207,8 @@ export default function Solution({ isOpen, toggle }) {
                       execution, real-time
                     </div>
                     <a href="/Contact">
-                      <button class="btn">
-                        <span class="btn-text">1-800-502-7000</span>
+                      <button className="btn">
+                        <span className="btn-text">1-800-502-7000</span>
                       </button>
                     </a>
                   </div>
@@ -237,8 +237,8 @@ export default function Solution({ isOpen, toggle }) {
                       turn your deadhead into profit.
                     </div>
                     <a href="/Contact">
-                      <button class="btn">
-                        <span class="btn-text">1-800-502-7000</span>
+                      <button className="btn">
+                        <span className="btn-text">1-800-502-7000</span>
                       </button>
                     </a>
                   </div>

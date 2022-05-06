@@ -198,7 +198,7 @@ export default function Shipper() {
             {posts[0] ? posts[0]['content'][2]['cta'].title : null}
           </p>
           <button class="btn">
-            <span class="btn-text">1-800-502-7000</span>
+            <span className="btn-text">1-800-502-7000</span>
           </button>
           <img
             style={{ paddingTop: '2rem' }}

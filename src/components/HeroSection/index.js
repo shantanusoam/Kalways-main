@@ -393,8 +393,8 @@ export default function HeroSectio() {
           {posts[0] ? <HeroP>{posts[0]['content'][0].heading}</HeroP> : null}
           {posts[0] ? (
             <a href={posts[0]['content'][0]['ctas'][0].link}>
-              <button class="btn">
-                <span class="btn-text">
+              <button className="btn">
+                <span className="btn-text">
                   {posts[0]['content'][0]['ctas'][0].title}
                 </span>
               </button>
@@ -402,7 +402,7 @@ export default function HeroSectio() {
           ) : null}
         </ContainerMain>
 
-        <PCENTER class="text-gray-600 p-8">
+        <PCENTER className="text-gray-600 p-8">
           Work with a trusted global third-party logistics provider that has
           been empowering business growth for over 15 years. Our centralized
           marketplace connects you to the people, technology, data and capacity

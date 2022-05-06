@@ -131,8 +131,8 @@ export default function About() {
                         dataset="production"
                       />
                     </h3>
-                    <button class="btn">
-                      <span class="btn-text">{post.cta.title}</span>
+                    <button className="btn">
+                      <span className="btn-text">{post.cta.title}</span>
                     </button>
                   </div>
                 </div>

@@ -144,13 +144,13 @@ export default function Ecommerce() {
           <div className="hidden lg:block">
             <HeroP>{posts[0] ? posts[0]['content'][0].heading : null}</HeroP>
             <a href="/Contact">
-              <button class="btn">
-                <span class="btn-text">SPEAK TO AN EXPERT</span>
+              <button className="btn">
+                <span className="btn-text">SPEAK TO AN EXPERT</span>
               </button>
             </a>
           </div>
 
-          <PCENTER class="text-white  self-center m-8">
+          <PCENTER className="text-white  self-center m-8">
             <h1 className=" font-bold pt-8 text-5xl pb-2 self-center  w-auto">
               EVER FULFILLING
             </h1>

@@ -79,7 +79,7 @@ export const AboutContainerSubHeading = styled.h2`
     font-size: 15px;
   }
 `;
-export const footerMobileContainer = styled.div`
+export const FooterMobileContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;

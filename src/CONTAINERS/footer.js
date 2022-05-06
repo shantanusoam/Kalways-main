@@ -7,8 +7,8 @@ export function FooterContainerBlack() {
   return (
     <Footer>
       <Footer.Wrapper>
-        {/* <div class="container">
-          <div class="footer">
+        {/* <div className="container">
+          <div className="footer">
             <img src={logo} alt="Logo"></img>
             <br></br>
             <label for="email">
@@ -27,18 +27,18 @@ export function FooterContainerBlack() {
               by submitting this form, you acknowledge that you have the <br />{" "}
               terms of our Privacy Statement
             </p>
-            <p class="pr1">Copyright @ Foodhub 2022</p>
+            <p className="pr1">Copyright @ Foodhub 2022</p>
           </div>
         </div> */}
         <Footer.Row>
-          {/* <div class="container">
-        <div class="footer">
+          {/* <div className="container">
+        <div className="footer">
             <img src="./kaltag.png"> <br>
             <label for="email">Subscribe to keep up with the <br/> latest news</label> <br/><br/>
             <input type="email"  id="email" placeholder="enter your email..."> &nbsp;&nbsp;
             <button>{$`&#8594`}</button>  
             <p>by submitting this form, you acknowledge that you have the <br/> terms of our Privacy Statement</p>  
-            <p class="pr1">Copyright @ Foodhub 2022</p>  
+            <p className="pr1">Copyright @ Foodhub 2022</p>  
         </div>
     </div> */}
 

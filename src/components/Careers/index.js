@@ -96,13 +96,13 @@ export default function Careers() {
           <ContainerMain>
             <HeroP>{posts[0] ? posts[0]['content'][0].heading : null}</HeroP>
             <a href="/Contact">
-              <button class="btn">
-                <span class="btn-text">Contact us</span>
+              <button className="btn">
+                <span className="btn-text">Contact us</span>
               </button>
             </a>
           </ContainerMain>
 
-          <PCENTER class="text-white lg:p-8 text-left m-8">
+          <PCENTER className="text-white lg:p-8 text-left m-8">
             <h1 className=" font-normal pt-8 2xl:text-3xl pb-2 text-4xl w-auto ">
               Start your career on KALWAY
             </h1>

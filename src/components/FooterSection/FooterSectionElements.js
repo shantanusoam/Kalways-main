@@ -30,7 +30,7 @@ export const SocialMediaActionsContainer = styled.div`
     align-items: flex-start;
   }
 `;
-export const footerMobileContainer = styled.div`
+export const FooterMobileContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;

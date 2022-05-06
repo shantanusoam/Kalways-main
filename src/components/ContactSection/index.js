@@ -8,6 +8,7 @@ import {
   FotterContact,
   FotterContactlist,
   FotterContactNo,
+  FooterMobileContainer,
   FotterContactName,
   Heading,
 } from './ContactSEctionElements';
@@ -47,7 +48,7 @@ export default function ContactSectio({ isOpen, toggle }) {
       </ContactForm>
 
       <ContactImage>
-        <footerMobileContainer>
+        <FooterMobileContainer>
           <FotterNav>
             <FotterContact>
               <FotterContactlist>
@@ -76,7 +77,7 @@ export default function ContactSectio({ isOpen, toggle }) {
                 <FotterNavH>Products</FotterNavH>
                 <FotterNavH>Contact</FotterNavH> */}
           </FotterNav>
-        </footerMobileContainer>
+        </FooterMobileContainer>
       </ContactImage>
     </ContactContainer>
   );

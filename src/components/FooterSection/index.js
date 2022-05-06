@@ -13,7 +13,7 @@ import {
   FotterContactNo,
   FotterContactName,
   // SocialMediaActionsContainer,
-  footerMobileContainer,
+  FooterMobileContainer,
   FotterHName,
 } from './FooterSectionElements';
 
@@ -97,7 +97,7 @@ export default function FooterSection() {
             </SocialMediaActions>
           </SocialMediaActionsContainer> */}
       </FooterLogo>
-      <footerMobileContainer>
+      <FooterMobileContainer>
         <FotterNav>
           {posts[0]
             ? posts[0]['content'].map((post) => (
@@ -146,7 +146,7 @@ export default function FooterSection() {
                 <FotterNavH>Products</FotterNavH>
                 <FotterNavH>Contact</FotterNavH> */}
         </FotterNav>
-      </footerMobileContainer>
+      </FooterMobileContainer>
 
       {/* <FotterSocialMedia>
             <SocialMediaActions>

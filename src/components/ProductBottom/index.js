@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 import {
   AboutContainer,
   ProductSlideImage,
   TextContaner,
-} from "./ProductBottomElement";
-import whitetruck from "../../images/ProductTop.png";
-import { animateScroll as scroll, Link } from "react-scroll";
-import { Trailers } from "../../trailer.js";
+} from './ProductBottomElement';
+import whitetruck from '../../images/ProductTop.png';
+import { animateScroll as scroll, Link } from 'react-scroll';
+import { Trailers } from '../../trailer.js';
 
 class ProductBottom extends React.Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class ProductBottom extends React.Component {
     };
   }
   componentDidMount() {
-    document.title = "KALWAY Product";
+    document.title = 'KALWAY Product';
   }
 
   render() {

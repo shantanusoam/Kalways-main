@@ -84,7 +84,7 @@ export function Shipfreight() {
               </h2>
             </ContainerMain>
 
-            <PCENTER class="text-gray-600 lg:p-10 text-left ">
+            <PCENTER className="text-gray-600 lg:p-10 text-left ">
               We will help you get your products where they need to go fast,
               efficiently and without interruption. Join the more than 3,500 CPG
               companies who trust us with their freight.
@@ -155,8 +155,8 @@ export function Shipfreight() {
             <p className="text-gray-800 font-normal pt-8 text-xl 2xl:w-96 pb-8 ">
               {posts[0] ? posts[0]['content'][2]['cta'].title : null}
             </p>
-            <button class="btn">
-              <span class="btn-text ">1-800-502-7000</span>
+            <button className="btn">
+              <span className="btn-text ">1-800-502-7000</span>
             </button>
           </div>
         </div>

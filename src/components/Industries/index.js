@@ -96,7 +96,7 @@ export function Industrie() {
               </p> */}
             </ContainerMain>
             s
-            <PCENTER class="text-white text-left 2xl:p-8 p-2 pl-8">
+            <PCENTER className="text-white text-left 2xl:p-8 p-2 pl-8">
               Bring simplicity to an intricate supply chain process with our
               reliable cross-border solutions.
             </PCENTER>
