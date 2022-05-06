@@ -7,6 +7,7 @@ import Inc5000 from '../../images/baI1.png';
 import SmartWay from '../../images/baI2.png';
 import BestBroker from '../../images/baI3.png';
 import YouTube from 'react-youtube';
+import PhoneNo from '../phoneno';
 import './style.css';
 import {
   WWOCArd,
@@ -149,7 +150,9 @@ export default function Solution({ isOpen, toggle }) {
                           </div>
                           <a href="/Contact">
                             <button className="btn">
-                              <span className="btn-text">1-800-502-7000</span>
+                              <span className="btn-text">
+                                <PhoneNo />
+                              </span>
                             </button>
                           </a>
                         </div>
@@ -335,7 +338,8 @@ export default function Solution({ isOpen, toggle }) {
           {posts[0] ? (
             <>
               <WWOCCHeading>
-                {posts[0]['content'][4].label} <br></br>1-800-502-7000
+                {posts[0]['content'][4].label} <br></br>
+                <PhoneNo />
               </WWOCCHeading>
               <WWOCCParagraph>{posts[0]['content'][4].heading}</WWOCCParagraph>
             </>

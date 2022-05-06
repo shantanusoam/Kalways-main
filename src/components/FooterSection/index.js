@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
+
 import logo from '../../images/logo.png';
-import client from '../../client';
+import client, { builder } from '../../client';
 // import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 import {
@@ -16,9 +17,10 @@ import {
   footerMobileContainer,
   FotterHName,
 } from './FooterSectionElements';
-
+const urlFor = (source) => builder.image(source);
 export default function FooterSection() {
   const [posts, setPosts] = useState([]);
+  const [posts1, setPosts1] = useState([]);
   // const data = {
   //   _createdAt: '2022-05-02T19:49:14Z',
   //   _id: '8b5585e6-4051-4388-81c8-e1bce0fa643a',
@@ -56,7 +58,7 @@ export default function FooterSection() {
   useEffect(() => {
     client
       .fetch(
-        `*[title == 'FooterText' ]{
+        `*[title == 'FooterText'   ]{
           title,
           content[]
           
@@ -64,7 +66,17 @@ export default function FooterSection() {
       )
       .then((data) => setPosts(data))
       .catch(console.error);
-    console.log(posts[0]);
+    client
+      .fetch(
+        `*[title == 'Kalway' ]{
+          Timing_2,
+          Timing_1,
+          logo,
+       
+          }`
+      )
+      .then((data) => setPosts1(data))
+      .catch(console.error);
   }, []);
 
   return (
@@ -72,7 +84,10 @@ export default function FooterSection() {
       <FooterLogo>
         <div className="mt-10">
           <div>
-            <img src={logo} alt="" />
+            <img
+              src={posts1[0] ? urlFor(posts1[0].logo.asset._ref) : null}
+              alt=""
+            />
           </div>
           <div>
             <h1 className="pt-10 font-bold text-xl   text-white">
@@ -129,14 +144,18 @@ export default function FooterSection() {
           </FotterContact> */}
 
           {/* <hr align="left" width="100%"></hr> */}
-          {/* <FotterContact>
+          <FotterContact>
             <FotterContactlist>
               <FotterContactName>We are open</FotterContactName>
-              <FotterContactNo>Monday - Friday 24Hrs</FotterContactNo>
+              {posts1[0] ? (
+                <>
+                  <FotterContactNo>{posts1[0].Timing_1}</FotterContactNo>
 
-              <FotterContactNo>Saturday & Sunday 7AM -5PM</FotterContactNo>
+                  <FotterContactNo>{posts1[0].Timing_2}</FotterContactNo>
+                </>
+              ) : null}
             </FotterContactlist>
-          </FotterContact> */}
+          </FotterContact>
           {/* <SocialMediaActions>
             <FaFacebookF/>
             </SocialMediaActions> */}

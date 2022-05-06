@@ -5,7 +5,7 @@ import './shipFleight.css';
 import Bounce from 'react-reveal/Bounce';
 import { Autoplay, Pagination, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
-
+import PhoneNo from '../components/phoneno';
 import 'swiper/swiper.min.css';
 import 'swiper/modules/pagination/pagination.min.css';
 import image1 from '../images/dv0.jpg';
@@ -198,7 +198,9 @@ export default function Shipper() {
             {posts[0] ? posts[0]['content'][2]['cta'].title : null}
           </p>
           <button class="btn">
-            <span className="btn-text">1-800-502-7000</span>
+            <span className="btn-text">
+              <PhoneNo />
+            </span>
           </button>
           <img
             style={{ paddingTop: '2rem' }}

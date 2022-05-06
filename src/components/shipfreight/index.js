@@ -23,7 +23,7 @@ import grid13 from '../../images/shipper.png';
 import Pulse from 'react-reveal/Pulse';
 import Bounce from 'react-reveal/Bounce';
 import Fade from 'react-reveal/Fade';
-
+import PhoneNo from '../../components/phoneno';
 // import bankground from "../../images";
 import { animateScroll as scroll, Link } from 'react-scroll';
 import {
@@ -156,7 +156,9 @@ export function Shipfreight() {
               {posts[0] ? posts[0]['content'][2]['cta'].title : null}
             </p>
             <button className="btn">
-              <span className="btn-text ">1-800-502-7000</span>
+              <span className="btn-text ">
+                <PhoneNo />
+              </span>
             </button>
           </div>
         </div>
