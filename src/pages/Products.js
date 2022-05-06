@@ -12,7 +12,6 @@ export default class Products extends React.Component {
   }
 
   render() {
-    console.log(this.props.location.state.id);
     return (
       <>
         <ProductTop id={this.props.location.state.id}></ProductTop>

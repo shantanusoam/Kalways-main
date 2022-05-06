@@ -64,7 +64,6 @@ export default function FooterSection() {
       )
       .then((data) => setPosts(data))
       .catch(console.error);
-    console.log(posts[0]);
   }, []);
 
   return (

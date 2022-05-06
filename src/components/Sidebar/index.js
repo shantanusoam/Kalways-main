@@ -13,7 +13,7 @@ import { animateScroll as scroll, Link } from 'react-scroll';
 const Sidebar = ({ isOpen, toggle }) => {
   function disabel() {
     const path = window.location.pathname;
-    console.log(path === '/');
+
     if (path === '/') {
       return true;
     }
@@ -45,9 +45,7 @@ const Sidebar = ({ isOpen, toggle }) => {
         </SideBtnWrap>
         <SideBtnWrap className="mt-2">
           <SidebarRoute to="/WorkAtKalway">
-            <addEventListener>
-              <a href="/WorkAtKalway">Work At KALWAY</a>
-            </addEventListener>
+            <a href="/WorkAtKalway">Work At KALWAY</a>
           </SidebarRoute>
         </SideBtnWrap>
       </SidebarWrapper>

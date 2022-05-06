@@ -432,9 +432,7 @@ export function Industrie() {
   );
 }
 class Industries extends React.Component {
-  componentDidMount() {
-    console.log('Industries');
-  }
+  componentDidMount() {}
 
   render() {
     return <Industrie />;

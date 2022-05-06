@@ -32,7 +32,7 @@ const Lol = () => {
 
   function disabeled() {
     const path = window.location.pathname;
-    console.log(path === '/');
+
     if (path === '/') {
       return true;
     }
