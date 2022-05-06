@@ -131,7 +131,7 @@ export default function Solution({ isOpen, toggle }) {
               {/* </LinkRo> */}
               {posts[0]
                 ? posts[0]['content'][2]['rows'].map((post) => (
-                    <Fade bottom>
+                    <Fade bottom key={post._key}>
                       <div className="bg-white hover:shadow-2xl m-9 flex-1 transition duration-700 ease-in-out delay-150 transition duration-700 ease-in-out delay-150">
                         <img
                           src={urlFor(post.image.asset._ref)}
@@ -297,7 +297,7 @@ export default function Solution({ isOpen, toggle }) {
             <BannerContainer2 className="flex lg:flex-row flex-col ">
               {posts[0]
                 ? posts[0]['content'][3]['rows'].map((post) => (
-                    <Fade left>
+                    <Fade left key={post._key}>
                       <div className="flex-1 ">
                         <img
                           src={urlFor(post.image.asset._ref)}

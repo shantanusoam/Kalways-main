@@ -131,6 +131,7 @@ export function Shipfreight() {
                 ? posts[0]['content'][2]['rows'].map((post) => (
                     <div className="flex flex-col items-start">
                       <img
+                        key={post._key}
                         src={urlFor(post.image.asset._ref)}
                         className=""
                         width="150px"
@@ -167,7 +168,7 @@ export function Shipfreight() {
       <div className="xl:px-14 xl:py-10 md:py-0 md:px-0 bg-white flex 2xl:flex-row lg:flex-row flex-wrap justify-center items-center flex-col ">
         {posts[0]
           ? posts[0]['content'][3]['rows'].map((post) => (
-              <Fade bottom>
+              <Fade bottom key={post._key}>
                 <div className="bg-white hover:shadow-2xl 2xl:m-2 m-2 flex-1 transition duration-700 ease-in-out delay-150">
                   <img
                     src={urlFor(post.image.asset._ref)}
@@ -225,7 +226,7 @@ export function Shipfreight() {
         <div className=" pt-10 pb-10 grid gap-10 lg:grid-cols-2 grid-cols-1 p-4">
           {posts[0]
             ? posts[0]['content'][4]['rows'].map((post) => (
-                <div className="flex flex-col items-start">
+                <div className="flex flex-col items-start" key={post._key}>
                   <img
                     src={urlFor(post.image.asset._ref)}
                     className=""
@@ -256,7 +257,7 @@ export function Shipfreight() {
         <div className="pb-10 pt-10 grid gap-10 lg:grid-cols-4 grid-cols-1 self-center justify-center justify-items-center ">
           {posts[0]
             ? posts[0]['content'][5]['rows'].map((post) => (
-                <Pulse>
+                <Pulse key={post._key}>
                   <Card className="flex flex-col items-center 	align-content:center place-items-center bg-white w-80 p-8 ">
                     <img
                       src={urlFor(post.image.asset._ref)}

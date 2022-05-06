@@ -53,6 +53,7 @@ export default function Shipper() {
         {posts[0]
           ? posts[0]['content'][0]['rows'][0]['rows'].map((post) => (
               <img
+                key={post.asset._ref}
                 src={urlFor(post.asset._ref)}
                 className="flex-1 h-64 2xl:h-80"
                 alt=""
@@ -77,7 +78,7 @@ export default function Shipper() {
         >
           {posts[0]
             ? posts[0]['content'][0]['rows'][0]['rows'].map((post) => (
-                <SwiperSlide>
+                <SwiperSlide key={post._key}>
                   <img src={urlFor(post.asset._ref)} alt=""></img>
                 </SwiperSlide>
               ))

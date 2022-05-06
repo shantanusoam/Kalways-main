@@ -82,7 +82,7 @@ export default function KalPower() {
         <div className="lg:pb-10  lg:pt-10 lg:pl-32 lg:pr-32 grid gap-20 2xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 self-center justify-center justify-items-center ">
           {posts[0]
             ? posts[0]['content'][1]['rows'].map((post) => (
-                <Pulse>
+                <Pulse key={post._key}>
                   <Card className="flex flex-col items-left h-auto bg-white w-auto p-8 lg:h-96">
                     <img
                       src={urlFor(post.image.asset._ref)}

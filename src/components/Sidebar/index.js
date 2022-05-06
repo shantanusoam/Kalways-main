@@ -41,7 +41,6 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLinkR to="/services">
             <a
               to="/products"
-              smooth={true}
               duration={500}
               spy={true}
               exact={true}
@@ -54,7 +53,6 @@ const Sidebar = ({ isOpen, toggle }) => {
             <a
               onClick={toggle}
               to="/Carriers"
-              smooth={true}
               duration={500}
               spy={true}
               exact={true}
@@ -66,7 +64,6 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLinkR to="/Shippers">
             <a
               onClick={toggle}
-              smooth={true}
               duration={500}
               spy={true}
               exact={true}
@@ -79,7 +76,6 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLinkR to="/Ecommerce">
             <a
               onClick={toggle}
-              smooth={true}
               duration={500}
               spy={true}
               exact={true}
@@ -92,7 +88,6 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLinkR to="/Careers">
             <a
               onClick={toggle}
-              smooth={true}
               duration={500}
               spy={true}
               exact={true}
@@ -105,7 +100,6 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLinkR to="/Shipfreight">
             <a
               onClick={toggle}
-              smooth={true}
               duration={500}
               spy={true}
               exact={true}
@@ -118,7 +112,6 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLinkR to="/Industries">
             <a
               onClick={toggle}
-              smooth={true}
               duration={500}
               spy={true}
               exact={true}
@@ -131,7 +124,6 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLinkR to="/KalPower">
             <a
               onClick={toggle}
-              smooth={true}
               duration={500}
               spy={true}
               exact={true}
