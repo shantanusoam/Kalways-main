@@ -11,7 +11,7 @@ import {
   TextContanerS,
 } from '../components/AboutMain/AboutMainElements';
 import Sidebar from '../components/Sidebar';
-
+import './shipFleight.css';
 import FooterSection from '../components/FooterSection';
 import AboutMain from '../components/AboutMain';
 import QuoteAtEnd from '../components/QuoteAtEnd';
@@ -19,6 +19,7 @@ import AboutMain2 from '../components/AboutMain2';
 import BlockContent from '@sanity/block-content-to-react';
 import Fade from 'react-reveal/Fade';
 const urlFor = (source) => builder.image(source);
+
 export default function About() {
   const [posts, setPosts] = useState([]);
 
@@ -124,7 +125,7 @@ export default function About() {
                   <div className="p-8">
                     <h3 className="font-bold text-2xl mb-5">{post.heading}</h3>
                     <br />
-                    <h3 className=" text-1xl mb-5  h-56 lg:h-48">
+                    <h3 className=" text-1xl mb-5  h-56 lg:h-48 About_blockContent">
                       <BlockContent
                         blocks={post.text}
                         projectId="cjv2tdo2"

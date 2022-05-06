@@ -188,7 +188,7 @@ export default function Careers() {
           {posts[0]
             ? posts[0]['content'][2]['rows'].map((post) => (
                 <Pulse>
-                  <Card className="flex flex-col items-left h-96 bg-white w-80 p-8">
+                  <Card className="flex flex-col items-left h-96 bg-white w-80 p-8 ">
                     <img
                       src={urlFor(post.image.asset._ref)}
                       className="w-32 self-center"
@@ -196,7 +196,7 @@ export default function Careers() {
                     <h4 className="text-2xl font-bold self-left pt-4">
                       {post.heading}
                     </h4>
-                    <p className="font-light self-left pt-4">
+                    <p className="font-light self-left pt-4 About_blockContent">
                       <BlockContent
                         blocks={post.text}
                         projectId="cjv2tdo2"

@@ -60,7 +60,9 @@ export function TrailerList() {
                         {post.heading}
                       </h2>
                       <br />
-                      <p className=" text-1xl mb-5 lg:h-48 ">{post.label}</p>
+                      <div className=" text-1xl mb-5 lg:h-48 ">
+                        {post.label}
+                      </div>
                     </div>
                   </div>
                 </Fade>
