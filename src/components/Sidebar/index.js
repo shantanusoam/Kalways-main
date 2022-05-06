@@ -5,7 +5,6 @@ import {
   SlidebarContainer,
   SidebarWrapper,
   SidebarMenu,
-  SidebarLink,
   SidebarLinkR,
   SideBtnWrap,
   SidebarRoute,
@@ -27,112 +26,17 @@ const Sidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLinkR to="/">
-            <a to="/" onClick={toggle}>
-              Home
-            </a>
-          </SidebarLinkR>
+          <SidebarLinkR to="/">Home</SidebarLinkR>
 
-          <SidebarLinkR to="/About">
-            <a onClick={toggle} to="/About">
-              About
-            </a>
-          </SidebarLinkR>
-          <SidebarLinkR to="/services">
-            <a
-              to="/products"
-              duration={500}
-              spy={true}
-              exact={true}
-              activeClassName="active"
-            >
-              Services
-            </a>
-          </SidebarLinkR>
-          <SidebarLinkR to="/Carriers">
-            <a
-              onClick={toggle}
-              to="/Carriers"
-              duration={500}
-              spy={true}
-              exact={true}
-              activeClassName="active"
-            >
-              Carriers
-            </a>
-          </SidebarLinkR>
-          <SidebarLinkR to="/Shippers">
-            <a
-              onClick={toggle}
-              duration={500}
-              spy={true}
-              exact={true}
-              activeClassName="active"
-              to="/Shipper"
-            >
-              Shipper
-            </a>
-          </SidebarLinkR>
-          <SidebarLinkR to="/Ecommerce">
-            <a
-              onClick={toggle}
-              duration={500}
-              spy={true}
-              exact={true}
-              activeClassName="active"
-              to="/Ecommerce"
-            >
-              Ecommerce
-            </a>
-          </SidebarLinkR>
-          <SidebarLinkR to="/Careers">
-            <a
-              onClick={toggle}
-              duration={500}
-              spy={true}
-              exact={true}
-              activeClassName="active"
-              to="/Careers"
-            >
-              Careers
-            </a>
-          </SidebarLinkR>
-          <SidebarLinkR to="/Shipfreight">
-            <a
-              onClick={toggle}
-              duration={500}
-              spy={true}
-              exact={true}
-              activeClassName="active"
-              to="/Shipfreight"
-            >
-              Shipfreight
-            </a>
-          </SidebarLinkR>
-          <SidebarLinkR to="/Industries">
-            <a
-              onClick={toggle}
-              duration={500}
-              spy={true}
-              exact={true}
-              activeClassName="active"
-              to="/Industries"
-            >
-              Industries
-            </a>
-          </SidebarLinkR>
-          <SidebarLinkR to="/KalPower">
-            <a
-              onClick={toggle}
-              duration={500}
-              spy={true}
-              exact={true}
-              activeClassName="active"
-              to="/KalPower"
-            >
-              KalPower
-            </a>
-          </SidebarLinkR>
+          <SidebarLinkR to="/About">About</SidebarLinkR>
+          <SidebarLinkR to="/services">Services</SidebarLinkR>
+          <SidebarLinkR to="/Carriers">Carriers</SidebarLinkR>
+          <SidebarLinkR to="/Shippers">Shipper</SidebarLinkR>
+          <SidebarLinkR to="/Ecommerce">Ecommerce</SidebarLinkR>
+          <SidebarLinkR to="/Careers">Careers</SidebarLinkR>
+          <SidebarLinkR to="/Shipfreight">Shipfreight</SidebarLinkR>
+          <SidebarLinkR to="/Industries">Industries</SidebarLinkR>
+          <SidebarLinkR to="/KalPower">KalPower</SidebarLinkR>
         </SidebarMenu>
         <SideBtnWrap className="mt-2">
           <SidebarRoute>
