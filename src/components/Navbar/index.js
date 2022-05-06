@@ -14,7 +14,7 @@ import {
   NavItem,
   Numbers,
   NavLinks,
-} from './NavbarElements';   
+} from './NavbarElements';
 
 const Navbar = ({ toggle }) => {
   return (
@@ -37,19 +37,16 @@ const Navbar = ({ toggle }) => {
               <NavLinks to="/" onClick={toggleHome}>
                 <a to="/">Home</a>
               </NavLinks>
-            </NavItem> */}      
+            </NavItem> */}
 
             <NavItem>
-              <NavLinks to="/" activeStyle>
+              <NavLinks to="/">
                 <a href="/">HOME</a>
               </NavLinks>
-         
             </NavItem>
 
             <NavItem>
-              <NavLinks to="/services" activeStyle>
-                SERVICES
-              </NavLinks>
+              <NavLinks to="/services">SERVICES</NavLinks>
             </NavItem>
 
             {/* <NavItem>
@@ -58,24 +55,16 @@ const Navbar = ({ toggle }) => {
               </NavLinks>
             </NavItem> */}
             <NavItem>
-              <NavLinks to="/Carriers" activeStyle>
-                CARRIERS
-              </NavLinks>
+              <NavLinks to="/Carriers">CARRIERS</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/Shippers" activeStyle>
-                SHIPPERS
-              </NavLinks>
+              <NavLinks to="/Shippers">SHIPPERS</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/Shipfreight" activeStyle>
-                SHIPFREIGHT
-              </NavLinks>
+              <NavLinks to="/Shipfreight">SHIPFREIGHT</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/Industries" activeStyle>
-                INDUSTRIES
-              </NavLinks>
+              <NavLinks to="/Industries">INDUSTRIES</NavLinks>
             </NavItem>
             {/* <NavItem>
             
@@ -103,11 +92,9 @@ const Navbar = ({ toggle }) => {
           <FaBars/>
         </MobileIcon> */}
         </Nav>
-      </IconContext.Provider>   
+      </IconContext.Provider>
     </>
   );
 };
 
-export default Navbar;    
-
-
+export default Navbar;
