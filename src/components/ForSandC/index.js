@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import client, { builder } from '../../client';
-import containers from '../../images/Ccontainers.jpg';
-import Hcontainers from '../../images/Hcontainers.jpg';
 
 import './style.css';
 import {
   WWOCArd,
   ImageContainer,
   ImageContainers,
-  SandCcontainer,
   Contanier,
 } from './SolutionElement';
-import Fade from 'react-reveal/Fade';
-import { CardContainer } from '../Solution/SolutionElement';
+
 const urlFor = (source) => builder.image(source);
 export function ForSandC({ isOpen, toggle }) {
   const [posts, setPosts] = useState([]);

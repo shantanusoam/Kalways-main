@@ -1,11 +1,10 @@
-import React, { useRef, useState, useEffect } from 'react';
-import client, { builder } from '../../client';
+import React, { useState, useEffect } from 'react';
+import client from '../../client';
 import {
   ContactContainer,
   ContactForm,
   ContactImage,
   FotterNav,
-  WWOCCButton,
   FotterContact,
   FotterContactlist,
   FotterContactNo,
@@ -13,7 +12,6 @@ import {
   Heading,
 } from './ContactSEctionElements';
 
-import { animateScroll as scroll, Link } from 'react-scroll';
 export default function ContactSectio({ isOpen, toggle }) {
   const [posts, setPosts] = useState([]);
 
@@ -29,12 +27,7 @@ export default function ContactSectio({ isOpen, toggle }) {
       .then((data) => setPosts(data))
       .catch(console.error);
   }, []);
-  function refreshPage() {
-    hide = 'lol';
-    window.location.reload();
-  }
 
-  var hide = 'ContactUs';
   return (
     <ContactContainer id="ContactUs">
       <br></br>
@@ -51,9 +44,6 @@ export default function ContactSectio({ isOpen, toggle }) {
           data-height="500px"
           data-do-resize
         ></div>
-        {/* <WWOCCButton className="" onClick={refreshPage} id={`${hide}`}>
-          Contact Us
-        </WWOCCButton> */}
       </ContactForm>
 
       <ContactImage>
@@ -88,13 +78,4 @@ export default function ContactSectio({ isOpen, toggle }) {
       </ContactImage>
     </ContactContainer>
   );
-}
-class ContactSection extends React.Component {
-  // componentDidMount() {
-  //   window.location.reload(false);
-  // }
-
-  render() {
-    return <ContactSectio />;
-  }
 }

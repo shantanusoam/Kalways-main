@@ -2,16 +2,12 @@ import React from 'react';
 import {
   AboutContainer,
   SpaceContainer,
-  AboutContainerImageContent2,
-  SpaceTruck,
   AboutContainerContent,
   AboutContainerTextContent,
-  AboutContainerHeading,
   AboutContainerSubHeading,
   AboutContainerPara,
   AboutContainerButton,
   AboutContainerImageContent,
-  AboutContainerImage,
 } from './DAboutSectionElement';
 import whitetruck from '../../images/whitetruck.png';
 const DAboutSection = ({ isOpen, toggle }) => {
@@ -40,7 +36,7 @@ const DAboutSection = ({ isOpen, toggle }) => {
             Canada.
           </AboutContainerPara>
           <AboutContainerButton to="/About">
-            <a to="/About">See more</a>
+            <a href="/About">See more</a>
           </AboutContainerButton>
         </AboutContainerTextContent>
       </AboutContainerContent>

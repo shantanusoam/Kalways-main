@@ -1,16 +1,12 @@
-import { render } from '@testing-library/react';
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import client, { builder } from '../client';
-import { shipfreight } from '../components/waystoship/shipfreight';
+
 import { Autoplay, Pagination, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
-import Styled from 'styled-components';
+
 import Bounce from 'react-reveal/Bounce';
 import './shipFleight.css';
-import image1 from '../images/dv01.jpg';
-import image2 from '../images/3t.jpeg';
-import image3 from '../images/Ut02.jpg';
-import image4 from '../images/bt.jpeg';
+
 import BlockContent from '@sanity/block-content-to-react';
 import {
   Card,
