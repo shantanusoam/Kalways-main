@@ -10,12 +10,12 @@ import Sidebar from './components/Sidebar';
 import About from './pages/about';
 import Contact from './pages/contact';
 import Products from './pages/Products';
-import BottomBar from './components/BottomBar';
-import PartnerCompnay from './components/PartnerCompnay';
+// import BottomBar from './components/BottomBar';
+// import PartnerCompnay from './components/PartnerCompnay';
 import { ProductsPage } from './pages/ProductsPage';
-import { FooterContainer } from './components/FooterSection/FooterSectionElements';
-import { FooterContainerBlack } from './CONTAINERS/footer';
-import ShipFlight from './pages/shipFlieghtPage';
+// import { FooterContainer } from './components/FooterSection/FooterSectionElements';
+// import { FooterContainerBlack } from './CONTAINERS/footer';
+// import ShipFlight from './pages/shipFlieghtPage';
 import ShipFlightPage from './pages/shipFlieghtPage';
 import Shipper from './pages/Shipper';
 import { Shipfreight } from './components/shipfreight';
@@ -29,41 +29,43 @@ import Blog from './components/Blog';
 import SinglePost from './components/SinglePost';
 
 import Error from './components/Error';
-import useLocalStorageState from './localStorage';
-function Setposts(data) {
-  const [post, setPost] = useLocalStorageState('name');
+// import LocalStorageFunction from './localStorageHook/localStotragefunction';
+// function Setposts(data) {
+//   var name = data[0].title;
+//   console.log(`inside setposts ${data}`);
+//   data.map((pos) => {
+//     client
+//       .fetch(
+//         `*[title == ${pos.title} ]{
 
-  data.map((post) =>
-    client
-      .fetch(
-        `*[title == ${post.title} ]{
-    
-      content[]
-      
-      }`
-      )
-      .then((data) => setPost(data))
+//       content[]
 
-      .catch(console.error)
-  );
-}
+//       }`
+//       )
+//       .then((data) => {
+//         console.log(`inside setposts ${pos.title} ${data[0].content}`);
+//         LocalStorageFunction(pos.title, data[0].content);
+//       })
+//       .catch(console.error);
+//   });
+// }
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    client
-      .fetch(
-        `*[_type == "page"] {
-          title,
-         
-         }`
-      )
-      .then((data) => Setposts(data))
+  // useEffect(() => {
+  //   client
+  //     .fetch(
+  //       `*[_type == "page"] {
+  //         title,
 
-      .catch(console.error);
-  }, []);
-  useLocalStorageState();
+  //        }`
+  //     )
+  //     .then((data) => Setposts(data))
+
+  //     .catch(console.error);
+  // }, []);
+
   const toggle = () => {
     setIsOpen(!isOpen);
   };
