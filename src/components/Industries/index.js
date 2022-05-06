@@ -111,7 +111,14 @@ export function Industrie() {
         <div className="flex flex-row 2xl:pt-16 pt-8">
           <div className="lg:pr-40">
             <p className="text-gray-800 font-normal 2xl:pt-8 pt-2 text-2xl w-auto ">
-              {posts[0] ? posts[0]['content'][1].label : null}
+              {posts[0] ? (
+                <BlockContent
+                  className="w-10/12"
+                  blocks={posts[0]['content'][1].text}
+                  projectId="cjv2tdo2"
+                  dataset="production"
+                />
+              ) : null}
             </p>
             {/* <p className="text-gray-800 font-normal pt-9 pb-4 text-2xl w-auto">
               We will help you get your products where they need to go fast,
