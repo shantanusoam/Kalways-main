@@ -13,7 +13,7 @@ import {
   FotterContactNo,
   FotterContactName,
   // SocialMediaActionsContainer,
-  FooterMobileContainer,
+  footerMobileContainer,
   FotterHName,
 } from './FooterSectionElements';
 
@@ -64,6 +64,7 @@ export default function FooterSection() {
       )
       .then((data) => setPosts(data))
       .catch(console.error);
+    console.log(posts[0]);
   }, []);
 
   return (
@@ -96,11 +97,11 @@ export default function FooterSection() {
             </SocialMediaActions>
           </SocialMediaActionsContainer> */}
       </FooterLogo>
-      <FooterMobileContainer>
+      <footerMobileContainer>
         <FotterNav>
           {posts[0]
             ? posts[0]['content'].map((post) => (
-                <FotterContact key={post._key}>
+                <FotterContact>
                   <FotterContactlist>
                     <FotterContactName>{post.heading}</FotterContactName>
                     <FotterContactNo>{post.label}</FotterContactNo>
@@ -145,7 +146,7 @@ export default function FooterSection() {
                 <FotterNavH>Products</FotterNavH>
                 <FotterNavH>Contact</FotterNavH> */}
         </FotterNav>
-      </FooterMobileContainer>
+      </footerMobileContainer>
 
       {/* <FotterSocialMedia>
             <SocialMediaActions>

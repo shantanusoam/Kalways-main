@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import client, { builder } from '../../client';
 import { FaBars } from 'react-icons/fa';
 import logo from '../../images/logo.png';
 import logo1 from '../../images/vanguard.png';
@@ -15,8 +16,22 @@ import {
   Numbers,
   NavLinks,
 } from './NavbarElements';
+const urlFor = (source) => builder.image(source);
+export default function Navbar({ toggle }) {
+  const [posts, setPosts] = useState([]);
 
-const Navbar = ({ toggle }) => {
+  useEffect(() => {
+    client
+      .fetch(
+        `*[title == 'Kalway' ]{
+         
+                    Headlogo,
+                    phone,
+                    }`
+      )
+      .then((data) => setPosts(data))
+      .catch(console.error);
+  }, []);
   return (
     <>
       <IconContext.Provider value={{ color: '#fff', size: '1em' }}>
@@ -25,9 +40,13 @@ const Navbar = ({ toggle }) => {
             to="/"
             className="flex flex-col content-center aligns-center"
           >
-            <img src={logo} width="150px" alt="logo" />
+            <img
+              src={posts[0] ? urlFor(posts[0].Headlogo.asset._ref) : null}
+              width="150px"
+              alt="logo"
+            />
             <Numbers className="text-sm items-center pt-2">
-              1-800-502-7000
+              {posts[0] ? posts[0].phone : null}
             </Numbers>
           </NavLogo>
 
@@ -95,6 +114,4 @@ const Navbar = ({ toggle }) => {
       </IconContext.Provider>
     </>
   );
-};
-
-export default Navbar;
+}
