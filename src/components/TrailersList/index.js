@@ -55,7 +55,7 @@ export function TrailerList() {
                       rows={post.rows}
                     />
 
-                    <div className="p-8 ">
+                    <div className="p-8 heading_cardContent">
                       <h2 className="font-bold text-2xl mb-5 ">
                         {post.heading}
                       </h2>
