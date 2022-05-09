@@ -251,7 +251,7 @@ export function Industrie() {
                       src={urlFor(post.image.asset._ref)}
                       className="w-32"
                     ></img>
-                    <h4 className="text-2xl font-bold self-center">
+                    <h4 className="text-1xl font-bold self-center">
                       {post.heading}
                     </h4>
                   </Card>
@@ -273,7 +273,7 @@ export function Industrie() {
                       src={urlFor(post.image.asset._ref)}
                       className="w-32"
                     ></img>
-                    <h4 className="text-2xl font-bold self-center">
+                    <h4 className="text-1xl font-bold self-center">
                       {post.heading}
                     </h4>
                   </Card>

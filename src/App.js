@@ -138,7 +138,7 @@ function App() {
           title="Ecomerece"
         />
         <Route path="/blog/:slug" children={<SinglePost />}></Route>
-        <Route exact path="/blog" title="Ecomerece">
+        <Route exact path="/blogs" title="Ecomerece">
           <Blog />
         </Route>
 
