@@ -12,13 +12,27 @@ import Fade from 'react-reveal/Fade';
 import EmblaCarousel from './EmblaCarousel';
 import { animateScroll as scroll, Link } from 'react-scroll';
 import { Trailers } from '../../trailer.js';
+import useLocalStorageState from '../../localStorageHook';
 const SLIDE_COUNT = 3;
 
 const slides = Array.from(Array(SLIDE_COUNT).keys());
 const urlFor = (source) => builder.image(source);
 export function TrailerList() {
-  const [posts, setPosts] = useState([]);
+  // const [name, setname] = useState([]);
 
+  // useEffect(() => {
+  //   client
+  //     .fetch(
+  //       `*[title == 'services' ]{
+  //         title,
+  //         content[]
+
+  //         }`
+  //     )
+  //     .then((data) => setname(data))
+  //     .catch(console.error);
+  // }, []);
+  const [name, setName] = useLocalStorageState('services');
   useEffect(() => {
     client
       .fetch(
@@ -28,21 +42,21 @@ export function TrailerList() {
           
           }`
       )
-      .then((data) => setPosts(data))
+      .then((data) => setName(data))
       .catch(console.error);
-  }, []);
+  }, [setName]);
 
   return (
     <AboutContainer id="Products">
       <h1 className="text-center text-black  2xl:text-5xl text-4xl pb-0  2xl:mt-28 xl:mt-28 mt-8 md:pb-3">
-        {posts[0] ? posts[0].title.toUpperCase() : null}
+        {name[0] ? name[0].title.toUpperCase() : null}
         <div className="w-40 h-2  hover:w-10 transition duration-700 ease-in-out delay-150"></div>
       </h1>
 
       <CardListRow>
         <div className="xl:px-14 xl:py-10 md:py-0 md:px-0 bg-white flex flex-row flex-wrap justify-center items-center   ">
-          {posts[0]
-            ? posts[0]['content'][0]['rows'].map((post) => (
+          {name[0]
+            ? name[0]['content'][0]['rows'].map((post) => (
                 <Fade bottom key={post._key}>
                   <div
                     className="bg-white rounded-xl  m-9 hover:shadow-2xl flex-1 transition duration-700 ease-in-out delay-150"

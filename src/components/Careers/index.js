@@ -65,12 +65,25 @@ import {
   Callinfo,
   BgImage,
 } from './CareersElement';
+import useLocalStorageState from '../../localStorageHook';
 import { render } from '@testing-library/react';
 const urlFor = (source) => builder.image(source);
 
 export default function Careers() {
-  const [posts, setPosts] = useState([]);
+  // const [posts, setPosts] = useState([]);
 
+  // useEffect(() => {
+  //   client
+  //     .fetch(
+  //       `*[title == "CAREERS"] {
+  //         content[],
+
+  //        }`
+  //     )
+  //     .then((data) => setPosts(data))
+  //     .catch(console.error);
+  // }, []);
+  const [posts, setPosts] = useLocalStorageState('CAREERS');
   useEffect(() => {
     client
       .fetch(
@@ -81,7 +94,7 @@ export default function Careers() {
       )
       .then((data) => setPosts(data))
       .catch(console.error);
-  }, []);
+  }, [setPosts]);
   return (
     <>
       <HeroContainer

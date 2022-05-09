@@ -21,6 +21,7 @@ import {
 import BlockContent from '@sanity/block-content-to-react';
 import YouTube from 'react-youtube';
 import PortableText from '@sanity/block-content-to-react';
+import useLocalStorageState from '../localStorageHook';
 const urlFor = (source) => builder.image(source);
 const serializers = {
   types: {
@@ -32,8 +33,21 @@ const serializers = {
   },
 };
 export default function Shipper({ Phoneno }) {
-  const [posts, setPosts] = useState([]);
+  // const [posts, setPosts] = useState([]);
 
+  // useEffect(() => {
+  //   client
+  //     .fetch(
+  //       `*[title == 'SHIPPERS' ]{
+
+  //         content[]
+
+  //         }`
+  //     )
+  //     .then((data) => setPosts(data))
+  //     .catch(console.error);
+  // }, []);
+  const [posts, setPosts] = useLocalStorageState('SHIPPERS');
   useEffect(() => {
     client
       .fetch(
@@ -45,7 +59,7 @@ export default function Shipper({ Phoneno }) {
       )
       .then((data) => setPosts(data))
       .catch(console.error);
-  }, []);
+  }, [setPosts]);
 
   return (
     <div className="lg:pt-28 flex flex-col bg-slate-800">
