@@ -16,22 +16,23 @@ import {
   Numbers,
   NavLinks,
 } from './NavbarElements';
-const urlFor = (source) => builder.image(source);
-export default function Navbar({ toggle }) {
-  const [posts, setPosts] = useState([]);
 
-  useEffect(() => {
-    client
-      .fetch(
-        `*[title == 'Kalway' ]{
-         
-                    Headlogo,
-                    phone,
-                    }`
-      )
-      .then((data) => setPosts(data))
-      .catch(console.error);
-  }, []);
+const urlFor = (source) => builder.image(source);
+export default function Navbar({ toggle, logo, Phoneno }) {
+  // const [posts, setPosts] = useState([]);
+
+  // useEffect(() => {
+  //   client
+  //     .fetch(
+  //       `*[title == 'Kalway' ]{
+
+  //                   Headlogo,
+  //                   phone,
+  //                   }`
+  //     )
+  //     .then((data) => setPosts(data))
+  //     .catch(console.error);
+  // }, []);
   return (
     <>
       <IconContext.Provider value={{ color: '#fff', size: '1em' }}>
@@ -40,14 +41,8 @@ export default function Navbar({ toggle }) {
             to="/"
             className="flex flex-col content-center aligns-center"
           >
-            <img
-              src={posts[0] ? urlFor(posts[0].Headlogo.asset._ref) : null}
-              width="150px"
-              alt="logo"
-            />
-            <Numbers className="text-sm items-center pt-2">
-              {posts[0] ? posts[0].phone : null}
-            </Numbers>
+            <img src={urlFor(logo)} width="150px" alt="logo" />
+            <Numbers className="text-sm items-center pt-2">{Phoneno}</Numbers>
           </NavLogo>
 
           {/* <Bars onClick={toggle}/> */}

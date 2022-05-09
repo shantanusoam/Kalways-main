@@ -7,8 +7,7 @@ import client from '../client';
 
 import Solution from '../components/Solution';
 import useLocalStorageState from '../localStorageHook';
-const Lol = () => {
-  const [posts, setPosts] = useState([]);
+const Lol = ({ Phoneno }) => {
   const [name, setName] = useLocalStorageState('Home');
   useEffect(() => {
     client
@@ -16,7 +15,6 @@ const Lol = () => {
         `*[title == 'Home' ]{
           title,
           content[]
-          
           }`
       )
       .then((data) => setName(data))
@@ -26,11 +24,11 @@ const Lol = () => {
   return (
     <>
       {/* <EmblaCarousel slides={slides} /> */}
-      {/* <Herosection></Herosection> */}
+      {/* <Herosection></Herosection> */},
       <HeroSection posts={name}></HeroSection>
       {/* <CenterSection></CenterSection> */}
       {/* <UAboutSection></UAboutSection> */}
-      <Solution posts={name}></Solution>
+      <Solution posts={name} Phoneno={Phoneno}></Solution>
       <ForSandC posts={name}></ForSandC>
       {/* <DAboutSection></DAboutSection>
       <ProvideExpertService></ProvideExpertService> */}
@@ -51,7 +49,7 @@ class Home extends React.Component {
   }
 
   render() {
-    return <Lol />;
+    return <Lol Phoneno={this.props.Phoneno} />;
   }
 }
 export default Home;

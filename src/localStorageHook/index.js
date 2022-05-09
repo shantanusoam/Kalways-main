@@ -34,16 +34,16 @@ export default function useLocalStorageState(
       window.localStorage.removeItem(prevKey);
     }
     prevKeyRef.current = key;
-    client
-      .fetch(
-        `*[title == ${key} ]{
-        title,
-        content[]
-        
-        }`
-      )
-      .then((data) => window.localStorage.setItem(key, serialize(state)))
-      .catch(console.error);
+    // client
+    //   .fetch(
+    //     `*[title == ${key} ]{
+    //     title,
+    //     content[]
+
+    //     }`
+    //   )
+    //   .then((data) => window.localStorage.setItem(key, serialize(state)))
+    //   .catch(console.error);
   }, [key, state, serialize]);
 
   return [state, setState];

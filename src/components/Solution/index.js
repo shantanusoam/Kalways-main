@@ -34,7 +34,7 @@ const opts = {
   },
 };
 const urlFor = (source) => builder.image(source);
-export default function Solution({ posts }) {
+export default function Solution({ posts, Phoneno }) {
   return (
     <>
       {/* <WWOCArd1>
@@ -136,9 +136,7 @@ export default function Solution({ posts }) {
                           </div>
                           <a href="/Contact">
                             <button className="btn">
-                              <span className="btn-text">
-                                {/* <PhoneNo /> */}
-                              </span>
+                              <span className="btn-text">{Phoneno}</span>
                             </button>
                           </a>
                         </div>
@@ -325,7 +323,7 @@ export default function Solution({ posts }) {
             <>
               <WWOCCHeading>
                 {posts[0]['content'][4].label} <br></br>
-                {/* <PhoneNo /> */}
+                {Phoneno}
               </WWOCCHeading>
               <WWOCCParagraph>{posts[0]['content'][4].heading}</WWOCCParagraph>
             </>

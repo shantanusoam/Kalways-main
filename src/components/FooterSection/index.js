@@ -18,9 +18,7 @@ import {
   FotterHName,
 } from './FooterSectionElements';
 const urlFor = (source) => builder.image(source);
-export default function FooterSection() {
-  const [posts, setPosts] = useState([]);
-  const [posts1, setPosts1] = useState([]);
+export default function FooterSection({ posts }) {
   // const data = {
   //   _createdAt: '2022-05-02T19:49:14Z',
   //   _id: '8b5585e6-4051-4388-81c8-e1bce0fa643a',
@@ -55,29 +53,6 @@ export default function FooterSection() {
   //   ],
   //   title: 'FooterText',
   // };
-  useEffect(() => {
-    client
-      .fetch(
-        `*[title == 'FooterText'   ]{
-          title,
-          content[]
-          
-          }`
-      )
-      .then((data) => setPosts(data))
-      .catch(console.error);
-    client
-      .fetch(
-        `*[title == 'Kalway' ]{
-          Timing_2,
-          Timing_1,
-          logo,
-       
-          }`
-      )
-      .then((data) => setPosts1(data))
-      .catch(console.error);
-  }, []);
 
   return (
     <FooterContainer id="Footertag">
@@ -85,7 +60,7 @@ export default function FooterSection() {
         <div className="mt-10">
           <div>
             <img
-              src={posts1[0] ? urlFor(posts1[0].logo.asset._ref) : null}
+              src={posts[0] ? urlFor(posts[0].logo.asset._ref) : null}
               alt=""
             />
           </div>
@@ -114,7 +89,7 @@ export default function FooterSection() {
       </FooterLogo>
       <footerMobileContainer>
         <FotterNav>
-          {posts[0]
+          {/* {posts[0]
             ? posts[0]['content'].map((post) => (
                 <FotterContact>
                   <FotterContactlist>
@@ -123,35 +98,58 @@ export default function FooterSection() {
                   </FotterContactlist>
                 </FotterContact>
               ))
-            : null}
-
+            : null} */}
           {/* <FotterContact>
+            <FotterContactlist>
+              <FotterContactName>Phone</FotterContactName>
+              <FotterContactNo></FotterContactNo>
+              {posts[0] ? posts[0].Email : null}
+            </FotterContactlist>
+          </FotterContact>
+
+          <FotterContact>
             <FotterContactlist>
               <FotterContactName>Email</FotterContactName>
-              <FotterContactNo>info@KALWAY.com</FotterContactNo>
-            
-            </FotterContactlist>
-          </FotterContact> */}
-
-          {/* <hr align="left" width="100%"></hr> */}
-          {/* <FotterContact>
-            <FotterContactlist>
-              <FotterContactName>Address</FotterContactName>
-              <FotterContactNo>
-                10156 Live Oak Ave, Fontana, CA 92335
-              </FotterContactNo>
+              <FotterContactNo></FotterContactNo>
+              {posts[0] ? posts[0].Email : null}
             </FotterContactlist>
           </FotterContact> */}
 
           {/* <hr align="left" width="100%"></hr> */}
           <FotterContact>
             <FotterContactlist>
-              <FotterContactName>We are open</FotterContactName>
-              {posts1[0] ? (
-                <>
-                  <FotterContactNo>{posts1[0].Timing_1}</FotterContactNo>
+              <FotterContactName>Phone</FotterContactName>
+              <FotterContactNo>
+                {posts[0] ? posts[0].phone : null}
+              </FotterContactNo>
+            </FotterContactlist>
+          </FotterContact>
+          <FotterContact>
+            <FotterContactlist>
+              <FotterContactName>Email</FotterContactName>
+              <FotterContactNo>
+                {posts[0] ? posts[0].Email : null}
+              </FotterContactNo>
+            </FotterContactlist>
+          </FotterContact>
+          <FotterContact>
+            <FotterContactlist>
+              <FotterContactName>Address</FotterContactName>
+              <FotterContactNo>
+                {posts[0] ? posts[0].Address : null}
+              </FotterContactNo>
+            </FotterContactlist>
+          </FotterContact>
 
-                  <FotterContactNo>{posts1[0].Timing_2}</FotterContactNo>
+          {/* <hr align="left" width="100%"></hr> */}
+          <FotterContact>
+            <FotterContactlist>
+              <FotterContactName>We are open</FotterContactName>
+              {posts[0] ? (
+                <>
+                  <FotterContactNo>{posts[0].Timing_1}</FotterContactNo>
+
+                  <FotterContactNo>{posts[0].Timing_2}</FotterContactNo>
                 </>
               ) : null}
             </FotterContactlist>
