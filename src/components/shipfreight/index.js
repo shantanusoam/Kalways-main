@@ -50,7 +50,7 @@ import {
 } from './shipfreight';
 import BlockContent from '@sanity/block-content-to-react';
 const urlFor = (source) => builder.image(source);
-export function Shipfreight() {
+export function Shipfreight({ Phoneno }) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -154,9 +154,7 @@ export function Shipfreight() {
               {posts[0] ? posts[0]['content'][2]['cta'].title : null}
             </p>
             <button className="btn">
-              <span className="btn-text ">
-                <PhoneNo />
-              </span>
+              <span className="btn-text ">{Phoneno}</span>
             </button>
           </div>
         </div>

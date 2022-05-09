@@ -230,10 +230,10 @@ margin-top: 24px;
 margin-bottom: 24px;
 font-family: sans-serif;
 font-style: normal;
-font-weight: 600;
+font-weight: 600 !important;
 font-size: 3.5rem !important; 
 
-line-height: 89.69%;
+line-height: 89.69% !important;
 text-align: left;
 // width: 75%;
 z-index: 2;

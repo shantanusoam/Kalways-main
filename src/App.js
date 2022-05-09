@@ -117,13 +117,13 @@ function App() {
               component={ShipFlightPage}
               title="Inventory"
             />
-            <Route exact path="/Shippers" component={Shipper} title="Shipper" />
-            <Route
-              exact
-              path="/shipfreight"
-              component={Shipfreight}
-              title="Inventory"
-            />
+            <Route exact path="/Shippers" title="Shipper">
+              <Shipper Phoneno={name[0].phone} />
+            </Route>
+
+            <Route exact path="/shipfreight" title="Inventory" />
+            <Shipfreight Phoneno={name[0].phone} />
+            <Route />
             <Route
               exact
               path="/industries"

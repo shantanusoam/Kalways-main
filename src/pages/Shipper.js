@@ -31,7 +31,7 @@ const serializers = {
     },
   },
 };
-export default function Shipper() {
+export default function Shipper({ Phoneno }) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -198,9 +198,7 @@ export default function Shipper() {
             {posts[0] ? posts[0]['content'][2]['cta'].title : null}
           </p>
           <button class="btn">
-            <span className="btn-text">
-              <PhoneNo />
-            </span>
+            <span className="btn-text">{Phoneno}</span>
           </button>
           <img
             style={{ paddingTop: '2rem' }}
