@@ -3,7 +3,7 @@
 // http://localhost:3000/isolated/final/02.extra-4.js
 
 import * as React from 'react';
-
+import client from '../client';
 export default function useLocalStorageState(
   key,
   defaultValue = '',
@@ -34,7 +34,16 @@ export default function useLocalStorageState(
       window.localStorage.removeItem(prevKey);
     }
     prevKeyRef.current = key;
-    window.localStorage.setItem(key, serialize(state));
+    client
+      .fetch(
+        `*[title == ${key} ]{
+        title,
+        content[]
+        
+        }`
+      )
+      .then((data) => window.localStorage.setItem(key, serialize(state)))
+      .catch(console.error);
   }, [key, state, serialize]);
 
   return [state, setState];

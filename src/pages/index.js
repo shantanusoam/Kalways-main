@@ -1,53 +1,37 @@
 import React, { useState, useEffect } from 'react';
-import ContactSection from '../components/ContactSection';
-import DAboutSection from '../components/DAboutSection';
+
 import HeroSection from '../components/HeroSection';
-import Navbar from '../components/Navbar';
-import QuoteAtEnd from '../components/QuoteAtEnd';
+
 import ForSandC from '../components/ForSandC';
+import client from '../client';
 
-import ProvideExpertService from '../components/ProvideExpertService';
-import MapSection from '../components/MapSection';
-import TrailerList from '../components/TrailersList';
-import CenterSection from '../components/CenterSection';
 import Solution from '../components/Solution';
-import Sidebar from '../components/Sidebar';
-
-const SLIDE_COUNT = 5;
-const slides = Array.from(Array(SLIDE_COUNT).keys());
-
+import useLocalStorageState from '../localStorageHook';
 const Lol = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
-  const [disabel, setdisabel] = useState(
-    () => window.localStorage.getItem('product') ?? false
-  );
+  const [posts, setPosts] = useState([]);
+  const [name, setName] = useLocalStorageState('Home');
   useEffect(() => {
-    // Update the document title using the browser API
-    disabeled() ? setdisabel(true) : setdisabel(false);
-    window.localStorage.setItem('product', disabel);
-  });
-
-  function disabeled() {
-    const path = window.location.pathname;
-
-    if (path === '/') {
-      return true;
-    }
-    return false;
-  }
+    client
+      .fetch(
+        `*[title == 'Home' ]{
+          title,
+          content[]
+          
+          }`
+      )
+      .then((data) => setName(data))
+      .catch(console.error);
+  }, []);
 
   return (
     <>
       {/* <EmblaCarousel slides={slides} /> */}
       {/* <Herosection></Herosection> */}
-      <HeroSection></HeroSection>
+      <HeroSection posts={name}></HeroSection>
       {/* <CenterSection></CenterSection> */}
       {/* <UAboutSection></UAboutSection> */}
-      <Solution></Solution>
-      <ForSandC></ForSandC>
+      <Solution posts={name}></Solution>
+      <ForSandC posts={name}></ForSandC>
       {/* <DAboutSection></DAboutSection>
       <ProvideExpertService></ProvideExpertService> */}
       {/* <TestimonialSection></TestimonialSection> */}

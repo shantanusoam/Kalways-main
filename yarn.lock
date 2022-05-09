@@ -7998,6 +7998,16 @@
   "resolved" "https://registry.npmjs.org/modern-normalize/-/modern-normalize-1.1.0.tgz"
   "version" "1.1.0"
 
+"momen@^0.0.1-security":
+  "integrity" "sha512-pFEyYVJ8FmAj6+WfCRZGVJKFI9I7XHS8jy2LdTuOPR8Qiq72rXGajxToS9E62DuJ3v4sFwcv2GnOVlhDWoCjVg=="
+  "resolved" "https://registry.npmjs.org/momen/-/momen-0.0.1-security.tgz"
+  "version" "0.0.1-security"
+
+"moment@^2.29.3":
+  "integrity" "sha512-c6YRvhEo//6T2Jz/vVtYzqBzwvPT95JBQ+smCytzf7c50oMZRsR/a4w88aD34I+/QVSfnoAnSBFPJHItlOMJVw=="
+  "resolved" "https://registry.npmjs.org/moment/-/moment-2.29.3.tgz"
+  "version" "2.29.3"
+
 "move-concurrently@^1.0.1":
   "integrity" "sha1-viwAX9oy4LKa8fBdfEszIUxwH5I="
   "resolved" "https://registry.npmjs.org/move-concurrently/-/move-concurrently-1.0.1.tgz"

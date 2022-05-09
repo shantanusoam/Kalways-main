@@ -10,22 +10,7 @@ import {
 } from './SolutionElement';
 
 const urlFor = (source) => builder.image(source);
-export function ForSandC({ isOpen, toggle }) {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    client
-      .fetch(
-        `*[title == 'Home' ]{
-          title,
-          content[]
-          
-          }`
-      )
-      .then((data) => setPosts(data))
-      .catch(console.error);
-  }, []);
-
+export function ForSandC({ posts }) {
   return (
     <WWOCArd>
       <ImageContainers>

@@ -72,9 +72,9 @@ function App() {
 
   return (
     <Router>
-      <Stickbar />
-      <Sidebar isOpen={isOpen} toggle={toggle}></Sidebar>
-      <Navbar toggle={toggle}></Navbar>
+      {/* <Stickbar />
+      <Sidebar isOpen={isOpen} toggle={toggle}></Sidebar> */}
+      {/* <Navbar toggle={toggle}></Navbar> */}
 
       <Switch>
         <Route
@@ -158,7 +158,7 @@ function App() {
       {/* <PartnerCompnay></PartnerCompnay> */}
       {/* <PartnerCompnay></PartnerCompnay> */}
 
-      <FooterSection />
+      {/* <FooterSection /> */}
       {/* <BottomBar></BottomBar> */}
     </Router>
   );

@@ -34,21 +34,7 @@ const opts = {
   },
 };
 const urlFor = (source) => builder.image(source);
-export default function Solution({ isOpen, toggle }) {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    client
-      .fetch(
-        `*[title == 'Home' ]{
-          title,
-          content[]
-          
-          }`
-      )
-      .then((data) => setPosts(data))
-      .catch(console.error);
-  }, []);
+export default function Solution({ posts }) {
   return (
     <>
       {/* <WWOCArd1>
@@ -151,7 +137,7 @@ export default function Solution({ isOpen, toggle }) {
                           <a href="/Contact">
                             <button className="btn">
                               <span className="btn-text">
-                                <PhoneNo />
+                                {/* <PhoneNo /> */}
                               </span>
                             </button>
                           </a>
@@ -339,7 +325,7 @@ export default function Solution({ isOpen, toggle }) {
             <>
               <WWOCCHeading>
                 {posts[0]['content'][4].label} <br></br>
-                <PhoneNo />
+                {/* <PhoneNo /> */}
               </WWOCCHeading>
               <WWOCCParagraph>{posts[0]['content'][4].heading}</WWOCCParagraph>
             </>
