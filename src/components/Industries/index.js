@@ -76,7 +76,10 @@ export function Industrie() {
   return (
     <>
       {posts[0] ? (
-        <HeroContainer id="Home">
+        <HeroContainer
+          id="Home"
+          bgImage={urlFor(posts[0]['content'][0].backgroundImage.asset._ref)}
+        >
           <HeroContent className="flex flex-col 	justify-items-end lg:w-1/2">
             <ContainerMain className="absolute bottom-0 left-20 pb-0 pl-32">
               <h1 className="text-white  font-normal pt-8 text-xl w-auto">
