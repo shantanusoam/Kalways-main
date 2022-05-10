@@ -80,7 +80,7 @@ export default function Blog() {
         </HeroContent>
       </HeroContainer>
       <FeaturedPosts Posts={posts} />
-      <section className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <section className="grid grid-cols-1 lg:grid-cols-12 lg:mx-52 mx-10 gap-12 place-content-center">
         {/* <h1 className="font-bold text-4xl pt-28 mb-10 tracking-widest text-center md:text-5xl lg:text-6xl">
           Blog page
         </h1> */}
@@ -160,7 +160,7 @@ export default function Blog() {
           ))}
         </div>
         <div className="lg:col-span-4 col-span-1">
-          <div className="lg:sticky relative top-20">
+          <div className="lg:sticky relative top-28">
             <PostWidget Posts={posts} />
           </div>
         </div>
