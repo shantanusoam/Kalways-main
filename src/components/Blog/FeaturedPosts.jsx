@@ -25,36 +25,7 @@ const responsive = {
   },
 };
 
-const FeaturedPosts = () => {
-  const [featuredPosts, setFeaturedPosts] = useState([]);
-  const [dataLoaded, setDataLoaded] = useState(false);
-
-  useEffect(() => {
-    client
-      .fetch(
-        `*[_type == "post"] {
-      title,
-      slug,
-      body,
-      publishedAt,
-      mainImage {
-        asset -> {
-          _id,
-          url
-        },
-        alt
-      }
-    }`
-      )
-      .then((data) => setFeaturedPosts(data), setDataLoaded(true))
-      .catch(console.error);
-    // getFeaturedPosts().then((result) => {
-    //   setFeaturedPosts(result);
-    //   console.log(`featured posts ${result}`);
-
-    // });
-  }, []);
-
+const FeaturedPosts = ({ Posts }) => {
   const customLeftArrow = (
     <div className="absolute arrow-btn left-0 text-center py-3 cursor-pointer bg-Site-green rounded-full">
       <svg
@@ -102,10 +73,9 @@ const FeaturedPosts = () => {
         responsive={responsive}
         itemClass="px-4"
       >
-        {dataLoaded &&
-          featuredPosts.map((post, index) => (
-            <FeaturedPostCard key={post._key} post={post} />
-          ))}
+        {Posts.map((post, index) => (
+          <FeaturedPostCard key={post._key} post={post} />
+        ))}
       </Carousel>
     </div>
   );

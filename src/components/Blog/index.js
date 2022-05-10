@@ -19,18 +19,18 @@ export default function Blog() {
     client
       .fetch(
         `*[_type == "post"] {
-        title,
-        slug,
-        body,
-        publishedAt,
-        mainImage {
-          asset -> {
-            _id,
-            url
-          },
-          alt
-        }
-      }`
+          title,
+          slug,
+          body,
+          publishedAt,
+          mainImage {
+            asset -> {
+              _id,
+              url
+            },
+            alt
+          }
+        }`
       )
       .then((data) => setPosts(data))
       .catch(console.error);
@@ -79,7 +79,7 @@ export default function Blog() {
           </PCENTER>
         </HeroContent>
       </HeroContainer>
-      <FeaturedPosts />
+      <FeaturedPosts Posts={posts} />
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         {/* <h1 className="font-bold text-4xl pt-28 mb-10 tracking-widest text-center md:text-5xl lg:text-6xl">
           Blog page
@@ -113,18 +113,6 @@ export default function Blog() {
                 <Link href={`/post/${post.slug}`}>{post.title}</Link>
               </h1>
               <div className="block lg:flex text-center items-center justify-center mb-8 w-full">
-                {/* <div className="flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8 items-center">
-                <Image
-                  unoptimized
-                  loader={grpahCMSImageLoader}
-                  alt={post.author.name}
-                  height="30px"
-                  width="30px"
-                  className="align-middle rounded-full"
-                  src={post.author.photo.url}
-                />
-                <p className="inline align-middle text-gray-700 ml-2 font-medium text-lg">{post.author.name}</p>
-              </div> */}
                 <div className="font-medium text-gray-700">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -173,7 +161,7 @@ export default function Blog() {
         </div>
         <div className="lg:col-span-4 col-span-1">
           <div className="lg:sticky relative top-20">
-            <PostWidget />
+            <PostWidget Posts={posts} />
           </div>
         </div>
       </section>
