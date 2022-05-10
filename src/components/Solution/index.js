@@ -6,7 +6,7 @@ import { builder } from '../../client';
 // import Inc5000 from '../../images/baI1.png';
 // import SmartWay from '../../images/baI2.png';
 // import BestBroker from '../../images/baI3.png';
-// import YouTube from 'react-youtube';
+import YouTube from 'react-youtube';
 // import PhoneNo from '../phoneno';
 import './style.css';
 import {
@@ -18,12 +18,12 @@ import {
   BannerContainer,
   // LinkRo,
   // NavLink,
-  // WWOCArd1,
+  WWOCArd1,
   BannerContainer2,
 } from './SolutionElement';
 import Fade from 'react-reveal/Fade';
 
-// import YoutubeEmbed from './youtubeVideo';
+import YoutubeEmbed from './youtubeVideo';
 const opts = {
   playerVars: {
     // https://developers.google.com/youtube/player_parameters
@@ -296,7 +296,7 @@ export default function Solution({ posts, Phoneno }) {
                 : null}
             </BannerContainer2>
           </BannerContainer>
-          {/* <WWOCArd1>
+          <WWOCArd1>
             <div style={{ flex: 1 }} className="m-8 items-center">
               <YouTube videoId="h-P3khDl29U" opts={opts} />
             </div>
@@ -318,7 +318,7 @@ export default function Solution({ posts, Phoneno }) {
                 your fingertips.
               </div>
             </div>
-          </WWOCArd1> */}
+          </WWOCArd1>
           {posts[0] ? (
             <>
               <WWOCCHeading>
