@@ -1,24 +1,24 @@
-import { render } from '@testing-library/react';
-import React, { useRef, useState, useEffect } from 'react';
+// import { render } from '@testing-library/react';
+import React, {  useEffect } from 'react';
 import client, { builder } from '../client';
 import './shipFleight.css';
 import Bounce from 'react-reveal/Bounce';
 import { Autoplay, Pagination, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
-import PhoneNo from '../components/phoneno';
+// import PhoneNo from '../components/phoneno';
 import 'swiper/swiper.min.css';
 import 'swiper/modules/pagination/pagination.min.css';
-import image1 from '../images/dv0.jpg';
-import image2 from '../images/Ut1.jpg';
-import image3 from '../images/Rt2.jpg';
-import image4 from '../images/Rt02.jpg';
+// import image1 from '../images/dv0.jpg';
+// import image2 from '../images/Ut1.jpg';
+// import image3 from '../images/Rt2.jpg';
+// import image4 from '../images/Rt02.jpg';
 
 import {
   Card,
   Formcontainer,
   FormButton,
 } from '../components/shipfreight/shipfreight';
-import BlockContent from '@sanity/block-content-to-react';
+// import BlockContent from '@sanity/block-content-to-react';
 import YouTube from 'react-youtube';
 import PortableText from '@sanity/block-content-to-react';
 import useLocalStorageState from '../localStorageHook';

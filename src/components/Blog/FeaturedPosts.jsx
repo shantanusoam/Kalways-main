@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import client, { builder } from '../../client';
-import FeaturedPostCard from './FeaturedPostCard';
-import { getFeaturedPosts } from './services';
+import client from '../../client';  
+import FeaturedPostCard from './FeaturedPostCard'; 
+
+// import { getFeaturedPosts } from './services';
 
 const responsive = {
   superLargeDesktop: {
@@ -26,7 +27,7 @@ const responsive = {
 
 const FeaturedPosts = () => {
   const [featuredPosts, setFeaturedPosts] = useState([]);
-  const [dataLoaded, setDataLoaded] = useState(false);
+  const [dataLoaded, setDataLoaded] = useState(false);  
 
   useEffect(() => {
     client

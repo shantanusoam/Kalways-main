@@ -1,5 +1,5 @@
 import React from 'react';
-import { SticNav, NavLink, Bars, NavMenu } from './StickbarElements';
+import { SticNav, NavLink,  NavMenu } from './StickbarElements';
 
 const Stickbar = () => {
   return (

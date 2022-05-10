@@ -6,7 +6,7 @@ import client, { builder } from '../../client';
 import Pulse from 'react-reveal/Pulse';
 
 // import bankground from "../../images";
-import { animateScroll as scroll, Link } from 'react-scroll';
+// import { animateScroll as scroll, Link } from 'react-scroll';
 import {
   HeroContainer,
   PCENTER,

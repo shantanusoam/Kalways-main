@@ -1,5 +1,5 @@
 import client from '../../client';
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
 // export const getPosts = async () => {
 //   const query = gql`

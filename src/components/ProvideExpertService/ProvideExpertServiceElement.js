@@ -1,6 +1,6 @@
-import { FaBars } from 'react-icons/fa';
-import { Link as LinkR } from 'react-router-dom';
-import { Link as LinkS } from 'react-scroll';
+// import { FaBars } from 'react-icons/fa';
+// import { Link as LinkR } from 'react-router-dom';
+// import { Link as LinkS } from 'react-scroll';
 import styled from 'styled-components';
 
 export const Conatainer = styled.div`
@@ -9,7 +9,7 @@ export const Conatainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 90vh;
+  height: 90vh;   
   overflow: hidden;
   @media screen and (max-width: 768px) {
     height: 100vh;

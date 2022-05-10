@@ -4,8 +4,8 @@ import {
   ProductSlideImage,
   TextContaner,
 } from './ProductBottomElement';
-import whitetruck from '../../images/ProductTop.png';
-import { animateScroll as scroll, Link } from 'react-scroll';
+// import whitetruck from '../../images/ProductTop.png';
+// import { animateScroll as scroll, Link } from 'react-scroll'; 
 import { Trailers } from '../../trailer.js';
 
 class ProductBottom extends React.Component {

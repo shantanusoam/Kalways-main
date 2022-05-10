@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import client, { builder } from '../../client';
-import trucks from '../../images/bg.jpg';
-import Containers from '../../images/comtaimer.png';
-import Shiping from '../../images/shiping.jpg';
-import Inc5000 from '../../images/baI1.png';
-import SmartWay from '../../images/baI2.png';
-import BestBroker from '../../images/baI3.png';
-import YouTube from 'react-youtube';
-import PhoneNo from '../phoneno';
+import React from 'react';
+import { builder } from '../../client';
+// import trucks from '../../images/bg.jpg';
+// import Containers from '../../images/comtaimer.png';
+// import Shiping from '../../images/shiping.jpg';
+// import Inc5000 from '../../images/baI1.png';
+// import SmartWay from '../../images/baI2.png';
+// import BestBroker from '../../images/baI3.png';
+// import YouTube from 'react-youtube';
+// import PhoneNo from '../phoneno';
 import './style.css';
 import {
   WWOCArd,
@@ -16,14 +16,14 @@ import {
   WWOCCParagraph,
   CardListRow,
   BannerContainer,
-  LinkRo,
-  NavLink,
-  WWOCArd1,
+  // LinkRo,
+  // NavLink,
+  // WWOCArd1,
   BannerContainer2,
 } from './SolutionElement';
 import Fade from 'react-reveal/Fade';
 
-import YoutubeEmbed from './youtubeVideo';
+// import YoutubeEmbed from './youtubeVideo';
 const opts = {
   playerVars: {
     // https://developers.google.com/youtube/player_parameters

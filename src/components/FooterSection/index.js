@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
-import logo from '../../images/logo.png';
-import client, { builder } from '../../client';
+// import logo from '../../images/logo.png';
+import  { builder } from '../../client';
 // import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 import {

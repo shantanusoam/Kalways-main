@@ -1,9 +1,9 @@
-import { FaBars } from 'react-icons/fa';
+// import { FaBars } from 'react-icons/fa';
 import { Link as LinkR } from 'react-router-dom';
-import { Link as LinkS } from 'react-scroll';
+// import { Link as LinkS } from 'react-scroll';
 import styled from 'styled-components';
-import bgimage from '../../images/ContactTire.png';
-import { mobile, laptop } from '../../responsive';
+// import bgimage from '../../images/ContactTire.png';
+// import { mobile, laptop } from '../../responsive';
 export const ContactContainer = styled.div`
   background: #fff;
   display: flex;

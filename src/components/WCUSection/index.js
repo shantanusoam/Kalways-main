@@ -1,5 +1,5 @@
 import React from 'react'
-import {WCUContainer,WCUHeding,WCUSubHeding,WCUContent,WCUCardContainer,WCUCard,WCUCardImage,WCUCardContent,WCUCHeading,WCUCParagraph,WCUCButton,BlueDot,GroupContent} from './WCUSectionElement'
+import {WCUContainer,WCUHeding,WCUSubHeding,WCUContent,WCUCardContainer,WCUCard,WCUCardContent,WCUCHeading,GroupContent} from './WCUSectionElement'
 import WCUTire from '../../images/WCUTire.png'
 
 const WCUSection = ({isOpen,toggle}) => {

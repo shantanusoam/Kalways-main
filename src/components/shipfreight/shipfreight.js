@@ -37,7 +37,7 @@ const heartbeat = keyframes`
 
 
 `;
-export const HeroContainer = Styled.div`
+export const HeroContainer = Styled.div`  
 
 overflow: hidden;
 // background:  url(${bgimage}) center ;

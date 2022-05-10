@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import image1 from '../images/dv0.jpg';
 import image2 from '../images/Ut1.jpg';
 import image3 from '../images/Rt2.jpg';
-import image4 from '../images/Rt02.jpg';
+// import image4 from '../images/Rt02.jpg';
 export default class SimpleSlider extends Component {
   render() {
     const settings = {

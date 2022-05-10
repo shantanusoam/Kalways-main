@@ -1,58 +1,58 @@
 import React, { useState, useEffect } from 'react';
 import client, { builder } from '../../client';
-import { TiArrowRightThick } from 'react-icons/ti';
+// import { TiArrowRightThick } from 'react-icons/ti';
 import Pulse from 'react-reveal/Pulse';
-import image1 from '../../images/dv0.jpg';
-import image2 from '../../images/Rt02.jpg';
-import image3 from '../../images/ut001.jpg';
-import image4 from '../../images/Rt002.jpg';
-import image5 from '../../images/ut002.jpg';
-import image6 from '../../images/ut003.jpg';
-import image7 from '../../images/ut004.jpg';
-import image8 from '../../images/ut0012.jpg';
-import grid1 from '../../images/fleet.png';
-import grid2 from '../../images/grid2.png';
-import grid3 from '../../images/grid3.png';
-import grid4 from '../../images/grid3.png';
-import mgrid10 from '../../images/mgrid10.png';
-import mgrid11 from '../../images/mgrid11.png';
-import mgrid13 from '../../images/mgrid13.png';
-import mgrid14 from '../../images/plane.png';
-import mgrid12 from '../../images/mgrid12.png';
-import mgrid15 from '../../images/grid4.png';
-import mgrid16 from '../../images/grid2.png';
-import igrid1 from '../../images/igrid1.png';
-import igrid2 from '../../images/igrid2.png';
-import igrid3 from '../../images/igrid3.png';
-import igrid4 from '../../images/igrid4.png';
-import igrid5 from '../../images/igrid5.png';
-import igrid6 from '../../images/igrid6.png';
-import igrid7 from '../../images/igrid7.png';
-import igrid8 from '../../images/igrid8.png';
-import igrid9 from '../../images/igrade9.png';
+// import image1 from '../../images/dv0.jpg';
+// import image2 from '../../images/Rt02.jpg';
+// import image3 from '../../images/ut001.jpg';
+// import image4 from '../../images/Rt002.jpg';
+// import image5 from '../../images/ut002.jpg';
+// import image6 from '../../images/ut003.jpg';
+// import image7 from '../../images/ut004.jpg';
+// import image8 from '../../images/ut0012.jpg';
+// import grid1 from '../../images/fleet.png';
+// import grid2 from '../../images/grid2.png';
+// import grid3 from '../../images/grid3.png';
+// import grid4 from '../../images/grid3.png';
+// import mgrid10 from '../../images/mgrid10.png';
+// import mgrid11 from '../../images/mgrid11.png';
+// import mgrid13 from '../../images/mgrid13.png';
+// import mgrid14 from '../../images/plane.png';
+// import mgrid12 from '../../images/mgrid12.png';
+// import mgrid15 from '../../images/grid4.png';
+// import mgrid16 from '../../images/grid2.png';
+// import igrid1 from '../../images/igrid1.png';
+// import igrid2 from '../../images/igrid2.png';
+// import igrid3 from '../../images/igrid3.png';
+// import igrid4 from '../../images/igrid4.png';
+// import igrid5 from '../../images/igrid5.png';
+// import igrid6 from '../../images/igrid6.png';
+// import igrid7 from '../../images/igrid7.png';
+// import igrid8 from '../../images/igrid8.png';
+// import igrid9 from '../../images/igrade9.png';  
 
 import Fade from 'react-reveal/Fade';
 // import bankground from "../../images";
-import { animateScroll as scroll, Link } from 'react-scroll';
+// import { animateScroll as scroll, Link } from 'react-scroll';
 import {
   HeroContainer,
-  WWOCCButtonM,
+  // WWOCCButtonM,
   PCENTER,
   Container,
-  HeroP,
+  // HeroP,
   HeroContent,
-  WWOCCButton,
-  HeroBg,
-  HeroPromoContainer,
-  HeroPromo,
-  SocialMediaActions,
-  HomeContactContent,
-  Info,
-  NavLinks,
-  VideoBg,
+  // WWOCCButton,
+  // HeroBg,
+  // HeroPromoContainer,
+  // HeroPromo,
+  // SocialMediaActions,
+  // HomeContactContent,
+  // Info,
+  // NavLinks,
+  // VideoBg,
   ContainerMain,
-  Callinfo,
-  BgImage,
+  // Callinfo,
+  // BgImage,
   Card,
 } from './Industries';
 import BlockContent from '@sanity/block-content-to-react';
@@ -131,7 +131,7 @@ export function Industrie() {
               <img
                 src={urlFor(posts[0]['content'][1].image.asset._ref)}
                 className="w-auto "
-              ></img>
+               alt='truck'></img>
             ) : null}
           </div>
         </div>
@@ -191,7 +191,7 @@ export function Industrie() {
                       key={post.image.asset._ref}
                       src={urlFor(post.image.asset._ref)}
                       width="150px"
-                    ></img>
+                    alt='truck '></img>
                     <h4 className="text-2xl">{post.heading}</h4>
                     <p className="text-gray-800 font-normal pt-2 text-xl w-auto">
                       <BlockContent
@@ -213,6 +213,7 @@ export function Industrie() {
               <Fade bottom key={post._key}>
                 <div className="bg-white hover:shadow-2xl 2xl:m-2 m-2 flex-1 transition duration-700 ease-in-out delay-150">
                   <img
+                  
                     src={urlFor(post.image.asset._ref)}
                     alt="boy with camera"
                     className=" h-80 w-full object-cover"
@@ -250,7 +251,7 @@ export function Industrie() {
                     <img
                       src={urlFor(post.image.asset._ref)}
                       className="w-32"
-                    ></img>
+                    alt='truck'></img>
                     <h4 className="text-1xl font-bold self-center">
                       {post.heading}
                     </h4>
@@ -272,6 +273,7 @@ export function Industrie() {
                     <img
                       src={urlFor(post.image.asset._ref)}
                       className="w-32"
+                      alt='truck'
                     ></img>
                     <h4 className="text-1xl font-bold self-center">
                       {post.heading}

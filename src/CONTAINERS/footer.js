@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../components/footer';
-import Icon from '../components/icons';
+// import Icon from '../components/icons';
 import logo from '../images/logo.png';
 import './style.css';
 export function FooterContainerBlack() {

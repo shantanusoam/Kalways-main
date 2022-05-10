@@ -1,17 +1,17 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import client, { builder } from '../../client';
-import VanillaTilt from 'vanilla-tilt';
+// import VanillaTilt from 'vanilla-tilt';
 import {
   AboutContainer,
   CardListRow,
-  NavLink,
-  LinkRo,
+  // NavLink,
+  // LinkRo,
 } from './TrailerListElement';
-import Roll from 'react-reveal/Roll';
+// import Roll from 'react-reveal/Roll';
 import Fade from 'react-reveal/Fade';
 import EmblaCarousel from './EmblaCarousel';
-import { animateScroll as scroll, Link } from 'react-scroll';
-import { Trailers } from '../../trailer.js';
+// import { animateScroll as scroll, Link } from 'react-scroll';
+// import { Trailers } from '../../trailer.js';
 import useLocalStorageState from '../../localStorageHook';
 const SLIDE_COUNT = 3;
 

@@ -3,7 +3,7 @@ import {AboutContainer,CardListRow} from './PartnerCompnayElements'
 import KalTire from '../../images/kalTire.png';
 import KalTrailerAndLeasing from '../../images/KalTrailerandLeasing.png';
 import KalFreight from '../../images/KalFreight.png';
-import { animateScroll as scroll,Link } from 'react-scroll';
+// import { animateScroll as scroll,Link } from 'react-scroll';
 
 const PartnerCompnay = ({isOpen,toggle}) => {
     return (

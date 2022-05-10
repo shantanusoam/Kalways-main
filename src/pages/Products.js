@@ -1,10 +1,10 @@
-import { render } from '@testing-library/react';
-import React, { useState, useEffect } from 'react';
+// import { render } from '@testing-library/react';
+import React from 'react';
 import ContactSection from '../components/ContactSection';
 
-import ProductBottom from '../components/ProductBottom';
+// import ProductBottom from '../components/ProductBottom';
 import ProductTop from '../components/ProductTop';
-import Contact from './contact';
+// import Contact from './contact';
 
 export default class Products extends React.Component {
   componentDidMount() {

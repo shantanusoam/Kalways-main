@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './loopApp.css';
 import desktopImage from '../../images/Bg.png';
 import mobileImage from '../../images/Bg.png';
-import EmblaCarousel from './EmblaCarousel';
+// import EmblaCarousel from './EmblaCarousel';
 const Herosection = () => {
   const imageUrl = useWindowWidth() >= 650 ? desktopImage : mobileImage;
 

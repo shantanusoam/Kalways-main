@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import TrailerList from '../components/TrailersList';
 
 export const ProductsPage = () => {

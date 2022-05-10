@@ -1,10 +1,10 @@
-import { FaBars } from 'react-icons/fa';
+// import { FaBars } from 'react-icons/fa';
 import { Link as LinkR } from 'react-router-dom';
-import { Link as LinkS } from 'react-scroll';
+// import { Link as LinkS } from 'react-scroll';
 import styled from 'styled-components';
-import WWO1 from '../../images/WWO1.png';
-import WWO2 from '../../images/WWO2.png';
-import WWO3 from '../../images/WWO2.png';
+// import WWO1 from '../../images/WWO1.png';
+// import WWO2 from '../../images/WWO2.png';
+// import WWO3 from '../../images/WWO2.png';
 export const WWOContainer = styled.div`
   background: #c1c1c1;
 

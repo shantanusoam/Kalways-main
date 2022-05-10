@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { PrevButton, NextButton } from './EmblaCarouselButtons';
+import React, {  useEffect, useCallback, useRef } from 'react';
+// import { PrevButton, NextButton } from './EmblaCarouselButtons';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
-import { Trailers } from '../../trailer.js';
+// import { Trailers } from '../../trailer.js';
 import './embla.css';
 import { builder } from '../../client';
 

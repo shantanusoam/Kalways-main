@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import ContactSection from '../components/ContactSection';
-import MapSection from '../components/MapSection';
+import React, { useState} from 'react';
+// import ContactSection from '../components/ContactSection';
+// import MapSection from '../components/MapSection';
 
 const Contac = () => {
   const [isOpen, setIsOpen] = useState(false);

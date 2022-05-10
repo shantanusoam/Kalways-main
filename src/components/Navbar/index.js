@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import client, { builder } from '../../client';
+import React from 'react';
+import { builder } from '../../client';
 import { FaBars } from 'react-icons/fa';
-import logo from '../../images/logo.png';
-import logo1 from '../../images/vanguard.png';
+// import logo from '../../images/logo.png';
+// import logo1 from '../../images/vanguard.png';
 import { IconContext } from 'react-icons/lib';
-import { animateScroll as scroll, Link } from 'react-scroll';
+// import { animateScroll as scroll, Link } from 'react-scroll';
 
 import {
   Nav,
   NavMenu,
-  NavBtn,
+  // NavBtn,
   NavLogo,
   MobileIcon,
   NavItem,

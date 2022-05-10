@@ -1,34 +1,34 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Video from './media/Bgvideo2.mp4';
-import client from '../../client';
-import bg from '../../images/bg.jpg';
+// import client from '../../client';
+// import bg from '../../images/bg.jpg';
 // import bankground from "../../images";
 import './style.css';
 import {
   HeroContainer,
-  WWOCCButtonM,
+  // WWOCCButtonM,
   PCENTER,
   HeroP,
   HeroContent,
-  WWOCCButton,
+  // WWOCCButton,
   HeroBg,
   HeroPromoContainer,
-  HeroPromo,
-  SocialMediaActions,
-  HomeContactContent,
-  Info,
-  NavLinks,
+  // HeroPromo,
+  // SocialMediaActions,
+  // HomeContactContent,
+  // Info,
+  // NavLinks,
   VideoBg,
   ContainerMain,
-  Callinfo,
-  BgImage,
+  // Callinfo,
+  // BgImage,
 } from './HeroElements';
-import { FiPhoneCall } from 'react-icons/fi';
-import { AiOutlineMail } from 'react-icons/ai';
-import { GoLocation } from 'react-icons/go';
-import { animateScroll as scroll, Link } from 'react-scroll';
+// import { FiPhoneCall } from 'react-icons/fi';
+// import { AiOutlineMail } from 'react-icons/ai';
+// import { GoLocation } from 'react-icons/go';
+// import { animateScroll as scroll, Link } from 'react-scroll';
 
-import EmblaCarousel from './EmblaCarousel';
+// import EmblaCarousel from './EmblaCarousel';
 
 import styled from 'styled-components';
 // import { sliderItems } from './media/data';
@@ -57,51 +57,51 @@ const Gradients = styled.div`
 `;
 const SLIDE_COUNT = 3;
 const slides = Array.from(Array(SLIDE_COUNT).keys());
-const Arrow = styled.div`
-  width: 50px;
-  height: 50px;
-  background-color: #f0f0f0;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  z-index: 99;
-  bottom: 0;
+// const Arrow = styled.div`
+//   width: 50px;
+//   height: 50px;
+//   background-color: #f0f0f0;
+//   border-radius: 50%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   position: absolute;
+//   top: 0;
+//   z-index: 99;
+//   bottom: 0;
 
-  margin: auto;
-  left: ${(props) => props.direction === 'left' && '10px'};
-  right: ${(props) => props.direction === 'right' && '10px'};
-  cursor: pointer;
-  opacity: 0.5;
-  z-index: 2;
-`;
-const Wrapper = styled.div`
-  height: 100%;
-  display: flex;
-  transition: all 1.5s ease-in-out;
-  transform: translateX(${(props) => props.slideIndex * -100}vw);
-`;
+//   margin: auto;
+//   left: ${(props) => props.direction === 'left' && '10px'};
+//   right: ${(props) => props.direction === 'right' && '10px'};
+//   cursor: pointer;
+//   opacity: 0.5;
+//   z-index: 2;
+// `;
+// const Wrapper = styled.div`
+//   height: 100%;
+//   display: flex;
+//   transition: all 1.5s ease-in-out;
+//   transform: translateX(${(props) => props.slideIndex * -100}vw);
+// `;
 
-const Slide = styled.div`
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  position: relative;
-  background-color: #${(props) => props.bg};
-`;
-const ImgContainer = styled.div`
-  flex: 1;
-`;
-const Image = styled.img`
-  height: 80%;
-`;
-const InfoContainer = styled.div`
-  flex: 1;
-  padding: 50px;
-`;
+// const Slide = styled.div`
+//   width: 100vw;
+//   height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   position: relative;
+//   background-color: #${(props) => props.bg};
+// `;
+// const ImgContainer = styled.div`
+//   flex: 1;
+// `;
+// const Image = styled.img`
+//   height: 80%;
+// `;
+// const InfoContainer = styled.div`
+//   flex: 1;
+//   padding: 50px;
+// `;
 const Title = styled.h1`
   font-size: 70px;
 `;

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import moment from 'moment';
 import { Link } from 'react-router-dom';
-import client, { builder } from '../../client';
+import client from '../../client';
 // import { grpahCMSImageLoader } from '../util';
 // import { getSimilarPosts, getRecentPosts } from '../services';
 

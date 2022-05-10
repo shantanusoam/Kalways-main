@@ -1,5 +1,5 @@
 import React from 'react'
-import {AboutContainer,SpaceForTire,AboutTireHolder ,ImageTire,ATHSectionInfo,SIHeading,SIPara,SIButton,ATHSectionInfo2 } from './UAboutSectionElement'
+import {AboutContainer,AboutTireHolder ,ATHSectionInfo,SIHeading,SIPara,SIButton } from './UAboutSectionElement'
 // import ReactSwipe from 'react-swipe';
 import AboutTire1 from '../../images/AboutTire1.png'
 import AboutTire2 from '../../images/AboutTire2.png'

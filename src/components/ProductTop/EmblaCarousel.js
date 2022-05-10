@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import divConatiners from './PtoductTopElement'
+// import divConatiners from './PtoductTopElement'
 import { Thumb } from "./EmblaCarouselThumb";
 
 import {Trailers} from '../../trailer.js'

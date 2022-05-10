@@ -2,17 +2,17 @@ import React from 'react';
 import {
   ContactContainer,
   ContactForm,
-  ContactImage,
-  FotterNav,
-  WWOCCButton,
-  FotterContact,
-  FotterContactlist,
-  FotterContactNo,
-  FotterContactName,
+  // ContactImage,
+  // FotterNav,
+  // WWOCCButton,
+  // FotterContact,
+  // FotterContactlist,
+  // FotterContactNo,
+  // FotterContactName,
   Heading,
 } from './WorkAtKalways';
 
-import { animateScroll as scroll, Link } from 'react-scroll';
+// import { animateScroll as scroll, Link } from 'react-scroll';
 const WorkAtKalways = ({ isOpen, toggle }) => {
   function refreshPage() {
     hide = 'lol';

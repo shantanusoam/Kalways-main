@@ -1,8 +1,8 @@
 import React from 'react'
-import {WWOContainer,WWOHeding,WWOSubHeding,WWOContent,WWOCardContainer,WWOCArd,WWOCArdImage,WWOCardContent,WWOCCHeading,WWOCCParagraph,WWOCCButton,WWOCardimage} from './WWOSectionElement'
-import WWO1 from '../../images/WWO1.png'
-import WWO2 from '../../images/WWO2.png'
-import WWO3 from '../../images/WWO2.png'
+import {WWOContainer,WWOSubHeding,WWOContent,WWOCardContainer,WWOCArd,WWOCardContent,WWOCCHeading,WWOCCParagraph,WWOCardimage} from './WWOSectionElement'
+// import WWO1 from '../../images/WWO1.png'
+// import WWO2 from '../../images/WWO2.png'
+// import WWO3 from '../../images/WWO2.png'
 const WWOSection = ({isOpen,toggle}) => {
     return (
       <WWOContainer id="Products">

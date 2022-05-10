@@ -1,72 +1,72 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import client, { builder } from '../../client';
-import image1 from '../../images/ut008.jpg';
-import image2 from '../../images/ut009.jpg';
-import image3 from '../../images/ut0010.jpg';
-import image4 from '../../images/ut0011.jpg';
-import PTO01 from '../../images/Kalway-Icon2.png';
-import bgcf from '../../images/CarrearD.png';
-import map from '../../images/Cmap.png';
-import EmployeeReferral from '../../images/Employee-Referral.png';
-import MaternityPaternity from '../../images/MP-Care-Icon.png';
-import Philanthropy from '../../images/Philanthropy.png';
-import PetInsurance from '../../images/Pet-Insurance-01.png';
-import HealthWellness from '../../images/Health-Wellness-01.png';
-import MedicalVisionDental from '../../images/Medical-Vision-Dental-01.png';
-import AdditionalBenefits from '../../images/Additional-Benefits-01.png';
-import Four from '../../images/401k-01.png';
-import CareerGrowth from '../../images/Career-Growth-01.png';
-// import PTO01 from '../../images/PTO-01.png';
+// import image1 from '../../images/ut008.jpg';
+// import image2 from '../../images/ut009.jpg';
+// import image3 from '../../images/ut0010.jpg';
+// import image4 from '../../images/ut0011.jpg';
+// import PTO01 from '../../images/Kalway-Icon2.png';
+// import bgcf from '../../images/CarrearD.png';
+// import map from '../../images/Cmap.png';
+// import EmployeeReferral from '../../images/Employee-Referral.png';
+// import MaternityPaternity from '../../images/MP-Care-Icon.png';
+// import Philanthropy from '../../images/Philanthropy.png';
+// import PetInsurance from '../../images/Pet-Insurance-01.png';
+// import HealthWellness from '../../images/Health-Wellness-01.png';
+// import MedicalVisionDental from '../../images/Medical-Vision-Dental-01.png';
+// import AdditionalBenefits from '../../images/Additional-Benefits-01.png';
+// import Four from '../../images/401k-01.png';
+// import CareerGrowth from '../../images/Career-Growth-01.png';
+// import PTO01 from '../../images/PTO-01.png';  
 
-import grid1 from '../../images/fleet.png';
-import grid2 from '../../images/grid2.png';
-import grid3 from '../../images/grid3.png';
-import grid4 from '../../images/grid4.png';
-import grid5 from '../../images/grid5.png';
-import grid6 from '../../images/grid6.png';
-import grid7 from '../../images/grid7.png';
-import grid8 from '../../images/grid8.png';
-import grid9 from '../../images/grid9.png';
-import mgrid1 from '../../images/mgrid1.png';
-import mgrid2 from '../../images/mgrid2.png';
-import mgrid4 from '../../images/intermodal.png';
-import mgrid5 from '../../images/mgrid5.png';
-import mgrid6 from '../../images/mgrid6.png';
-import grid12 from '../../images/sustain.png';
-import grid13 from '../../images/shipper.png';
+// import grid1 from '../../images/fleet.png';
+// import grid2 from '../../images/grid2.png';
+// import grid3 from '../../images/grid3.png';
+// import grid4 from '../../images/grid4.png';
+// import grid5 from '../../images/grid5.png';
+// import grid6 from '../../images/grid6.png';
+// import grid7 from '../../images/grid7.png';
+// import grid8 from '../../images/grid8.png';
+// import grid9 from '../../images/grid9.png';
+// import mgrid1 from '../../images/mgrid1.png';
+// import mgrid2 from '../../images/mgrid2.png';
+// import mgrid4 from '../../images/intermodal.png';
+// import mgrid5 from '../../images/mgrid5.png';
+// import mgrid6 from '../../images/mgrid6.png';
+// import grid12 from '../../images/sustain.png';
+// import grid13 from '../../images/shipper.png';  
 import Pulse from 'react-reveal/Pulse';
-import moreleaves from '../../images/more-leaves.png';
-import Fade from 'react-reveal/Fade';
+// import moreleaves from '../../images/more-leaves.png';
+// import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 import BlockContent from '@sanity/block-content-to-react';
 // import bankground from "../../images";
-import { animateScroll as scroll, Link } from 'react-scroll';
+// import { animateScroll as scroll, Link } from 'react-scroll';
 import {
   HeroContainer,
   WWOCCButtonM,
   PCENTER,
   Card,
-  Faq,
+  // Faq,
   Line,
-  FormC,
+  // FormC,
   HeroP,
   HeroContent,
-  WWOCCButton,
-  HeroBg,
-  HeroPromoContainer,
-  HeroPromo,
-  SocialMediaActions,
-  HomeContactContent,
-  Info,
-  NavLinks,
-  VideoBg,
+  // WWOCCButton,
+  // HeroBg,
+  // HeroPromoContainer,
+  // HeroPromo,
+  // SocialMediaActions,
+  // HomeContactContent,
+  // Info,
+  // NavLinks,
+  // VideoBg,
   Head,
   ContainerMain,
-  Callinfo,
-  BgImage,
+  // Callinfo,
+  // BgImage,
 } from './CareersElement';
 import useLocalStorageState from '../../localStorageHook';
-import { render } from '@testing-library/react';
+// import { render } from '@testing-library/react';
 const urlFor = (source) => builder.image(source);
 
 export default function Careers() {

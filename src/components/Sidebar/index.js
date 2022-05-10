@@ -9,7 +9,7 @@ import {
   SideBtnWrap,
   SidebarRoute,
 } from './SlidebarElement';
-import { animateScroll as scroll, Link } from 'react-scroll';
+// import { animateScroll as scroll, Link } from 'react-scroll';
 const Sidebar = ({ isOpen, toggle }) => {
   function disabel() {
     const path = window.location.pathname;

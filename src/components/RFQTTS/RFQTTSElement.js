@@ -1,6 +1,6 @@
-import { FaBars } from "react-icons/fa";
-import { Link as LinkR } from "react-router-dom";
-import { Link as LinkS } from "react-scroll";
+// import { FaBars } from "react-icons/fa";
+// import { Link as LinkR } from "react-router-dom";
+// import { Link as LinkS } from "react-scroll";
 import styled from "styled-components";
 
 export const Pattern = styled.div`
