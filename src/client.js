@@ -6,12 +6,15 @@ export const builder = imageUrlBuilder({
   projectId: 'cjv2tdo2', // find this at manage.sanity.io or in your sanity.json
   apiVersion: '2021-10-21', // use a UTC date string
   dataset: 'production',
+  token:
+    'sk4pc12j1a2OHAv0SSRUAX5gwKFxlbkVXezTKPLkMKZZPqx9UJYsn7PSKVJmCCMKaVELzkCrs1719E246THaEJokrJaHR50oWtVzQeLfQzqwRxvNCDNPyiF6cfXY3bgw2DTO9VxChAuTDWEG3hBVISzGZkopfS3MM3mmOBa5gSemt888hEus',
   useCdn: true,
 });
 export default client({
   projectId: 'cjv2tdo2', // find this at manage.sanity.io or in your sanity.json
   apiVersion: '2021-10-21', // use a UTC date string
-
+  token:
+    'sk4pc12j1a2OHAv0SSRUAX5gwKFxlbkVXezTKPLkMKZZPqx9UJYsn7PSKVJmCCMKaVELzkCrs1719E246THaEJokrJaHR50oWtVzQeLfQzqwRxvNCDNPyiF6cfXY3bgw2DTO9VxChAuTDWEG3hBVISzGZkopfS3MM3mmOBa5gSemt888hEus',
   dataset: 'production',
   useCdn: true, // this is from those question during 'sanity init'
 });
