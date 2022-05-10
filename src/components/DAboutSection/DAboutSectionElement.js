@@ -169,7 +169,7 @@ export const AboutContainerSubHeading = styled.h2`
     width: 20%;
   }
 `;
-export const AboutContainerPara = styled.p`
+export const AboutContainerPara = styled.div`
   margin-top: 4px;
   font-family: sans-serif;
   font-style: normal;

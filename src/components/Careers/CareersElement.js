@@ -1,6 +1,5 @@
 import Styled, { keyframes } from 'styled-components';
-import bgimage from '../../images/Carrear.png';
-import bgimages from '../../images/CarrearsS.png';
+
 import { Link as LinkR } from 'react-router-dom';
 
 const heartbeat = keyframes`
@@ -55,7 +54,8 @@ height: 100vh;
 z-index: 1;
 
 @media (max-width: 768px) {
-  background-image: radial-gradient(#42424280,#9f9e9e17),  url(${bgimages});
+  background-image: radial-gradient(#42424280,#9f9e9e17),  url(${(props) =>
+    props.bgImage});
   background-size: cover;
 }
 `;

@@ -1,10 +1,10 @@
 import Styled from 'styled-components';
-import bgimage from '../../images/bg.jpg';
+
 import { Link as LinkR } from 'react-router-dom';
 export const HeroContainer = Styled.div`
 
 overflow: hidden;
-// background: transparent url(${bgimage})  center ;
+
 
 background-position: center; /* Center the image */
 background-repeat: no-repeat; /* Do not repeat the image */
@@ -23,7 +23,7 @@ height: 100vh;
 
 z-index: 1;
 @media screen and (max-width: 768px) {
-    background: transparent url(${bgimage}) no-repeat  cover;
+    background: transparent url(${(props) => props.bgImage}); no-repeat  cover;
     
 }
 `;
@@ -351,7 +351,7 @@ flex-direction: column;
 align-items: start;
 padding: 0px 20px 0px 0px;
 `;
-export const Callinfo = Styled.p`
+export const Callinfo = Styled.div`
 font-family: sans-serif;
 font-style: normal;
 font-weight: bold;

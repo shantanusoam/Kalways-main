@@ -3,9 +3,10 @@
 // import { Link as LinkS } from 'react-scroll';
 
 import styled from 'styled-components';
-import bgimage from '../../images/testimonialbg.png';
+
 export const TestimonialContainer = styled.div`
-  background: transparent url(${bgimage}) no-repeat center center;
+  background: transparent no-repeat center center
+    url(${(props) => props.bgImage});
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,7 +58,7 @@ export const TestimonialContent = styled.div`
   align-items: flex-start;
 `;
 
-export const TParagraph = styled.p`
+export const TParagraph = styled.div`
   padding: 20px;
   font-family: sans-serif;
   font-style: normal;

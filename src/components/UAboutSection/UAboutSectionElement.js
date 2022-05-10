@@ -85,7 +85,7 @@ export const SIHeading = styled.h2`
     font-size: 20px;
   }
 `;
-export const SIPara = styled.p`
+export const SIPara = styled.div`
   margin-top: 4px;
   font-family: sans-serif;
   width: 60%;

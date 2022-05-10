@@ -35,7 +35,7 @@ const PostWidget = ({ categories, slug }) => {
         {'Recent Posts'}
       </h3>
       {relatedPosts.map((post, index) => (
-        <div key={index} className="flex items-center w-full mb-4">
+        <div className="flex items-center w-full mb-4" key={post._key}>
           <div className="w-16 flex-none">
             <img
               alt={post.title}

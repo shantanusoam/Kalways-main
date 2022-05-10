@@ -1,22 +1,22 @@
-import React, { useState, useEffect, useCallback } from "react";
-import useEmblaCarousel from "embla-carousel-react";
+import React, { useState, useEffect, useCallback } from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
 // import divConatiners from './PtoductTopElement'
-import { Thumb } from "./EmblaCarouselThumb";
+import { Thumb } from './EmblaCarouselThumb';
 
-import {Trailers} from '../../trailer.js'
-import "./embla.css";
+import { Trailers } from '../../trailer.js';
+import './embla.css';
 
-const EmblaCarousel = ({ slides,id }) => {
+const EmblaCarousel = ({ slides, id }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [mainViewportRef, embla] = useEmblaCarousel({ skipSnaps: false });
   const [thumbViewportRef, emblaThumbs] = useEmblaCarousel({
-    containScroll: "keepSnaps",
-    selectedClass: "",
-    dragFree: true
+    containScroll: 'keepSnaps',
+    selectedClass: '',
+    dragFree: true,
   });
-const data = Trailers[id]
-const media = data.subImages;
-const mediaByIndex = index => media[index % media.length];
+  const data = Trailers[id];
+  const media = data.subImages;
+  const mediaByIndex = (index) => media[index % media.length];
   const onThumbClick = useCallback(
     (index) => {
       if (!embla || !emblaThumbs) return;
@@ -34,13 +34,12 @@ const mediaByIndex = index => media[index % media.length];
   useEffect(() => {
     if (!embla) return;
     onSelect();
-    embla.on("select", onSelect);
+    embla.on('select', onSelect);
   }, [embla, onSelect]);
 
   return (
     <>
-  
-    <div className="embla">
+      <div className="embla">
         <div className="embla__viewport" ref={mainViewportRef}>
           <div className="embla__container">
             {slides.map((index) => (
@@ -72,8 +71,6 @@ const mediaByIndex = index => media[index % media.length];
           </div>
         </div>
       </div>
- 
-      
     </>
   );
 };

@@ -1,5 +1,5 @@
 import Styled, { keyframes } from 'styled-components';
-import bgimage from '../../images/ebg.png';
+
 import { Link as LinkR } from 'react-router-dom';
 
 const heartbeat = keyframes`
@@ -35,7 +35,7 @@ const heartbeat = keyframes`
 export const HeroContainer = Styled.div`
 
 overflow: hidden;
-// background:  url(${bgimage}) center ;
+
 background-image: radial-gradient(#42424280,#9f9e9e17);
 background-size: cover;
 background-position: center;
@@ -53,7 +53,8 @@ height: 90vh;
 
 z-index: 1;
 @media screen and (max-width: 768px) {
-  background-image: radial-gradient(#42424280,#9f9e9e17),  url(${bgimage});
+  background-image: radial-gradient(#42424280,#9f9e9e17),  url(${(props) =>
+    props.bgImage});
   background-size: cover;
   background-position: center;
   height: 70vh;
@@ -334,7 +335,7 @@ div{
     margin:0px;
 }
 `;
-export const PCENTER = Styled.p`
+export const PCENTER = Styled.div`
 display: none;
     @media screen and (max-width: 768px) {
     display: block;
@@ -507,7 +508,7 @@ flex-direction: column;
 align-items: start;
 padding: 0px 20px 0px 0px;
 `;
-export const Callinfo = Styled.p`
+export const Callinfo = Styled.div`
 font-family: sans-serif;
 font-style: normal;
 font-weight: bold;

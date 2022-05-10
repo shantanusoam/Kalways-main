@@ -105,7 +105,7 @@ const slides = Array.from(Array(SLIDE_COUNT).keys());
 const Title = styled.h1`
   font-size: 70px;
 `;
-const Desc = styled.p`
+const Desc = styled.div`
   margin: 0px 0px;
   font-size: 20px;
   font-weight: 500px;

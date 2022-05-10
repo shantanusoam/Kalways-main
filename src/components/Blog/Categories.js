@@ -35,7 +35,7 @@ const Categories = () => {
       <div className="flex flex-col lg:flex-row lg:justify-center flex-wrap w-full gap-10 my-10">
         {categories &&
           categories.map((category) => (
-            <Category key={category._id} category={category} />
+            <Category key={category._key} category={category} />
           ))}
       </div>
     </div>

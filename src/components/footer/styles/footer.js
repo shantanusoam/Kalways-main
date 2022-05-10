@@ -48,7 +48,7 @@ export const Link = styled.a`
   }
 `;
 
-export const Title = styled.p`
+export const Title = styled.div`
   font-size: 18px;
   color: #fff;
   margin-bottom: 40px;

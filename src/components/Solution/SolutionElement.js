@@ -2,8 +2,6 @@
 import { Link as LinkR } from 'react-router-dom';
 // import { Link as LinkS } from 'react-scroll';
 import styled from 'styled-components';
-// import bgimage from '../../images/QuoteAtEnd.png';
-// import Mbgimage from '../../images/mobilequote.png';
 
 export const WWOCArd = styled.div`
   background-color: #fff;
@@ -98,7 +96,7 @@ export const CButton = styled.div`
   flex-direction: row;
   align-items: center;
 `;
-export const WWOCCParagraph = styled.p`
+export const WWOCCParagraph = styled.div`
   padding: 20px;
   margin-top: 4px;
   font-family: sans-serif;

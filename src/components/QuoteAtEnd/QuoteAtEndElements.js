@@ -2,10 +2,10 @@
 import { Link as LinkR } from 'react-router-dom';
 // import { Link as LinkS } from 'react-scroll';
 import styled from 'styled-components';
-import bgimage from '../../images/QuoteAtEnd.png';
-import Mbgimage from '../../images/mobilequote.png';
+
 export const WWOCArd = styled.div`
-  background: transparent url(${bgimage}) no-repeat center center;
+  background: transparent no-repeat center center
+    url(${(props) => props.bgImage});
   display: flex;
   padding: 0px 0px 0px 50px;
   flex-direction: column;
@@ -16,7 +16,7 @@ export const WWOCArd = styled.div`
   overflow: hidden;
   @media screen and (max-width: 768px) {
     height: 80vh;
-    background: #1e1b1b url(${Mbgimage}) no-repeat center center;
+    background: #1e1b1b no-repeat center center url(${(props) => props.bgImage});
   }
 `;
 

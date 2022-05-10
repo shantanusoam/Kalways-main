@@ -1,10 +1,11 @@
 import Styled from 'styled-components';
-import bgimage from '../../images/CrossBorder.png';
+
 import { Link as LinkR } from 'react-router-dom';
 export const HeroContainer = Styled.div`
 
 overflow: hidden;
-background-image: radial-gradient(#42424280, #191919d9),  url(${bgimage});
+background-image: radial-gradient(#42424280, #191919d9),  url(${(props) =>
+  props.bgImage});
 
 background-position: center; /* Center the image */
 background-repeat: no-repeat; /* Do not repeat the image */
@@ -23,7 +24,8 @@ height: 50vh;
 
 z-index: 1;
 @media screen and (max-width: 768px) {
-    background: transparent url(${bgimage}) no-repeat center center;
+    background: transparent  no-repeat center center url(${(props) =>
+      props.bgImage});
     
 }
 
@@ -230,7 +232,7 @@ div{
     margin:0px;
 }
 `;
-export const PCENTER = Styled.p`
+export const PCENTER = Styled.div`
 display: none;
     @media screen and (max-width: 768px) {
     display: block;
@@ -261,7 +263,7 @@ color: #ED1C24;
     font-size: 32px;
 }
 `;
-export const HeroP = Styled.p`
+export const HeroP = Styled.div`
 margin-top: 24px;
 margin-bottom: 24px;
 font-family: sans-serif;
@@ -387,7 +389,7 @@ flex-direction: column;
 align-items: start;
 padding: 0px 20px 0px 0px;
 `;
-export const Callinfo = Styled.p`
+export const Callinfo = Styled.div`
 font-family: sans-serif;
 font-style: normal;
 font-weight: bold;

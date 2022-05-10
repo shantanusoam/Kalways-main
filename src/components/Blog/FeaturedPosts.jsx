@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import client from '../../client';  
-import FeaturedPostCard from './FeaturedPostCard'; 
+import client from '../../client';
+import FeaturedPostCard from './FeaturedPostCard';
 
 // import { getFeaturedPosts } from './services';
 
@@ -27,7 +27,7 @@ const responsive = {
 
 const FeaturedPosts = () => {
   const [featuredPosts, setFeaturedPosts] = useState([]);
-  const [dataLoaded, setDataLoaded] = useState(false);  
+  const [dataLoaded, setDataLoaded] = useState(false);
 
   useEffect(() => {
     client
@@ -104,7 +104,7 @@ const FeaturedPosts = () => {
       >
         {dataLoaded &&
           featuredPosts.map((post, index) => (
-            <FeaturedPostCard key={index} post={post} />
+            <FeaturedPostCard key={post._key} post={post} />
           ))}
       </Carousel>
     </div>

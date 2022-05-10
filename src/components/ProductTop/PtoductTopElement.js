@@ -33,7 +33,7 @@ export const AboutContainer = styled.div`
 export const ContainerCorsole = styled.div`
   width: 1000px;
 `;
-export const WWOCCParagraph = styled.p`
+export const WWOCCParagraph = styled.div`
   padding: 20px;
   margin-top: 4px;
   font-family: sans-serif;

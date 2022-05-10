@@ -145,7 +145,7 @@ export function Shipfreight({ Phoneno }) {
             <div className=" pt-10 grid gap-10 lg:grid-cols-2 grid-cols-1">
               {posts[0]
                 ? posts[0]['content'][2]['rows'].map((post) => (
-                    <div className="flex flex-col items-start">
+                    <div className="flex flex-col items-start" key={post._key}>
                       <img
                         src={urlFor(post.image.asset._ref)}
                         className="w-32"

@@ -96,7 +96,9 @@ export default function Careers() {
                     <Zoom right cascade>
                       <div className="lg:mt-4 mt-2">
                         {post.rows.map((row) => (
-                          <p className="pt-1">{row}</p>
+                          <p className="pt-1" key={row}>
+                            {row}
+                          </p>
                         ))}
                       </div>
                     </Zoom>
@@ -119,11 +121,8 @@ export default function Careers() {
         <div className="pb-10  pt-10 grid gap-10 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 self-center justify-center justify-items-center ">
           {posts[0]
             ? posts[0]['content'][3]['rows'].map((post) => (
-                <Pulse>
-                  <Card
-                    className="flex flex-col items-left h-96 bg-white w-80 p-8 "
-                    key={post._key}
-                  >
+                <Pulse key={post._key}>
+                  <Card className="flex flex-col items-left h-96 bg-white w-80 p-8 ">
                     <img
                       src={urlFor(post.image.asset._ref)}
                       className="w-32 self-center"

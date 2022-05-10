@@ -15,7 +15,7 @@ const YoutubeEmbed = ({ embedId }) => (
   </div>
 );
 
-YoutubeEmbed.propTypes = {
+YoutubeEmbed.divropTypes = {
   embedId: PropTypes.string.isRequired,
   rel: 0,
   showinfo: 0,

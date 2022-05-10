@@ -31,7 +31,7 @@ export const WCUHeding = styled.h1`
   }
 `;
 
-export const WCUSubHeding = styled.p`
+export const WCUSubHeding = styled.div`
   margin-top: 24px;
   font-family: sans-serif;
   font-style: normal;
@@ -116,7 +116,7 @@ export const WCUCHeading = styled.h2`
     font-size: 20px;
   }
 `;
-// export const WCUCParagraph = styled.p`
+// export const WCUCParagraph = styled.div`
 // margin-top: 4px;
 // font-family: sans-serif;
 // font-style: normal;

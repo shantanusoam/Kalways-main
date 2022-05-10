@@ -36,7 +36,7 @@ export const WWOHeding = styled.h1`
     font-size: 18px;
   }
 `;
-export const WWOSubHeding = styled.p`
+export const WWOSubHeding = styled.div`
   font-family: sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -113,7 +113,7 @@ export const WWOCCHeading = styled.h2`
     font-size: 20px;
   }
 `;
-export const WWOCCParagraph = styled.p`
+export const WWOCCParagraph = styled.div`
   margin-top: 4px;
   font-family: sans-serif;
   font-style: normal;
