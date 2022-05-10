@@ -454,7 +454,7 @@ flex-direction: column;
 align-items: start;
 padding: 0px 20px 0px 0px;
 `;
-export const Callinfo = Styled.p`
+export const Callinfo = Styled.div`
 font-family: sans-serif;
 font-style: normal;
 font-weight: bold;

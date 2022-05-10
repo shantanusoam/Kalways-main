@@ -15,8 +15,9 @@ import {
   HeroContent,
   ContainerMain,
 } from './KalPowerElement';
+import serializers from '../../serializers';
 import useLocalStorageState from '../../localStorageHook';
-import BlockContent from '@sanity/block-content-to-react';
+import PortableText from '@sanity/block-content-to-react';
 
 const urlFor = (source) => builder.image(source);
 export default function KalPower() {
@@ -49,10 +50,11 @@ export default function KalPower() {
             <HeroP>{posts[0] ? posts[0]['content'][0].heading : null}</HeroP>
             <p className="text-white text-xl pb-6">
               {posts[0] ? (
-                <BlockContent
+                <PortableText
                   blocks={posts[0]['content'][0].tagline}
                   projectId="cjv2tdo2"
                   dataset="production"
+                  serializers={serializers}
                 />
               ) : null}
             </p>
@@ -92,10 +94,11 @@ export default function KalPower() {
                       {post.heading}
                     </h4>
                     <p className="font-light self-left pt-4 pb-20 lg:h-40">
-                      <BlockContent
+                      <PortableText
                         blocks={post.text}
                         projectId="cjv2tdo2"
                         dataset="production"
+                        serializers={serializers}
                       />
                     </p>
                   </Card>
@@ -144,10 +147,11 @@ export default function KalPower() {
                 </h3>
                 <p className=" lg:text-2xl text-xl lg:pt-10">
                   {posts[0] ? (
-                    <BlockContent
+                    <PortableText
                       blocks={posts[0]['content'][3].text}
                       projectId="cjv2tdo2"
                       dataset="production"
+                      serializers={serializers}
                     />
                   ) : null}
                 </p>

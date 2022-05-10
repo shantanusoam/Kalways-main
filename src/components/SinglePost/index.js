@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import client from '../../client';
-import BlockContent from '@sanity/block-content-to-react';
-
+import PortableText from '@sanity/block-content-to-react';
+import serializers from '../../serializers';
 export default function SinglePost() {
   const [singlePost, setSinglePost] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -49,10 +49,11 @@ export default function SinglePost() {
           )}
 
           <div className="block__content mb-8">
-            <BlockContent
+            <PortableText
               blocks={singlePost.body}
               projectId="cjv2tdo2"
               dataset="production"
+              serializers={serializers}
             />
           </div>
 

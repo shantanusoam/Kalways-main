@@ -7,10 +7,10 @@ import {
   TextContaner,
   TextContanerS,
 } from '../components/AboutMain/AboutMainElements';
-
+import serializers from '../serializers';
 import './shipFleight.css';
 import useLocalStorageState from '../localStorageHook';
-import BlockContent from '@sanity/block-content-to-react';
+import PortableText from '@sanity/block-content-to-react';
 import Fade from 'react-reveal/Fade';
 const urlFor = (source) => builder.image(source);
 
@@ -120,10 +120,11 @@ export default function About() {
                     <h3 className="font-bold text-2xl mb-5">{post.heading}</h3>
                     <br />
                     <h3 className=" text-1xl mb-5  h-56 lg:h-48 About_blockContent">
-                      <BlockContent
+                      <PortableText
                         blocks={post.text}
                         projectId="cjv2tdo2"
                         dataset="production"
+                        serializers={serializers}
                       />
                     </h3>
                     <button className="btn">

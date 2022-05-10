@@ -6,6 +6,7 @@ import client, { builder } from '../../client';
 
 // import image3 from '../../images/ut0010.jpg';
 // import image4 from '../../images/eci1.png';
+import serializers from '../../serializers';
 import { Autoplay, Pagination, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 // import ecb from '../../images/ecb.png';
@@ -69,7 +70,7 @@ import {
   FormButton,
 } from './ecommerceElement';
 import useLocalStorageState from '../../localStorageHook';
-import BlockContent from '@sanity/block-content-to-react';
+import PortableText from '@sanity/block-content-to-react';
 const urlFor = (source) => builder.image(source);
 export default function Ecommerce() {
   const [posts, setPosts] = useLocalStorageState('E-commerce');
@@ -260,10 +261,11 @@ export default function Ecommerce() {
             </>
             <p className="text-gray-800 font-normal pt-8 text-xl w-auto ">
               {posts[0] ? (
-                <BlockContent
+                <PortableText
                   blocks={posts[0]['content'][2]['text']}
                   projectId="cjv2tdo2"
                   dataset="production"
+                  serializers={serializers}
                 />
               ) : null}
             </p>
@@ -295,10 +297,11 @@ export default function Ecommerce() {
                   <h4 className="font-bold text-xl pb-4  ">{post.heading}</h4>
                   <p className="   text-white">
                     {posts[0] ? (
-                      <BlockContent
+                      <PortableText
                         blocks={post.text}
                         projectId="cjv2tdo2"
                         dataset="production"
+                        serializers={serializers}
                       />
                     ) : null}
                   </p>
@@ -324,10 +327,11 @@ export default function Ecommerce() {
                     <p className="   text-black">
                       {' '}
                       {posts[0] ? (
-                        <BlockContent
+                        <PortableText
                           blocks={post.text}
                           projectId="cjv2tdo2"
                           dataset="production"
+                          serializers={serializers}
                         />
                       ) : null}
                     </p>

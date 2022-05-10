@@ -4,8 +4,8 @@ import client, { builder } from '../../client';
 import Pulse from 'react-reveal/Pulse';
 
 import Zoom from 'react-reveal/Zoom';
-import BlockContent from '@sanity/block-content-to-react';
-
+import PortableText from '@sanity/block-content-to-react';
+import serializers from '../../serializers';
 import {
   HeroContainer,
   WWOCCButtonM,
@@ -133,10 +133,11 @@ export default function Careers() {
                       {post.heading}
                     </h4>
                     <p className="font-light self-left pt-4 About_blockContent">
-                      <BlockContent
+                      <PortableText
                         blocks={post.text}
                         projectId="cjv2tdo2"
                         dataset="production"
+                        serializers={serializers}
                       />
                     </p>
                   </Card>

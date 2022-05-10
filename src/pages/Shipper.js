@@ -1,5 +1,5 @@
 // import { render } from '@testing-library/react';
-import React, {  useEffect } from 'react';
+import React, { useEffect } from 'react';
 import client, { builder } from '../client';
 import './shipFleight.css';
 import Bounce from 'react-reveal/Bounce';
@@ -18,7 +18,7 @@ import {
   Formcontainer,
   FormButton,
 } from '../components/shipfreight/shipfreight';
-// import BlockContent from '@sanity/block-content-to-react';
+
 import YouTube from 'react-youtube';
 import PortableText from '@sanity/block-content-to-react';
 import useLocalStorageState from '../localStorageHook';

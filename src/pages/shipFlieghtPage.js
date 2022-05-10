@@ -6,8 +6,8 @@ import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 
 import Bounce from 'react-reveal/Bounce';
 import './shipFleight.css';
-
-import BlockContent from '@sanity/block-content-to-react';
+import serializers from '../serializers';
+import PortableText from '@sanity/block-content-to-react';
 import {
   Card,
   Formcontainer,
@@ -105,10 +105,11 @@ export default function ShipFlightPage() {
 
         <div className="self-end 2xl:pl-32 p-2">
           {posts[0] ? (
-            <BlockContent
+            <PortableText
               blocks={posts[0]['content'][2]['text']}
               projectId="cjv2tdo2"
               dataset="production"
+              serializers={serializers}
             />
           ) : null}
         </div>

@@ -55,8 +55,9 @@ import {
   // BgImage,
   Card,
 } from './Industries';
+import serializers from '../../serializers';
 import useLocalStorageState from '../../localStorageHook';
-import BlockContent from '@sanity/block-content-to-react';
+import PortableText from '@sanity/block-content-to-react';
 const urlFor = (source) => builder.image(source);
 export function Industrie() {
   const [posts, setPosts] = useLocalStorageState('INDUSTRIES');
@@ -82,11 +83,12 @@ export function Industrie() {
                 {posts[0]['content'][0].heading}
               </h1>
               <h2 className="text-white   pt-3 2xl:text-5xl text-3xl w-5/6 xl:text-2xl md:text-2xl heading_cardContent">
-                <BlockContent
+                <PortableText
                   className="w-10/12"
                   blocks={posts[0]['content'][0].tagline}
                   projectId="cjv2tdo2"
                   dataset="production"
+                  serializers={serializers}
                 />
               </h2>
               {/* <p className=" font-normal pt-2 xl:mb-2 mb-0 2xl:text-2xl  text-1xl text-white 2xl:mb-10 mb:-10 w-4/5 ">
@@ -111,11 +113,12 @@ export function Industrie() {
           <div className="lg:pr-40">
             <p className="text-gray-800 font-normal 2xl:pt-8 pt-2 text-2xl w-auto ">
               {posts[0] ? (
-                <BlockContent
+                <PortableText
                   className="w-10/12"
                   blocks={posts[0]['content'][1].text}
                   projectId="cjv2tdo2"
                   dataset="production"
+                  serializers={serializers}
                 />
               ) : null}
             </p>
@@ -195,11 +198,12 @@ export function Industrie() {
                     ></img>
                     <h4 className="text-2xl">{post.heading}</h4>
                     <p className="text-gray-800 font-normal pt-2 text-xl w-auto">
-                      <BlockContent
+                      <PortableText
                         className="w-10/12"
                         blocks={post.text}
                         projectId="cjv2tdo2"
                         dataset="production"
+                        serializers={serializers}
                       />
                     </p>
                   </div>
@@ -225,11 +229,12 @@ export function Industrie() {
                     </h3>
                     <br />
                     <p className="text-gray-800 text-1xl mb-0 h-42  ">
-                      <BlockContent
+                      <PortableText
                         className="w-10/12"
                         blocks={post.text}
                         projectId="cjv2tdo2"
                         dataset="production"
+                        serializers={serializers}
                       />
                     </p>
                   </div>
@@ -382,11 +387,12 @@ export function Industrie() {
                       </h3>
                       <br />
                       <p className="text-gray-800 text-1xl mb-9 h-42 ">
-                        <BlockContent
+                        <PortableText
                           className="w-10/12"
                           blocks={post.text}
                           projectId="cjv2tdo2"
                           dataset="production"
+                          serializers={serializers}
                         />
                       </p>
                     </div>

@@ -49,7 +49,8 @@ import {
   Formcontainer,
 } from './shipfreight';
 import useLocalStorageState from '../../localStorageHook';
-import BlockContent from '@sanity/block-content-to-react';
+import PortableText from '@sanity/block-content-to-react';
+import serializers from '../../serializers';
 const urlFor = (source) => builder.image(source);
 export function Shipfreight({ Phoneno }) {
   // const [posts, setPosts] = useState([]);
@@ -89,11 +90,12 @@ export function Shipfreight({ Phoneno }) {
                 {posts[0]['content'][0].heading}
               </h1>
               <h2 className="text-white   pt-3 2xl:text-5xl text-4xl w-5/6 heading_cardContent">
-                <BlockContent
+                <PortableText
                   className="w-10/12"
                   blocks={posts[0]['content'][0].tagline}
                   projectId="cjv2tdo2"
                   dataset="production"
+                  serializers={serializers}
                 />
               </h2>
             </ContainerMain>
@@ -151,11 +153,12 @@ export function Shipfreight({ Phoneno }) {
                       ></img>
                       <h4 className="text-3xl">{post.heading}</h4>
                       <p className="text-gray-800 font-normal pt-5 text-xl w-auto">
-                        <BlockContent
+                        <PortableText
                           className="w-10/12"
                           blocks={post.text}
                           projectId="cjv2tdo2"
                           dataset="production"
+                          serializers={serializers}
                         />
                       </p>
                     </div>
@@ -195,11 +198,12 @@ export function Shipfreight({ Phoneno }) {
                     </h3>
                     <br />
                     <p className="text-gray-800 text-1xl mb-0 h-42  ">
-                      <BlockContent
+                      <PortableText
                         className="w-10/12"
                         blocks={post.text}
                         projectId="cjv2tdo2"
                         dataset="production"
+                        serializers={serializers}
                       />
                     </p>
                   </div>
@@ -249,11 +253,12 @@ export function Shipfreight({ Phoneno }) {
                   ></img>
                   <h3 className="text-3xl">{post.heading}</h3>
                   <p className=" text-gray-800 font-normal pt-5 text-xl w-auto">
-                    <BlockContent
+                    <PortableText
                       className="w-10/12"
                       blocks={post.text}
                       projectId="cjv2tdo2"
                       dataset="production"
+                      serializers={serializers}
                     />
                   </p>
                 </div>
