@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import client, { builder } from '../../client';
 // import image1 from '../../images/e-commerce1.png';
 // import image2 from '../../images/e-commerce2.png';
@@ -68,23 +68,23 @@ import {
   // BgImage,
   FormButton,
 } from './ecommerceElement';
+import useLocalStorageState from '../../localStorageHook';
 import BlockContent from '@sanity/block-content-to-react';
 const urlFor = (source) => builder.image(source);
 export default function Ecommerce() {
-  const [posts, setPosts] = useState([]);
-
+  const [posts, setPosts] = useLocalStorageState('E-commerce');
   useEffect(() => {
     client
       .fetch(
         `*[title == 'E-commerce' ]{
-    
+     
           content[]
           
           }`
       )
       .then((data) => setPosts(data))
       .catch(console.error);
-  }, []);
+  }, [setPosts]);
   return (
     <>
       {/* <Gradients></Gradients>

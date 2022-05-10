@@ -29,7 +29,7 @@ import Pulse from 'react-reveal/Pulse';
 // import igrid6 from '../../images/igrid6.png';
 // import igrid7 from '../../images/igrid7.png';
 // import igrid8 from '../../images/igrid8.png';
-// import igrid9 from '../../images/igrade9.png';  
+// import igrid9 from '../../images/igrade9.png';
 
 import Fade from 'react-reveal/Fade';
 // import bankground from "../../images";
@@ -55,11 +55,11 @@ import {
   // BgImage,
   Card,
 } from './Industries';
+import useLocalStorageState from '../../localStorageHook';
 import BlockContent from '@sanity/block-content-to-react';
 const urlFor = (source) => builder.image(source);
 export function Industrie() {
-  const [posts, setPosts] = useState([]);
-
+  const [posts, setPosts] = useLocalStorageState('INDUSTRIES');
   useEffect(() => {
     client
       .fetch(
@@ -71,8 +71,7 @@ export function Industrie() {
       )
       .then((data) => setPosts(data))
       .catch(console.error);
-  }, []);
-
+  }, [setPosts]);
   return (
     <>
       {posts[0] ? (
@@ -82,7 +81,7 @@ export function Industrie() {
               <h1 className="text-white  font-normal pt-8 text-xl w-auto">
                 {posts[0]['content'][0].heading}
               </h1>
-              <h2 className="text-white   pt-3 2xl:text-5xl text-3xl w-5/6 xl:text-2xl md:text-2xl">
+              <h2 className="text-white   pt-3 2xl:text-5xl text-3xl w-5/6 xl:text-2xl md:text-2xl heading_cardContent">
                 <BlockContent
                   className="w-10/12"
                   blocks={posts[0]['content'][0].tagline}
@@ -131,7 +130,8 @@ export function Industrie() {
               <img
                 src={urlFor(posts[0]['content'][1].image.asset._ref)}
                 className="w-auto "
-               alt='truck'></img>
+                alt="truck"
+              ></img>
             ) : null}
           </div>
         </div>
@@ -191,7 +191,8 @@ export function Industrie() {
                       key={post.image.asset._ref}
                       src={urlFor(post.image.asset._ref)}
                       width="150px"
-                    alt='truck '></img>
+                      alt="truck "
+                    ></img>
                     <h4 className="text-2xl">{post.heading}</h4>
                     <p className="text-gray-800 font-normal pt-2 text-xl w-auto">
                       <BlockContent
@@ -213,7 +214,6 @@ export function Industrie() {
               <Fade bottom key={post._key}>
                 <div className="bg-white hover:shadow-2xl 2xl:m-2 m-2 flex-1 transition duration-700 ease-in-out delay-150">
                   <img
-                  
                     src={urlFor(post.image.asset._ref)}
                     alt="boy with camera"
                     className=" h-80 w-full object-cover"
@@ -251,7 +251,8 @@ export function Industrie() {
                     <img
                       src={urlFor(post.image.asset._ref)}
                       className="w-32"
-                    alt='truck'></img>
+                      alt="truck"
+                    ></img>
                     <h4 className="text-1xl font-bold self-center">
                       {post.heading}
                     </h4>
@@ -273,7 +274,7 @@ export function Industrie() {
                     <img
                       src={urlFor(post.image.asset._ref)}
                       className="w-32"
-                      alt='truck'
+                      alt="truck"
                     ></img>
                     <h4 className="text-1xl font-bold self-center">
                       {post.heading}

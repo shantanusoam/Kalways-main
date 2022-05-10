@@ -9,25 +9,25 @@ import {
 } from '../components/AboutMain/AboutMainElements';
 
 import './shipFleight.css';
-
+import useLocalStorageState from '../localStorageHook';
 import BlockContent from '@sanity/block-content-to-react';
 import Fade from 'react-reveal/Fade';
 const urlFor = (source) => builder.image(source);
 
 export default function About() {
-  const [posts, setPosts] = useState([]);
-
+  const [posts, setPosts] = useLocalStorageState('About Us');
   useEffect(() => {
     client
       .fetch(
-        `*[title == "About Us"] {
-          content[],
-         
-         }`
+        `*[title == 'About Us' ]{
+     
+          content[]
+          
+          }`
       )
       .then((data) => setPosts(data))
       .catch(console.error);
-  }, []);
+  }, [setPosts]);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

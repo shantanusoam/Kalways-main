@@ -15,25 +15,24 @@ import {
   HeroContent,
   ContainerMain,
 } from './KalPowerElement';
+import useLocalStorageState from '../../localStorageHook';
 import BlockContent from '@sanity/block-content-to-react';
 
 const urlFor = (source) => builder.image(source);
 export default function KalPower() {
-  const [posts, setPosts] = useState([]);
-
+  const [posts, setPosts] = useLocalStorageState('KALPOWER');
   useEffect(() => {
     client
       .fetch(
         `*[title == 'KALPOWER' ]{
-    
+     
           content[]
           
           }`
       )
       .then((data) => setPosts(data))
       .catch(console.error);
-  }, []);
-
+  }, [setPosts]);
   return (
     <>
       <HeroContainer

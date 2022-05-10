@@ -1,4 +1,4 @@
-import React, {  useEffect } from 'react';
+import React, { useEffect } from 'react';
 import client, { builder } from '../../client';
 // import image1 from '../../images/ut008.jpg';
 // import image2 from '../../images/ut009.jpg';
@@ -16,7 +16,7 @@ import client, { builder } from '../../client';
 // import AdditionalBenefits from '../../images/Additional-Benefits-01.png';
 // import Four from '../../images/401k-01.png';
 // import CareerGrowth from '../../images/Career-Growth-01.png';
-// import PTO01 from '../../images/PTO-01.png';  
+// import PTO01 from '../../images/PTO-01.png';
 
 // import grid1 from '../../images/fleet.png';
 // import grid2 from '../../images/grid2.png';
@@ -33,7 +33,7 @@ import client, { builder } from '../../client';
 // import mgrid5 from '../../images/mgrid5.png';
 // import mgrid6 from '../../images/mgrid6.png';
 // import grid12 from '../../images/sustain.png';
-// import grid13 from '../../images/shipper.png';  
+// import grid13 from '../../images/shipper.png';
 import Pulse from 'react-reveal/Pulse';
 // import moreleaves from '../../images/more-leaves.png';
 // import Fade from 'react-reveal/Fade';
@@ -95,6 +95,7 @@ export default function Careers() {
       .then((data) => setPosts(data))
       .catch(console.error);
   }, [setPosts]);
+
   return (
     <>
       <HeroContainer

@@ -48,11 +48,25 @@ import {
   // BgImage,
   Formcontainer,
 } from './shipfreight';
+import useLocalStorageState from '../../localStorageHook';
 import BlockContent from '@sanity/block-content-to-react';
 const urlFor = (source) => builder.image(source);
 export function Shipfreight({ Phoneno }) {
-  const [posts, setPosts] = useState([]);
+  // const [posts, setPosts] = useState([]);
 
+  // useEffect(() => {
+  //   client
+  //     .fetch(
+  //       `*[title == 'SHIPFREIGHT' ]{
+
+  //         content[]
+
+  //         }`
+  //     )
+  //     .then((data) => setPosts(data))
+  //     .catch(console.error);
+  // }, []);
+  const [posts, setPosts] = useLocalStorageState('SHIPFREIGHT');
   useEffect(() => {
     client
       .fetch(
@@ -64,7 +78,7 @@ export function Shipfreight({ Phoneno }) {
       )
       .then((data) => setPosts(data))
       .catch(console.error);
-  }, []);
+  }, [setPosts]);
   return (
     <>
       {posts[0] ? (
@@ -74,7 +88,7 @@ export function Shipfreight({ Phoneno }) {
               <h1 className="text-white  font-normal pt-8 text-xl w-auto">
                 {posts[0]['content'][0].heading}
               </h1>
-              <h2 className="text-white   pt-3 2xl:text-5xl text-4xl w-5/6">
+              <h2 className="text-white   pt-3 2xl:text-5xl text-4xl w-5/6 heading_cardContent">
                 <BlockContent
                   className="w-10/12"
                   blocks={posts[0]['content'][0].tagline}
@@ -133,7 +147,7 @@ export function Shipfreight({ Phoneno }) {
                       <img
                         src={urlFor(post.image.asset._ref)}
                         className="w-32"
-                        alt='truck'
+                        alt="truck"
                       ></img>
                       <h4 className="text-3xl">{post.heading}</h4>
                       <p className="text-gray-800 font-normal pt-5 text-xl w-auto">
@@ -218,7 +232,7 @@ export function Shipfreight({ Phoneno }) {
               }
               className="w-auto"
               width="150px"
-              alt='truck'
+              alt="truck"
             ></img>
           </div>
         </div>
@@ -231,7 +245,7 @@ export function Shipfreight({ Phoneno }) {
                     src={urlFor(post.image.asset._ref)}
                     className=""
                     width="150px"
-                    alt='truck'
+                    alt="truck"
                   ></img>
                   <h3 className="text-3xl">{post.heading}</h3>
                   <p className=" text-gray-800 font-normal pt-5 text-xl w-auto">
@@ -263,7 +277,7 @@ export function Shipfreight({ Phoneno }) {
                     <img
                       src={urlFor(post.image.asset._ref)}
                       className="w-32"
-                      alt='truck'
+                      alt="truck"
                     ></img>
                     <h4 className="text-2xl font-bold self-center">
                       {post.heading}

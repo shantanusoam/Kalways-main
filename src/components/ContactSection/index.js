@@ -12,23 +12,21 @@ import {
   FotterContactName,
   Heading,
 } from './ContactSEctionElements';
-
+import useLocalStorageState from '../../localStorageHook';
 export default function ContactSectio({ isOpen, toggle }) {
-  const [posts, setPosts] = useState([]);
-
+  const [posts, setPosts] = useLocalStorageState('Contact Us');
   useEffect(() => {
     client
       .fetch(
         `*[title == 'Contact Us' ]{
-          label,
+     
           content[]
           
           }`
       )
       .then((data) => setPosts(data))
       .catch(console.error);
-  }, []);
-
+  }, [setPosts]);
   return (
     <ContactContainer id="ContactUs">
       <br></br>
