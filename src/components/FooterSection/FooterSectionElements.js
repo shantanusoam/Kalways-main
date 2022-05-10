@@ -30,18 +30,18 @@ export const SocialMediaActionsContainer = styled.div`
     align-items: flex-start;
   }
 `;
-export const FooterMobileContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  justify-content: center;
-  @media screen and (max-width: 768px) {
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-`;
+// export const FooterMobileContainer = styled.div`
+//   display: flex;
+//   flex-wrap: wrap;
+//   flex-direction: row;
+//   align-items: center;
+//   width: 100%;
+//   justify-content: center;
+//   @media screen and (max-width: 768px) {
+//     flex-wrap: wrap;
+//     align-items: flex-start;
+//   }
+// `;
 export const FooterLogo = styled.div`
   padding-top: 20px;
   width: 35%;

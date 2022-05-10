@@ -54,9 +54,7 @@ export default function Navbar({ toggle, logo, Phoneno }) {
             </NavItem> */}
 
             <NavItem>
-              <NavLinks to="/">
-                <a href="/">HOME</a>
-              </NavLinks>
+              <NavLinks to="/">HOME</NavLinks>
             </NavItem>
 
             <NavItem>

@@ -1,7 +1,7 @@
 // import { useState, useEffect } from 'react';
 
 // import logo from '../../images/logo.png';
-import  { builder } from '../../client';
+import { builder } from '../../client';
 // import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 import {
@@ -14,7 +14,7 @@ import {
   FotterContactNo,
   FotterContactName,
   // SocialMediaActionsContainer,
-  footerMobileContainer,
+  // FooterMobileContainer,
   FotterHName,
 } from './FooterSectionElements';
 const urlFor = (source) => builder.image(source);
@@ -87,9 +87,9 @@ export default function FooterSection({ posts }) {
             </SocialMediaActions>
           </SocialMediaActionsContainer> */}
       </FooterLogo>
-      <footerMobileContainer>
-        <FotterNav>
-          {/* {posts[0]
+      {/* <FooterMobileContainer> */}
+      <FotterNav>
+        {/* {posts[0]
             ? posts[0]['content'].map((post) => (
                 <FotterContact>
                   <FotterContactlist>
@@ -99,7 +99,7 @@ export default function FooterSection({ posts }) {
                 </FotterContact>
               ))
             : null} */}
-          {/* <FotterContact>
+        {/* <FotterContact>
             <FotterContactlist>
               <FotterContactName>Phone</FotterContactName>
               <FotterContactNo></FotterContactNo>
@@ -115,55 +115,55 @@ export default function FooterSection({ posts }) {
             </FotterContactlist>
           </FotterContact> */}
 
-          {/* <hr align="left" width="100%"></hr> */}
-          <FotterContact>
-            <FotterContactlist>
-              <FotterContactName>Phone</FotterContactName>
-              <FotterContactNo>
-                {posts[0] ? posts[0].phone : null}
-              </FotterContactNo>
-            </FotterContactlist>
-          </FotterContact>
-          <FotterContact>
-            <FotterContactlist>
-              <FotterContactName>Email</FotterContactName>
-              <FotterContactNo>
-                {posts[0] ? posts[0].Email : null}
-              </FotterContactNo>
-            </FotterContactlist>
-          </FotterContact>
-          <FotterContact>
-            <FotterContactlist>
-              <FotterContactName>Address</FotterContactName>
-              <FotterContactNo>
-                {posts[0] ? posts[0].Address : null}
-              </FotterContactNo>
-            </FotterContactlist>
-          </FotterContact>
+        {/* <hr align="left" width="100%"></hr> */}
+        <FotterContact>
+          <FotterContactlist>
+            <FotterContactName>Phone</FotterContactName>
+            <FotterContactNo>
+              {posts[0] ? posts[0].phone : null}
+            </FotterContactNo>
+          </FotterContactlist>
+        </FotterContact>
+        <FotterContact>
+          <FotterContactlist>
+            <FotterContactName>Email</FotterContactName>
+            <FotterContactNo>
+              {posts[0] ? posts[0].Email : null}
+            </FotterContactNo>
+          </FotterContactlist>
+        </FotterContact>
+        <FotterContact>
+          <FotterContactlist>
+            <FotterContactName>Address</FotterContactName>
+            <FotterContactNo>
+              {posts[0] ? posts[0].Address : null}
+            </FotterContactNo>
+          </FotterContactlist>
+        </FotterContact>
 
-          {/* <hr align="left" width="100%"></hr> */}
-          <FotterContact>
-            <FotterContactlist>
-              <FotterContactName>We are open</FotterContactName>
-              {posts[0] ? (
-                <>
-                  <FotterContactNo>{posts[0].Timing_1}</FotterContactNo>
+        {/* <hr align="left" width="100%"></hr> */}
+        <FotterContact>
+          <FotterContactlist>
+            <FotterContactName>We are open</FotterContactName>
+            {posts[0] ? (
+              <>
+                <FotterContactNo>{posts[0].Timing_1}</FotterContactNo>
 
-                  <FotterContactNo>{posts[0].Timing_2}</FotterContactNo>
-                </>
-              ) : null}
-            </FotterContactlist>
-          </FotterContact>
-          {/* <SocialMediaActions>
+                <FotterContactNo>{posts[0].Timing_2}</FotterContactNo>
+              </>
+            ) : null}
+          </FotterContactlist>
+        </FotterContact>
+        {/* <SocialMediaActions>
             <FaFacebookF/>
             </SocialMediaActions> */}
-          {/* <FotterNavH>Email</FotterNavH> */}
-          {/* <FotterNavH>Company</FotterNavH>
+        {/* <FotterNavH>Email</FotterNavH> */}
+        {/* <FotterNavH>Company</FotterNavH>
                 <FotterNavH>Advantages</FotterNavH>
                 <FotterNavH>Products</FotterNavH>
                 <FotterNavH>Contact</FotterNavH> */}
-        </FotterNav>
-      </footerMobileContainer>
+      </FotterNav>
+      {/* </FooterMobileContainer> */}
 
       {/* <FotterSocialMedia>
             <SocialMediaActions>

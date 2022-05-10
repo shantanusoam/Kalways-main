@@ -288,7 +288,7 @@ div{
     margin:0px;
 }
 `;
-export const PCENTER = Styled.p`
+export const PCENTER = Styled.h1`
 display: none;
     @media screen and (max-width: 768px) {
     display: block;

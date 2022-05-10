@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import client from '../../client';
 import {
   ContactContainer,
@@ -49,18 +49,14 @@ export default function ContactSectio({ isOpen, toggle }) {
         <FooterMobileContainer>
           <FotterNav>
             <FotterContact>
-              <FotterContactlist>
-                {posts[0]
-                  ? posts[0]['content'].map((post) => (
-                      <>
-                        <FotterContactName key={post._key}>
-                          {post.heading}
-                        </FotterContactName>
-                        <FotterContactNo>{post.label}</FotterContactNo>
-                      </>
-                    ))
-                  : null}
-              </FotterContactlist>
+              {posts[0]
+                ? posts[0]['content'].map((post) => (
+                    <FotterContactlist key={post._key}>
+                      <FotterContactName>{post.heading}</FotterContactName>
+                      <FotterContactNo>{post.label}</FotterContactNo>
+                    </FotterContactlist>
+                  ))
+                : null}
             </FotterContact>
             {/* <hr align="left" width="100%"></hr> */}
 
