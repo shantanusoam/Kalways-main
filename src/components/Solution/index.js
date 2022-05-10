@@ -7,6 +7,8 @@ import { builder } from '../../client';
 // import SmartWay from '../../images/baI2.png';
 // import BestBroker from '../../images/baI3.png';
 import YouTube from 'react-youtube';
+import serializers from '../../serializers';
+import PortableText from '@sanity/block-content-to-react';
 // import PhoneNo from '../phoneno';
 import './style.css';
 import {
@@ -325,6 +327,15 @@ export default function Solution({ posts, Phoneno }) {
                 {posts[0]['content'][4].label} <br></br>
                 {Phoneno}
               </WWOCCHeading>
+              <WWOCCParagraph>
+                <PortableText
+                  className="w-10/12 "
+                  blocks={posts[0]['content'][4].text}
+                  projectId="cjv2tdo2"
+                  dataset="production"
+                  serializers={serializers}
+                />
+              </WWOCCParagraph>
               <WWOCCParagraph>{posts[0]['content'][4].heading}</WWOCCParagraph>
             </>
           ) : null}
