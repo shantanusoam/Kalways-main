@@ -66,6 +66,7 @@ import {
   // BgImage,
 } from './CareersElement';
 import useLocalStorageState from '../../localStorageHook';
+import { Youtube } from '../Youtube';
 // import { render } from '@testing-library/react';
 const urlFor = (source) => builder.image(source);
 
@@ -188,11 +189,11 @@ export default function Careers() {
           </div>
         </div>
       </div>
-
+      {posts[0] ? <Youtube posts={posts[0]['content'][2]}></Youtube> : null}
       <div className="flex flex-col bg-grey bg-white ">
         <Head className="  self-start pl-16">
           <h2 className="font-bold self-start pt-10 text-black  text-2xl 2xl:text-4xl">
-            {posts[0] ? posts[0]['content'][2].title : null}
+            {posts[0] ? posts[0]['content'][3].title : null}
             <p className="h-2"></p>
             <div className="w-full h-1  hover:w-10 transition duration-700 ease-in-out delay-150"></div>
           </h2>
@@ -200,7 +201,7 @@ export default function Careers() {
 
         <div className="pb-10  pt-10 grid gap-10 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 self-center justify-center justify-items-center ">
           {posts[0]
-            ? posts[0]['content'][2]['rows'].map((post) => (
+            ? posts[0]['content'][3]['rows'].map((post) => (
                 <Pulse>
                   <Card className="flex flex-col items-left h-96 bg-white w-80 p-8 ">
                     <img
@@ -230,7 +231,7 @@ export default function Careers() {
               className="flex flex-col justify-center justify-items-center items-center h-80 lg:w-5/6"
               style={{
                 backgroundImage: `radial-gradient(#42424280,#9f9e9e17), url(${urlFor(
-                  posts[0]['content'][3].image.asset._ref
+                  posts[0]['content'][4].image.asset._ref
                 )})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
@@ -238,11 +239,11 @@ export default function Careers() {
               }}
             >
               <h4 className="text-white text-center lg:text-5xl text-3xl lg:w-3/5">
-                {posts[0]['content'][3].heading}
+                {posts[0]['content'][4].heading}
               </h4>
               <WWOCCButtonM>
-                <a href={posts[0]['content'][3].cta.link}>
-                  {posts[0]['content'][3].cta.title}
+                <a href={posts[0]['content'][4].cta.link}>
+                  {posts[0]['content'][4].cta.title}
                 </a>
               </WWOCCButtonM>
             </div>

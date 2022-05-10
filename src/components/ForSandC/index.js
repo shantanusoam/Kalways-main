@@ -1,5 +1,5 @@
 import React from 'react';
-import  { builder } from '../../client';
+import { builder } from '../../client';
 
 import './style.css';
 import {
@@ -15,7 +15,7 @@ export function ForSandC({ posts }) {
     <WWOCArd>
       <ImageContainers>
         {posts[0]
-          ? posts[0]['content'][5]['rows'].map((post) => (
+          ? posts[0]['content'][6]['rows'].map((post) => (
               <ImageContainers key={post._key}>
                 <Contanier>
                   <ImageContainer>

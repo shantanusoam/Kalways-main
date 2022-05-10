@@ -24,7 +24,7 @@ import {
   BannerContainer2,
 } from './SolutionElement';
 import Fade from 'react-reveal/Fade';
-
+import { Youtube } from '../Youtube';
 import YoutubeEmbed from './youtubeVideo';
 const opts = {
   playerVars: {
@@ -35,6 +35,7 @@ const opts = {
     ecver: 2,
   },
 };
+
 const urlFor = (source) => builder.image(source);
 export default function Solution({ posts, Phoneno }) {
   return (
@@ -298,45 +299,23 @@ export default function Solution({ posts, Phoneno }) {
                 : null}
             </BannerContainer2>
           </BannerContainer>
-          <WWOCArd1>
-            <div style={{ flex: 1 }} className="m-8 items-center">
-              <YouTube videoId="h-P3khDl29U" opts={opts} />
-            </div>
-            <div style={{ flex: 1 }}>
-              <h3 className="font-bold text-2xl mb-5">
-                Why KALWAY Is The Best 3PL For You
-              </h3>
-              <div className=" text-gray-800 text-0xl mb-4 lg:text-1xl md:mb-5 2xl:h-56 w-3/4">
-                Our centralized marketplace connects you to the people,
-                technology, data, and capacity needed to take your supply chain
-                further.
-                <br></br> For shippers, we offer a wide network of 13+
-                Warehouses, 10,000+ Carriers, 2,500+ Trailers, 800+ Trucks, and
-                24/7 customer service to get your products where they need to
-                be, on time and on budget.
-                <br></br> For carriers we provide the ability to manage loads
-                and drivers with one easy-to-use portal, putting all the
-                information you need, including load documents and invoices, at
-                your fingertips.
-              </div>
-            </div>
-          </WWOCArd1>
+          {posts[0] ? <Youtube posts={posts[0]['content'][4]}></Youtube> : null}
           {posts[0] ? (
             <>
               <WWOCCHeading>
-                {posts[0]['content'][4].label} <br></br>
+                {posts[0]['content'][5].label} <br></br>
                 {Phoneno}
               </WWOCCHeading>
               <WWOCCParagraph>
                 <PortableText
                   className="w-10/12 "
-                  blocks={posts[0]['content'][4].text}
+                  blocks={posts[0]['content'][5].text}
                   projectId="cjv2tdo2"
                   dataset="production"
                   serializers={serializers}
                 />
               </WWOCCParagraph>
-              <WWOCCParagraph>{posts[0]['content'][4].heading}</WWOCCParagraph>
+              <WWOCCParagraph>{posts[0]['content'][5].heading}</WWOCCParagraph>
             </>
           ) : null}
 
