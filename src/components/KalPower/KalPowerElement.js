@@ -295,7 +295,7 @@ div{
     margin:0px;
 }
 `;
-export const PCENTER = Styled.div`
+export const PCENTER = Styled.p`
 display: none;
     @media screen and (max-width: 768px) {
     display: block;
@@ -470,7 +470,7 @@ flex-direction: column;
 align-items: start;
 padding: 0px 20px 0px 0px;
 `;
-export const Callinfo = Styled.div`
+export const Callinfo = Styled.p`
 font-family: sans-serif;
 font-style: normal;
 font-weight: bold;
