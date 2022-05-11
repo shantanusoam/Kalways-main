@@ -93,15 +93,14 @@ export function Shipfreight({ Phoneno }) {
               <h1 className="text-white  font-normal pt-8 text-xl w-auto">
                 {posts[0]['content'][0].heading}
               </h1>
-              <h2 className="text-white   pt-3 2xl:text-5xl text-4xl w-5/6 heading_cardContent">
-                <PortableText
-                  className="w-10/12"
-                  blocks={posts[0]['content'][0].tagline}
-                  projectId="cjv2tdo2"
-                  dataset="production"
-                  serializers={serializers}
-                />
-              </h2>
+
+              <PortableText
+                className="w-10/12"
+                blocks={posts[0]['content'][0].tagline}
+                projectId="cjv2tdo2"
+                dataset="production"
+                serializers={serializers}
+              />
             </ContainerMain>
 
             <PCENTER className="text-gray-600 lg:p-10 text-left ">
@@ -282,7 +281,7 @@ export function Shipfreight({ Phoneno }) {
           {posts[0]
             ? posts[0]['content'][5]['rows'].map((post) => (
                 <Pulse key={post._key}>
-                  <Card className="flex flex-col items-center 	align-content:center place-items-center bg-white w-80 p-8 ">
+                  <Card className="flex flex-col items-center 	align-content:center place-items-center bg-white w-80 h-72 p-8 ">
                     <img
                       src={urlFor(post.image.asset._ref)}
                       className="w-32"

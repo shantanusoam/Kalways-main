@@ -42,5 +42,9 @@ export const AboutContainer = styled.div`
   justify-content: space-around;
   width: auto;
   min-height: 100vh;
-  height: auto;
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
 `;

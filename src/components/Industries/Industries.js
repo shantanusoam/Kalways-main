@@ -35,6 +35,7 @@ export const ContainerMain = Styled.div`
 display: flex;
 flex-direction:column;
 h1{
+  padding-bottom: 1rem;
    :first-child{
        color: #00e700;
    }
@@ -42,6 +43,24 @@ h1{
         
     }
 }
+h2{
+    font-size: 3rem !important;
+    font-weight: 300 !important;
+    width: 83.333333% !important;
+    padding: 0;
+    padding-bottom: 1rem;
+    color: #fff !important;
+  line-height: 1;
+  }
+  p{
+    padding-bottom: 2rem !important;
+    font-size: 1.5rem !important;
+    font-weight: 200 !important;
+    width: 83.333333% !important;
+    padding: 0;
+    color: #fff !important;
+
+  }
 `;
 export const Card = Styled.div`
 box-shadow: 6px 4px 8px 2px rgb(0 0 0 / 20%);
@@ -190,7 +209,7 @@ align-items: flex-end;
 
 
 div{
-    width: 60%;
+    width: 80%;
    
    
    

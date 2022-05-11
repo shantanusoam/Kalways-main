@@ -34,7 +34,7 @@ h1{
     font-size: 1.5rem;
     font-weight: normal;
     color: #fff;
-    letter-spacing: 0.3rem;
+   
 }
 `;
 export const HeroBg = Styled.div`
@@ -226,18 +226,16 @@ color: #ED1C24;
 }
 `;
 export const HeroP = Styled.h1`
-margin-top: 24px;
-margin-bottom: 24px;
-font-family: sans-serif;
-font-style: normal;
+margin-top: 24px !important;
+margin-bottom: 24px !important;
+font-family: sans-serif !important;
+font-style: normal !important;
 font-weight: 600 !important;
-font-size: 3.5rem !important; 
-
+font-size: 4rem !important;
 line-height: 89.69% !important;
-text-align: left;
-// width: 75%;
+text-align: left !important;
 z-index: 2;
-color: #FFFFFF;
+color: rgb(255, 255, 255);
 
 @media screen and (max-width: 768px) {
     font-size: 54px;

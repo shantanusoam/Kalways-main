@@ -350,7 +350,7 @@ text-align: left;
 
 z-index: 2;
 color: #FFFFFF;
-
+margin: 0 !important;
 @media screen and (max-width: 768px) {
     font-size: 54px;
     width: 65%;

@@ -158,7 +158,7 @@ h1{
     font-size: 1.5rem;
     font-weight: normal;
     color: #fff;
-    letter-spacing: 0.3rem;
+
 }
 `;
 export const ImageS = Styled.div`
@@ -384,17 +384,19 @@ color: #ED1C24;
 `;
 export const HeroP = Styled.h2`
 margin-top: 24px;
-margin-bottom: 24px;
+margin-bottom: 24px !important;
 font-family: sans-serif;
 font-style: normal;
-font-weight: 600;
-font-size: 3rem;
+font-weight: 600 !important;
+font-size: 3rem !important;
 
 line-height: 89.69%;
 text-align: left;
-// width: 75%;
+
 z-index: 2;
 color: #FFFFFF;
+margin: 0 ;
+Padding: 0 !important;
 
 @media screen and (max-width: 768px) {
     font-size: 54px;

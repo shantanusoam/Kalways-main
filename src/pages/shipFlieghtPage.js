@@ -12,7 +12,9 @@ import {
   Card,
   Formcontainer,
   FormButton,
+  AboutContainer,
 } from '../components/shipfreight/shipfreight';
+
 const urlFor = (source) => builder.image(source);
 
 export default function ShipFlightPage() {
@@ -86,34 +88,33 @@ export default function ShipFlightPage() {
           </FormButton>
         </Formcontainer>
       </Bounce>
-      <Card className=" self-center ">
-        <h1 className=" self-center pt-10 text-gray-800 text-3xl 2xl:text-5xl">
+      <AboutContainer id="Products">
+        <h1 className="text-center text-black  2xl:text-5xl text-4xl pb-0  2xl:mt-28 xl:mt-28 mt-8 md:pb-3">
           {posts[0] ? posts[0]['content'][2].heading : null}
-          <p className="h-4"></p>
           <div className="w-40 h-2  hover:w-10 transition duration-700 ease-in-out delay-150"></div>
         </h1>
-      </Card>
 
-      <div className="flex flex-row lg:pl-16  pl-8 2xl:pt-16 pt-8">
-        {posts[0] ? (
-          <img
-            src={urlFor(posts[0]['content'][2].image.asset._ref)}
-            className="flex-1 h-64 lg:block hidden"
-            alt=""
-          ></img>
-        ) : null}
-
-        <div className="self-end 2xl:pl-32 p-2">
+        <div className="flex flex-row lg:pl-16  pl-8 2xl:pt-16 pt-8">
           {posts[0] ? (
-            <PortableText
-              blocks={posts[0]['content'][2]['text']}
-              projectId="cjv2tdo2"
-              dataset="production"
-              serializers={serializers}
-            />
+            <img
+              src={urlFor(posts[0]['content'][2].image.asset._ref)}
+              className="flex-1 h-64 lg:block hidden"
+              alt=""
+            ></img>
           ) : null}
+
+          <div className="self-end 2xl:pl-32 p-2">
+            {posts[0] ? (
+              <PortableText
+                blocks={posts[0]['content'][2]['text']}
+                projectId="cjv2tdo2"
+                dataset="production"
+                serializers={serializers}
+              />
+            ) : null}
+          </div>
         </div>
-      </div>
+      </AboutContainer>
     </div>
   );
 }

@@ -146,6 +146,7 @@ export const FormButton = Styled.div`
 
 `;
 export const ContainerMain = Styled.div`
+
 display: flex;
 flex-direction: column;
 h1{
@@ -161,6 +162,14 @@ h1{
     @media screen and (max-width: 1366px) {
         line-height: 3rem;
     }
+}
+h2{
+  font-size: 3rem !important;
+  font-weight: 300 !important;
+  width: 83.333333%;
+  padding: 0;
+  color: #fff;
+line-height: 1;
 }
 `;
 // export const HeroBg = Styled.div`
@@ -575,6 +584,37 @@ display: block;
     display: none;
 }
 `;
+export const AboutContainer = Styled.div`
+  background: #fff;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0px 0px 10px 0px;
+
+  justify-content: center;
+  min-height: 100vh;
+  animation: fadein 0.5s;
+
+  height: auto;
+  h1 {
+    margin: 0rem !important;
+    margin-top: 2rem !important;
+    font-weight: 200;
+    div {
+      background: #00e700;
+      width: 10%;
+      transition: all 0.5s ease;
+    }
+    :hover {
+      cursor: pointer;
+      div {
+        width: 100%;
+      }
+    }
+  }`;
 export const NavLinks = Styled(LinkR)`
 color: ${({ scrollNav }) => (scrollNav ? '#fff' : `#000`)};
 display: flex;

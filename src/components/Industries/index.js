@@ -85,15 +85,14 @@ export function Industrie() {
               <h1 className="text-white  font-normal pt-8 text-xl w-auto">
                 {posts[0]['content'][0].heading}
               </h1>
-              <h2 className="text-white   pt-3 2xl:text-5xl text-3xl w-5/6 xl:text-2xl md:text-2xl heading_cardContent">
-                <PortableText
-                  className="w-10/12"
-                  blocks={posts[0]['content'][0].tagline}
-                  projectId="cjv2tdo2"
-                  dataset="production"
-                  serializers={serializers}
-                />
-              </h2>
+
+              <PortableText
+                blocks={posts[0]['content'][0].tagline}
+                projectId="cjv2tdo2"
+                dataset="production"
+                serializers={serializers}
+              />
+
               {/* <p className=" font-normal pt-2 xl:mb-2 mb-0 2xl:text-2xl  text-1xl text-white 2xl:mb-10 mb:-10 w-4/5 ">
                 Bring simplicity to an intricate supply chain process with our
                 reliable cross-border solutions.
@@ -255,7 +254,7 @@ export function Industrie() {
           {posts[0]
             ? posts[0]['content'][4]['rows'].map((post) => (
                 <Pulse key={post._key}>
-                  <Card className="flex flex-col items-center 	align-content:center place-items-center bg-white w-80 p-8 ">
+                  <Card className="flex flex-col items-center 	align-content:center place-items-center bg-white w-80 h-72 p-8 ">
                     <img
                       src={urlFor(post.image.asset._ref)}
                       className="w-32"
