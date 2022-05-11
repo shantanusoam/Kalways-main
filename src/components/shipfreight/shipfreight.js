@@ -80,6 +80,11 @@ h4{
 
     }
 }
+h2{
+  font-weight: 400;
+  font-size: 3rem;
+
+}
 
 `;
 

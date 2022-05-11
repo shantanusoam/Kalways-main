@@ -128,7 +128,7 @@ export default function Shipper({ Phoneno }) {
           <div className="w-40 h-2  hover:w-10 transition duration-700 ease-in-out delay-150"></div>
         </h2>
       </Card>
-      <div className="flex lg:flex-row  content-between  justify-between flex-col p-8">
+      <div className="flex lg:flex-row  content-between  justify-between flex-col p-8 heading_cardContent">
         {posts[0] ? (
           <PortableText
             className="w-10/12 "
@@ -211,11 +211,11 @@ export default function Shipper({ Phoneno }) {
           <p className="font-normal pt-10 text-xl 2xl:w-96 pb-8">
             {posts[0] ? posts[0]['content'][2]['cta'].title : null}
           </p>
-          <button class="btn">
+          <button class="btn" style={{ padding: '20px 0px 20px 0px' }}>
             <span className="btn-text">{Phoneno}</span>
           </button>
           <img
-            style={{ paddingTop: '2rem' }}
+            style={{ marginTop: '20vh' }}
             src={
               posts[0]
                 ? urlFor(posts[0]['content'][2]['image']['asset']._ref)

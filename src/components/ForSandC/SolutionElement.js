@@ -5,7 +5,7 @@ export const WWOCArd = styled.div`
   background-color: #fff;
   display: flex;
   padding: 0px 0px 0px 50px;
-  margin-bottom: 90px;
+  margin-bottom: 60px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -153,6 +153,28 @@ export const Contanier = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-right: 1px solid #000000;
+  padding: 0px 2rem 30px 0px;
+  margin-top: 3rem;
+  justify-content: center;
+  h4 {
+    padding-top: 4rem;
+    font-size: 2.625rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  p {
+    padding: 1.5rem;
+    font-size: 24px;
+    color: #313131;
+    text-align: center;
+  }
+`;
+export const MainContanier = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   justify-content: center;
   h4 {
     padding-top: 4rem;

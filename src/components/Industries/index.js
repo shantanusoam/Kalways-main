@@ -107,7 +107,7 @@ export function Industrie() {
         </HeroContainer>
       ) : null}
       <div className=" flex flex-col  bg-slate-800   2xl:ml-40 m-8">
-        <h2 className="pt-2 2xl:text-5xl  text-4xl  ">
+        <h2 className="pt-2 2xl:text-5xl  text-4xl  heading2_cardContent">
           {posts[0] ? posts[0]['content'][1].title : null}
         </h2>
 
@@ -277,7 +277,7 @@ export function Industrie() {
           {posts[0]
             ? posts[0]['content'][5]['rows'].map((post) => (
                 <Pulse key={post._key}>
-                  <Card className="flex flex-col items-center 	align-content:center place-items-center bg-white w-80 p-8 ">
+                  <Card className="flex flex-col items-center 	align-content:center place-items-center bg-white w-80 h-72 p-8 ">
                     <img
                       src={urlFor(post.image.asset._ref)}
                       className="w-32"

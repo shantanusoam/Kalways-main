@@ -7,6 +7,8 @@ import {
   ImageContainer,
   ImageContainers,
   Contanier,
+  verticalLine,
+  MainContanier,
 } from './SolutionElement';
 
 const urlFor = (source) => builder.image(source);
@@ -17,15 +19,16 @@ export function ForSandC({ posts }) {
         {posts[0]
           ? posts[0]['content'][6]['rows'].map((post) => (
               <ImageContainers key={post._key}>
-                <Contanier>
+                <MainContanier>
                   <ImageContainer>
                     <img src={urlFor(post.image.asset._ref)} alt=""></img>
                   </ImageContainer>
+                  {/* <verticalLine /> */}
                   <Contanier>
                     <h4>{post.heading}</h4>
                     <p>{post.label}</p>
                   </Contanier>
-                </Contanier>
+                </MainContanier>
               </ImageContainers>
             ))
           : null}
