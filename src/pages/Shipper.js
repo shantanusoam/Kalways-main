@@ -215,7 +215,7 @@ export default function Shipper({ Phoneno }) {
             <span className="btn-text">{Phoneno}</span>
           </button>
           <img
-            style={{ marginTop: '20vh' }}
+            style={{ marginTop: '8vh' }}
             src={
               posts[0]
                 ? urlFor(posts[0]['content'][2]['image']['asset']._ref)
