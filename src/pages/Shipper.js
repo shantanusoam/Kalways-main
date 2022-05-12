@@ -205,7 +205,7 @@ export default function Shipper({ Phoneno }) {
             </li>
           </div>
         </div> */}
-        <div className="flex-1 h-64 pl-28 flex flex-col flex-end ">
+        <div className="flex-1 h-64 2xl:pl-28 pl-0 xl:pl-18 lg:p-20 flex flex-col flex-end ">
           <h3 className="font-bold pt-10 text-xl">Learn More</h3>
 
           <p className="font-normal pt-10 text-xl 2xl:w-96 pb-8">
