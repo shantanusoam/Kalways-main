@@ -1,7 +1,11 @@
 import Styled from 'styled-components';
 
 import { Link as LinkR } from 'react-router-dom';
+
 export const HeroContainer = Styled.div`
+
+
+
 
 overflow: hidden;
 background-image: radial-gradient(#42424280, #191919d9),  url(${(props) =>
@@ -35,9 +39,9 @@ export const ContainerMain = Styled.div`
 display: flex;
 flex-direction:column;
 h1{
-  padding-bottom: 1rem;
+  padding-bottom: 1rem !important;
    :first-child{
-       color: #00e700;
+       color: #00e700 !important;
    }
     @media screen and (max-width: 1366px) {
         
@@ -47,10 +51,23 @@ h2{
     font-size: 3rem !important;
     font-weight: 300 !important;
     width: 83.333333% !important;
-    padding: 0;
-    padding-bottom: 1rem;
+    padding: 0 !important;
+    padding-bottom: 1rem !important;
     color: #fff !important;
   line-height: 1;
+  @media screen and (max-width: 1024px) {
+    font-size: 2rem !important;
+    width: 100% !important;
+    padding: 0 !important;
+    
+
+  }
+  @media screen and (max-width: 124px) {
+    font-size: 2rem !important;
+    width: 100% !important;
+    padding: 0 !important;
+    
+
   }
   p{
     padding-bottom: 2rem !important;
@@ -59,6 +76,13 @@ h2{
     width: 83.333333% !important;
     padding: 0;
     color: #fff !important;
+    @media screen and (max-width: 1024px) {
+      font-size: 2rem !important;
+      width: 100% !important;
+      padding: 0 !important;
+      
+  
+    }
 
   }
 `;

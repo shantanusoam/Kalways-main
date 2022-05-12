@@ -76,53 +76,11 @@ export default function Solution({ posts, Phoneno }) {
           ) : null}
 
           <CardListRow>
-            <div className=" md:py-0 md:px-0 bg-white flex flex-row flex-wrap justify-center items-center   ">
-              {/* <LinkRo
-        key={4}
-        to={{
-          pathname: "/Product",
-          state: { id: "lol" }, // your data array of objects
-        }}
-        className=" flex-1 "
-        key={3}
-        id={3}
-      > */}
-              {/* <Fade bottom key={2}>
-        <div
-          className="bg-white   m-9 hover:shadow-2xl flex-1 "
-          key={2}
-          id={5}
-        >
-          <img
-            src={trucks}
-            alt="Trailers images"
-            className=" h-80 w-full object-cover"
-          />
-
-          <div className="p-8"> */}
-              {/* <h3 className="font-bold text-2xl mb-5">fine</h3> */}
-              {/* <br />
-            <h3 className=" text-1xl mb-5 ">
-              Tap into a marketplace that matches over 10.000 shipments a
-              day
-            </h3>
-            <NavLink
-              key={1}
-              to={{
-                pathname: "/Product",
-                state: { id: "lol" }, // your data array of objects
-              }}
-            > */}
-              {/* <p>date</p> */}
-              {/* </NavLink>
-          </div>
-        </div>
-      </Fade> */}
-              {/* </LinkRo> */}
+            <div className=" md:py-0 md:px-0 bg-white grid 2xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-4 justify-center items-center   ">
               {posts[0]
                 ? posts[0]['content'][2]['rows'].map((post) => (
                     <Fade bottom key={post._key}>
-                      <div className="bg-white hover:shadow-2xl m-9 flex-1 transition duration-700 ease-in-out delay-150 transition duration-700 ease-in-out delay-150">
+                      <div className="bg-white hover:shadow-2xl m-9 flex-1  transition duration-700 ease-in-out delay-150 ">
                         <img
                           src={urlFor(post.image.asset._ref)}
                           alt="boy with camera"
@@ -130,11 +88,11 @@ export default function Solution({ posts, Phoneno }) {
                         />
 
                         <div className="p-8">
-                          <h3 className="font-bold text-2xl mb-5">
-                            {post.heading}
+                          <h3 className="font-bold 2xl:text-2xl lg:text-1xl text-1xl mb-5">
+                            {post.heading + `            `}
                           </h3>
                           <br />
-                          <div className=" text-gray-800 text-0xl mb-4 lg:text-1xl md:mb-5 2xl:h-56">
+                          <div className=" text-gray-800 text-1xl mb-5 lg:h-56">
                             {post.text[0]['children'][0]['text']}
                           </div>
                           <a href="/Contact">
@@ -148,7 +106,7 @@ export default function Solution({ posts, Phoneno }) {
                   ))
                 : null}
               {/* <Fade bottom>
-                <div className="bg-white hover:shadow-2xl m-9 flex-1 transition duration-700 ease-in-out delay-150 transition duration-700 ease-in-out delay-150">
+                <div className="bg-white hover:shadow-2xl m-9 flex-1 ">
                   <img
                     src={trucks}
                     alt="boy with camera"
@@ -175,7 +133,7 @@ export default function Solution({ posts, Phoneno }) {
                 </div>
               </Fade>
               <Fade bottom>
-                <div className="bg-white hover:shadow-2xl m-9 flex-1 transition duration-700 ease-in-out delay-150 transition duration-700 ease-in-out delay-150">
+                <div className="bg-white hover:shadow-2xl m-9 flex-1 ">
                   <img
                     src={Containers}
                     alt="boy with camera"
@@ -205,7 +163,7 @@ export default function Solution({ posts, Phoneno }) {
                 </div>
               </Fade>
               <Fade right>
-                <div className="bg-white hover:shadow-2xl m-9 flex-1 transition duration-700 ease-in-out delay-150 transition duration-700 ease-in-out delay-150">
+                <div className="bg-white hover:shadow-2xl m-9 flex-1 ">
                   <img
                     src={Shiping}
                     alt="boy with camera"

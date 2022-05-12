@@ -81,12 +81,19 @@ export function Industrie() {
           bgImage={urlFor(posts[0]['content'][0].backgroundImage.asset._ref)}
         >
           <HeroContent className="flex flex-col 	justify-items-end lg:w-1/2">
-            <ContainerMain className="absolute bottom-0 left-20 pb-0 pl-32">
+            <ContainerMain className="absolute bottom-0 left-20 pb-0 2xl:pl-32 pl-20 ">
               <h1 className="text-white  font-normal pt-8 text-xl w-auto">
                 {posts[0]['content'][0].heading}
               </h1>
-
+              {/* <h2 className="text-white   pt-3 2xl:text-5xl text-3xl w-5/6 xl:text-2xl md:text-2xl">
+                Driving your business across borders.
+              </h2>
+              <p >
+                Bring simplicity to an intricate supply chain process with our
+                reliable cross-border solutions.
+              </p> */}
               <PortableText
+                className=" font-normal pt-2 xl:mb-2 mb-0 2xl:text-2xl  text-1xl text-white 2xl:mb-10 mb:-10 w-4/5 "
                 blocks={posts[0]['content'][0].tagline}
                 projectId="cjv2tdo2"
                 dataset="production"
@@ -98,7 +105,7 @@ export function Industrie() {
                 reliable cross-border solutions.
               </p> */}
             </ContainerMain>
-            s
+
             <PCENTER className="text-white text-left 2xl:p-8 p-2 pl-8">
               Bring simplicity to an intricate supply chain process with our
               reliable cross-border solutions.
@@ -230,7 +237,7 @@ export function Industrie() {
                       {post.heading}
                     </h3>
                     <br />
-                    <p className="text-gray-800 text-1xl mb-0 h-42  ">
+                    <p className="text-gray-800 text-1xl mb-0 h-42  About_blockCardContent">
                       <PortableText
                         className="w-10/12"
                         blocks={post.text}
@@ -372,11 +379,11 @@ export function Industrie() {
         <p className=" self-center font-bold pt-8   2xl:text-4xl">
           {posts[0] ? posts[0]['content'][6].title : null}
         </p>
-        <div className="xl:px-14 xl:py-10 md:py-0 md:px-0 bg-white flex 2xl:flex-row lg:flex-row flex-col flex-wrap justify-center items-center   ">
+        <div className="xl:px-14 xl:py-10 md:py-0 md:px-0 bg-white grid 2xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-4 justify-center items-center     ">
           {posts[0]
             ? posts[0]['content'][6]['rows'].map((post) => (
                 <Fade bottom key={post._key}>
-                  <div className="bg-white hover:shadow-2xl m-4 flex-1 transition duration-700 ease-in-out delay-150">
+                  <div className="bg-white hover:shadow-2xl m-4 flex-1 transition duration-700 ease-in-out delay-150 h-full">
                     <img
                       src={urlFor(post.image.asset._ref)}
                       alt="boy with camera"
@@ -387,10 +394,10 @@ export function Industrie() {
                       <h3 className="font-bold text-2xl mb-5">
                         {post.heading}
                       </h3>
-                      <br />
-                      <p className="text-gray-800 text-1xl mb-9 h-42 ">
+
+                      <p className="text-gray-800 text-1xl mb-9 h-42 About_blockCardContent">
                         <PortableText
-                          className="w-10/12"
+                          className="w-10/12  "
                           blocks={post.text}
                           projectId="cjv2tdo2"
                           dataset="production"

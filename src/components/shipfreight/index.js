@@ -184,11 +184,11 @@ export function Shipfreight({ Phoneno }) {
         </h2>
       </div>
 
-      <div className="xl:px-14 xl:py-10 md:py-0 md:px-0 bg-white flex 2xl:flex-row lg:flex-row flex-wrap justify-center items-center flex-col ">
+      <div className="xl:px-14 xl:py-10 md:py-0 md:px-0 bg-white grid 2xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-4 justify-center items-center flex-col ">
         {posts[0]
           ? posts[0]['content'][3]['rows'].map((post) => (
               <Fade bottom key={post._key}>
-                <div className="bg-white hover:shadow-2xl 2xl:m-2 m-2 flex-1 transition duration-700 ease-in-out delay-150">
+                <div className="bg-white hover:shadow-2xl 2xl:m-2 m-2 flex-1 transition duration-700 ease-in-out delay-150 h-full">
                   <img
                     src={urlFor(post.image.asset._ref)}
                     alt="boy with camera"
