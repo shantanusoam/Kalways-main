@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 function Redirect() {
   useEffect(() => {
-    window.location.href = 'https://kalway.com/backoffice/desk';
+    window.location.href = 'https://kalway.com/backoffice';
   }, []);
 
   return (
