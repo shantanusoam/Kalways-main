@@ -29,6 +29,7 @@ import Blog from './components/Blog';
 import SinglePost from './components/SinglePost';
 import useLocalStorageState from './localStorageHook/index';
 import Error from './components/Error';
+import Redirect from './pages/redirect';
 // import LocalStorageFunction from './localStorageHook/localStotragefunction';
 // function Setposts(data) {
 //   var name = data[0].title;
@@ -154,6 +155,18 @@ function App() {
               exact
               path="/KalPower"
               component={KalPower}
+              title="KalPower"
+            />
+            <Route
+              exact
+              path="/backoffice"
+              component={Redirect}
+              title="KalPower"
+            />
+            <Route
+              exact
+              path="/backoffice/desk"
+              component={Redirect}
               title="KalPower"
             />
             <Route exact path="*" title="Error">
