@@ -51,18 +51,14 @@ import Error from './components/Error';
 // }
 
 function App() {
+  var names = ['Timing_2', 'Timing_1', 'logo', 'phone', 'Email', 'Address'];
   const [isOpen, setIsOpen] = useState(false);
   const [name, setName] = useLocalStorageState('Kalway');
   useEffect(() => {
     client
       .fetch(
         `*[title == 'Kalway' ]{
-        Timing_2,
-        Timing_1,
-        logo,
-        phone,
-        Email,
-        Address,
+          ${names}
         }`
       )
       .then((data) => setName(data))
