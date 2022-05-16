@@ -53,17 +53,21 @@ import Redirect from './pages/redirect';
 
 function App() {
   var names = ['Timing_2', 'Timing_1', 'logo', 'phone', 'Email', 'Address'];
+  console.log(`inside  App`);
   const [isOpen, setIsOpen] = useState(false);
   const [name, setName] = useLocalStorageState('Kalway');
   useEffect(() => {
-    client
-      .fetch(
-        `*[title == 'Kalway' ]{
+    console.log(`inside useEffect App`);
+    if (!window.localStorage.getItem('Kalway')) {
+      client
+        .fetch(
+          `*[title == 'Kalway' ]{
           ${names}
         }`
-      )
-      .then((data) => setName(data))
-      .catch(console.error);
+        )
+        .then((data) => setName(data))
+        .catch(console.error);
+    }
   }, [setName]);
 
   const toggle = () => {
@@ -161,7 +165,7 @@ function App() {
               exact
               path="/backoffice"
               component={Redirect}
-              title="Kalway backoffice"
+              title="KalPower"
             />
 
             <Route exact path="*" title="Error">

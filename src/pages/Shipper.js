@@ -29,7 +29,6 @@ const serializers = {
   },
 };
 export default function Shipper({ Phoneno }) {
-  
   const [posts, setPosts] = useLocalStorageState('SHIPPERS');
   useEffect(() => {
     client
@@ -80,7 +79,6 @@ export default function Shipper({ Phoneno }) {
                 </SwiperSlide>
               ))
             : null}
-      
         </Swiper>
       </div>
       <Bounce right>
@@ -103,17 +101,17 @@ export default function Shipper({ Phoneno }) {
           <div className="w-40 h-2   hover:w-10 transition duration-700 ease-in-out delay-150"></div>
         </h2>
       </Card>
-      <div className="flex lg:flex-row pt-0  content-between  justify-between flex-col p-8 heading_cardContent "> 
+      <div className="flex lg:flex-row pt-0  content-between  justify-between flex-col p-8 heading_cardContent ">
         {posts[0] ? (
-          <PortableText 
-            className="w-10/12" 
+          <PortableText
+            className="w-10/12"
             blocks={posts[0]['content'][2].text}
             projectId="cjv2tdo2"
             dataset="production"
             serializers={serializers}
           />
         ) : null}
-    
+
         <div className="flex-1 h-64 2xl:pl-28 pl-0 xl:pl-18 lg:p-20 flex flex-col flex-end ">
           <h3 className="font-bold pt-10 text-xl">Learn More</h3>
 
@@ -124,7 +122,7 @@ export default function Shipper({ Phoneno }) {
             <span className="btn-text">{Phoneno}</span>
           </button>
           <img
-            style={{ marginTop: '8vh' }} 
+            style={{ marginTop: '8vh' }}
             src={
               posts[0]
                 ? urlFor(posts[0]['content'][2]['image']['asset']._ref)
@@ -135,7 +133,6 @@ export default function Shipper({ Phoneno }) {
           ></img>
         </div>
       </div>
-     
     </div>
   );
 }

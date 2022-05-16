@@ -8,18 +8,22 @@ import client from '../client';
 import Solution from '../components/Solution';
 import useLocalStorageState from '../localStorageHook';
 const Lol = ({ Phoneno }) => {
+  console.log(`inside Home`);
   const [name, setName] = useLocalStorageState('Home');
   useEffect(() => {
-    client
-      .fetch(
-        `*[title == 'Home' ]{
+    console.log(`inside useEffect Home`);
+    if (!window.localStorage.getItem('Home')) {
+      client
+        .fetch(
+          `*[title == 'Home' ]{
           title,
           content[]
           }`
-      )
-      .then((data) => setName(data))
-      .catch(console.error);
-  }, []);
+        )
+        .then((data) => setName(data))
+        .catch(console.error);
+    }
+  }, [setName]);
 
   return (
     <>
