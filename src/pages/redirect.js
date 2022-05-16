@@ -2,7 +2,9 @@ import React, { useEffect } from 'react';
 
 function Redirect() {
   useEffect(() => {
-    window.location.href = 'https://kalway.com/backoffice';
+    if ((this.props.location.state = 'http://localhost:3000/')) {
+      window.location.href = 'https://kalway.sanity.studio';
+    }
   }, []);
 
   return (

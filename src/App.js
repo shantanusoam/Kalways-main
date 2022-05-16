@@ -157,7 +157,12 @@ function App() {
               component={KalPower}
               title="KalPower"
             />
-            <Route exact path="desk" component={Redirect} title="KalPower" />
+            <Route
+              exact
+              path="/backoffice"
+              component={Redirect}
+              title="Kalway backoffice"
+            />
 
             <Route exact path="*" title="Error">
               <Error />
