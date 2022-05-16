@@ -15,6 +15,7 @@ import {
 
 const CenterSection = ({ isOpen, toggle }) => {
   return (
+    
     <ContactContainer id="Map">
       <MapElement>
         <ImagesContainer>

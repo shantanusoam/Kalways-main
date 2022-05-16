@@ -29,6 +29,7 @@ import Blog from './components/Blog';
 import SinglePost from './components/SinglePost';
 import useLocalStorageState from './localStorageHook/index';
 import Error from './components/Error';
+import Redirect from './pages/redirect';
 // import LocalStorageFunction from './localStorageHook/localStotragefunction';
 // function Setposts(data) {
 //   var name = data[0].title;
@@ -51,18 +52,14 @@ import Error from './components/Error';
 // }
 
 function App() {
+  var names = ['Timing_2', 'Timing_1', 'logo', 'phone', 'Email', 'Address'];
   const [isOpen, setIsOpen] = useState(false);
   const [name, setName] = useLocalStorageState('Kalway');
   useEffect(() => {
     client
       .fetch(
         `*[title == 'Kalway' ]{
-        Timing_2,
-        Timing_1,
-        logo,
-        phone,
-        Email,
-        Address,
+          ${names}
         }`
       )
       .then((data) => setName(data))
@@ -160,6 +157,13 @@ function App() {
               component={KalPower}
               title="KalPower"
             />
+            <Route
+              exact
+              path="/backoffice"
+              component={Redirect}
+              title="Kalway backoffice"
+            />
+
             <Route exact path="*" title="Error">
               <Error />
             </Route>

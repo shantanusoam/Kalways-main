@@ -42,11 +42,7 @@ export default function About() {
             alt=""
           ></img>
         ) : null}
-        {/* <img
-        src={whitetruck}
-        alt="Our services Truck on black road "
-        height="90vh"
-      /> */}
+
         <TextContaner className="align-left">
           <h1 className="md:text-4xl text-left text-white lg:text-7xl p-8 ">
             {posts[0] ? posts[0]['content'][0]['heading'] : null}
@@ -64,48 +60,6 @@ export default function About() {
         </TextContanerS>
       </AboutContainer>
       <div className="xl:px-14 xl:py-10 md:py-0 md:px-0 bg-white flex flex-row flex-wrap justify-center items-center   ">
-        {/* <LinkRo
-              key={4}
-              to={{
-                pathname: "/Product",
-                state: { id: "lol" }, // your data array of objects
-              }}
-              className=" flex-1 "
-              key={3}
-              id={3}
-            > */}
-        {/* <Fade bottom key={2}>
-              <div
-                className="bg-white   m-9 hover:shadow-2xl flex-1 "
-                key={2}
-                id={5}
-              >
-                <img
-                  src={trucks}
-                  alt="Trailers images"
-                  className=" h-80 w-full object-cover"
-                />
-
-                <div className="p-8"> */}
-        {/* <h3 className="font-bold text-2xl mb-5">fine</h3> */}
-        {/* <br />
-                  <h3 className=" text-1xl mb-5 ">
-                    Tap into a marketplace that matches over 10.000 shipments a
-                    day
-                  </h3>
-                  <NavLink
-                    key={1}
-                    to={{
-                      pathname: "/Product",
-                      state: { id: "lol" }, // your data array of objects
-                    }}
-                  > */}
-        {/* <p>date</p> */}
-        {/* </NavLink>
-                </div>
-              </div>
-            </Fade> */}
-        {/* </LinkRo> */}
         {posts[0]
           ? posts[0]['content'][1]['rows'].map((post) => (
               <Fade bottom key={post._key}>
