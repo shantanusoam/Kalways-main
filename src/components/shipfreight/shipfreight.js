@@ -67,12 +67,13 @@ z-index: 1;
 
 `;
 export const Card = Styled.div`
-// box-shadow: 6px 4px 8px 2px rgb(0 0 0 / 20%);
+// box-shadow: 6px 4px 8px 2px rgb(0 0 0 / 20%); 
 &hover: {
     box-shadow: 6px 4px 8px 2px rgb(0 0 0 / 70%);
 }
 h4{
     text-align: center;
+  
 }
 :hover{
     h4{
@@ -84,6 +85,15 @@ h2{
   font-weight: 400;
   font-size: 3rem;
 
+}
+
+@media only screen and (max-width:600px){
+  h2{
+    font-weight:300;
+    font-size:1.8rem !important;
+    line-height:1.8rem !important; 
+    padding-bottom:0px;
+  }
 }
 
 `;
