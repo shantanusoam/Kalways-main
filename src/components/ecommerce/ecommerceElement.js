@@ -103,6 +103,14 @@ align-items: center;
              }
         }
     }
+
+    @media only screen and (max-width:600px){
+      h3{
+        
+        font-size:1.8rem; 
+        line-height:1.8rem; 
+      }
+    }
 `;
 export const Percentage = Styled.div`
 display: flex;
@@ -127,6 +135,13 @@ align-items: center;
                 text-align: center;
              }
         }
+    }
+
+    @media only screen and (max-width:600px){
+      h3{
+        font-size:2rem;  
+        line-height:2rem; 
+      }
     }
 `;
 export const Faq = Styled.div`  
@@ -627,6 +642,15 @@ export const Formcontainer = Styled.div`
 background: #212121;
 h3{
   text-align: center;
+  
+}
+
+@media only screen and (max-width:600px){
+  h3{
+
+    font-size:1.8rem;
+    line-height:2rem;
+  }
 }
 `;
 export const FormButton = Styled.div`

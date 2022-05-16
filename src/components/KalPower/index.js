@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import client, { builder } from '../../client';
+import React, { useState, useEffect } from "react";
+import client, { builder } from "../../client";
 
 // import PTO01 from '../../images/PTO-01.png';
 
-import Pulse from 'react-reveal/Pulse';
+import Pulse from "react-reveal/Pulse";
 
 // import bankground from "../../images";
 // import { animateScroll as scroll, Link } from 'react-scroll';
@@ -14,14 +14,14 @@ import {
   HeroP,
   HeroContent,
   ContainerMain,
-} from './KalPowerElement';
-import serializers from '../../serializers';
-import useLocalStorageState from '../../localStorageHook';
-import PortableText from '@sanity/block-content-to-react';
+} from "./KalPowerElement";
+import serializers from "../../serializers";
+import useLocalStorageState from "../../localStorageHook";
+import PortableText from "@sanity/block-content-to-react";
 
 const urlFor = (source) => builder.image(source);
 export default function KalPower() {
-  const [posts, setPosts] = useLocalStorageState('KALPOWER');
+  const [posts, setPosts] = useLocalStorageState("KALPOWER");
   useEffect(() => {
     client
       .fetch(
@@ -41,17 +41,17 @@ export default function KalPower() {
         id="Carrers"
         bgImage={
           posts[0]
-            ? urlFor(posts[0]['content'][0].backgroundImage.asset._ref)
+            ? urlFor(posts[0]["content"][0].backgroundImage.asset._ref)
             : null
         }
       >
         <HeroContent className="flex flex-col 	justify-items-end lg:w-1/2">
           <ContainerMain>
-            <HeroP>{posts[0] ? posts[0]['content'][0].heading : null}</HeroP>
+            <HeroP>{posts[0] ? posts[0]["content"][0].heading : null}</HeroP>
             <p className="text-white text-xl pb-6">
               {posts[0] ? (
                 <PortableText
-                  blocks={posts[0]['content'][0].tagline}
+                  blocks={posts[0]["content"][0].tagline}
                   projectId="cjv2tdo2"
                   dataset="production"
                   serializers={serializers}
@@ -82,7 +82,7 @@ export default function KalPower() {
       <div className="flex flex-col bg-grey bg-white lg:pt-32">
         <div className="lg:pb-10  lg:pt-10 lg:pl-32 lg:pr-32 grid gap-20 2xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 self-center justify-center justify-items-center ">
           {posts[0]
-            ? posts[0]['content'][1]['rows'].map((post) => (
+            ? posts[0]["content"][1]["rows"].map((post) => (
                 <Pulse key={post._key}>
                   <Card className="flex flex-col items-left h-auto bg-white w-auto p-8 lg:h-96">
                     <img
@@ -114,18 +114,18 @@ export default function KalPower() {
               className="flex flex-col justify-center justify-items-start items-left  h-auto w-full"
               style={{
                 backgroundImage: `url(${urlFor(
-                  posts[0]['content'][2].image.asset._ref
+                  posts[0]["content"][2].image.asset._ref
                 )})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
               }}
             >
               <h4 className="text-white text-left  lg:text-5xl text-3xl lg:w-3/5 pt-64 lg:ml-40 ml-4">
-                {posts[0]['content'][2].heading}
+                {posts[0]["content"][2].heading}
               </h4>
-              <p className="text-white text-left ml-44 pt-4 font-bold">
-                {posts[0]['content'][2].label}
+              <p className="text-white text-left 2xl:ml-44 ml-4 pt-4 font-bold">
+                {posts[0]["content"][2].label}
               </p>
               <div className="pb-64 lg:ml-40 pt-10 ml-4">
                 <a className="pt-10" href="/Contact" target="_blank">
@@ -142,13 +142,13 @@ export default function KalPower() {
           <div className=" flex lg:flex-row flex-col-reverse ">
             <div className="lg:pr-40 ml-4 mt-20 lg:w-4/5 mr-4">
               <>
-                <h3 className="font-bold  2xl:text-6xl lg:text-4xl xl:text-5xl text-3xl leading-10 w-4/5">
-                  {posts[0] ? posts[0]['content'][3].heading : null}
+                <h3 className="font-bold   2xl:text-6xl leading-7 lg:text-4xl xl:text-5xl text-3xl w-4/5">
+                  {posts[0] ? posts[0]["content"][3].heading : null}
                 </h3>
                 <p className=" lg:text-2xl text-xl lg:pt-10">
                   {posts[0] ? (
                     <PortableText
-                      blocks={posts[0]['content'][3].text}
+                      blocks={posts[0]["content"][3].text}
                       projectId="cjv2tdo2"
                       dataset="production"
                       serializers={serializers}
@@ -167,7 +167,7 @@ export default function KalPower() {
             <div>
               {posts[0] ? (
                 <img
-                  src={urlFor(posts[0]['content'][3].image.asset._ref)}
+                  src={urlFor(posts[0]["content"][3].image.asset._ref)}
                   className="lg:w-auto w-full"
                   alt=""
                 ></img>

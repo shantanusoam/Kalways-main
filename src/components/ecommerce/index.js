@@ -179,74 +179,7 @@ export default function Ecommerce() {
           </FormButton>
         </Formcontainer>
       </Bounce>
-      {/* <div className="xl:px-14 xl:py-10 md:py-0 md:px-0 bg-white flex 2xl:flex-row lg:flex-row flex-wrap justify-center items-center flex-col ">
-        
-        <Fade bottom>
-          <div className="bg-white hover:shadow-2xl 2xl:m-2 m-2 flex-1">
-            <img
-              src={image1}
-              alt="boy with camera"
-              className=" h-80 w-full object-cover"
-            />
-
-            <div className="p-8">
-              <h3 className="font-bold 2xl:text-3xl text-2xl mb-5">
-                Pricing You Can Trust
-              </h3>
-              <br />
-              <p className="text-gray-800 text-1xl mb-5 h-42">
-                You can trust the quote you get from us, whether it comes
-                through your rep or KALWAYGO. If you are quoting for a spot LTL
-                load, a high-volume lane, or anything else, we can get you a
-                clear, reliable price.
-              </p>
-            </div>
-          </div>
-        </Fade>
-        <Fade bottom>
-          <div className="bg-white hover:shadow-2xl 2xl:m-2 m-2 flex-1">
-            <img
-              src={image2}
-              alt="boy with camera"
-              className=" h-80 w-full object-cover"
-            />
-
-            <div className="p-8">
-              <h3 className="font-bold 2xl:text-3xl text-2xl mb-5">
-                Network Density
-              </h3>
-              <br />
-              <p className="text-gray-800 text-1xl mb-5 h-42">
-                You need quick access to a diverse carrier base to control your
-                freight spend and enable consistent service. Leverage our vast,
-                centralized network of over 75,000 carriers.
-              </p>
-            </div>
-          </div>
-        </Fade>
-        <Fade right>
-          <div className="bg-white hover:shadow-2xl 2xl:m-2 m-2 flex-1">
-            <img
-              src={image3}
-              alt="boy with camera"
-              className=" h-80 w-full object-cover"
-            />
-
-            <div className="p-8">
-              <h3 className="font-bold 2xl:text-3xl text-2xl  mb-5">
-                Unmatched Support
-              </h3>
-              <br />
-              <p className="text-gray-800 text-1xl mb-5 h-42">
-                When moving CPG freight, you need the support of a dedicated
-                team that you can count on. Our specialists are here to help
-                during the day and after hours to respond to your quoting and
-                issue resolution needs.
-              </p>
-            </div>
-          </div>
-        </Fade>
-      </div> */}
+ 
 
       <div className="lg:ml-40 lg:mr-40  lg:mt-16">
         <div className=" flex lg:flex-row flex-col-reverse ">
@@ -286,7 +219,7 @@ export default function Ecommerce() {
       </div>
 
       <Fulfillment>
-        <h3 className="self-center pb-8 pt-8 text-4xl p-4">
+        <h3 className="self-center pb-8 pt-8 text-4xl p-4 ">
           {posts[0] ? posts[0]['content'][3].title : null}
           <br></br> {posts[0] ? posts[0]['content'][3].label : null}
         </h3>
@@ -343,7 +276,7 @@ export default function Ecommerce() {
       </Bounce>
       {posts[0] ? (
         <Bounce left>
-          <Formcontainer className=" flex w-screen justify-center justify-items-center items-center">
+          <Formcontainer className=" flex w-screen justify-center justify-items-center items-center"> 
             <div
               className="flex flex-col justify-center justify-items-center items-center h-80 lg:w-full"
               style={{
