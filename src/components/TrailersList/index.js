@@ -18,6 +18,7 @@ const SLIDE_COUNT = 3;
 const slides = Array.from(Array(SLIDE_COUNT).keys());
 const urlFor = (source) => builder.image(source);
 export function TrailerList() {
+  console.log(`inside  services`);
   // const [name, setname] = useState([]);
 
   // useEffect(() => {
@@ -34,16 +35,20 @@ export function TrailerList() {
   // }, []);
   const [name, setName] = useLocalStorageState('services');
   useEffect(() => {
-    client
-      .fetch(
-        `*[title == 'services' ]{
+    console.log(`inside useEffect services`);
+    if (!window.localStorage.getItem('Kalway')) {
+      console.log(`inside useEffect fetch call services`);
+      client
+        .fetch(
+          `*[title == 'services' ]{
           title,
           content[]
           
           }`
-      )
-      .then((data) => setName(data))
-      .catch(console.error);
+        )
+        .then((data) => setName(data))
+        .catch(console.error);
+    }
   }, [setName]);
 
   return (
