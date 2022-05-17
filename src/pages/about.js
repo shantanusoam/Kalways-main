@@ -21,14 +21,14 @@ export default function About() {
     if (!window.localStorage.getItem('About Us')) {
       client
         .fetch(
-          `*[title == 'About Us' ]{
+          `*[title == 'About Us' ]{ 
      
           content[]
           
           }`
         )
         .then((data) => [
-          window.localStorage.setItem('About Us', JSON.stringify(data)),
+          window.localStorage.setItem('About Us', JSON.stringify(data)), 
           setPosts(data),
         ])
         .catch(console.error);
@@ -39,8 +39,7 @@ export default function About() {
     
   }, []);
 
-
-
+ 
   return (
     <>
   
@@ -83,7 +82,7 @@ export default function About() {
                   <div className="p-8">
                     <h3 className="font-bold text-2xl mb-5">{post.heading}</h3>
                     <br />
-                    <h3 className=" text-1xl mb-5  h-56 lg:h-48 About_blockContent">
+                    <h3 className=" text-1xl mb-5  h-56 lg:h-48 About_blockContent"> 
                       <PortableText
                         blocks={post.text}
                         projectId="y10nshsc"
