@@ -1,6 +1,6 @@
 import { FaBars } from 'react-icons/fa';
-import { Link as LinkR } from 'react-router-dom';
-// import { Link as LinkS } from 'react-scroll';
+import { NavLink as LinkR } from 'react-router-dom';
+
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
@@ -167,7 +167,7 @@ export const NavItem = styled.li`
   // }
 `;
 export const NavLinks = styled(LinkR)`
-  color: ${({ scrollNav }) => (scrollNav ? '#fff' : `#fff`)};
+  color: ${({ scrollNav }) => (scrollNav ? "#fff" : `#fff`)};
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -181,7 +181,7 @@ export const NavLinks = styled(LinkR)`
     color: #00e700;
   }
   &.active {
-    border-bottom: 3px solid #15cdfc;
+    border-bottom: 3px solid #00e700;
   }
 `;
 export const Bars = styled(FaBars)`

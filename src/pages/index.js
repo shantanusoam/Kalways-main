@@ -23,10 +23,13 @@ const Lol = ({ Phoneno }) => {
         .then((data) => setName(data))
         .catch(console.error);
     }
+     
   }, [setName]);
 
+   
+
   return (
-    <>
+    <> 
       {/* <EmblaCarousel slides={slides} /> */}
       {/* <Herosection></Herosection> */},
       <HeroSection posts={name}></HeroSection>

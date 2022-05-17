@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import TrailerList from '../components/TrailersList';
-
 export const ProductsPage = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  
   function disabeled() {
     const path = window.location.pathname;
 
@@ -15,7 +14,10 @@ export const ProductsPage = () => {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
+ 
   return (
+  
     <div style={{ paddingTop: '70px' }}>
       <TrailerList></TrailerList>
     </div>

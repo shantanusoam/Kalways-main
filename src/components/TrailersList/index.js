@@ -34,8 +34,10 @@ export function TrailerList() {
   //     .catch(console.error);
   // }, []);
   const [name, setName] = useLocalStorageState('services');
+  
   useEffect(() => {
     console.log(`inside useEffect services`);
+    
     if (!window.localStorage.getItem('Kalway')) {
       console.log(`inside useEffect fetch call services`);
       client
@@ -49,6 +51,7 @@ export function TrailerList() {
         .then((data) => setName(data))
         .catch(console.error);
     }
+    
   }, [setName]);
 
   return (

@@ -1,41 +1,25 @@
-import React from 'react';
-import { builder } from '../../client';
-import { FaBars } from 'react-icons/fa';
-// import logo from '../../images/logo.png';
-// import logo1 from '../../images/vanguard.png';
-import { IconContext } from 'react-icons/lib';
-// import { animateScroll as scroll, Link } from 'react-scroll';
+import React from "react";
+import { builder } from "../../client";
+import { FaBars } from "react-icons/fa"; 
+import { IconContext } from "react-icons/lib";
+import { animateScroll as scroll} from 'react-scroll'; 
 
 import {
   Nav,
   NavMenu,
-  // NavBtn,
   NavLogo,
   MobileIcon,
   NavItem,
   Numbers,
   NavLinks,
-} from './NavbarElements';
+} from "./NavbarElements";
 
 const urlFor = (source) => builder.image(source);
 export default function Navbar({ toggle, logo, Phoneno }) {
-  // const [posts, setPosts] = useState([]);
-
-  // useEffect(() => {
-  //   client
-  //     .fetch(
-  //       `*[title == 'Kalway' ]{
-
-  //                   Headlogo,
-  //                   phone,
-  //                   }`
-  //     )
-  //     .then((data) => setPosts(data))
-  //     .catch(console.error);
-  // }, []);
+ 
   return (
     <>
-      <IconContext.Provider value={{ color: '#fff', size: '1em' }}>
+      <IconContext.Provider value={{ color: "#fff", size: "1em" }}>
         <Nav>
           <NavLogo
             to="/"
@@ -46,11 +30,12 @@ export default function Navbar({ toggle, logo, Phoneno }) {
           </NavLogo>
           <NavMenu>
             <NavItem>
-              <NavLinks to="/">HOME</NavLinks>
+              <NavLinks to="/" exact onClick={()=>scroll.scrollToTop()}>HOME</NavLinks>    
+               
             </NavItem>
 
             <NavItem>
-              <NavLinks to="/services">SERVICES</NavLinks>
+              <NavLinks onClick={()=>scroll.scrollToTop()} to="/services">SERVICES</NavLinks> 
             </NavItem>
 
             <NavItem>

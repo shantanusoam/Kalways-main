@@ -1,27 +1,18 @@
-import React from 'react';
-import { SticNav, NavLink,  NavMenu } from './StickbarElements';
+import React from "react";
+import { SticNav, NavLink, NavMenu } from "./StickbarElements";
+import { Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll"; 
 
 const Stickbar = () => {
   return (
     <>
-      <SticNav>
+      <SticNav id="mithai">
         <NavMenu>
-          {/* <NavLink to="/"  ></NavLink> */}
-
-          {/* <NavLink to="/"  >
-            Track Your Shipment
-          </NavLink> */}
-          {/* <NavLink to="/Abut"  >
-            <a href="/About">About Us</a>
-          </NavLink> */}
-
           <NavLink to="/Abut">
             <a href="/About">ABOUT US</a>
+            {/* <Link to="/About" smooth={true} duration={1000} >ABOUT US</Link> */}  
           </NavLink>
 
-          {/* <NavLink to="/WorkAtKalway"  >
-            <a href="/WorkAtKalway">Work at KALWAY</a>
-          </NavLink> */}
           <NavLink to="/Ecommerce">
             <a href="/Ecommerce">E-COMMERCE</a>
           </NavLink>
@@ -34,21 +25,7 @@ const Stickbar = () => {
           </NavLink>
           <NavLink to="/Contact">
             <a href="/Contact">CONTACT US</a>
-          </NavLink>
-          {/* <NavLink to="/"  >
-            Contact
-          </NavLink>
-          <NavLink to="/"  >
-            Georgia
-          </NavLink>
-          <NavLink to="/"  >
-            New Jersey
-          </NavLink>
-          <NavLink to="/"  >
-            Canada
-          </NavLink> */}
-          {/* Second Nav */}
-          {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
+          </NavLink>  
         </NavMenu>
       </SticNav>
     </>

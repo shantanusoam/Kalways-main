@@ -1,37 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import client, { builder } from '../../client';
+import React, { useState, useEffect } from "react";
+import client, { builder } from "../../client";
 // import { TiArrowRightThick } from 'react-icons/ti';
-import Pulse from 'react-reveal/Pulse';
-// import image1 from '../../images/dv0.jpg';
-// import image2 from '../../images/Rt02.jpg';
-// import image3 from '../../images/ut001.jpg';
-// import image4 from '../../images/Rt002.jpg';
-// import image5 from '../../images/ut002.jpg';
-// import image6 from '../../images/ut003.jpg';
-// import image7 from '../../images/ut004.jpg';
-// import image8 from '../../images/ut0012.jpg';
-// import grid1 from '../../images/fleet.png';
-// import grid2 from '../../images/grid2.png';
-// import grid3 from '../../images/grid3.png';
-// import grid4 from '../../images/grid3.png';
-// import mgrid10 from '../../images/mgrid10.png';
-// import mgrid11 from '../../images/mgrid11.png';
-// import mgrid13 from '../../images/mgrid13.png';
-// import mgrid14 from '../../images/plane.png';
-// import mgrid12 from '../../images/mgrid12.png';
-// import mgrid15 from '../../images/grid4.png';
-// import mgrid16 from '../../images/grid2.png';
-// import igrid1 from '../../images/igrid1.png';
-// import igrid2 from '../../images/igrid2.png';
-// import igrid3 from '../../images/igrid3.png';
-// import igrid4 from '../../images/igrid4.png';
-// import igrid5 from '../../images/igrid5.png';
-// import igrid6 from '../../images/igrid6.png';
-// import igrid7 from '../../images/igrid7.png';
-// import igrid8 from '../../images/igrid8.png';
-// import igrid9 from '../../images/igrade9.png';
+import Pulse from "react-reveal/Pulse";
 
-import Fade from 'react-reveal/Fade';
+import Fade from "react-reveal/Fade";
 // import bankground from "../../images";
 // import { animateScroll as scroll, Link } from 'react-scroll';
 import {
@@ -54,13 +26,13 @@ import {
   // Callinfo,
   // BgImage,
   Card,
-} from './Industries';
-import serializers from '../../serializers';
-import useLocalStorageState from '../../localStorageHook';
-import PortableText from '@sanity/block-content-to-react';
+} from "./Industries";
+import serializers from "../../serializers";
+import useLocalStorageState from "../../localStorageHook";
+import PortableText from "@sanity/block-content-to-react";
 const urlFor = (source) => builder.image(source);
 export function Industrie() {
-  const [posts, setPosts] = useLocalStorageState('INDUSTRIES');
+  const [posts, setPosts] = useLocalStorageState("INDUSTRIES");
   useEffect(() => {
     client
       .fetch(
@@ -73,6 +45,9 @@ export function Industrie() {
       .then((data) => setPosts(data))
       .catch(console.error);
   }, [setPosts]);
+
+ 
+
   return (
     <>
       {posts[0] ? (
@@ -257,7 +232,7 @@ export function Industrie() {
       </div>
 
       <div className="flex flex-col m-2">
-        <h3 className="flex justify-center items-center  2xl:self-center  lg:pt-12 text-2xl m-2">       
+        <h3 className="flex justify-center items-center  2xl:self-center  lg:pt-12 text-2xl m-2">
           {posts[0] ? posts[0]["content"][6].label : null}
         </h3>
         <p className=" self-center font-bold pt-8   2xl:text-4xl">

@@ -265,7 +265,6 @@ h3 {
   }
 }
 
-
 @media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
   h4 {
     font-size: 1rem;
@@ -292,21 +291,18 @@ h3 {
   }
 }
 
-@media only screen and (max-width:600px){
-  .heading_cardContent h2{
+@media only screen and (max-width: 600px) {
+  .heading_cardContent h2 {
     line-height: 2rem;
-    font-size: 1.5rem;   
+    font-size: 1.5rem;
   }
-  
 }
 
-@media only screen and (max-width:600px){
-  .heading2_cardContent{
+@media only screen and (max-width: 600px) {
+  .heading2_cardContent {
     font-size: 2.5rem;
     font-weight: 600;
     line-height: 2.4rem;
   }
-
-  
 }
 

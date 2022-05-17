@@ -1,31 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import client, { builder } from '../../client';
-// import image1 from '../../images/ut008.jpg';
-// import image2 from '../../images/NetworkD.png';
-// import image3 from '../../images/ut0010.jpg';
-// import image4 from '../../images/ut0011.jpg';
-// import grid1 from '../../images/fleet.png';
-// import grid2 from '../../images/grid2.png';
-// import grid3 from '../../images/grid3.png';
-// import grid4 from '../../images/grid4.png';
-// import grid5 from '../../images/grid5.png';
-// import grid6 from '../../images/grid6.png';
-// import grid7 from '../../images/grid7.png';
-// import grid8 from '../../images/grid8.png';
-// import grid9 from '../../images/grid9.png';
-// import mgrid1 from '../../images/mgrid1.png';
-// import mgrid2 from '../../images/mgrid2.png';
-// import mgrid4 from '../../images/intermodal.png';
-// import mgrid5 from '../../images/mgrid5.png';
-// import mgrid6 from '../../images/mgrid6.png';
-// import grid12 from '../../images/sustain.png';
-// import grid13 from '../../images/shipper.png';
-import Pulse from 'react-reveal/Pulse';
-import Bounce from 'react-reveal/Bounce';
-import Fade from 'react-reveal/Fade';
-// import PhoneNo from '../../components/phoneno';
-// import bankground from "../../images";
-// import { animateScroll as scroll, Link } from 'react-scroll';
+import React, { useState, useEffect } from "react";
+import client, { builder } from "../../client";
+
+import Pulse from "react-reveal/Pulse";
+import Bounce from "react-reveal/Bounce";
+import Fade from "react-reveal/Fade";
+
+
+
 import {
   HeroContainer,
   // WWOCCButtonM,
@@ -47,10 +28,10 @@ import {
   // Callinfo,
   // BgImage,
   Formcontainer,
-} from './shipfreight';
-import useLocalStorageState from '../../localStorageHook';
-import PortableText from '@sanity/block-content-to-react';
-import serializers from '../../serializers';
+} from "./shipfreight";
+import useLocalStorageState from "../../localStorageHook";
+import PortableText from "@sanity/block-content-to-react";
+import serializers from "../../serializers";
 const urlFor = (source) => builder.image(source);
 export function Shipfreight({ Phoneno }) {
   // const [posts, setPosts] = useState([]);
@@ -67,7 +48,7 @@ export function Shipfreight({ Phoneno }) {
   //     .then((data) => setPosts(data))
   //     .catch(console.error);
   // }, []);
-  const [posts, setPosts] = useLocalStorageState('SHIPFREIGHT');
+  const [posts, setPosts] = useLocalStorageState("SHIPFREIGHT");
   useEffect(() => {
     client
       .fetch(
@@ -80,6 +61,9 @@ export function Shipfreight({ Phoneno }) {
       .then((data) => setPosts(data))
       .catch(console.error);
   }, [setPosts]);
+
+
+
   return (
     <>
       {posts[0] ? (
@@ -271,10 +255,10 @@ export function Shipfreight({ Phoneno }) {
       </div>
 
       <div className="flex flex-col bg-gray-200">
-        <h3 className=" self-center  font-bold pt-16  p-8 sm:text-4xl text-3xl pb-0"> 
-          {posts[0] ? posts[0]["content"][5].title : null} 
+        <h3 className=" self-center  font-bold pt-16  p-8 sm:text-4xl text-3xl pb-0">
+          {posts[0] ? posts[0]["content"][5].title : null}
         </h3>
-        <p className=" text-gray-800 self-center  pt-4  p-8 sm:text-3xl text-2xl"> 
+        <p className=" text-gray-800 self-center  pt-4  p-8 sm:text-3xl text-2xl">
           {posts[0] ? posts[0]["content"][5].label : null}
         </p>
         <div className="pb-10 pt-10 grid gap-10 lg:grid-cols-4 grid-cols-1 self-center justify-center justify-items-center ">

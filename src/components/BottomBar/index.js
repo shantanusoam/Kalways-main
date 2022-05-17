@@ -40,7 +40,6 @@ const BottomBar = ({ toggle }) => {
           </h3>
         </NavLogo>
 
-        {/* <Bars onClick={toggle}/> */}
         <NavMenu>
           <NavItem>
             <NavLinks to="/" onClick={toggleHome}>
@@ -63,26 +62,13 @@ const BottomBar = ({ toggle }) => {
               <a to="/Contact">Contact</a>
             </NavLinks>
           </NavItem>
-          {/* <NavItem>
-            
-          <NavLinks >
-          <Link to='ContactUs' smooth={true} duration={500} spy={true} exact={true} offset={-80}>Contact Us</Link>
-          </NavLinks>
-          </NavItem> */}
-
-          <MobileIcon onClick={toggle}>{/* <FaBars/> */}</MobileIcon>
-
-          {/* Second Nav */}
-          {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
+        
         </NavMenu>
         <NavBtn>
           <h3 className="text-left text-gray-200 font-bold text-1xl">
             @ Copyright KALWAY Trailer and Leasing
           </h3>
-        </NavBtn>
-        {/* <MobileIcon onClick={toggle}>
-          <FaBars/>
-        </MobileIcon> */}
+        </NavBtn> 
       </Nav>
     </>
   );

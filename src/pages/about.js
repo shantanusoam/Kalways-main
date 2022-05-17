@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import client, { builder } from '../client';
 
+
 // import whitetruck from '../../images/AP.jpeg';
 import {
   AboutContainer,
@@ -30,10 +31,14 @@ export default function About() {
   }, [setPosts]);
   useEffect(() => {
     window.scrollTo(0, 0);
+    
   }, []);
+
+
 
   return (
     <>
+  
       <AboutContainer id="About">
         {posts[0] ? (
           <img

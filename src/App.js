@@ -15,7 +15,7 @@ import ShipFlightPage from './pages/shipFlieghtPage';
 import Shipper from './pages/Shipper';
 import { Shipfreight } from './components/shipfreight';
 import Industries from './components/Industries';
-import WorkAtKalwayss from './components/WorkAtKalways';
+import WorkAtKalwayss from './components/WorkAtKalways'; 
 import Careers from './components/Careers';
 import Ecommerce from './components/ecommerce';
 import KalPower from './components/KalPower';
@@ -24,7 +24,7 @@ import Blog from './components/Blog';
 import SinglePost from './components/SinglePost';
 import useLocalStorageState from './localStorageHook/index';
 import Error from './components/Error';
-import Redirect from './pages/redirect';
+import Redirect from './pages/redirect';  
 
 function App() {
   var names = ['Timing_2', 'Timing_1', 'logo', 'phone', 'Email', 'Address'];
@@ -53,7 +53,7 @@ function App() {
     <Router>
       {name ? (
         <>
-          <Stickbar />
+          <Stickbar /> 
           <Sidebar isOpen={isOpen} toggle={toggle}></Sidebar>
           <Navbar
             toggle={toggle}
@@ -63,7 +63,7 @@ function App() {
 
           <Switch>
             <Route exact path="/" title="KALWAY - 5PL Logistics & Brokerage">
-              <Home Phoneno={name[0].phone} />
+              <Home Phoneno={name[0].phone} /> 
             </Route>
 
             <Route
@@ -71,6 +71,7 @@ function App() {
               path="/Contact"
               component={Contact}
               title="BigContact"
+              
             />
 
             <Route exact path="/About" component={About} title="BigAbout" />
@@ -148,21 +149,10 @@ function App() {
             </Route>
           </Switch>
 
-          {/* <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/about' component={About} />
-        <Route path='/services' component={Services} />
-        <Route path='/contact-us' component={Contact} />
-        <Route path='/sign-up' component={SignUp} />
-      </Switch> */}
-          {/* <PartnerCompnay></PartnerCompnay> */}
-          {/* <PartnerCompnay></PartnerCompnay> */}
-
           <FooterSection posts={name} />
         </>
       ) : null}
 
-      {/* <BottomBar></BottomBar> */}
     </Router>
   );
 }
