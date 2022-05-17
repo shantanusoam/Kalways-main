@@ -91,7 +91,7 @@ export default function SinglePost() {
             <div className="block__content mb-8">
               <PortableText
                 blocks={singlePost.body}
-                projectId="cjv2tdo2"
+                projectId="y10nshsc"
                 dataset="production"
                 serializers={serializers}
               />

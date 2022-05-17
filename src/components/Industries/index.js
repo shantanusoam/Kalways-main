@@ -69,7 +69,7 @@ export function Industrie() {
               <PortableText
                 className=" font-normal pt-2 xl:mb-2 mb-0 2xl:text-2xl  text-1xl text-white 2xl:mb-10 mb:-10 w-4/5 "
                 blocks={posts[0]["content"][0].tagline}
-                projectId="cjv2tdo2"
+                projectId="y10nshsc"
                 dataset="production"
                 serializers={serializers}
               />
@@ -94,7 +94,7 @@ export function Industrie() {
                 <PortableText
                   className="w-10/12"
                   blocks={posts[0]["content"][1].text}
-                  projectId="cjv2tdo2"
+                  projectId="y10nshsc"
                   dataset="production"
                   serializers={serializers}
                 />
@@ -145,7 +145,7 @@ export function Industrie() {
                       <PortableText
                         className="w-10/12"
                         blocks={post.text}
-                        projectId="cjv2tdo2"
+                        projectId="y10nshsc"
                         dataset="production"
                         serializers={serializers}
                       />
@@ -176,7 +176,7 @@ export function Industrie() {
                       <PortableText
                         className="w-10/12"
                         blocks={post.text}
-                        projectId="cjv2tdo2"
+                        projectId="y10nshsc"
                         dataset="production"
                         serializers={serializers}
                       />
@@ -263,7 +263,7 @@ export function Industrie() {
                         <PortableText
                           className="w-10/12  "
                           blocks={post.text}
-                          projectId="cjv2tdo2"
+                          projectId="y10nshsc"
                           dataset="production"
                           serializers={serializers}
                         />

@@ -86,7 +86,7 @@ export default function About() {
                     <h3 className=" text-1xl mb-5  h-56 lg:h-48 About_blockContent">
                       <PortableText
                         blocks={post.text}
-                        projectId="cjv2tdo2"
+                        projectId="y10nshsc"
                         dataset="production"
                         serializers={serializers}
                       />

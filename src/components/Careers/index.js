@@ -142,7 +142,7 @@ export default function Careers() {
                     <p className="font-light self-left pt-4 About_blockContent">
                       <PortableText
                         blocks={post.text}
-                        projectId="cjv2tdo2"
+                        projectId="y10nshsc"
                         dataset="production"
                         serializers={serializers}
                       />

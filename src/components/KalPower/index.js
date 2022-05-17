@@ -57,7 +57,7 @@ export default function KalPower() {
               {posts[0] ? (
                 <PortableText
                   blocks={posts[0]["content"][0].tagline}
-                  projectId="cjv2tdo2"
+                  projectId="y10nshsc"
                   dataset="production"
                   serializers={serializers}
                 />
@@ -101,7 +101,7 @@ export default function KalPower() {
                     <p className="font-light self-left pt-4 pb-20 lg:h-40">
                       <PortableText
                         blocks={post.text}
-                        projectId="cjv2tdo2"
+                        projectId="y10nshsc"
                         dataset="production"
                         serializers={serializers}
                       />
@@ -154,7 +154,7 @@ export default function KalPower() {
                   {posts[0] ? (
                     <PortableText
                       blocks={posts[0]["content"][3].text}
-                      projectId="cjv2tdo2"
+                      projectId="y10nshsc"
                       dataset="production"
                       serializers={serializers}
                     />

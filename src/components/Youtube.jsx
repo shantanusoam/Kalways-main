@@ -28,7 +28,7 @@ export const Youtube = ({ posts }) => {
             <PortableText
               className="w-10/12 "
               blocks={posts.text}
-              projectId="cjv2tdo2"
+              projectId="y10nshsc"
               dataset="production"
               serializers={serializers}
             />

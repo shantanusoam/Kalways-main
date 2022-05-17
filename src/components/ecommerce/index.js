@@ -201,7 +201,7 @@ export default function Ecommerce() {
               {posts[0] ? (
                 <PortableText
                   blocks={posts[0]['content'][2]['text']}
-                  projectId="cjv2tdo2"
+                  projectId="y10nshsc"
                   dataset="production"
                   serializers={serializers}
                 />
@@ -237,7 +237,7 @@ export default function Ecommerce() {
                     {posts[0] ? (
                       <PortableText
                         blocks={post.text}
-                        projectId="cjv2tdo2"
+                        projectId="y10nshsc"
                         dataset="production"
                         serializers={serializers}
                       />
@@ -267,7 +267,7 @@ export default function Ecommerce() {
                       {posts[0] ? (
                         <PortableText
                           blocks={post.text}
-                          projectId="cjv2tdo2"
+                          projectId="y10nshsc"
                           dataset="production"
                           serializers={serializers}
                         />
