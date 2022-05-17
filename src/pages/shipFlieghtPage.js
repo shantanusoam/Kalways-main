@@ -8,6 +8,7 @@ import Bounce from 'react-reveal/Bounce';
 import './shipFleight.css';
 import serializers from '../serializers';
 import PortableText from '@sanity/block-content-to-react';
+import useLocalStorageState from '../localStorageHook';
 import {
   Card,
   Formcontainer,
@@ -21,19 +22,24 @@ export default function ShipFlightPage() {
   // componentDidMount() {
   //   document.title = 'KALWAY - 5PL Logistics & Brokerage';
   // }
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useLocalStorageState('CARRIER');
 
   useEffect(() => {
-    client
-      .fetch(
-        `*[title == 'CARRIER' ]{
+    if (!window.localStorage.getItem('CARRIER')) {
+      client
+        .fetch(
+          `*[title == 'CARRIER' ]{
     
           content[]
           
           }`
-      )
-      .then((data) => setPosts(data))
-      .catch(console.error);
+        )
+        .then((data) => [
+          window.localStorage.setItem('CARRIER', JSON.stringify(data)),
+          setPosts(data),
+        ])
+        .catch(console.error);
+    }
   }, []);
   return (
     <div className="lg:pt-28 flex flex-col pb-10 bg-slate-500">

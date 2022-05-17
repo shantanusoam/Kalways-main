@@ -20,7 +20,10 @@ const Lol = ({ Phoneno }) => {
           content[]
           }`
         )
-        .then((data) => setName(data))
+        .then((data) => [
+          window.localStorage.setItem('Home', JSON.stringify(data)),
+          setName(data),
+        ])
         .catch(console.error);
     }
      

@@ -30,17 +30,23 @@ const serializers = {
 };
 export default function Shipper({ Phoneno }) {
   const [posts, setPosts] = useLocalStorageState('SHIPPERS');
+
   useEffect(() => {
-    client
-      .fetch(
-        `*[title == 'SHIPPERS' ]{
+    if (!window.localStorage.getItem('SHIPPERS')) {
+      client
+        .fetch(
+          `*[title == 'SHIPPERS' ]{
     
           content[]
           
           }`
-      )
-      .then((data) => setPosts(data))
-      .catch(console.error);
+        )
+        .then((data) => [
+          window.localStorage.setItem('SHIPPERS', JSON.stringify(data)),
+          setPosts(data),
+        ])
+        .catch(console.error);
+    }
   }, [setPosts]);
 
   return (

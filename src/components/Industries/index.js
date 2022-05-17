@@ -34,16 +34,21 @@ const urlFor = (source) => builder.image(source);
 export function Industrie() {
   const [posts, setPosts] = useLocalStorageState("INDUSTRIES");
   useEffect(() => {
-    client
-      .fetch(
-        `*[title == 'INDUSTRIES' ]{
+    if (!window.localStorage.getItem('INDUSTRIES')) {
+      client
+        .fetch(
+          `*[title == 'INDUSTRIES' ]{
      
           content[]
           
           }`
-      )
-      .then((data) => setPosts(data))
-      .catch(console.error);
+        )
+        .then((data) => [
+          window.localStorage.setItem('INDUSTRIES', JSON.stringify(data)),
+          setPosts(data),
+        ])
+        .catch(console.error);
+    }
   }, [setPosts]);
 
  

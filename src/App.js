@@ -40,7 +40,10 @@ function App() {
           ${names}
         }`
         )
-        .then((data) => setName(data))
+        .then((data) => [
+          window.localStorage.setItem('Kalway', JSON.stringify(data)),
+          setName(data),
+        ])
         .catch(console.error);
     }
   }, [setName]);
