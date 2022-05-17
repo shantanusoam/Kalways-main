@@ -24,7 +24,10 @@ export default function ContactSectio({ isOpen, toggle }) {
           
           }`
       )
-      .then((data) => setPosts(data))
+      .then((data) => [
+        window.localStorage.setItem('Contact Us', JSON.stringify(data)),
+        setPosts(data),
+      ])
       .catch(console.error);
   }, [setPosts]);
   return (

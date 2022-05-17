@@ -69,16 +69,21 @@ export function Shipfreight({ Phoneno }) {
   // }, []);
   const [posts, setPosts] = useLocalStorageState('SHIPFREIGHT');
   useEffect(() => {
-    client
-      .fetch(
-        `*[title == 'SHIPFREIGHT' ]{
+    if (!window.localStorage.getItem('SHIPFREIGHT')) {
+      client
+        .fetch(
+          `*[title == 'SHIPFREIGHT' ]{
      
           content[],
           
           }`
-      )
-      .then((data) => setPosts(data))
-      .catch(console.error);
+        )
+        .then((data) => [
+          window.localStorage.setItem('SHIPFREIGHT', JSON.stringify(data)),
+          setPosts(data),
+        ])
+        .catch(console.error);
+    }
   }, [setPosts]);
   return (
     <>

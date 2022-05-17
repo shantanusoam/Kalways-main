@@ -17,16 +17,21 @@ const urlFor = (source) => builder.image(source);
 export default function About() {
   const [posts, setPosts] = useLocalStorageState('About Us');
   useEffect(() => {
-    client
-      .fetch(
-        `*[title == 'About Us' ]{
+    if (!window.localStorage.getItem('About Us')) {
+      client
+        .fetch(
+          `*[title == 'About Us' ]{
      
           content[]
           
           }`
-      )
-      .then((data) => setPosts(data))
-      .catch(console.error);
+        )
+        .then((data) => [
+          window.localStorage.setItem('About Us', JSON.stringify(data)),
+          setPosts(data),
+        ])
+        .catch(console.error);
+    }
   }, [setPosts]);
   useEffect(() => {
     window.scrollTo(0, 0);

@@ -25,15 +25,23 @@ const urlFor = (source) => builder.image(source);
 export default function Careers() {
   const [posts, setPosts] = useLocalStorageState('CAREERS');
   useEffect(() => {
-    client
-      .fetch(
-        `*[title == "CAREERS"] {
-          content[],
-         
-         }`
-      )
-      .then((data) => setPosts(data))
-      .catch(console.error);
+    if (!window.localStorage.getItem('CAREERS')) {
+      if (!window.localStorage.getItem('CAREERS')) {
+        client
+          .fetch(
+            `*[title == 'CAREERS' ]{
+     
+          content[]
+          
+          }`
+          )
+          .then((data) => [
+            window.localStorage.setItem('CAREERS', JSON.stringify(data)),
+            setPosts(data),
+          ])
+          .catch(console.error);
+      }
+    }
   }, [setPosts]);
 
   return (

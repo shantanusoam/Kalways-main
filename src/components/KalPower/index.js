@@ -23,16 +23,21 @@ const urlFor = (source) => builder.image(source);
 export default function KalPower() {
   const [posts, setPosts] = useLocalStorageState('KALPOWER');
   useEffect(() => {
-    client
-      .fetch(
-        `*[title == 'KALPOWER' ]{
+    if (!window.localStorage.getItem('KALPOWER')) {
+      client
+        .fetch(
+          `*[title == 'KALPOWER' ]{
      
           content[]
           
           }`
-      )
-      .then((data) => setPosts(data))
-      .catch(console.error);
+        )
+        .then((data) => [
+          window.localStorage.setItem('KALPOWER', JSON.stringify(data)),
+          setPosts(data),
+        ])
+        .catch(console.error);
+    }
   }, [setPosts]);
   return (
     <>

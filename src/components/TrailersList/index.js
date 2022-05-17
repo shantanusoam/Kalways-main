@@ -36,7 +36,7 @@ export function TrailerList() {
   const [name, setName] = useLocalStorageState('services');
   useEffect(() => {
     console.log(`inside useEffect services`);
-    if (!window.localStorage.getItem('Kalway')) {
+    if (!window.localStorage.getItem('services')) {
       console.log(`inside useEffect fetch call services`);
       client
         .fetch(
@@ -46,7 +46,10 @@ export function TrailerList() {
           
           }`
         )
-        .then((data) => setName(data))
+        .then((data) => [
+          window.localStorage.setItem('services', JSON.stringify(data)),
+          setName(data),
+        ])
         .catch(console.error);
     }
   }, [setName]);

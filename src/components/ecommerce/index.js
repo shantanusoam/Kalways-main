@@ -75,16 +75,21 @@ const urlFor = (source) => builder.image(source);
 export default function Ecommerce() {
   const [posts, setPosts] = useLocalStorageState('E-commerce');
   useEffect(() => {
-    client
-      .fetch(
-        `*[title == 'E-commerce' ]{
+    if (!window.localStorage.getItem('E-commerce')) {
+      client
+        .fetch(
+          `*[title == 'E-commerce' ]{
      
           content[]
           
           }`
-      )
-      .then((data) => setPosts(data))
-      .catch(console.error);
+        )
+        .then((data) => [
+          window.localStorage.setItem('E-commerce', JSON.stringify(data)),
+          setPosts(data),
+        ])
+        .catch(console.error);
+    }
   }, [setPosts]);
   return (
     <>
