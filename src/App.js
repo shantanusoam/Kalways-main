@@ -10,12 +10,7 @@ import Sidebar from './components/Sidebar';
 import About from './pages/about';
 import Contact from './pages/contact';
 import Products from './pages/Products';
-// import BottomBar from './components/BottomBar';
-// import PartnerCompnay from './components/PartnerCompnay';
-import { ProductsPage } from './pages/ProductsPage';
-// import { FooterContainer } from './components/FooterSection/FooterSectionElements';
-// import { FooterContainerBlack } from './CONTAINERS/footer';
-// import ShipFlight from './pages/shipFlieghtPage';
+import { ProductsPage } from './pages/ProductsPage';  
 import ShipFlightPage from './pages/shipFlieghtPage';
 import Shipper from './pages/Shipper';
 import { Shipfreight } from './components/shipfreight';
@@ -30,26 +25,6 @@ import SinglePost from './components/SinglePost';
 import useLocalStorageState from './localStorageHook/index';
 import Error from './components/Error';
 import Redirect from './pages/redirect';
-// import LocalStorageFunction from './localStorageHook/localStotragefunction';
-// function Setposts(data) {
-//   var name = data[0].title;
-//   console.log(`inside setposts ${data}`);
-//   data.map((pos) => {
-//     client
-//       .fetch(
-//         `*[title == ${pos.title} ]{
-
-//       content[]
-
-//       }`
-//       )
-//       .then((data) => {
-//         console.log(`inside setposts ${pos.title} ${data[0].content}`);
-//         LocalStorageFunction(pos.title, data[0].content);
-//       })
-//       .catch(console.error);
-//   });
-// }
 
 function App() {
   var names = ['Timing_2', 'Timing_1', 'logo', 'phone', 'Email', 'Address'];

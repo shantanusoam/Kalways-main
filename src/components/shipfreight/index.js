@@ -91,17 +91,17 @@ export function Shipfreight({ Phoneno }) {
         <HeroContainer
           ontainer
           id="Home"
-          bgImage={urlFor(posts[0]['content'][0].backgroundImage.asset._ref)}
+          bgImage={urlFor(posts[0]["content"][0].backgroundImage.asset._ref)}
         >
           <HeroContent className="flex flex-col 	justify-items-end lg:w-1/2">
             <ContainerMain className="absolute bottom-0 left-20 pb-8 pl-32">
               <h1 className="text-white  font-normal pt-8 text-xl w-auto">
-                {posts[0]['content'][0].heading}
+                {posts[0]["content"][0].heading}
               </h1>
 
               <PortableText
                 className="w-10/12"
-                blocks={posts[0]['content'][0].tagline}
+                blocks={posts[0]["content"][0].tagline}
                 projectId="cjv2tdo2"
                 dataset="production"
                 serializers={serializers}
@@ -120,11 +120,11 @@ export function Shipfreight({ Phoneno }) {
       <Bounce right>
         <Formcontainer className="flex flex-col justify-center lg:items-center items-start bg-black p-8">
           <h3 className="self-center pb-8 pt-4 lg:text-4xl text-2xl text-white">
-            {posts[0] ? posts[0]['content'][1].heading : null}
+            {posts[0] ? posts[0]["content"][1].heading : null}
           </h3>
           <FormButton className="self-center">
-            <a href={posts[0] ? posts[0]['content'][1]['ctas'][0].link : null}>
-              {posts[0] ? posts[0]['content'][1]['ctas'][0].title : null}
+            <a href={posts[0] ? posts[0]["content"][1]["ctas"][0].link : null}>
+              {posts[0] ? posts[0]["content"][1]["ctas"][0].title : null}
             </a>
           </FormButton>
         </Formcontainer>
@@ -140,10 +140,10 @@ export function Shipfreight({ Phoneno }) {
           <div className="self-end lg:pl-40 lg:pr-32">
             {/* <h3 className="font-bold pt-10 text-xl">Additional Information</h3> */}
             <h3 className="font-bold pt-8 2xl:text-3xl text-2xl">
-              {posts[0] ? posts[0]['content'][2].title : null}
+              {posts[0] ? posts[0]["content"][2].title : null}
             </h3>
             <p className="text-gray-800 font-normal pt-8 text-xl w-auto">
-              {posts[0] ? posts[0]['content'][2].label : null}
+              {posts[0] ? posts[0]["content"][2].label : null}
             </p>
             {/* <p className="text-gray-800 font-normal pt-9 text-xl w-auto">
               We will help you get your products where they need to go fast,
@@ -152,7 +152,7 @@ export function Shipfreight({ Phoneno }) {
             </p> */}
             <div className=" pt-10 grid gap-10 lg:grid-cols-2 grid-cols-1">
               {posts[0]
-                ? posts[0]['content'][2]['rows'].map((post) => (
+                ? posts[0]["content"][2]["rows"].map((post) => (
                     <div className="flex flex-col items-start" key={post._key}>
                       <img
                         src={urlFor(post.image.asset._ref)}
@@ -177,7 +177,7 @@ export function Shipfreight({ Phoneno }) {
           <div className="flex-1 h-64 drop-shadow-lg z-10">
             <h3 className="font-bold pt-10 text-xl">Learn More</h3>
             <p className="text-gray-800 font-normal pt-8 text-xl 2xl:w-96 pb-8 ">
-              {posts[0] ? posts[0]['content'][2]['cta'].title : null}
+              {posts[0] ? posts[0]["content"][2]["cta"].title : null}
             </p>
             <button className="btn">
               <span className="btn-text ">{Phoneno}</span>
@@ -185,13 +185,13 @@ export function Shipfreight({ Phoneno }) {
           </div>
         </div>
         <h2 className=" self-center font-bold 2xl:pt-10 pt-4 2xl:text-6xl text-4xl pl-4  ">
-          {posts[0] ? posts[0]['content'][3].title : null}
+          {posts[0] ? posts[0]["content"][3].title : null}
         </h2>
       </div>
 
       <div className="xl:px-14 xl:py-10 md:py-0 md:px-0 bg-white grid 2xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-4 justify-center items-center flex-col ">
         {posts[0]
-          ? posts[0]['content'][3]['rows'].map((post) => (
+          ? posts[0]["content"][3]["rows"].map((post) => (
               <Fade bottom key={post._key}>
                 <div className="bg-white hover:shadow-2xl 2xl:m-2 m-2 flex-1 transition duration-700 ease-in-out delay-150 h-full">
                   <img
@@ -222,12 +222,12 @@ export function Shipfreight({ Phoneno }) {
       </div>
       <div className="lg:ml-20 lg:mr-40 m-0">
         <h3 className="font-bold  text-5xl pl-4">
-          {posts[0] ? posts[0]['content'][4].title : null}
+          {posts[0] ? posts[0]["content"][4].title : null}
         </h3>
         <div className="flex flex-row p-4">
           <div className="lg:pr-40">
             <p className="text-gray-800 font-normal pt-2 text-xl w-auto ">
-              {posts[0] ? posts[0]['content'][4].label : null}
+              {posts[0] ? posts[0]["content"][4].label : null}
             </p>
             {/* <p className=" text-gray-800 font-normal pt-9 pb-10 text-xl w-auto">
               We will help you get your products where they need to go fast,
@@ -239,7 +239,7 @@ export function Shipfreight({ Phoneno }) {
             <img
               src={
                 posts[0]
-                  ? urlFor(posts[0]['content'][4].image.asset._ref)
+                  ? urlFor(posts[0]["content"][4].image.asset._ref)
                   : null
               }
               className="w-auto"
@@ -251,7 +251,7 @@ export function Shipfreight({ Phoneno }) {
 
         <div className=" pt-10 pb-10 grid gap-10 lg:grid-cols-2 grid-cols-1 p-4">
           {posts[0]
-            ? posts[0]['content'][4]['rows'].map((post) => (
+            ? posts[0]["content"][4]["rows"].map((post) => (
                 <div className="flex flex-col items-start" key={post._key}>
                   <img
                     src={urlFor(post.image.asset._ref)}
@@ -276,15 +276,15 @@ export function Shipfreight({ Phoneno }) {
       </div>
 
       <div className="flex flex-col bg-gray-200">
-        <h3 className=" self-center font-bold pt-16 text-4xl p-8">
-          {posts[0] ? posts[0]['content'][5].title : null}
+        <h3 className=" self-center  font-bold pt-16  p-8 sm:text-4xl text-3xl pb-0"> 
+          {posts[0] ? posts[0]["content"][5].title : null} 
         </h3>
-        <p className=" text-gray-800 self-center  pt-4 text-3xl p-8">
-          {posts[0] ? posts[0]['content'][5].label : null}
+        <p className=" text-gray-800 self-center  pt-4  p-8 sm:text-3xl text-2xl"> 
+          {posts[0] ? posts[0]["content"][5].label : null}
         </p>
         <div className="pb-10 pt-10 grid gap-10 lg:grid-cols-4 grid-cols-1 self-center justify-center justify-items-center ">
           {posts[0]
-            ? posts[0]['content'][5]['rows'].map((post) => (
+            ? posts[0]["content"][5]["rows"].map((post) => (
                 <Pulse key={post._key}>
                   <Card className="flex flex-col items-center 	align-content:center place-items-center bg-white w-80 h-72 p-8 ">
                     <img

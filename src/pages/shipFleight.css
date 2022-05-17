@@ -299,3 +299,14 @@ h3 {
   }
   
 }
+
+@media only screen and (max-width:600px){
+  .heading2_cardContent{
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+  }
+
+  
+}
+

@@ -45,7 +45,7 @@ const Lol = ({ Phoneno }) => {
       {/* <QuoteAtEnd></QuoteAtEnd>
       <TrailerList></TrailerList> */}
       {/* <ContactSection></ContactSection> */}
-      {/* <MapSection></MapSection> */}
+      {/* <MapSection></MapSection> */} 
     </>
   );
 };

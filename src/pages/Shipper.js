@@ -69,7 +69,7 @@ export default function Shipper({ Phoneno }) {
           centeredSlides={true}
           autoplay={{
             delay: 2500,
-            disableOnInteraction: false,
+            disableOnInteraction: false, 
           }}
           pagination={{
             clickable: true,

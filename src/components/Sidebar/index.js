@@ -31,7 +31,7 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLinkR to="/About">About</SidebarLinkR>
           <SidebarLinkR to="/services">Services</SidebarLinkR>
           <SidebarLinkR to="/Carriers">Carriers</SidebarLinkR>
-          <SidebarLinkR to="/Shippers">Shipper</SidebarLinkR>
+          <SidebarLinkR to="/Shippers">Shipper</SidebarLinkR> 
           <SidebarLinkR to="/Ecommerce">Ecommerce</SidebarLinkR>
           <SidebarLinkR to="/Careers">Careers</SidebarLinkR>
           <SidebarLinkR to="/Shipfreight">Shipfreight</SidebarLinkR>
