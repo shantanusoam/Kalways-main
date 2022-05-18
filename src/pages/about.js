@@ -31,7 +31,7 @@ export default function About() {
     if (!window.localStorage.getItem('About Us')) {
       client
         .fetch(
-          `*[title == 'About Us' ]{
+          `*[title == 'About Us' ]{ 
      
           content[]
           
