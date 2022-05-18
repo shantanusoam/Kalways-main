@@ -25,12 +25,12 @@ import { Youtube } from '../Youtube';
 const urlFor = (source) => builder.image(source);
 
 export default function Careers() {
-  const page = 'CAREERS';
+  var page = 'CAREERS';
   const [posts, setPosts] = useLocalStorageState(page);
   useEffect(() => {
     client
       .fetch(
-        `*[title == ${page} ]{
+        `*[title == '${page}' ]{
 
       _rev
       

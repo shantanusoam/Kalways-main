@@ -35,14 +35,14 @@ export function TrailerList() {
   //     .then((data) => setname(data))
   //     .catch(console.error);
   // }, []);
-  const page = 'services';
+  var page = 'services';
   const [name, setName] = useLocalStorageState(page);
 
   useEffect(() => {
     console.log(`inside useEffect services`);
     client
       .fetch(
-        `*[title == ${page} ]{
+        `*[title == '${page}' ]{
 
       _rev
       

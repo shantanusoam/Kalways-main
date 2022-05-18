@@ -48,12 +48,12 @@ export function Shipfreight({ Phoneno }) {
   //     .then((data) => setPosts(data))
   //     .catch(console.error);
   // }, []);
-  const page = 'SHIPFREIGHT';
+  var page = 'SHIPFREIGHT';
   const [posts, setPosts] = useLocalStorageState(page);
   useEffect(() => {
     client
       .fetch(
-        `*[title == ${page} ]{
+        `*[title == '${page}' ]{
 
       _rev
       

@@ -75,13 +75,13 @@ import useLocalStorageState, {
 import PortableText from '@sanity/block-content-to-react';
 const urlFor = (source) => builder.image(source);
 export default function Ecommerce() {
-  const page = 'E-commerce';
+  var page = 'E-commerce';
   const [posts, setPosts] = useLocalStorageState(page);
 
   useEffect(() => {
     client
       .fetch(
-        `*[title == ${page} ]{
+        `*[title == '${page}' ]{
 
       _rev
       

@@ -22,13 +22,13 @@ export default function ShipFlightPage() {
   // componentDidMount() {
   //   document.title = 'KALWAY - 5PL Logistics & Brokerage';
   // }
-  const page = 'CARRIER';
+  var page = 'CARRIER';
   const [posts, setPosts] = useLocalStorageState(page);
 
   useEffect(() => {
     client
       .fetch(
-        `*[title == ${page} ]{
+        `*[title == '${page}' ]{
 
       _rev
       

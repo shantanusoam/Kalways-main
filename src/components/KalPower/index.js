@@ -23,12 +23,12 @@ import PortableText from '@sanity/block-content-to-react';
 
 const urlFor = (source) => builder.image(source);
 export default function KalPower() {
-  const page = 'KALPOWER';
+  var page = 'KALPOWER';
   const [posts, setPosts] = useLocalStorageState(page);
   useEffect(() => {
     client
       .fetch(
-        `*[title == ${page} ]{
+        `*[title == '${page}' ]{
 
       _rev
       

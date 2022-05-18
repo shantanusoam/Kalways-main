@@ -16,13 +16,13 @@ import useLocalStorageState, {
   localstorageCleaner,
 } from '../../localStorageHook';
 export default function ContactSectio({ isOpen, toggle }) {
-  const page = 'Contact Us';
+  var page = 'Contact Us';
   const [posts, setPosts] = useLocalStorageState(page);
 
   useEffect(() => {
     client
       .fetch(
-        `*[title == ${page} ]{
+        `*[title == '${page}' ]{
 
     _rev
     

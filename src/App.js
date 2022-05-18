@@ -30,12 +30,12 @@ function App() {
   var names = ['Timing_2', 'Timing_1', 'logo', 'phone', 'Email', 'Address'];
   console.log(`inside  App`);
   const [isOpen, setIsOpen] = useState(false);
-  const page = 'Kalway';
+  var page = 'Kalway';
   const [name, setName] = useLocalStorageState(page);
   useEffect(() => {
     client
       .fetch(
-        `*[title == ${page} ]{
+        `*[title == '${page}' ]{
 
       _rev
       

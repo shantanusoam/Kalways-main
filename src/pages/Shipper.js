@@ -29,24 +29,13 @@ const serializers = {
   },
 };
 export default function Shipper({ Phoneno }) {
-  const page = 'SHIPPERS';
+  var page = 'SHIPPERS';
   const [posts, setPosts] = useLocalStorageState(page);
 
   useEffect(() => {
     client
       .fetch(
-        `*[title == ${page} ]{
-
-      _rev
-      
-      }`
-      )
-      .then((data) => localstorageCleaner(data[0]['_rev'], page))
-      .catch(console.error);
-
-    client
-      .fetch(
-        `*[title == ${page} ]{
+        `*[title == '${page}' ]{
 
       _rev
       

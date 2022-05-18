@@ -48,10 +48,16 @@ export default function useLocalStorageState(
 }
 
 export function localstorageCleaner(revid, page) {
+  console.log(`${page}.......................................${revid}`);
   if (!window.localStorage.getItem(`${page}revid`)) {
+    console.log(`update brand new rev id`);
     window.localStorage.setItem(`${page}revid`, revid);
   } else if (window.localStorage.getItem(`${page}revid`) !== revid) {
+    console.log(`${page}revid is not equal to ${revid}
+    then removing ${page} from local storage
+    or set new page id ${window.localStorage.getItem(`${page}revid`)}
+    `);
     window.localStorage.removeItem(page);
-    window.localStorage.setItem('revid', revid);
+    window.localStorage.setItem(`${page}revid`, revid);
   }
 }

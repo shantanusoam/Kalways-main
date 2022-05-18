@@ -15,12 +15,12 @@ import Fade from 'react-reveal/Fade';
 const urlFor = (source) => builder.image(source);
 
 export default function About() {
-  const page = 'About Us';
+  var page = 'About Us';
   const [posts, setPosts] = useLocalStorageState(page);
   useEffect(() => {
     client
       .fetch(
-        `*[title == ${page} ]{
+        `*[title == '${page}' ]{
 
       _rev
       

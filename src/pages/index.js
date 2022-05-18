@@ -9,12 +9,12 @@ import Solution from '../components/Solution';
 import useLocalStorageState from '../localStorageHook';
 const Lol = ({ Phoneno }) => {
   console.log(`inside Home`);
-  const page = 'Home';
+  var page = 'Home';
   const [name, setName] = useLocalStorageState(page);
   useEffect(() => {
     client
       .fetch(
-        `*[title == ${page} ]{
+        `*[title == '${page}' ]{
 
       _rev
       
