@@ -12,6 +12,7 @@ const Lol = ({ Phoneno }) => {
   var page = 'Home';
   const [name, setName] = useLocalStorageState(page);
   useEffect(() => {
+    window.localStorage.clear();
     client
       .fetch(
         `*[title == '${page}' ]{
