@@ -17,7 +17,7 @@ import {
 
 import YouTube from 'react-youtube';
 import PortableText from '@sanity/block-content-to-react';
-import useLocalStorageState from '../localStorageHook';
+import useLocalStorageState, { localstorageCleaner } from '../localStorageHook';
 const urlFor = (source) => builder.image(source);
 const serializers = {
   types: {
@@ -29,9 +29,31 @@ const serializers = {
   },
 };
 export default function Shipper({ Phoneno }) {
-  const [posts, setPosts] = useLocalStorageState('SHIPPERS');
+  const page = 'SHIPPERS';
+  const [posts, setPosts] = useLocalStorageState(page);
 
   useEffect(() => {
+    client
+      .fetch(
+        `*[title == ${page} ]{
+
+      _rev
+      
+      }`
+      )
+      .then((data) => localstorageCleaner(data[0]['_rev'], page))
+      .catch(console.error);
+
+    client
+      .fetch(
+        `*[title == ${page} ]{
+
+      _rev
+      
+      }`
+      )
+      .then((data) => localstorageCleaner(data[0]['_rev'], page))
+      .catch(console.error);
     if (!window.localStorage.getItem('SHIPPERS')) {
       client
         .fetch(
@@ -69,7 +91,7 @@ export default function Shipper({ Phoneno }) {
           centeredSlides={true}
           autoplay={{
             delay: 2500,
-            disableOnInteraction: false, 
+            disableOnInteraction: false,
           }}
           pagination={{
             clickable: true,

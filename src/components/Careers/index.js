@@ -17,15 +17,38 @@ import {
   Head,
   ContainerMain,
 } from './CareersElement';
-import useLocalStorageState from '../../localStorageHook';
+import useLocalStorageState, {
+  localstorageCleaner,
+} from '../../localStorageHook';
 import { Youtube } from '../Youtube';
 
 const urlFor = (source) => builder.image(source);
 
 export default function Careers() {
-  const [posts, setPosts] = useLocalStorageState('CAREERS');
+  const page = 'CAREERS';
+  const [posts, setPosts] = useLocalStorageState(page);
   useEffect(() => {
+    client
+      .fetch(
+        `*[title == ${page} ]{
+
+      _rev
+      
+      }`
+      )
+      .then((data) => localstorageCleaner(data[0]['_rev'], page))
+      .catch(console.error);
     if (!window.localStorage.getItem('CAREERS')) {
+      client
+        .fetch(
+          `*[title == ${page} ]{
+
+      _rev
+      
+      }`
+        )
+        .then((data) => localstorageCleaner(data[0]['_rev'], page))
+        .catch(console.error);
       if (!window.localStorage.getItem('CAREERS')) {
         client
           .fetch(

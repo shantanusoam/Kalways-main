@@ -4,14 +4,24 @@ import HeroSection from '../components/HeroSection';
 
 import ForSandC from '../components/ForSandC';
 import client from '../client';
-
+import { localstorageCleaner } from '../localStorageHook';
 import Solution from '../components/Solution';
 import useLocalStorageState from '../localStorageHook';
 const Lol = ({ Phoneno }) => {
   console.log(`inside Home`);
-  const [name, setName] = useLocalStorageState('Home');
+  const page = 'Home';
+  const [name, setName] = useLocalStorageState(page);
   useEffect(() => {
-    console.log(`inside useEffect Home`);
+    client
+      .fetch(
+        `*[title == ${page} ]{
+
+      _rev
+      
+      }`
+      )
+      .then((data) => localstorageCleaner(data[0]['_rev'], page))
+      .catch(console.error);
     if (!window.localStorage.getItem('Home')) {
       client
         .fetch(
@@ -26,13 +36,10 @@ const Lol = ({ Phoneno }) => {
         ])
         .catch(console.error);
     }
-     
   }, [setName]);
 
-   
-
   return (
-    <> 
+    <>
       {/* <EmblaCarousel slides={slides} /> */}
       {/* <Herosection></Herosection> */},
       <HeroSection posts={name}></HeroSection>
@@ -48,7 +55,7 @@ const Lol = ({ Phoneno }) => {
       {/* <QuoteAtEnd></QuoteAtEnd>
       <TrailerList></TrailerList> */}
       {/* <ContactSection></ContactSection> */}
-      {/* <MapSection></MapSection> */} 
+      {/* <MapSection></MapSection> */}
     </>
   );
 };

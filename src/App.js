@@ -10,12 +10,12 @@ import Sidebar from './components/Sidebar';
 import About from './pages/about';
 import Contact from './pages/contact';
 import Products from './pages/Products';
-import { ProductsPage } from './pages/ProductsPage';  
+import { ProductsPage } from './pages/ProductsPage';
 import ShipFlightPage from './pages/shipFlieghtPage';
 import Shipper from './pages/Shipper';
 import { Shipfreight } from './components/shipfreight';
 import Industries from './components/Industries';
-import WorkAtKalwayss from './components/WorkAtKalways'; 
+import WorkAtKalwayss from './components/WorkAtKalways';
 import Careers from './components/Careers';
 import Ecommerce from './components/ecommerce';
 import KalPower from './components/KalPower';
@@ -24,15 +24,25 @@ import Blog from './components/Blog';
 import SinglePost from './components/SinglePost';
 import useLocalStorageState from './localStorageHook/index';
 import Error from './components/Error';
-import Redirect from './pages/redirect';  
-
+import Redirect from './pages/redirect';
+import { localstorageCleaner } from './localStorageHook/index';
 function App() {
   var names = ['Timing_2', 'Timing_1', 'logo', 'phone', 'Email', 'Address'];
   console.log(`inside  App`);
   const [isOpen, setIsOpen] = useState(false);
-  const [name, setName] = useLocalStorageState('Kalway');
+  const page = 'Kalway';
+  const [name, setName] = useLocalStorageState(page);
   useEffect(() => {
-    console.log(`inside useEffect App`);
+    client
+      .fetch(
+        `*[title == ${page} ]{
+
+      _rev
+      
+      }`
+      )
+      .then((data) => localstorageCleaner(data[0]['_rev'], page))
+      .catch(console.error);
     if (!window.localStorage.getItem('Kalway')) {
       client
         .fetch(
@@ -56,7 +66,7 @@ function App() {
     <Router>
       {name ? (
         <>
-          <Stickbar /> 
+          <Stickbar />
           <Sidebar isOpen={isOpen} toggle={toggle}></Sidebar>
           <Navbar
             toggle={toggle}
@@ -66,7 +76,7 @@ function App() {
 
           <Switch>
             <Route exact path="/" title="KALWAY - 5PL Logistics & Brokerage">
-              <Home Phoneno={name[0].phone} /> 
+              <Home Phoneno={name[0].phone} />
             </Route>
 
             <Route
@@ -74,17 +84,16 @@ function App() {
               path="/Contact"
               component={Contact}
               title="BigContact"
-              
             />
 
             <Route exact path="/About" component={About} title="BigAbout" />
 
-            <Route
+            {/* <Route
               exact
               path="/Product"
               component={Products}
               title="KALWAYProduct"
-            />
+            /> */}
             <Route
               exact
               path="/services"
@@ -110,12 +119,12 @@ function App() {
               component={Industries}
               title="Inventory"
             />
-            <Route
+            {/* <Route
               exact
               path="/WorkAtKalway"
               component={WorkAtKalwayss}
               title="WorkAtKALWAY"
-            />
+            /> */}
             <Route exact path="/Careers" component={Careers} title="Careers" />
             <Route
               exact
@@ -155,7 +164,6 @@ function App() {
           <FooterSection posts={name} />
         </>
       ) : null}
-
     </Router>
   );
 }

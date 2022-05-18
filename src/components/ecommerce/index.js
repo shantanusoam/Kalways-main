@@ -69,12 +69,26 @@ import {
   // BgImage,
   FormButton,
 } from './ecommerceElement';
-import useLocalStorageState from '../../localStorageHook';
+import useLocalStorageState, {
+  localstorageCleaner,
+} from '../../localStorageHook';
 import PortableText from '@sanity/block-content-to-react';
 const urlFor = (source) => builder.image(source);
 export default function Ecommerce() {
-  const [posts, setPosts] = useLocalStorageState('E-commerce');
+  const page = 'E-commerce';
+  const [posts, setPosts] = useLocalStorageState(page);
+
   useEffect(() => {
+    client
+      .fetch(
+        `*[title == ${page} ]{
+
+      _rev
+      
+      }`
+      )
+      .then((data) => localstorageCleaner(data[0]['_rev'], page))
+      .catch(console.error);
     if (!window.localStorage.getItem('E-commerce')) {
       client
         .fetch(
@@ -184,7 +198,6 @@ export default function Ecommerce() {
           </FormButton>
         </Formcontainer>
       </Bounce>
- 
 
       <div className="lg:ml-40 lg:mr-40  lg:mt-16">
         <div className=" flex lg:flex-row flex-col-reverse ">
@@ -281,7 +294,7 @@ export default function Ecommerce() {
       </Bounce>
       {posts[0] ? (
         <Bounce left>
-          <Formcontainer className=" flex w-screen justify-center justify-items-center items-center"> 
+          <Formcontainer className=" flex w-screen justify-center justify-items-center items-center">
             <div
               className="flex flex-col justify-center justify-items-center items-center h-80 lg:w-full"
               style={{

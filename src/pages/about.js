@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import client, { builder } from '../client';
 
-
 // import whitetruck from '../../images/AP.jpeg';
 import {
   AboutContainer,
@@ -10,14 +9,25 @@ import {
 } from '../components/AboutMain/AboutMainElements';
 import serializers from '../serializers';
 import './shipFleight.css';
-import useLocalStorageState from '../localStorageHook';
+import useLocalStorageState, { localstorageCleaner } from '../localStorageHook';
 import PortableText from '@sanity/block-content-to-react';
 import Fade from 'react-reveal/Fade';
 const urlFor = (source) => builder.image(source);
 
 export default function About() {
-  const [posts, setPosts] = useLocalStorageState('About Us');
+  const page = 'About Us';
+  const [posts, setPosts] = useLocalStorageState(page);
   useEffect(() => {
+    client
+      .fetch(
+        `*[title == ${page} ]{
+
+      _rev
+      
+      }`
+      )
+      .then((data) => localstorageCleaner(data[0]['_rev'], page))
+      .catch(console.error);
     if (!window.localStorage.getItem('About Us')) {
       client
         .fetch(
@@ -36,14 +46,10 @@ export default function About() {
   }, [setPosts]);
   useEffect(() => {
     window.scrollTo(0, 0);
-    
   }, []);
-
-
 
   return (
     <>
-  
       <AboutContainer id="About">
         {posts[0] ? (
           <img

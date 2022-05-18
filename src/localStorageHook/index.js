@@ -46,3 +46,12 @@ export default function useLocalStorageState(
 
   return [state, setState];
 }
+
+export function localstorageCleaner(revid, page) {
+  if (!window.localStorage.getItem(`${page}revid`)) {
+    window.localStorage.setItem(`${page}revid`, revid);
+  } else if (window.localStorage.getItem(`${page}revid`) !== revid) {
+    window.localStorage.removeItem(page);
+    window.localStorage.setItem('revid', revid);
+  }
+}

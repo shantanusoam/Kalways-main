@@ -12,7 +12,9 @@ import Fade from 'react-reveal/Fade';
 import EmblaCarousel from './EmblaCarousel';
 // import { animateScroll as scroll, Link } from 'react-scroll';
 // import { Trailers } from '../../trailer.js';
-import useLocalStorageState from '../../localStorageHook';
+import useLocalStorageState, {
+  localstorageCleaner,
+} from '../../localStorageHook';
 const SLIDE_COUNT = 3;
 
 const slides = Array.from(Array(SLIDE_COUNT).keys());
@@ -33,10 +35,21 @@ export function TrailerList() {
   //     .then((data) => setname(data))
   //     .catch(console.error);
   // }, []);
-  const [name, setName] = useLocalStorageState('services');
-  
+  const page = 'services';
+  const [name, setName] = useLocalStorageState(page);
+
   useEffect(() => {
     console.log(`inside useEffect services`);
+    client
+      .fetch(
+        `*[title == ${page} ]{
+
+      _rev
+      
+      }`
+      )
+      .then((data) => localstorageCleaner(data[0]['_rev'], page))
+      .catch(console.error);
     if (!window.localStorage.getItem('services')) {
       console.log(`inside useEffect fetch call services`);
       client
@@ -53,7 +66,6 @@ export function TrailerList() {
         ])
         .catch(console.error);
     }
-    
   }, [setName]);
 
   return (
