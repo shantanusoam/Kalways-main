@@ -1,8 +1,8 @@
-import React from "react";
-import { builder } from "../../client";
-import { FaBars } from "react-icons/fa"; 
-import { IconContext } from "react-icons/lib";
-import { animateScroll as scroll} from 'react-scroll'; 
+import React from 'react';
+import { builder } from '../../client';
+import { FaBars } from 'react-icons/fa';
+import { IconContext } from 'react-icons/lib';
+import { animateScroll as scroll } from 'react-scroll';
 
 import {
   Nav,
@@ -12,14 +12,13 @@ import {
   NavItem,
   Numbers,
   NavLinks,
-} from "./NavbarElements";
+} from './NavbarElements';
 
 const urlFor = (source) => builder.image(source);
 export default function Navbar({ toggle, logo, Phoneno }) {
- 
   return (
     <>
-      <IconContext.Provider value={{ color: "#fff", size: "1em" }}>
+      <IconContext.Provider value={{ color: '#fff', size: '1em' }}>
         <Nav>
           <NavLogo
             to="/"
@@ -30,12 +29,15 @@ export default function Navbar({ toggle, logo, Phoneno }) {
           </NavLogo>
           <NavMenu>
             <NavItem>
-              <NavLinks to="/" exact onClick={()=>scroll.scrollToTop()}>HOME</NavLinks>    
-               
+              <NavLinks to="/" exact onClick={() => scroll.scrollToTop()}>
+                HOME
+              </NavLinks>
             </NavItem>
 
             <NavItem>
-              <NavLinks onClick={()=>scroll.scrollToTop()} to="/services">SERVICES</NavLinks> 
+              <NavLinks onClick={() => scroll.scrollToTop()} to="/services">
+                SERVICES
+              </NavLinks>
             </NavItem>
 
             <NavItem>
