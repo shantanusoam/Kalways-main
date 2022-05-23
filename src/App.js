@@ -119,12 +119,12 @@ function App() {
               component={Industries}
               title="Inventory"
             />
-            {/* <Route
+            <Route
               exact
               path="/WorkAtKalway"
               component={WorkAtKalwayss}
               title="WorkAtKALWAY"
-            /> */}
+            />
             <Route exact path="/Careers" component={Careers} title="Careers" />
             <Route
               exact
