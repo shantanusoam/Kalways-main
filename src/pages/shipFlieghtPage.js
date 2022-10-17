@@ -30,9 +30,9 @@ export default function ShipFlightPage() {
       .fetch(
         `*[title == '${page}' ]{
 
-      _rev
-      
-      }`
+        _rev
+        
+        }`
       )
       .then((data) => localstorageCleaner(data[0]['_rev'], page))
       .catch(console.error);
@@ -40,10 +40,10 @@ export default function ShipFlightPage() {
       client
         .fetch(
           `*[title == 'CARRIER' ]{
-    
-          content[]
-          
-          }`
+      
+            content[]
+            
+            }`
         )
         .then((data) => [
           window.localStorage.setItem('CARRIER', JSON.stringify(data)),

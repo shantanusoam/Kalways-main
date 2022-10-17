@@ -89,15 +89,15 @@ export default function Careers() {
 
           <PCENTER className="text-white lg:p-8 text-left m-8">
             <h1 className=" font-normal pt-8 2xl:text-3xl pb-2 text-4xl w-auto ">
-              Start your career on KALWAY
+              Coming Soon...
             </h1>
           </PCENTER>
         </HeroContent>
       </HeroContainer>
-      <div className=" flex flex-col  lg:pb-2 pb-2 bg-slate-800 ">
+      {/* <div className=" flex flex-col  lg:pb-2 pb-2 bg-slate-800 ">
         <div className="flex lg:flex-row flex-col  lg:pl-16 pl-4 lg:pt-8  ">
           <div className="self-start ">
-            {/* <h3 className="font-bold pt-10 text-xl">Additional Information</h3> */}
+            <h3 className="font-bold pt-10 text-xl">Additional Information</h3>
             <Head className=" lg:self-center self-start ">
               <h2 className=" lg:self-center self-start pt-10 text-black font-bold text-3xl 2xl:text-4xl">
                 {posts[0] ? posts[0]['content'][1].heading : null}
@@ -107,8 +107,8 @@ export default function Careers() {
             </Head>
           </div>
         </div>
-      </div>
-      <div className="flex lg:flex-row flex-col lg:pl-16 pl-4 lg:pt-8">
+      </div> */}
+      {/* <div className="flex lg:flex-row flex-col lg:pl-16 pl-4 lg:pt-8">
         <div>
           {posts[0] ? (
             <img
@@ -138,8 +138,8 @@ export default function Careers() {
               : null}
           </div>
         </div>
-      </div>
-      {posts[0] ? <Youtube posts={posts[0]['content'][2]}></Youtube> : null}
+      </div> */}
+      {/* {posts[0] ? <Youtube posts={posts[0]['content'][2]}></Youtube> : null}
       <div className="flex flex-col bg-grey bg-white ">
         <Head className="  self-start pl-16">
           <h2 className="font-bold self-start pt-10 text-black  text-2xl 2xl:text-4xl">
@@ -199,10 +199,10 @@ export default function Careers() {
                 </a>
               </WWOCCButtonM>
             </div>
-          ) : null}
-        </div>
+          ) : null} */}
+      {/* </div>
         <div className="h-4"></div>
-      </div>
+      </div> */}
     </>
   );
 }
