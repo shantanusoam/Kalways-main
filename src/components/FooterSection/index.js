@@ -143,7 +143,7 @@ export default function FooterSection({ posts }) {
 
         {/* <hr align="left" width="100%"></hr> */}
         <FotterContact>
-          <FotterContactlist>
+          {/* <FotterContactlist>
             <FotterContactName>We are open</FotterContactName>
             {posts[0] ? (
               <>
@@ -152,7 +152,7 @@ export default function FooterSection({ posts }) {
                 <FotterContactNo>{posts[0].Timing_2}</FotterContactNo>
               </>
             ) : null}
-          </FotterContactlist>
+          </FotterContactlist> */}
         </FotterContact>
         {/* <SocialMediaActions>
             <FaFacebookF/>

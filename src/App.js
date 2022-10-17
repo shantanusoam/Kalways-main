@@ -9,7 +9,7 @@ import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import About from './pages/about';
 import Contact from './pages/contact';
-import Products from './pages/Products';
+// import Products from './pages/Products';
 import { ProductsPage } from './pages/ProductsPage';
 import ShipFlightPage from './pages/shipFlieghtPage';
 import Shipper from './pages/Shipper';
@@ -71,7 +71,7 @@ function App() {
           <Navbar
             toggle={toggle}
             logo={name[0].logo.asset._ref}
-            Phoneno={name[0].phone}
+            // Phoneno={name[0].phone}
           ></Navbar>
 
           <Switch>

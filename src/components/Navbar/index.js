@@ -24,7 +24,7 @@ export default function Navbar({ toggle, logo, Phoneno }) {
             to="/"
             className="flex flex-col content-center aligns-center"
           >
-            <img src={urlFor(logo)} width="150px" alt="logo" />
+            <img src={urlFor(logo)} width="180px" alt="logo" />
             <Numbers className="text-sm items-center pt-2">{Phoneno}</Numbers>
           </NavLogo>
           <NavMenu>
