@@ -610,7 +610,7 @@ export const AboutContainer = Styled.div`
   padding: 0px 0px 10px 0px;
 
   justify-content: center;
-  min-height: 100vh;
+  min-height: 70vh;
   animation: fadein 0.5s;
 
   height: auto;
