@@ -12,6 +12,7 @@ import './shipFleight.css';
 import useLocalStorageState, { localstorageCleaner } from '../localStorageHook';
 import PortableText from '@sanity/block-content-to-react';
 import Fade from 'react-reveal/Fade';
+import { Link } from 'react-router-dom';
 const urlFor = (source) => builder.image(source);
 
 export default function About() {
@@ -98,7 +99,9 @@ export default function About() {
                       />
                     </h3>
                     <button className="btn">
-                      <span className="btn-text">{post.cta.title}</span>
+                      <a href={post.cta.link} className="btn-text">
+                        {post.cta.title}
+                      </a>
                     </button>
                   </div>
                 </div>
