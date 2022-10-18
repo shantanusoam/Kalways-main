@@ -82,7 +82,7 @@ export default function Careers() {
             <HeroP>{posts[0] ? posts[0]['content'][0].heading : null}</HeroP>
             <a href="/Contact">
               <button className="btn">
-                <span className="btn-text">Contact us</span>
+                <span className="btn-text">Contact us </span>
               </button>
             </a>
           </ContainerMain>
