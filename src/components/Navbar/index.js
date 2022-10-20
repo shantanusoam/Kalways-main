@@ -47,7 +47,7 @@ export default function Navbar({ toggle, logo, Phoneno }) {
               <NavLinks to="/Shippers">SHIPPERS</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/Shipfreight">SHIP FREIGHT</NavLinks>
+              <NavLinks to="/Shipfreight">SHIPFREIGHT</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks to="/Industries">INDUSTRIES</NavLinks>
