@@ -181,7 +181,7 @@ export const Heading = styled.h2`
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 60%;
+  // width: 60%;
   justify-content: center;
 
   font-family: sans-serif;
@@ -196,12 +196,12 @@ export const Heading = styled.h2`
   }
   @media screen and (min-width: 1024px) and (max-width: 1380px) {
     font-size: 10px;
-    width: 90%;
+    // width: 90%;
     padding: 20px 0px 0px 160px;
   }
   @media screen and (max-width: 3024px) {
     font-size: 40px;
-    padding: 0px 0px 10px 160px;
+    padding: 0px 0px 10px 0px;
   }
   @media screen and (max-width: 480px) {
     font-size: 36px;
