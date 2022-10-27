@@ -11,7 +11,7 @@ export const ContactContainer = styled.div`
   width: 100%;
   padding-top: 300px;
   justify-content: flex-end;
-  height: 110vh;
+  height: 130vh;
   overflow: hidden;
   // @media screen and (max-width: 768px) {
   //     transition: 0.8s all ease;
