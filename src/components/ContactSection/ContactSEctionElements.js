@@ -23,6 +23,10 @@ export const ContactContainer = styled.div`
   @media screen and (max-width: 3024px) {
     padding: 0px 0px 0px 0px;
   }
+
+  @media screen and (min-width: 900px) and (max-width: 1400px) {
+    height: 150vh;
+  }
 `;
 
 export const ContactForm = styled.div`
